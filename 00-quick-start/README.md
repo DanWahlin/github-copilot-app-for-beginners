@@ -1,22 +1,18 @@
 ![Chapter 00: Quick Start](assets/chapter-header.svg)
 
-# Chapter 00: Quick Start
+> **What if your first setup pass ended with a prepared training repo, a read-only Quick chat overview, and a first session you can inspect?**
 
-> **What if your first setup pass ended with a prepared training repo, a safe Quick chat, and a first session you can inspect?**
-
-Welcome. This chapter gets the basics out of the way: install the GitHub Copilot App, sign in, fork and clone the course repository, run the training setup script if you plan to complete the GitHub workflow chapters, connect the repository, and verify that Quick chat can explain the project without changing files. Once the app can see the repository, the hands-on agent workflows begin in Chapter 01.
+Welcome! This chapter gets the basics out of the way: install the GitHub Copilot App, sign in, fork and clone the course repository, run the training setup script if you plan to complete the GitHub workflow chapters, connect the repository, and verify that Quick chat can explain the project without changing files. Once the app can see the repository, the hands-on agent workflows begin in Chapter 01.
 
 ## 🎯 Learning objectives
 
 By the end of this chapter, you'll be able to:
 
 - Confirm the required account, Git, operating system, and Copilot access prerequisites
-- Install and open the GitHub Copilot App
-- Sign in with GitHub or GitHub Enterprise Server
-- Fork and clone the course repository
-- Run the training setup script for later GitHub workflow chapters
-- Connect a local folder, GitHub repository, or repository URL
-- Start a Quick chat for a harmless repository overview
+- Install, open, and sign in to the GitHub Copilot App
+- Fork, clone, and prepare the course repository for later GitHub workflow chapters
+- Connect the repository to the app
+- Use Quick chat for a read-only repository overview
 - Create a first project session in Interactive mode
 
 > ⏱️ **Estimated time**: ~35 minutes (20 min setup + 15 min hands-on)

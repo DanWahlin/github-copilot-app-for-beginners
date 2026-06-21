@@ -1,7 +1,5 @@
 ![Chapter 01: First Steps](assets/chapter-header.svg)
 
-# Chapter 01: First Steps
-
 > **What if you knew which app surface to use before you typed your next prompt?**
 
 Now that the app is installed and connected to the course repository, it's time for the control-room tour. You'll walk through the main navigation areas, compare Quick chats with project sessions, and see how session modes change Copilot's level of autonomy.

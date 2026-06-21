@@ -1,7 +1,5 @@
 ![Chapter 04: GitHub Workflows](assets/chapter-header.svg)
 
-# Chapter 04: GitHub Workflows
-
 > **What if issues, pull requests, review comments, checks, and merge readiness lived in the same supervised workflow?**
 
 The GitHub Copilot App also helps you move work through GitHub: issues, pull requests, review comments, failing checks, and merge readiness. In this chapter, you'll use My Work as your issue and pull request inbox, start sessions from GitHub context, review diffs, and use Fix actions safely.

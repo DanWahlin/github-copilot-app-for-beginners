@@ -1,7 +1,5 @@
 ![Chapter 06: Canvases](assets/chapter-header.svg)
 
-# Chapter 06: Canvases
-
 > **What if the agent's work was not trapped in a chat transcript?**
 
 Chat works well for conversation. Some work is easier to understand when it lives on a visible surface: a checklist, browser preview, terminal output, release board, or plan that both you and Copilot can update.

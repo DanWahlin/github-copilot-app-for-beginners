@@ -1,7 +1,5 @@
 ![Chapter 05: Skills, Model Context Protocol Servers, and Plugins](assets/chapter-header.svg)
 
-# Chapter 05: Skills, Model Context Protocol (MCP) Servers, and Plugins
-
 > **What if Copilot could reuse your team's review checklist without gaining any new external access?**
 
 This chapter starts with the safest extension point: repo-local skills. A skill is reusable guidance stored in the repository. It helps Copilot approach a task consistently while keeping the beginner path local, reviewable, and credential-free.

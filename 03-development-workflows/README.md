@@ -1,7 +1,5 @@
 ![Chapter 03: Development Workflows](assets/chapter-header.svg)
 
-# Chapter 03: Development Workflows
-
 > **What if the app could help you review, debug, test, preview, and polish a change without losing the evidence?**
 
 In this chapter, you'll use the GitHub Copilot App as a development loop for `samples/book-app-web`: ask, plan, change, test, preview, review the diff, and iterate.

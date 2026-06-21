@@ -1,7 +1,5 @@
 ![Chapter 08: Putting It All Together](assets/chapter-header.svg)
 
-# Chapter 08: Putting It All Together
-
 > **Now you get to run the whole workflow without losing control.**
 
 You've worked through the pieces: settings orientation, sessions, worktrees, context, development loops, GitHub workflows, skills, canvases, and automations. This final chapter combines them into a capstone workflow from issue triage to pull request readiness.

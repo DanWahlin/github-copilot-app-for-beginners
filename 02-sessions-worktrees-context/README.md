@@ -1,7 +1,5 @@
 ![Chapter 02: Sessions, Worktrees, and Context](assets/chapter-header.svg)
 
-# Chapter 02: Sessions, Worktrees, and Context
-
 > **What if every task had its own safe desk, branch, context, and history?**
 
 Sessions are where the GitHub Copilot App stops feeling like ordinary chat. A session can have its own branch, working folder, plan, diff, terminal output, browser preview, and GitHub context. In this chapter, you'll start a session from a task, learn why worktrees keep work separated, and practice giving Copilot just enough context.

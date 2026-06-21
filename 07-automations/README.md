@@ -1,7 +1,5 @@
 ![Chapter 07: Automations](assets/chapter-header.svg)
 
-# Chapter 07: Automations
-
 > **What if your recurring Copilot prompt became a reusable button?**
 
 Automations let you save repeatable agent work. You'll start with a manual automation that runs only when you choose. Scheduled, cloud, and issue-triggered automations appear later because they can involve policy, billing, and permission decisions.
