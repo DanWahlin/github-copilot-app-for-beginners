@@ -21,8 +21,10 @@ By the end of this chapter, you will be able to:
 
 ## Suggested visuals and screenshots
 
-- [visual-image: Create a technical analogy image titled 'Mission Control for Agent Sessions'. Show a calm developer at a control desk monitoring several small spacecraft-like agent sessions on screens. Each screen is labeled 'Quick chat', 'Plan mode', 'Interactive mode', and 'Autopilot'. Use a clean modern educational style, dark navy background with blue and purple highlights, friendly non-cartoon look, proper margins, and fully readable labels.]
-- [visual-image: Create a decision ladder diagram titled 'Choosing the Right Session Mode'. Three ascending steps labeled 'Interactive: steer closely', 'Plan: approve before execution', and 'Autopilot: well-scoped autonomous work'. Use traffic-light style accents from blue to green, include small safety checkpoint icons, technical documentation style, proper margins, and fully visible text.]
+![Mission control view for agent sessions](assets/mission-control-sessions.png)
+
+![Session mode decision ladder](assets/session-mode-decision-ladder.png)
+
 - [app-screenshot: Main app sidebar with My Work, Automations, Search, Sessions, and Quick chats visible.]
 - [app-screenshot: Session composer dropdowns showing mode, model, and reasoning effort controls.]
 - [app-screenshot: Settings area showing the major categories such as General, Sessions, Projects, Skills, Voice dictation, and Accessibility or keyboard shortcuts. If MCP servers, Plugins, or Model providers are visible, label them as INTERMEDIATE orientation topics rather than required setup.]

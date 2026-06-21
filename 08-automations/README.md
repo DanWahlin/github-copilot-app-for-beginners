@@ -21,8 +21,10 @@ By the end of this chapter, you'll be able to:
 
 ## Suggested visuals and screenshots
 
-- [visual-image: Create a technical workflow diagram titled 'Automation Trigger to Agent Run'. Show a left-to-right flow: 'Manual trigger or schedule or issue created' to 'Automation prompt' to 'Selected tools' to 'Agent run' to 'Review result'. Add a security gate labeled 'Least privilege tools'. Use clean technical documentation style, GitHub blue, green, and amber accents, proper margins, and fully readable labels.]
-- [visual-image: Create a comparison image titled 'Local vs Cloud Automations'. Two side-by-side cards. Left card labeled 'Local Automation' with laptop icon, note 'Runs on your machine', and status 'Good for personal workflows'. Right card labeled 'Cloud Automation' with cloud icon, note 'Runs when your machine is off', and status 'Requires policy and billing awareness'. Use modern course illustration style, proper margins, and clearly readable labels.]
+![Automation trigger to agent run](assets/automation-trigger-to-run.png)
+
+![Local versus cloud automations](assets/local-vs-cloud-automations.png)
+
 - [app-screenshot: Automations tab showing saved automations with name, schedule, repository, and last run status.]
 - [app-screenshot: New automation form showing trigger choices such as Manual, On a schedule, and When an issue is created.]
 - [app-screenshot: ADVANCED: Cloud automation tool selection area showing least-privilege tool choices, with any repository details anonymized.]

@@ -23,8 +23,10 @@ By the end of this chapter, you'll be able to:
 
 ## Suggested visuals and screenshots
 
-- [visual-image: Create a technical capability map titled 'Extending the Copilot App'. Show a central node labeled 'Copilot Agent' connected to four labeled nodes: 'Skills: reusable expertise', 'MCP Servers: external tools and data', 'Plugins: bundled capabilities', and 'Custom Agents: specialized roles'. Use clean technical documentation style, white background, blue, green, and purple accents, proper margins, and fully readable labels.]
-- [visual-image: Create a least-tool principle diagram titled 'Give the Agent Only What It Needs'. Show a large toolbox with many dimmed tools and three highlighted tools labeled 'Repo context', 'Docs search', and 'Review skill'. Include a small warning label 'Too many tools add noise'. Use modern educational style, proper margins, and clear text.]
+![Extending the GitHub Copilot App](assets/extending-copilot-app.png)
+
+![Give the agent only what it needs](assets/least-tool-principle.png)
+
 - [app-screenshot: Skills settings showing installed or available skills.]
 - [app-screenshot: INTERMEDIATE: MCP servers settings showing built-in, plugin, or on-device server grouping.]
 - [app-screenshot: INTERMEDIATE: Plugins settings showing install/manage/enable/disable controls.]

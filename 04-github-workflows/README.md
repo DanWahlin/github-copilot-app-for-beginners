@@ -22,8 +22,10 @@ By the end of this chapter, you will be able to:
 
 ## Suggested visuals and screenshots
 
-- [visual-image: Create a technical process diagram titled 'From Issue to Merged Pull Request'. Show a left-to-right pipeline with stages: 'Pick Issue', 'Start Session', 'Review Diff', 'Open PR', 'Fix Checks', 'Agent Merge'. Add small approval gates before 'Open PR' and 'Agent Merge'. Use GitHub-inspired blue, green, and purple accents, clean icons, professional documentation style, proper margins, and fully readable labels.]
-- [visual-image: Create a review workflow image titled 'Human Judgment Stays in the Loop'. Show an agent proposing changes, automated checks reporting status, and a developer approving or redirecting. Include labels 'Diff', 'Review comments', 'CI checks', and 'Merge decision'. Use calm professional colors, no clutter, proper margins, and readable labels.]
+![Issue to pull request workflow](assets/issue-to-merged-pr.png)
+
+![Human judgment stays in the loop](assets/human-judgment-loop.png)
+
 - [app-screenshot: My Work view showing issue and pull request sections with filters, using a safe sample repository.]
 - [app-screenshot: Issue detail page with New session button visible.]
 - [app-screenshot: Pull request Files changed tab or diff review surface inside the app.]

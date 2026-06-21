@@ -21,7 +21,8 @@ By the end of this chapter, you will be able to:
 
 ## Suggested visuals and screenshots
 
-- [visual-image: Create a beginner-friendly technical flow diagram titled 'First 10 Minutes in the GitHub Copilot App'. Show five left-to-right steps with icons and labels: 'Install App', 'Sign In', 'Connect Repository', 'Start Quick Chat', 'Create First Session'. Use a clean course illustration style, soft blue and green accents, white background, simple arrows, proper margins, and ensure all text is spelled correctly and fully visible.]
+![First 10 minutes in the GitHub Copilot App](assets/first-10-minutes-flow.png)
+
 - [app-screenshot: First-run or setup screen showing sign-in and onboarding flow, with any personal account details hidden or blurred.]
 - [app-screenshot: Add project flow showing options for local folder or repository, GitHub repository, and repository URL.]
 - [app-screenshot: Quick chat composer with a harmless repository overview prompt typed but no sensitive data visible.]

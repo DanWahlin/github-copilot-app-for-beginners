@@ -22,8 +22,10 @@ By the end of this chapter, you'll be able to:
 
 ## Suggested visuals and screenshots
 
-- [visual-image: Create a capstone journey map titled 'End-to-End Copilot App Workflow'. Show a sweeping left-to-right journey across eight labeled stops: 'Prioritize work', 'Start session', 'Approve plan', 'Implement', 'Validate', 'Review PR', 'Fix feedback', and 'Merge'. Add small icons for My Work, session, plan, code, terminal/browser, PR, checks, and merge. Use a polished course roadmap style, GitHub blue and purple gradient accents, proper margins, and fully readable text.]
-- [visual-image: Create a multi-agent coordination diagram titled 'Parallel Sessions Without Collisions'. Show three separate session lanes running in parallel, each with its own branch/worktree, then converging into a final review and merge lane. Include labels 'Feature', 'Tests', 'Docs', 'Human review', and 'Merged PR'. Use clean technical documentation style, white background, proper margins, and readable labels.]
+![End-to-end GitHub Copilot App workflow](assets/end-to-end-workflow.png)
+
+![Parallel sessions without collisions](assets/parallel-sessions-without-collisions.png)
+
 - [app-screenshot: App sidebar showing multiple active sessions under the same repository or across repositories.]
 - [app-screenshot: Capstone session conversation with plan, tasks, changes, terminal/browser validation, and PR context visible in a single workspace.]
 - [app-screenshot: Final PR ready to merge with checks passing and ADVANCED: Agent Merge or merge controls visible in a safe repository.]

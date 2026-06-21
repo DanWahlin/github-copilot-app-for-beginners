@@ -1,4 +1,4 @@
-![GitHub Copilot App for Beginners](assets/course-banner.svg)
+![GitHub Copilot App for Beginners](assets/course-hero-command-center.png)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)&ensp;
 [![GitHub Copilot App documentation](https://img.shields.io/badge/GitHub-Copilot_App_Docs-00a3ee?style=flat-square&logo=github)](https://docs.github.com/en/copilot/concepts/agents/github-copilot-app)&ensp;
@@ -16,8 +16,8 @@ This course teaches the app as a supervised development workspace. You will not 
 
 ## Suggested visuals and screenshots
 
-- [visual-image: Create a professional technical course hero image for 'GitHub Copilot App for Beginners'. Show a modern desktop command center with a developer supervising multiple friendly AI agent workstreams. Include three labeled panels: 'Plan', 'Build', and 'Review'. Add subtle GitHub-inspired dark navy, blue, purple, and white accents. Use clean 3D-isometric style mixed with flat technical documentation elements. Ensure the words 'GitHub Copilot App for Beginners' are large, centered, spelled correctly, and fully visible with proper margins. No logos unless generic, no tiny unreadable text.]
-- [visual-image: Create a clean comparison diagram titled 'Where the GitHub Copilot App Fits'. Four columns labeled 'IDE Copilot', 'Copilot CLI', 'Copilot App', and 'Cloud Agent'. Show IDE Copilot as inline coding help, Copilot CLI as terminal-based agent work, Copilot App as a desktop mission control for sessions, PRs, canvases, and automations, and Cloud Agent as GitHub-hosted background execution. Use a modern technical documentation style, light background, GitHub blue and purple accent colors, clear icons, consistent spacing, proper margins, and fully readable labels.]
+![Where the GitHub Copilot App fits across Copilot surfaces](assets/copilot-family-comparison.png)
+
 - [app-screenshot: GitHub Copilot App home or sidebar showing the main navigation areas such as My Work, Automations, Search, Sessions, and Quick chats. Use this near the README introduction to orient learners to the app as a control center.]
 
 ## Target audience

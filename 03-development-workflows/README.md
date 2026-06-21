@@ -21,8 +21,10 @@ By the end of this chapter, you will be able to:
 
 ## Suggested visuals and screenshots
 
-- [visual-image: Create a technical workflow diagram titled 'Development Loop in the Copilot App'. Show a circular loop with five stages: 'Ask', 'Plan', 'Change Code', 'Run Tests', and 'Preview in Browser'. Add a small 'Human Review' checkpoint before the loop repeats. Use modern technical documentation style, blue and purple accents, white background, clean icons, proper margins, and fully readable labels.]
-- [visual-image: Create a polished UI iteration diagram titled 'Pick and Polish'. Show a browser preview on the left with one highlighted UI card labeled 'Pick', an arrow to an AI design action panel labeled 'Polish', and a refined browser preview on the right labeled 'Preview and Iterate'. Include small callouts for 'spacing', 'copy', 'contrast', and 'responsive layout'. Use premium SaaS dashboard visual style, soft blue and indigo accents, proper margins, and ensure all text is spelled correctly.]
+![Development loop in the GitHub Copilot App](assets/development-loop.png)
+
+![Pick and Polish UI iteration workflow](assets/pick-and-polish.png)
+
 - [app-screenshot: Integrated terminal showing a test command running or completed, with project-specific secrets and paths cropped if needed.]
 - [app-screenshot: Integrated browser or browser canvas showing the sample web app preview.]
 - [app-screenshot: Pick and Polish live mode or relevant app UI showing selected browser element and polish options, with any user data hidden.]

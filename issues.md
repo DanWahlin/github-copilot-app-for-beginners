@@ -10,7 +10,7 @@ This file tracks issues found during the rubber-duck review of the root README a
 
 **Problem:** The plan called for conceptual visuals and app screenshots throughout the course, but the chapters only included the SVG header images. That made a visual desktop app course feel too text-heavy for beginners.
 
-**Resolution:** Added `Suggested visuals and screenshots` sections to the root README and every chapter, using the exact visual-image and app-screenshot placeholders from `.plans/course-plan.md`.
+**Resolution:** Added `Suggested visuals and screenshots` sections to the root README and every chapter, generated PNG assets for the `visual-image` items, replaced those prompt placeholders with image references, and kept the `app-screenshot` placeholders for future app captures.
 
 ## ✅ Issue 2: Chapter template consistency drifted between Chapters 00-04 and 05-09
 
@@ -50,7 +50,7 @@ This file tracks issues found during the rubber-duck review of the root README a
 
 **Problem:** The README said each chapter includes a visual course image or screenshot, but the chapters did not include the planned screenshot or image placeholders beyond header art.
 
-**Resolution:** Added planned visual and screenshot placeholders to every chapter, so the README promise now matches the course structure.
+**Resolution:** Added generated visual images and planned screenshot placeholders to every chapter, so the README promise now matches the course structure.
 
 ## ✅ Issue 6: Chapters 02 and 03 used the same seeded issue too closely
 

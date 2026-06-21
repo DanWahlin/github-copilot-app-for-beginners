@@ -24,8 +24,10 @@ By the end of this chapter, you will be able to:
 
 ## Suggested visuals and screenshots
 
-- [visual-image: Create a beginner-friendly technical diagram titled 'One Repository, Many Safe Worktrees'. Show a central box labeled 'Main Repository' connected to three separate folder boxes labeled 'Feature Session', 'Bug Fix Session', and 'Docs Session'. Each folder has its own small branch label. Show that the folders do not collide by using separate lanes. Use clean technical documentation style, light background, GitHub blue and green accents, proper margins, and fully readable text.]
-- [visual-image: Create a comparison diagram titled 'Where Should This Session Run?'. Three side-by-side cards labeled 'Local Repository', 'New Worktree', and 'Cloud Sandbox'. Local Repository shows direct edits with caution icon, New Worktree shows isolated branch/folder with recommended badge, Cloud Sandbox shows cloud container with policy and billing icons. Use professional course illustration style, clear labels, no tiny text, proper margins.]
+![One repository with many safe worktrees](assets/one-repo-many-worktrees.png)
+
+![Where a session should run](assets/session-run-location-comparison.png)
+
 - [app-screenshot: New session composer showing the choice between local repository, new worktree, and cloud sandbox if available.]
 - [app-screenshot: Session details or sidebar area showing the generated branch/worktree name so learners can connect the app UI to git concepts.]
 - [app-screenshot: Settings screen where branch prefix or session lifecycle settings are visible, with sensitive details hidden.]

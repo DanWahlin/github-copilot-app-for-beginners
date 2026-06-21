@@ -22,8 +22,10 @@ By the end of this chapter, you'll be able to:
 
 ## Suggested visuals and screenshots
 
-- [visual-image: Create a technical diagram titled 'Chat vs Canvas'. Split the image into two panels. Left panel labeled 'Chat' shows a vertical conversation thread with intent and discussion. Right panel labeled 'Canvas' shows a shared work surface with a plan card, browser preview, terminal output, and checklist. Add a center arrow labeled 'Intent becomes inspectable work'. Use clean educational style, GitHub blue and purple accents, proper margins, and fully readable labels.]
-- [visual-image: Create a canvas architecture diagram titled 'Human and Agent Shared Surface'. Show a central canvas labeled 'Canvas Extension' with two-way arrows to 'Developer' and 'Copilot Agent'. Under the canvas show three capability chips labeled 'get_board', 'add_card', and 'move_card'. Include side labels 'Shared state' and 'Visible controls'. Use modern technical documentation style, light background, proper margins, and text fully visible.]
+![Chat versus canvas work surfaces](assets/chat-vs-canvas.png)
+
+![Human and agent shared canvas surface](assets/human-agent-shared-surface.png)
+
 - [app-screenshot: Right-side canvas panel showing a plan, checklist, browser session, terminal session, or markdown artifact open inside the GitHub Copilot App.]
 - [app-screenshot: ADVANCED: `/create-canvas` prompt or resulting canvas extension workflow, using a simple issue triage or release checklist example.]
 - [app-screenshot: Canvas controls being used to update shared state, such as moving a card or checking an item.]

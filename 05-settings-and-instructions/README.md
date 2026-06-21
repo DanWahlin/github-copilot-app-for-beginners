@@ -21,8 +21,10 @@ By the end of this chapter, you'll be able to:
 
 ## Suggested visuals and screenshots
 
-- [visual-image: Create a technical settings map titled 'Customize the Copilot App Safely'. Show a hub labeled 'App Settings' connected to five labeled nodes: 'Session Safety', 'Instructions', 'Model Strategy', 'Voice and Shortcuts', and 'Branch Prefixes'. Add small icons for shield, document, model chip, microphone, keyboard, and branch. Use clean technical documentation style, white background, blue and purple accents, proper margins, and fully readable labels.]
-- [visual-image: Create a layered context diagram titled 'How Copilot Gets Better Context'. Stack four layers from bottom to top: 'Repository files', '.github/copilot-instructions.md', 'App settings', and 'Prompt context'. Add a side note labeled 'Keep context lean'. Use modern flat diagram style, subtle gradients, proper margins, and text fully visible.]
+![Safe settings map for the GitHub Copilot App](assets/safe-settings-map.png)
+
+![Better context layers for Copilot](assets/context-layers.png)
+
 - [app-screenshot: General or Sessions settings tab showing default model behavior, custom instructions, branch prefix, or session lifecycle settings, with sensitive fields hidden. If auto-approve, Agent Merge attribution, or remote access appears, label it as ADVANCED.]
 - [app-screenshot: Project-specific settings area showing repository instructions or branch prefix settings.]
 - [app-screenshot: Voice dictation or keyboard shortcuts settings, with account details hidden.]
