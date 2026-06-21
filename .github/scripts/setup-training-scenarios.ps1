@@ -13,7 +13,7 @@ This script seeds a fork or disposable training repository with:
 - course issue labels
 - five seeded issues
 - practice branches with intentional regressions
-- pull requests for review-comment, failing-check, and merge-readiness lessons
+- pull requests for conversation-comment, failing-check, and merge-readiness lessons
 - a PR comment for the empty-state copy review scenario
 
 Run it from the repository root after you fork and clone the course repo.
@@ -298,7 +298,7 @@ function Ensure-Issue {
     $bodyFile = [System.IO.Path]::GetTempFileName()
     try {
         Write-Utf8NoBom -Path $bodyFile -Value ($Body + "`n")
-        $arguments = @("issue", "create", "--title", $Title, "--body-file", $bodyFile)
+        $arguments = @("issue", "create", "--title", $Title, "--body-file", $bodyFile, "--assignee", $script:GitHubUser)
         foreach ($label in $LabelsCsv.Split(",")) {
             $trimmed = $label.Trim()
             if ($trimmed.Length -gt 0) {
@@ -449,6 +449,7 @@ $repoView = ConvertFrom-GhJson -Arguments @("repo", "view", "--json", "nameWithO
 $repo = $repoView.nameWithOwner
 $script:DefaultBranch = $repoView.defaultBranchRef.name
 $startBranch = Get-ExternalOutput -FilePath "git" -Arguments @("branch", "--show-current")
+$script:GitHubUser = Get-ExternalOutput -FilePath "gh" -Arguments @("api", "user", "--jq", ".login")
 
 if ([string]::IsNullOrWhiteSpace($script:DefaultBranch)) {
     throw "Could not determine the repository default branch."
@@ -518,7 +519,7 @@ Repro:
 
 Expected result: The message explains that no matching books were found and suggests changing filters.
 
-Learner goal: Use a PR review comment to request clearer copy, then ask Copilot to address the comment.
+Learner goal: Use a PR conversation comment to request clearer copy, then ask Copilot to address the comment.
 '@
 
 Ensure-Issue "Polish book card spacing and responsive layout" "ui,responsive,book-app-web" @'
@@ -560,7 +561,7 @@ $emptyPr = Ensure-PR "fix-empty-state-copy" "Improve empty-state copy" @'
 This PR updates the empty state shown when filters match no books.
 
 Course use:
-- Practice responding to a review comment.
+- Practice responding to a PR conversation comment.
 - Ask Copilot for the smallest safe improvement.
 - Inspect the diff before accepting changes.
 '@

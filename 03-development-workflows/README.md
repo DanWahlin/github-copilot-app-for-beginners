@@ -4,11 +4,11 @@
 
 > **What if the app could help you review, debug, test, preview, and polish a change without losing the evidence?**
 
-In this chapter, you will use the GitHub Copilot App as a development loop for `samples/book-app-web`: ask, plan, change, test, preview, review the diff, and iterate.
+In this chapter, you'll use the GitHub Copilot App as a development loop for `samples/book-app-web`: ask, plan, change, test, preview, review the diff, and iterate.
 
 ## 🎯 Learning objectives
 
-By the end of this chapter, you will be able to:
+By the end of this chapter, you'll be able to:
 
 - Run code review workflows inside the app
 - Debug a failing test or small behavior bug with agent help
@@ -25,7 +25,7 @@ By the end of this chapter, you will be able to:
 
 Complete Chapters [00](../00-quick-start/README.md), [01](../01-first-steps/README.md), and [02](../02-sessions-worktrees-context/README.md).
 
-You should have a session for the course repository and know where to find the session diff, terminal, and browser surfaces.
+At this point, you've got a session for the course repository and know where to find the session diff, terminal, and browser surfaces.
 
 ---
 
@@ -52,13 +52,44 @@ Copilot can help with the building, but you still inspect the evidence:
 | Integrated browser | A visible web preview surface for checking the running app |
 | Rubber duck | Asking Copilot to critique or explain a plan or change before you accept it |
 
-![Development loop in the GitHub Copilot App](assets/development-loop.png)
+![Development loop in the GitHub Copilot App](assets/development-loop.webp)
+
+---
+
+## Prepare repository instructions
+
+Repository instructions give Copilot stable project guidance before it starts editing. This course repository already includes `.github/copilot-instructions.md`. Open it before the first coding workflow and confirm it mentions:
+
+- `samples/book-app-web`
+- React, TypeScript, Vite, and Vitest
+- small beginner-readable changes
+- validation with install, test, build, and browser preview commands
+
+![Better context layers for Copilot](assets/context-layers.webp)
+
+If your own repository does not have instructions yet, keep them short and project-specific. Put personal preferences in global instructions, but put shared build, test, style, and safety rules in repository instructions so teammates can review them in git.
+
+### Try the comparison
+
+Start a Plan-mode session and ask:
+
+```text
+Review the sample web app structure and suggest one beginner-friendly improvement.
+```
+
+Then ask a more scoped version:
+
+```text
+Using the repository instructions, review @samples/book-app-web and suggest one small accessibility improvement. Do not change files yet.
+```
+
+Demo output varies. Look for signs that Copilot used the validation commands and project boundaries from the instructions.
 
 ---
 
 ## Prepare the sample app
 
-Use the session terminal for these commands:
+From the repository root, use the session terminal for these commands:
 
 ```bash
 cd samples/book-app-web
@@ -71,7 +102,7 @@ npm run build
 
 ### Expected output
 
-You should see dependencies install, tests run, and a production build complete. If the training repo includes an intentionally failing scenario, record the failing test name and continue with the debugging exercise.
+You'll see dependencies install, tests run, and a production build complete. If the training repo includes an intentionally failing scenario, record the failing test name and continue with the debugging exercise.
 
 ### How it works
 
@@ -101,7 +132,7 @@ The review should mention behavior that you can verify with tests or browser int
 
 ## Hands-on workflow 2: debug and fix a small issue
 
-The default app passes tests. Before this workflow, follow the Issue 2 training-branch setup in [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-2-keep-unread-stats-correct-when-filters-are-active) so there is a real unread-count regression to fix.
+The default app passes tests. Before this workflow, use the `practice-unread-count-bug` branch created by the setup script, or follow the Issue 2 training-branch setup in [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-2-keep-unread-stats-correct-when-filters-are-active) so there is a real unread-count regression to fix. If you're unsure how to base the session on that branch, use the [Chapter 02 practice branch note](../02-sessions-worktrees-context/README.md#practice-branches-in-this-course).
 
 Use this exact learner prompt:
 
@@ -117,6 +148,8 @@ Copilot should make a focused change, explain the cause, and run or suggest a te
 
 Run:
 
+From the repository root:
+
 ```bash
 cd samples/book-app-web
 npm test -- --run
@@ -127,6 +160,8 @@ If the app has a browser-visible behavior change, also run:
 ```bash
 npm run dev -- --host 127.0.0.1 --port 5173
 ```
+
+This dev-server command keeps running so the browser can preview the app. Leave that terminal open while you test, then press `Ctrl+C` when you're finished.
 
 Then open the integrated browser to:
 
@@ -168,13 +203,17 @@ Both commands should complete before you treat the change as ready.
 
 ## Hands-on workflow 4: rubber duck review
 
+The `/rubber-duck` slash command asks a critic agent to review your current plan, diff, tests, or design. Use it before you create a PR, especially when the session made code changes.
+
 Use this exact learner prompt:
 
 ```text
-Act as a rubber duck reviewer for this session. Critique the plan, diff, tests, and browser validation. What should I double-check before creating a pull request?
+/rubber-duck Critique the plan, diff, tests, and browser validation for this session. What should I double-check before creating a pull request?
 ```
 
 - [app-screenshot: Diff view showing code changes alongside the conversation or validation output.]
+
+If `/rubber-duck` is not available in your app build, use the same prompt without the slash command.
 
 ### Expected output
 
@@ -187,7 +226,7 @@ Copilot should point out review areas, missing validation, or confidence checks.
 
 Pick and Polish is the course name for a visible UI iteration loop:
 
-![Pick and Polish UI iteration workflow](assets/pick-and-polish.png)
+![Pick and Polish UI iteration workflow](assets/pick-and-polish.webp)
 
 1. Run `samples/book-app-web`.
 2. Open the browser preview.
@@ -233,7 +272,7 @@ Check:
 - The dev server is running in the correct worktree
 - The browser points to the correct port
 - Hot reload is active
-- You are not viewing a different session's app
+- You're not viewing a different session's app
 
 ### Tests fail only in one session
 
@@ -283,7 +322,7 @@ Then check:
 
 ## ➡️ What's next
 
-In Chapter 04, you will connect the development loop to GitHub work: issues, pull requests, review comments, failing checks, Fix actions, and advanced Agent Merge.
+In Chapter 04, you'll connect the development loop to GitHub work: issues, pull requests, review comments, failing checks, Fix actions, and advanced Agent Merge.
 
 **[← Back to Chapter 02](../02-sessions-worktrees-context/README.md)** | **[Continue to Chapter 04 →](../04-github-workflows/README.md)**
 

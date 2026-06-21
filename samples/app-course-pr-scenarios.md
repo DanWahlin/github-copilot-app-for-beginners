@@ -10,13 +10,13 @@ Branch: `fix-empty-state-copy`
 
 This PR updates the empty state shown when filters match no books.
 
-### Seeded review comment
+### Seeded PR conversation comment
 
 The copy is better, but can we make it more helpful for a first-time learner? Please mention that they can change the search term, genre, or reading status.
 
 ### Learner goal
 
-Ask Copilot to address the review comment, inspect the diff, and decide whether to accept the change.
+Ask Copilot to address the PR conversation comment, inspect the diff, and decide whether to accept the change.
 
 ## PR scenario 2: Failing CI points to the stats test
 
@@ -42,7 +42,7 @@ Branch: `feature-reading-dashboard`
 
 ### PR summary
 
-This PR adds small reading dashboard improvements after tests pass and review comments are resolved.
+This PR adds a safe training note used for merge-readiness discussion after tests pass and comments are resolved.
 
 ### Merge readiness checklist
 

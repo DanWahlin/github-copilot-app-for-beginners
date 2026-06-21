@@ -1,8 +1,8 @@
 # Appendices
 
-These appendices support the hands-on chapters in **GitHub Copilot App for Beginners**. They are practical references you can use while working through the course or preparing course assets.
+These appendices support the hands-on chapters in **GitHub Copilot App for Beginners**. They're practical references you can use while working through the course or preparing course assets.
 
-| Appendix | Use it when you need to |
+| Appendix | Use it for |
 |---|---|
 | [Git Worktrees](git-worktrees.md) | Understand session worktrees, inspect them safely, avoid conflicts, and clean them up |
 | [Screenshot Capture Guide](screenshot-capture-guide.md) | Capture privacy-safe screenshots for app lessons and course assets |
@@ -13,7 +13,7 @@ These appendices support the hands-on chapters in **GitHub Copilot App for Begin
 ## How to use these appendices
 
 - Read [Git Worktrees](git-worktrees.md) before Chapter 02 if worktrees are new to you.
-- Use [Training GitHub Scenarios](training-github-scenarios.md) before Chapter 04 if you are working through the course without an instructor-provided training repository.
+- Use [Training GitHub Scenarios](training-github-scenarios.md) before Chapter 04 if you're working through the course without an instructor-provided training repository.
 - Keep [Screenshot Capture Guide](screenshot-capture-guide.md) open while creating chapter images.
 - Run the [Privacy-Safe Course Assets](privacy-safe-course-assets.md) checklist before sharing course material.
 - Use [Troubleshooting Reference](troubleshooting-reference.md) when a learner gets stuck during setup, sessions, PRs, canvases, or automations.

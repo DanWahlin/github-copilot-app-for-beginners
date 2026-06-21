@@ -1,12 +1,12 @@
-![Chapter 07: Canvases](assets/chapter-header.svg)
+![Chapter 06: Canvases](assets/chapter-header.svg)
 
-# Chapter 07: Canvases
+# Chapter 06: Canvases
 
 > **What if the agent's work was not trapped in a chat transcript?**
 
 Chat works well for conversation. Some work is easier to understand when it lives on a visible surface: a checklist, browser preview, terminal output, release board, or plan that both you and Copilot can update.
 
-That shared surface is a canvas. In this chapter, you will inspect a prepared canvas concept first. Creating new canvas extensions is advanced and optional.
+That shared surface is a canvas. In this chapter, you'll inspect a prepared canvas concept first. Creating new canvas extensions is advanced and optional.
 
 ## 🎯 Learning objectives
 
@@ -15,7 +15,7 @@ By the end of this chapter, you'll be able to:
 - Explain why canvases exist and when chat is the wrong shape for the job
 - Use a prepared canvas concept for a release checklist or issue triage workflow
 - Recognize canvases as shared surfaces for plans, browser sessions, terminals, dashboards, documents, and structured workflows
-- Use canvas controls to inspect, steer, and verify work
+- Use canvas controls when your app supports them, or simulate canvas state with a checklist when it does not
 - Explain the difference between chat history and shared canvas state
 
 > ⏱️ **Estimated time**: ~45 minutes (15 min reading + 30 min hands-on)
@@ -26,7 +26,7 @@ By the end of this chapter, you'll be able to:
 
 Before starting:
 
-- Complete Chapter 06
+- Complete Chapter 05
 - Open the course repository in the GitHub Copilot app
 - Confirm the repository includes the prepared release checklist concept under `.github/extensions/release-checklist`
 - Use `samples/book-app-web` as the sample app path
@@ -59,7 +59,7 @@ A canvas can be more than a prettier response. It can include:
 - agent-callable capabilities
 - artifacts such as plans, checklists, dashboards, browser previews, terminals, or documents
 
-![Human and agent shared canvas surface](assets/human-agent-shared-surface.png)
+![Human and agent shared canvas surface](assets/human-agent-shared-surface.webp)
 
 ### When to use a canvas
 
@@ -68,9 +68,9 @@ A canvas can be more than a prettier response. It can include:
 | You need a quick answer | You need visible state |
 | The task is short | The task has multiple steps |
 | The result can be text | The result needs controls or inspection |
-| You do not need to revisit it | You want a reusable work surface |
+| You don't need to revisit it | You want a reusable work surface |
 
-![Chat versus canvas work surfaces](assets/chat-vs-canvas.png)
+![Chat versus canvas work surfaces](assets/chat-vs-canvas.webp)
 
 ---
 
@@ -82,6 +82,7 @@ Use the prepared canvas concept included with this repository. Do not create a n
 2. Read the checklist items and the expected canvas behavior described in the concept.
 3. Compare the checklist with the validation commands in `samples/book-app-web/README.md`.
 4. Decide which items should be checked manually before a pull request.
+5. This folder is a design concept, not a loadable extension. If your instructor provides a working release checklist canvas, open it from the canvas panel. Otherwise, continue with the markdown simulation.
 
 - [app-screenshot: Right-side canvas panel showing a plan, checklist, browser session, terminal session, or markdown artifact open inside the GitHub Copilot App.]
 
@@ -102,7 +103,7 @@ Release checklist for samples/book-app-web:
 
 ### Expected result
 
-You should understand what the prepared canvas is meant to show before you simulate it or try it in the app. If your app build supports project-scoped canvas extensions, the same checklist becomes visible state learners can inspect and update.
+You'll want to understand what the prepared canvas is meant to show before you simulate it or try it in the app. If your app build supports project-scoped canvas extensions, the same checklist becomes visible state learners can inspect and update.
 
 ### How it works
 
@@ -112,7 +113,7 @@ The course starts with the concept because canvas extension support and app pack
 
 ## Hands-on example 2: simulate canvas state while validating the sample app
 
-Run the sample app commands and update the checklist state as you go. If your app build supports project-scoped canvas extensions, you can use the visible canvas. If it does not, keep the checklist in the conversation or in a scratch note.
+Run the sample app commands and update the checklist state as you go. If your app build supports project-scoped canvas extensions, you can use the visible canvas. If it doesn't, keep the checklist in the conversation or in a scratch note.
 
 ```bash
 cd samples/book-app-web
@@ -136,7 +137,7 @@ Use the release checklist concept to track validation for samples/book-app-web. 
 
 - [app-screenshot: Canvas controls being used to update shared state, such as moving a card or checking an item.]
 
-Demo output varies. What matters is that the checklist state matches evidence you can inspect.
+Demo output varies. What matters is that the checklist state matches evidence you're able to inspect.
 
 ### Expected output
 
@@ -163,7 +164,7 @@ Before approving implementation, check that the plan includes:
 
 ### Why this matters
 
-Canvas-style planning keeps the control points visible. You do not have to scroll through the full chat to find the current state.
+Canvas-style planning keeps the control points visible. You don't have to scroll through the full chat to find the current state.
 
 ---
 
@@ -184,7 +185,7 @@ Project-scoped canvases can become team assets. User-scoped canvases are better 
 <details>
 <summary>Advanced: canvas authoring and `/create-canvas`</summary>
 
-Create or revise a canvas only after you are comfortable with the prepared canvas concept.
+Create or revise a canvas only after you're comfortable with the prepared canvas concept.
 
 Optional stretch prompt:
 
@@ -252,18 +253,18 @@ Use the prepared canvas concept to run a validation checklist:
 
 1. Add checklist items for `npm install`, `npm test -- --run`, `npm run build`, and browser preview.
 2. Run the commands for `samples/book-app-web`.
-3. Mark each item only after you have evidence.
+3. Mark each item only after you've got evidence.
 4. Ask Copilot to summarize what remains unchecked.
 
-Success criteria: You can explain the difference between a chat answer and shared canvas state.
+Success criteria: You're able to explain the difference between a chat answer and shared canvas state.
 
 ---
 
 ## ➡️ What's next
 
-In Chapter 08, you'll turn repeatable prompts into automations. You'll start with manual automations before trying schedules or cloud/event-triggered workflows.
+In Chapter 07, you'll turn repeatable prompts into automations. You'll start with manual automations before trying schedules or cloud/event-triggered workflows.
 
-**[← Back to Chapter 06](../06-skills-mcp-plugins/README.md)** | **[Next: Automations →](../08-automations/README.md)**
+**[← Back to Chapter 05](../05-skills-mcp-plugins/README.md)** | **[Next: Automations →](../07-automations/README.md)**
 
 ---
 

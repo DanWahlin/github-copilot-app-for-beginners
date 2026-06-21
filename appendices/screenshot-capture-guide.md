@@ -31,7 +31,7 @@ Normal screenshot tools capture visible pixels. They do not capture hidden sessi
 Before capturing:
 
 - bring the Copilot App window to the front,
-- expand the panel or canvas you want to show,
+- expand the panel or canvas you'd like to show,
 - scroll to the relevant content,
 - make sure no sensitive popover or notification is visible,
 - avoid relying on background work that is not visible in the frame.
@@ -74,7 +74,7 @@ Examples:
 
 ## Screenshot manifest
 
-Record screenshot batches in `assets/screenshot-manifest.md`.
+Record screenshot batches in `assets/screenshot-manifest.md`. Create that file the first time you capture screenshots if it does not exist yet.
 
 Each batch should include:
 
@@ -109,11 +109,11 @@ Suggested entry:
 - Chapter 02: show branch and worktree concepts, but crop personal home folder paths if needed.
 - Chapter 03: show terminal, browser, and diff evidence without secrets or unrelated file paths.
 - Chapter 04: use safe training issues and PRs only.
-- Chapter 05: never show tokens, provider keys, private endpoints, or organization-only policies.
-- Chapter 06: show skills, Model Context Protocol (MCP) servers, plugins, and agents only with safe names and no credentials.
-- Chapter 07: treat canvas content as publishable course content. Remove private notes first.
-- Chapter 08: hide repository secrets, cloud configuration, billing details, and organization settings.
-- Chapter 09: use a safe training repository for capstone screenshots.
+- Chapter 01: never show tokens, provider keys, private endpoints, or organization-only policies in settings screenshots.
+- Chapter 05: show skills, Model Context Protocol (MCP) servers, plugins, and agents only with safe names and no credentials.
+- Chapter 06: treat canvas content as publishable course content. Remove private notes first.
+- Chapter 07: hide repository secrets, cloud configuration, billing details, and organization settings.
+- Chapter 08: use a safe training repository for capstone screenshots.
 
 ## Final review checklist
 

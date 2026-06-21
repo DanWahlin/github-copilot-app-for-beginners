@@ -8,7 +8,7 @@ Welcome. This chapter gets the basics out of the way: install the GitHub Copilot
 
 ## 🎯 Learning objectives
 
-By the end of this chapter, you will be able to:
+By the end of this chapter, you'll be able to:
 
 - Confirm the required account, Git, operating system, and Copilot access prerequisites
 - Install and open the GitHub Copilot App
@@ -30,6 +30,7 @@ By the end of this chapter, you will be able to:
 - A fork of the course repository if you plan to complete the GitHub issue and PR chapters
 - Node.js 20.19+ or 22.12+ and npm for later chapters that use `samples/book-app-web`
 - GitHub CLI (`gh`) for the training setup script used by later chapters
+- `python3` for the macOS, Linux, or Git Bash setup script. The Windows PowerShell script does not need Python.
 - Permission to use the app if your account belongs to a GitHub Copilot Business or Enterprise organization
 
 > Note: A paid Copilot plan is required for the app. Business or Enterprise users may also need an administrator to enable the Copilot CLI policy or related app policies.
@@ -38,7 +39,7 @@ By the end of this chapter, you will be able to:
 
 ## 🧩 Real-world analogy: checking into a workshop
 
-Before you use a shared workshop, you check in, prove you are allowed to use the tools, choose a workbench, and make sure the lights turn on.
+Before you use a shared workshop, you check in, prove you're allowed to use the tools, choose a workbench, and make sure the lights turn on.
 
 The Copilot App setup is the same idea:
 
@@ -50,7 +51,7 @@ The Copilot App setup is the same idea:
 6. Ask a safe first question
 7. Start a small session
 
-![First 10 minutes in the GitHub Copilot App](assets/first-10-minutes-flow.png)
+![First 10 minutes in the GitHub Copilot App](assets/first-10-minutes-flow.webp)
 
 ## Core concepts
 
@@ -76,7 +77,7 @@ The Copilot App setup is the same idea:
 
 ### Expected output
 
-You should see the main app window with navigation areas such as My Work, Automations, Search, Sessions, and Quick chats.
+You'll see the main app window with navigation areas such as My Work, Automations, Search, Sessions, and Quick chats.
 
 ### How it works
 
@@ -98,6 +99,8 @@ Sign in with GitHub CLI if needed:
 ```bash
 gh auth login
 ```
+
+Before running the setup script, review [`appendices/training-github-scenarios.md`](../appendices/training-github-scenarios.md) to see the issues, branches, pull requests, comments, and failing-check scenario it creates.
 
 Preview the training setup:
 
@@ -133,7 +136,7 @@ If you only want to complete Chapters 00 through 03, you can skip the script and
 
 ### Success check
 
-You have a local clone of your fork, and the setup script completed or you intentionally chose the local-only path.
+You've got a local clone of your fork, and the setup script completed or you intentionally chose the local-only path.
 
 ---
 
@@ -141,7 +144,7 @@ You have a local clone of your fork, and the setup script completed or you inten
 
 Choose the option that matches your setup:
 
-| If you have... | Use this app option |
+| If you've got... | Use this app option |
 |---|---|
 | A cloned copy on your machine | Add local folder |
 | A repository on GitHub | Add GitHub repository |
@@ -163,7 +166,7 @@ samples/book-app-web
 
 ### Success check
 
-You can see the course repository in the app, and the app sidebar shows the project as available.
+You'll see the course repository in the app, and the app sidebar will show the project as available.
 
 ---
 
@@ -185,13 +188,13 @@ Copilot should summarize the course structure and identify `samples/book-app-web
 
 ### How it works
 
-Quick chat is useful for exploration because it does not create a session branch or worktree. Use it when you want to ask questions before changing code.
+Quick chat is useful for exploration because it does not create a session branch or worktree. Use it when you're asking questions before changing code.
 
 ---
 
 ## Hands-on example 5: create your first project session
 
-Create a new project session in Interactive mode and use this exact learner prompt:
+Create a new project session in Interactive mode. In the session composer, choose **Interactive** from the mode selector before sending the prompt.
 
 ```text
 Explain the app structure and suggest one beginner-friendly improvement. Do not edit files yet.
@@ -203,7 +206,7 @@ Copilot should explain the repository at a high level and suggest a small possib
 
 ### Success check
 
-You can answer these questions:
+You're able to answer these questions:
 
 - Where do Quick chats appear?
 - Where do project sessions appear?
@@ -232,7 +235,7 @@ You can answer these questions:
 
 Check:
 
-- You are using the expected GitHub account
+- You're using the expected GitHub account
 - Your Copilot plan is active
 - Your organization allows the app and related Copilot policies
 - You entered the correct GitHub Enterprise Server URL if required
@@ -241,7 +244,7 @@ Check:
 
 Check:
 
-- You have access to the repository on GitHub
+- You've got access to the repository on GitHub
 - You selected the correct account or organization
 - You tried the local folder option if the repository is already cloned
 - You tried the repository URL option if search does not find it
@@ -253,6 +256,10 @@ Check:
 - The correct repository is connected
 - The prompt mentions `samples/book-app-web`
 - The app has permission to read the project folder
+
+### I need to report an app problem
+
+Use the app's feedback flow first. If support asks for logs and your slash command palette includes `/collect-debug-logs`, run it only after reviewing the warning. Debug logs can contain sensitive repository, prompt, path, or account details.
 
 </details>
 
@@ -282,7 +289,7 @@ Before continuing:
 
 ## ➡️ What's next
 
-In Chapter 01, you will tour the app interface, compare Quick chat with sessions, and learn when to use Interactive, Plan, and Autopilot modes.
+In Chapter 01, you'll tour the app interface, compare Quick chat with sessions, and learn when to use Interactive, Plan, and Autopilot modes.
 
 **[← Back to course README](../README.md)** | **[Continue to Chapter 01 →](../01-first-steps/README.md)**
 

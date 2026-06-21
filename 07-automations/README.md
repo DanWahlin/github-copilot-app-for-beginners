@@ -1,10 +1,10 @@
-![Chapter 08: Automations](assets/chapter-header.svg)
+![Chapter 07: Automations](assets/chapter-header.svg)
 
-# Chapter 08: Automations
+# Chapter 07: Automations
 
 > **What if your recurring Copilot prompt became a reusable button?**
 
-Automations let you save repeatable agent work. You will start with a manual automation that runs only when you choose. Scheduled, cloud, and issue-triggered automations appear later because they can involve policy, billing, and permission decisions.
+Automations let you save repeatable agent work. You'll start with a manual automation that runs only when you choose. Scheduled, cloud, and issue-triggered automations appear later because they can involve policy, billing, and permission decisions.
 
 ## 🎯 Learning objectives
 
@@ -25,7 +25,7 @@ By the end of this chapter, you'll be able to:
 
 Before starting:
 
-- Complete Chapter 07
+- Complete Chapter 06
 - Open the course repository in the GitHub Copilot app
 - Use `samples/book-app-web` for validation examples
 - Have a GitHub-backed repository if you want live PR or issue summaries
@@ -61,11 +61,11 @@ An automation has four beginner-friendly parts:
 | Tools | What is the least access needed? |
 | Review path | Where do I inspect the result? |
 
-![Automation trigger to agent run](assets/automation-trigger-to-run.png)
+![Automation trigger to agent run](assets/automation-trigger-to-run.webp)
 
 ### Start manual
 
-Manual automations run on demand. They are the safest first step because you can:
+Manual automations run on demand. They're the safest first step because you can:
 
 - test the prompt
 - inspect output
@@ -77,6 +77,8 @@ Manual automations run on demand. They are the safest first step because you can
 
 ## Hands-on example 1: create a manual PR summary automation
 
+This exercise works best after Chapter 04 has created at least one PR. If your training repository has no open PRs yet, skip to the local validation reminder in Hands-on example 3, then come back later.
+
 Create an automation named:
 
 ```text
@@ -84,6 +86,8 @@ Book app PR summary
 ```
 
 Use a manual trigger.
+
+Use this UI path if your app exposes automation creation: open **Automations**, choose **New automation**, select **Manual trigger**, paste the prompt, select the smallest read-only tool set, save, then run it.
 
 - [app-screenshot: New automation form showing trigger choices such as Manual, On a schedule, and When an issue is created.]
 
@@ -208,7 +212,7 @@ Cloud automations can run when your machine is off, but they can depend on:
 
 Use cloud automations only after the manual version works and after you understand the permission model.
 
-![Local versus cloud automations](assets/local-vs-cloud-automations.png)
+![Local versus cloud automations](assets/local-vs-cloud-automations.webp)
 
 - [app-screenshot: ADVANCED: Cloud automation tool selection area showing least-privilege tool choices, with any repository details anonymized.]
 
@@ -282,15 +286,15 @@ Create one manual automation for your own workflow:
 5. Run it once.
 6. Inspect the run history and revise the prompt.
 
-Success criteria: You can explain why the automation is safe to run again.
+Success criteria: You're able to explain why the automation is safe to run again.
 
 ---
 
 ## ➡️ What's next
 
-In Chapter 09, you'll combine the app workflow into a capstone: issue triage, planning, implementation, validation, PR review, and merge readiness. Advanced orchestration stays behind explicit pause points.
+In Chapter 08, you'll combine the app workflow into a capstone: issue triage, planning, implementation, validation, PR review, and merge readiness. Advanced orchestration stays behind explicit pause points.
 
-**[← Back to Chapter 07](../07-canvases/README.md)** | **[Next: Putting It All Together →](../09-putting-it-all-together/README.md)**
+**[← Back to Chapter 06](../06-canvases/README.md)** | **[Next: Putting It All Together →](../08-putting-it-all-together/README.md)**
 
 ---
 

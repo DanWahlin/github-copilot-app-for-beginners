@@ -4,35 +4,36 @@
 
 > **What if every task had its own safe desk, branch, context, and history?**
 
-Sessions are where the GitHub Copilot App stops feeling like ordinary chat. A session can have its own branch, working folder, plan, diff, terminal output, browser preview, and GitHub context. In this chapter, you will start a session from a task, learn why worktrees keep work separated, and practice giving Copilot just enough context.
+Sessions are where the GitHub Copilot App stops feeling like ordinary chat. A session can have its own branch, working folder, plan, diff, terminal output, browser preview, and GitHub context. In this chapter, you'll start a session from a task, learn why worktrees keep work separated, and practice giving Copilot just enough context.
 
 ## 🎯 Learning objectives
 
-By the end of this chapter, you will be able to:
+By the end of this chapter, you'll be able to:
 
 - Start a session from a prompt, issue, or pull request
 - Explain a git worktree in beginner terms
 - Understand why isolated sessions protect your main checkout
 - Use `@` for file and folder context
 - Use `#` for issue or PR context when available
-- Use `/` for app commands
+- Use `/` for app commands and know where to check availability
 - Decide between local repository, new worktree, and cloud sandbox options
 - Recognize branch prefixes and session lifecycle settings
 - Use `/chronicle` to summarize session history
+- Use `/context` to inspect session context and token usage when available
 
-> ⏱️ **Estimated time**: ~45 minutes (20 min reading + 25 min hands-on)
+> ⏱️ **Estimated time**: ~50 minutes (25 min reading + 25 min hands-on)
 
 ---
 
 ## ✅ Prerequisites
 
-Complete Chapters [00](../00-quick-start/README.md) and [01](../01-first-steps/README.md). You should have the course repository connected and understand the difference between Quick chat and a project session.
+Complete Chapters [00](../00-quick-start/README.md) and [01](../01-first-steps/README.md). At this point, you've connected the course repository and understand the difference between Quick chat and a project session.
 
 ---
 
 ## 🧩 Real-world analogy: separate desks for separate projects
 
-Imagine you have one important notebook, but three people need to work on different ideas from it. You would not ask everyone to write on the same page at the same time. You would make separate working copies, label them, and compare the results later.
+Imagine you've got one important notebook, but three people need to work on different ideas from it. You wouldn't ask everyone to write on the same page at the same time. You'd make separate working copies, label them, and compare the results later.
 
 A worktree is like that separate working desk. It is connected to the same repository, but it has its own folder and branch so parallel work does not collide.
 
@@ -51,7 +52,19 @@ A git worktree is a second working directory attached to the same repository. It
 | Tests and diffs can mix together | Diffs stay tied to the session |
 | Harder to compare work | Easier to inspect and approve |
 
-![One repository with many safe worktrees](assets/one-repo-many-worktrees.png)
+![One repository with many safe worktrees](assets/one-repo-many-worktrees.webp)
+
+### Session settings that matter here
+
+Before you run multiple sessions, find the app's session settings you toured in Chapter 01:
+
+| Setting | Why it matters |
+|---|---|
+| Branch prefix | Makes app-created session branches easier to recognize |
+| Session lifecycle | Helps you understand when sessions, branches, or worktrees are reused or cleaned up |
+| Default model and reasoning | Affects speed, quality, and cost for new sessions |
+
+Keep the defaults unless your instructor or team has a reason to change them.
 
 ### Context controls
 
@@ -63,11 +76,79 @@ A git worktree is a second working directory attached to the same repository. It
 
 > Tip: Context controls are not a contest to attach the most information. Give the smallest useful context.
 
+### Slash commands in the app
+
+Slash commands are shortcuts you type in the composer. They can open app utilities, invoke agent behaviors, inspect usage, or trigger installed skills. The safest way to discover what your app supports is to type `/` in the composer and read the palette. Commands vary by app version, plan, enabled plugins, installed skills, and organization policy.
+
+Start with these beginner-safe commands:
+
+| Command | What it's for | Use it when... |
+|---|---|---|
+| `/chronicle` | Summarizes session history and past work | You want a session recap or standup-style summary |
+| `/context` | Opens session context and token usage details when available | You want to see how much context the session is using |
+| `/usage` | Opens usage, rate limit, or credit information when available | You want to understand cost or plan limits |
+| `/rubber-duck` | Asks a critic agent to review a plan, diff, tests, or design | You want a second opinion before accepting work |
+
+<details>
+<summary>Reference: Copilot CLI slash commands and GitHub Copilot App availability</summary>
+
+The `copilot-cli-for-beginners` course lists many Copilot CLI commands. This table compares those commands with App-specific commands learners see in this course. The GitHub Copilot App is built on Copilot CLI, but the desktop app also has its own UI flows. Treat this table as a practical map, not a promise that every command appears in every app build.
+
+| Command | App status | Course placement |
+|---|---|---|
+| `/agent` | Confirmed in the app changelog for selecting custom, user, plugin, project, and remote agents | Chapter 05 |
+| `/ask` | CLI command. Use Quick chat in the app for the same beginner need | Chapter 01 concept |
+| `/chronicle` | Confirmed in GitHub Docs for app sessions | This chapter and Chapter 08 |
+| `/context` | Confirmed in the app changelog for session context, token count, context window, and credit spend | This chapter |
+| `/usage` | Confirmed in the app changelog for usage, rate limits, and plan limits | This chapter |
+| `/rubber-duck` | Confirmed in GitHub Docs and the app changelog | Chapter 03 |
+| `/orchestrate` | Confirmed in the app changelog for coordinating child sessions and multi-repo work | Chapter 08, advanced |
+| `/skills` | Confirmed in the app changelog command palette examples | Chapter 05 |
+| `/collect-debug-logs` | Confirmed in the app README and changelog examples | Chapter 00 troubleshooting |
+| `/agent-merge` | Confirmed in the app changelog as an Agent Merge loop command | Chapter 04 and Chapter 08, advanced |
+| `/create-canvas` | Available when canvas-authoring capabilities are installed or exposed in the app | Chapter 06, advanced |
+| `/remote` | Mentioned in the app changelog command palette examples, but primarily a Copilot CLI remote-control workflow | Advanced appendix or Chapter 08 note only |
+| `/model` | Prefer the app model picker. The CLI command may not be the right teaching path in the app | Chapter 01 via UI |
+| `/plan` | Prefer the app Plan mode selector. The CLI command is not the beginner app path | Chapter 01 via mode selector |
+| `/review` | CLI code-review agent command. In the app, teach review prompts, diff review, Fix actions, and `/rubber-duck` | Chapter 03 |
+| `/pr` | CLI PR command. In the app, use My Work and PR surfaces | Chapter 04 via UI |
+| `/diff` | CLI diff command. In the app, use the Changes or diff surface | Chapter 03 via UI |
+| `/clear`, `/new`, `/resume`, `/rename`, `/session`, `/rewind`, `/share`, `/compact` | CLI session-management commands. The app has visible session, history, and sharing surfaces, so teach the UI first | Chapter 02 concept only |
+| `/env`, `/init`, `/mcp` | CLI configuration commands. The app exposes settings, instructions, MCP, skills, and plugins through settings and project files | Chapters 05 and 06 |
+| `/add-dir`, `/list-dirs`, `/cwd`, `/cd` | CLI directory-permission and working-directory commands. The app uses project/session workspace choices instead | Chapter 02 concept only |
+| `/allow-all`, `/yolo` | CLI permission commands. Do not teach on the beginner app path because they bypass review habits | Not recommended |
+| `/delegate`, `/fleet`, `/tasks` | CLI subagent/cloud-agent commands. The app equivalent is sessions, child sessions, background agents, and `/orchestrate` when available | Chapter 08, advanced |
+| `/memory`, `/keep-alive`, `/statusline`, `/footer`, `/theme`, `/terminal-setup`, `/changelog`, `/feedback`, `/voice`, `/help`, `/exit` | CLI convenience commands. The app has settings, menus, command palette, voice settings, feedback controls, and window/session UI for these needs | Mention only if the app palette shows them |
+| `/research` | CLI deep-research command. Use normal prompts, installed skills, or approved web/documentation tools when available in the app | Optional, not required |
+| `/skill-name` such as `/security-audit` or `/generate-tests` | Skill-provided commands vary by installed skills. Use `/skills` or the slash palette to discover them | Chapter 05 |
+
+When in doubt, type `/` and trust the in-app palette over a printed list.
+
+</details>
+
+### Practice branches in this course
+
+Some later exercises use setup-script branches such as `practice-empty-state-copy`, `practice-unread-count-bug`, and `practice-search-case-bug`. Those branches contain intentional regressions or training changes.
+
+Before starting one of those exercises, make sure the session is based on the named branch:
+
+1. If the app lets you choose a branch or worktree base, choose the named practice branch.
+2. If the app uses your local checkout, switch your local clone first:
+
+   ```bash
+   git switch practice-empty-state-copy
+   git status
+   ```
+
+3. Confirm `git status` shows the expected branch before asking Copilot to inspect or fix the scenario.
+
+Use the branch name shown in the chapter you're working through.
+
 ---
 
 ## Hands-on example 1: start a session from a task
 
-The default sample app is stable. To practice a real planning workflow without overlapping the Chapter 03 debugging example, first read Issue 3 in [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-3-improve-the-empty-state-copy). This issue asks for clearer empty-state copy.
+The default sample app is stable. To practice a real planning workflow without overlapping the Chapter 03 debugging example, first read Issue 3 in [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-3-improve-the-empty-state-copy). This issue asks for clearer empty-state copy. Use the `practice-empty-state-copy` branch created by the setup script, or manually apply Issue 3's training-branch setup before this exercise. Follow the practice branch note above before starting the session.
 
 Create a new session in Plan mode and use this exact learner prompt:
 
@@ -85,7 +166,7 @@ Copilot should identify likely files to inspect, describe the current behavior, 
 
 ### Success check
 
-You can find the session in the app and identify whether it is using a worktree, local repository, or cloud sandbox.
+You'll find the session in the app and identify whether it's using a worktree, local repository, or cloud sandbox.
 
 ---
 
@@ -109,7 +190,7 @@ The `@` reference narrows context. It helps Copilot spend attention on the files
 
 ## Hands-on example 3: start from an issue
 
-If your training repository includes seeded issues, open Issue 3 from [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-3-improve-the-empty-state-copy) and start a session from it.
+If your training repository includes seeded issues, open Issue 3 from [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-3-improve-the-empty-state-copy) and start a session from it. If you skipped the setup script, paste the issue text into the session prompt instead.
 
 Use this exact learner prompt after the issue context is loaded:
 
@@ -146,6 +227,13 @@ git status
 
 Git should show the current branch and whether files are modified.
 
+Example clean output looks like this:
+
+```text
+On branch practice-empty-state-copy
+nothing to commit, working tree clean
+```
+
 > Note: Do not delete an active worktree from Finder, Explorer, or terminal. Clean up sessions through the app when possible.
 
 ---
@@ -164,6 +252,26 @@ Copilot should summarize what happened in the session and what decisions or chan
 
 > Demo output varies. Use `/chronicle` as a reflection aid, not as the only record of truth.
 
+---
+
+## Hands-on example 6: check session context with `/context`
+
+Type:
+
+```text
+/context
+```
+
+### Expected output
+
+If your app version supports it, Copilot opens or summarizes session context details such as token count, context window, and usage information.
+
+If `/context` is not available, open the slash command palette and look for a similar usage or context command. App commands change over time, so the palette is the source of truth.
+
+### How it works
+
+Context is the material Copilot is using for the current session. Checking it helps you notice when a session is getting too broad before you add more files, issues, or instructions.
+
 <details>
 <summary>Intermediate: local repository, new worktree, and cloud sandbox tradeoffs</summary>
 
@@ -173,7 +281,7 @@ Copilot should summarize what happened in the session and what decisions or chan
 | New worktree | Most course exercises and parallel work | Ports, databases, and background processes are still shared |
 | Cloud sandbox | Isolated GitHub-hosted work when available | Requires plan, policy, repository settings, and possible billing awareness |
 
-![Where a session should run](assets/session-run-location-comparison.png)
+![Where a session should run](assets/session-run-location-comparison.webp)
 
 </details>
 
@@ -240,7 +348,7 @@ This can happen if the folder was moved or deleted outside the app. Prefer app-m
 2. Worktrees keep session changes separate from your main checkout.
 3. `@`, `#`, and `/` help you control context and commands.
 4. Cloud sandboxes are useful when available, but they are not required for the beginner path.
-5. `/chronicle` helps summarize session history.
+5. `/chronicle`, `/context`, and `/usage` help summarize session history and inspect context or usage when available.
 
 ---
 
@@ -263,7 +371,7 @@ Then answer:
 
 ## ➡️ What's next
 
-In Chapter 03, you will use the app for real development workflows: review, debugging, tests, terminal validation, browser preview, and UI polish.
+In Chapter 03, you'll use the app for real development workflows: review, debugging, tests, terminal validation, browser preview, and UI polish.
 
 **[← Back to Chapter 01](../01-first-steps/README.md)** | **[Continue to Chapter 03 →](../03-development-workflows/README.md)**
 

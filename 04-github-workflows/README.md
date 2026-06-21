@@ -4,11 +4,11 @@
 
 > **What if issues, pull requests, review comments, checks, and merge readiness lived in the same supervised workflow?**
 
-The GitHub Copilot App also helps you move work through GitHub: issues, pull requests, review comments, failing checks, and merge readiness. In this chapter, you will use My Work as your issue and pull request inbox, start sessions from GitHub context, review diffs, and use Fix actions safely.
+The GitHub Copilot App also helps you move work through GitHub: issues, pull requests, review comments, failing checks, and merge readiness. In this chapter, you'll use My Work as your issue and pull request inbox, start sessions from GitHub context, review diffs, and use Fix actions safely.
 
 ## 🎯 Learning objectives
 
-By the end of this chapter, you will be able to:
+By the end of this chapter, you'll be able to:
 
 - Use My Work as an issue and pull request inbox
 - Filter issues and PRs with search qualifiers
@@ -26,7 +26,7 @@ By the end of this chapter, you will be able to:
 
 Complete Chapters [00](../00-quick-start/README.md) through [03](../03-development-workflows/README.md).
 
-For the full hands-on flow, use a GitHub-backed training repository with seeded issues and PR scenarios. If you are self-paced, follow the [Training GitHub Scenarios setup guide](../appendices/training-github-scenarios.md) before starting this chapter. If you do not have permission to create PRs, read the steps and use screenshots or instructor-provided examples.
+For the full hands-on flow, use a GitHub-backed training repository with seeded issues and PR scenarios. If you're self-paced, follow the [Training GitHub Scenarios setup guide](../appendices/training-github-scenarios.md) before starting this chapter. If you don't have permission to create PRs, read the steps and use screenshots or instructor-provided examples.
 
 ---
 
@@ -46,7 +46,7 @@ My Work is similar. It helps you see what needs attention before you launch, rev
 | Fix action | A guided action that asks Copilot to address a review comment or failing check |
 | CI check | An automated validation run, often from GitHub Actions |
 
-![Issue to pull request workflow](assets/issue-to-merged-pr.png)
+![Issue to pull request workflow](assets/issue-to-merged-pr.webp)
 
 ---
 
@@ -73,13 +73,13 @@ repo:your-org-or-user/github-copilot-app-for-beginners is:pr is:open
 
 ### Success check
 
-You can explain whether a missing issue or PR is more likely caused by filters, permissions, repository selection, or organization policy.
+You're able to explain whether a missing issue or PR is more likely caused by filters, permissions, repository selection, or organization policy.
 
 ---
 
 ## Hands-on workflow 2: start from an issue
 
-Open a seeded issue for the sample app. Choose Issue 1 from [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-1-make-search-case-insensitive) and use its training-branch setup before asking Copilot to fix it:
+Open a seeded issue for the sample app. Choose Issue 1 from [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-1-make-search-case-insensitive) and use the `practice-search-case-bug` branch created by the setup script. If you skipped the script, manually apply Issue 1's training-branch diff before asking Copilot to fix it. If you're unsure how to base the session on that branch, use the [Chapter 02 practice branch note](../02-sessions-worktrees-context/README.md#practice-branches-in-this-course):
 
 ```text
 Search should be case-insensitive in samples/book-app-web
@@ -129,17 +129,17 @@ Copilot should draft a PR summary that you can edit before submitting.
 
 ---
 
-## Hands-on workflow 4: respond to a review comment
+## Hands-on workflow 4: respond to a PR conversation comment
 
-Open a PR with a safe review comment, such as clearer empty-state copy.
+Open the PR conversation comment from [PR scenario 1](../samples/app-course-pr-scenarios.md#pr-scenario-1-review-comment-asks-for-clearer-empty-state-copy), which asks for clearer empty-state copy.
 
 Use this exact learner prompt:
 
 ```text
-Review this PR comment and propose the smallest change that addresses it. Show me the diff and validation plan before I accept the fix.
+Review this PR conversation comment and propose the smallest change that addresses it. Show me the diff and validation plan before I accept the fix.
 ```
 
-- [app-screenshot: Review comment or failing CI check with Copilot Fix action visible.]
+- [app-screenshot: PR conversation comment, review comment, or failing CI check, with a Copilot Fix action visible if your app exposes one.]
 
 ### Expected output
 
@@ -147,13 +147,13 @@ Copilot should connect the comment to the relevant file, propose a focused fix, 
 
 ### Success check
 
-You can explain whether the comment is fully addressed and whether the fix changes anything unrelated.
+You're able to explain whether the comment is fully addressed and whether the fix changes anything unrelated.
 
 ---
 
 ## Hands-on workflow 5: fix a failing check safely
 
-Open a PR with a failing check or use an instructor-provided example.
+Open [PR scenario 2](../samples/app-course-pr-scenarios.md#pr-scenario-2-failing-ci-points-to-the-stats-test), which should fail the `Book app web` workflow, or use an instructor-provided example.
 
 Use this exact learner prompt:
 
@@ -169,6 +169,8 @@ Copilot should summarize the failing check and suggest a minimal fix.
 
 When the failure is related to the sample app, run:
 
+From the repository root:
+
 ```bash
 cd samples/book-app-web
 npm test -- --run
@@ -182,7 +184,7 @@ Do not mark the PR ready until local validation and CI evidence agree.
 
 Agent Merge is an advanced finishing workflow. It can help carry a pull request through review comments, checks, and merge requirements in a safe training scenario, but it is not a substitute for understanding the work.
 
-![Human judgment stays in the loop](assets/human-judgment-loop.png)
+![Human judgment stays in the loop](assets/human-judgment-loop.webp)
 
 - [app-screenshot: ADVANCED: Agent Merge control or merge drawer in a safe training repository before enabling it.]
 
@@ -197,11 +199,11 @@ Use Agent Merge only when:
 
 Do not use Agent Merge when:
 
-- You do not understand the diff
+- You don't understand the diff
 - Checks are missing, flaky, or unrelated
 - The PR touches secrets, auth, permissions, billing, production data, or deployment logic
 - Your organization policy does not allow it
-- You are working in a public or upstream repository where you lack merge rights
+- You're working in a public or upstream repository where you lack merge rights
 
 Exact learner prompt for a safe orientation:
 
@@ -210,6 +212,14 @@ Explain whether this training PR is a good candidate for Agent Merge. Consider d
 ```
 
 > Demo output varies. Treat the response as a checklist, not permission to merge.
+
+If your app version exposes `/agent-merge`, treat it as an advanced entry point to the same workflow:
+
+```text
+/agent-merge
+```
+
+Run it only in the training fork after you've reviewed the PR diff, checks, comments, branch protection, and merge rules.
 
 </details>
 
@@ -300,9 +310,9 @@ Then answer:
 
 ## ➡️ What's next
 
-Chapter 05 will show how settings and instructions make app sessions safer, more consistent, and easier to review.
+Chapter 05 will show how repo-local skills add reusable review guidance without adding external tools.
 
-**[← Back to Chapter 03](../03-development-workflows/README.md)** | **[Continue to Chapter 05 →](../05-settings-and-instructions/README.md)**
+**[← Back to Chapter 03](../03-development-workflows/README.md)** | **[Continue to Chapter 05 →](../05-skills-mcp-plugins/README.md)**
 
 ---
 

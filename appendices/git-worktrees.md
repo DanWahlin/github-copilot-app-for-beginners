@@ -33,7 +33,7 @@ For example, one session can fix a search bug while another session writes tests
 
 ## Safe inspection checklist
 
-Use this checklist when you want to look at a session worktree.
+Use this checklist when you'd like to look at a session worktree.
 
 1. Find the session in the Copilot App.
 2. Note the branch name and worktree path shown by the app.
@@ -52,7 +52,7 @@ npm test -- --run
 npm run build
 ```
 
-If you are inside a session worktree, run those commands from that worktree's `samples/book-app-web` folder.
+If you're inside a session worktree, run those commands from that worktree's `samples/book-app-web` folder.
 
 ## What not to do
 
@@ -84,7 +84,7 @@ If two worktrees both start the app on port `5173`, the second one may fail or c
 npm run dev -- --host 127.0.0.1 --port 5174
 ```
 
-Label browser tabs or canvas previews so you know which session you are viewing.
+Label browser tabs or canvas previews so you know which session you're viewing.
 
 ### Example: shared local files
 

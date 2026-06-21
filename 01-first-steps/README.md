@@ -4,14 +4,15 @@
 
 > **What if you knew which app surface to use before you typed your next prompt?**
 
-Now that the app is installed and connected to the course repository, it is time for the control-room tour. You will walk through the main navigation areas, compare Quick chats with project sessions, and see how session modes change Copilot's level of autonomy.
+Now that the app is installed and connected to the course repository, it's time for the control-room tour. You'll walk through the main navigation areas, compare Quick chats with project sessions, and see how session modes change Copilot's level of autonomy.
 
 ## 🎯 Learning objectives
 
-By the end of this chapter, you will be able to:
+By the end of this chapter, you'll be able to:
 
 - Navigate My Work, Automations, Search, Sessions, and Quick chats
 - Locate major settings areas such as General, Sessions, Projects, Skills, Voice dictation, and accessibility or keyboard shortcuts
+- Identify beginner-safe settings that affect safety, context, productivity, speed, and cost
 - Choose between Quick chat and a project session
 - Explain Interactive, Plan, and Autopilot
 - Select a model and reasoning effort based on task complexity
@@ -42,7 +43,7 @@ The Copilot App works the same way:
 
 ### Quick chat versus project session
 
-| Use this | When you want to... | Creates branch or worktree? |
+| Use this | When you're trying to... | Creates branch or worktree? |
 |---|---|---|
 | Quick chat | Ask questions, brainstorm, summarize, orient yourself | No |
 | Project session | Plan, inspect, edit, test, or create PR-ready work | Usually yes, depending on session settings |
@@ -55,7 +56,7 @@ The Copilot App works the same way:
 | Plan | Copilot proposes before executing | Changes where approach matters |
 | Autopilot | Copilot works more independently | Clear, low-risk tasks with obvious checks |
 
-![Session mode decision ladder](assets/session-mode-decision-ladder.png)
+![Session mode decision ladder](assets/session-mode-decision-ladder.webp)
 
 > Note: Session modes are autonomy settings, not skill levels. Beginners can use Plan mode early because it creates a review checkpoint before work starts.
 
@@ -71,7 +72,7 @@ Find these areas in the sidebar:
 4. Sessions
 5. Quick chats
 
-![Mission control view for agent sessions](assets/mission-control-sessions.png)
+![Mission control view for agent sessions](assets/mission-control-sessions.webp)
 
 - [app-screenshot: Main app sidebar with My Work, Automations, Search, Sessions, and Quick chats visible.]
 
@@ -86,6 +87,21 @@ Then open Settings and locate:
 
 - [app-screenshot: Settings area showing the major categories such as General, Sessions, Projects, Skills, Voice dictation, and Accessibility or keyboard shortcuts. If Model Context Protocol (MCP) servers, Plugins, or Model providers are visible, label them as INTERMEDIATE orientation topics rather than required setup.]
 
+![Safe settings map for the GitHub Copilot App](assets/safe-settings-map.webp)
+
+Use this beginner-safe settings checklist:
+
+| Setting area | What to notice now |
+|---|---|
+| General | Theme and notification preferences |
+| Sessions | Default model, reasoning effort, branch prefix, and session lifecycle settings |
+| Projects | Project-specific settings for this repository |
+| Skills | Where skills are managed, without changing anything yet |
+| Voice dictation | Microphone permission, shortcut setup, and review-before-send behavior |
+| Accessibility or shortcuts | Three shortcuts you'd like to practice |
+
+Don't change settings you don't understand yet. The goal is to know where controls live before later chapters depend on them.
+
 <details>
 <summary>Intermediate: settings you only need to recognize for now</summary>
 
@@ -97,7 +113,7 @@ For now, just remember:
 - Plugins can add bundled capabilities.
 - Model providers can affect which models are available.
 
-You will revisit these later in the course.
+You'll revisit these later in the course. Never screenshot tokens, API keys, private provider URLs, or organization-specific settings.
 
 </details>
 
@@ -119,7 +135,7 @@ Copilot should suggest safe exploration tasks such as explaining structure, iden
 
 ### How it works
 
-Quick chat helps you learn without starting a branch. It is a good first stop when you are unsure what to ask.
+Quick chat helps you learn without starting a branch. It's a good first stop when you're unsure what to ask.
 
 ---
 
@@ -130,13 +146,13 @@ Create three small sessions or use one session with mode changes if your app ver
 ### Plan mode prompt
 
 ```text
-Plan how you would investigate the unread count bug in samples/book-app-web. Do not edit files.
+Plan how you'd investigate a hypothetical unread count bug in samples/book-app-web. You'll seed and fix a real one in Chapter 03. Don't edit files.
 ```
 
 ### Interactive mode prompt
 
 ```text
-Walk me through the files you would inspect for the unread count bug in samples/book-app-web. Ask before suggesting any code change.
+Walk me through the files you'd inspect for a hypothetical unread count bug in samples/book-app-web. Ask before suggesting any code change.
 ```
 
 ### Autopilot orientation prompt
@@ -149,7 +165,9 @@ Explain when Autopilot would be appropriate for a small documentation-only task 
 
 ### Expected output
 
-You should notice that Plan mode emphasizes an approach, Interactive mode encourages step-by-step steering, and Autopilot is framed as higher autonomy.
+You'll notice that Plan mode emphasizes an approach, Interactive mode encourages step-by-step steering, and Autopilot is framed as higher autonomy.
+
+For this course, keep the default model and reasoning effort unless a chapter says otherwise. Increase reasoning for harder planning or debugging work. Use lower reasoning for simple summaries.
 
 ---
 
@@ -161,11 +179,11 @@ Use the app Search view to find:
 samples/book-app-web
 ```
 
-Then open keyboard shortcuts from Help and identify three shortcuts you want to practice.
+Then open keyboard shortcuts from Help and identify three shortcuts you'd like to practice.
 
 ### Success check
 
-You can explain where to find a file, where to change settings, and where to start a new session.
+You're able to explain where to find a file, where to change settings, and where to start a new session.
 
 ---
 
@@ -184,13 +202,15 @@ Open voice dictation settings and identify:
 
 Voice dictation turns speech into editable prompt text. You still review the text before sending it, which is important when prompts can start agent work.
 
+If voice dictation is unavailable in your app, skip this exercise and note which setting or permission is missing.
+
 ---
 
 ## Notes and tips
 
-- Use Quick chat when you want to learn before acting.
+- Use Quick chat when you're learning before acting.
 - Use Plan when the approach matters.
-- Use Interactive when you want to steer closely.
+- Use Interactive when you'd like to steer closely.
 - Use Autopilot only for clear, bounded tasks with safe validation.
 - Model and reasoning choices affect speed, quality, and cost. Use enough capability for the task, but not more than needed.
 
@@ -232,16 +252,16 @@ Check your plan, organization policy, project settings, and app version.
 
 Create a small mode decision note for yourself:
 
-1. Write one task you would do in Quick chat.
-2. Write one task you would do in Plan mode.
-3. Write one task you would do in Interactive mode.
-4. Write one task you would not give to Autopilot yet, and explain why.
+1. Write one task you'd do in Quick chat.
+2. Write one task you'd do in Plan mode.
+3. Write one task you'd do in Interactive mode.
+4. Write one task you wouldn't give to Autopilot yet, and explain why.
 
 ---
 
 ## ➡️ What's next
 
-In Chapter 02, you will start real sessions, learn what worktrees are, and practice giving Copilot focused context with `@`, `#`, and `/`.
+In Chapter 02, you'll start real sessions, learn what worktrees are, and practice giving Copilot focused context with `@`, `#`, and `/`.
 
 **[← Back to Chapter 00](../00-quick-start/README.md)** | **[Continue to Chapter 02 →](../02-sessions-worktrees-context/README.md)**
 

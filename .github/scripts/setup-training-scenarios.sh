@@ -9,7 +9,7 @@ This script seeds a fork or disposable training repository with:
 - course issue labels
 - five seeded issues
 - practice branches with intentional regressions
-- pull requests for review-comment, failing-check, and merge-readiness lessons
+- pull requests for conversation-comment, failing-check, and merge-readiness lessons
 - a PR comment for the empty-state copy review scenario
 
 Run it from the repository root after you fork and clone the course repo.
@@ -87,6 +87,7 @@ fi
 REPO="$(gh repo view --json nameWithOwner --jq '.nameWithOwner')"
 DEFAULT_BRANCH="$(gh repo view --json defaultBranchRef --jq '.defaultBranchRef.name')"
 START_BRANCH="$(git branch --show-current || true)"
+GH_USER="$(gh api user --jq '.login')"
 
 if [[ -z "$DEFAULT_BRANCH" ]]; then
   echo "Could not determine the repository default branch." >&2
@@ -144,7 +145,7 @@ ensure_issue() {
   body_file="$(mktemp)"
   printf '%s\n' "$body" > "$body_file"
 
-  local args=(issue create --title "$title" --body-file "$body_file")
+  local args=(issue create --title "$title" --body-file "$body_file" --assignee "$GH_USER")
   IFS=',' read -ra labels <<< "$labels_csv"
   for label in "${labels[@]}"; do
     args+=(--label "$label")
@@ -392,7 +393,7 @@ Repro:
 
 Expected result: The message explains that no matching books were found and suggests changing filters.
 
-Learner goal: Use a PR review comment to request clearer copy, then ask Copilot to address the comment."
+Learner goal: Use a PR conversation comment to request clearer copy, then ask Copilot to address the comment."
 
 ensure_issue "Polish book card spacing and responsive layout" "ui,responsive,book-app-web" \
 "Book cards should have clear hierarchy, comfortable spacing, and a useful mobile layout.
@@ -431,7 +432,7 @@ empty_pr="$(ensure_pr "fix-empty-state-copy" "Improve empty-state copy" \
 "This PR updates the empty state shown when filters match no books.
 
 Course use:
-- Practice responding to a review comment.
+- Practice responding to a PR conversation comment.
 - Ask Copilot for the smallest safe improvement.
 - Inspect the diff before accepting changes.")"
 

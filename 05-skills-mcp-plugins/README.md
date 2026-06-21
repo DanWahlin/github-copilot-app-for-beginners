@@ -1,12 +1,12 @@
-![Chapter 06: Skills, Model Context Protocol Servers, and Plugins](assets/chapter-header.svg)
+![Chapter 05: Skills, Model Context Protocol Servers, and Plugins](assets/chapter-header.svg)
 
-# Chapter 06: Skills, Model Context Protocol (MCP) Servers, and Plugins
+# Chapter 05: Skills, Model Context Protocol (MCP) Servers, and Plugins
 
 > **What if Copilot could reuse your team's review checklist without gaining any new external access?**
 
 This chapter starts with the safest extension point: repo-local skills. A skill is reusable guidance stored in the repository. It helps Copilot approach a task consistently while keeping the beginner path local, reviewable, and credential-free.
 
-Model Context Protocol (MCP) servers, plugins, model providers, and custom agents are useful too, but they introduce extra setup, permissions, or policy decisions. You will see them later in collapsible optional sections.
+Model Context Protocol (MCP) servers, plugins, model providers, and custom agents are useful too, but they introduce extra setup, permissions, or policy decisions. You'll see them later in collapsible optional sections.
 
 ## 🎯 Learning objectives
 
@@ -15,6 +15,7 @@ By the end of this chapter, you'll be able to:
 - Explain when skills are useful
 - Inspect the repo-local `book-app-reviewer` skill included with the course
 - Use a skill-guided review prompt in a Copilot app session
+- Use `/skills` or the slash palette to discover available skills when supported
 - Explain the difference between reusable expertise and optional external tool access
 - Choose least-context and least-tool setups
 - Locate, but not depend on, optional MCP server, plugin, model provider, and custom agent settings
@@ -27,7 +28,7 @@ By the end of this chapter, you'll be able to:
 
 Before starting:
 
-- Complete Chapter 05
+- Complete Chapter 04
 - Have the course repository open in the GitHub Copilot app
 - Use `samples/book-app-web` for all hands-on prompts
 - Keep the beginner path repo-local
@@ -62,9 +63,11 @@ Skills package task-specific instructions in a folder with a `SKILL.md` file.
 | Plugins | Bundled capabilities that may include tools, skills, or agents | No |
 | Custom agents | Specialized roles selected with `/agent` | No |
 
-![Extending the GitHub Copilot App](assets/extending-copilot-app.png)
+![Extending the GitHub Copilot App](assets/extending-copilot-app.webp)
 
 - [app-screenshot: Skills settings showing installed or available skills.]
+
+This may appear under Settings, Skills, Plugins, or Agents depending on your app version.
 
 > 💡 **Tip**: A skill changes how Copilot approaches work. It does not automatically give Copilot access to new external systems.
 
@@ -103,7 +106,15 @@ Open that file and confirm it includes guidance for:
 - testing and validation commands
 - safe, focused changes
 
-If you want to rebuild it manually for practice, copy the existing file to a scratch folder first. Do not overwrite the course copy during the beginner path.
+If your app shows `/skills` in the slash command palette, use it as an optional discovery step:
+
+```text
+/skills list
+```
+
+The output should show skills Copilot can find from built-in, user, plugin, or project locations. If `/skills` is not available, continue by inspecting the repo-local skill file directly.
+
+If you'd like to rebuild it manually for practice, copy the existing file to a scratch folder first. Don't overwrite the course copy during the beginner path.
 
 ### Expected result
 
@@ -112,6 +123,10 @@ You now know what the skill tells Copilot to care about before it reviews `sampl
 ### How it works
 
 Copilot can use the skill when your prompt matches the skill description. You can also refer to the skill by name in your prompt.
+
+Some installed skills also appear as direct slash commands, such as `/skill-name`. Those commands vary by environment, so treat the slash palette as the source of truth.
+
+If you're unsure whether the skill was used, explicitly name `book-app-reviewer` in the prompt and ask Copilot which checklist items from the skill it considered.
 
 ---
 
@@ -179,7 +194,7 @@ Beginner rule:
 | Do I need GitHub issue or PR data? | Use built-in GitHub integration when available |
 | Do I need third-party docs or tools? | Add only the MCP server required for the task |
 
-![Give the agent only what it needs](assets/least-tool-principle.png)
+![Give the agent only what it needs](assets/least-tool-principle.webp)
 
 - [app-screenshot: INTERMEDIATE: MCP servers settings showing built-in, plugin, or on-device server grouping.]
 
@@ -188,11 +203,20 @@ If an MCP server does not work, check authentication, environment variables, ena
 </details>
 
 <details>
-<summary>Intermediate: plugins and model providers are orientation-only here</summary>
+<summary>Intermediate: plugins, model providers, and model strategy are orientation-only here</summary>
 
 Plugins can bundle capabilities such as tools, skills, agents, or canvas extensions. Model providers can affect which models are available to sessions.
 
-Do not require plugin installation for this chapter. Instead, learn where the controls are and how to disable capabilities you do not need.
+Don't require plugin installation for this chapter. Instead, learn where the controls are and how to disable capabilities you don't need.
+
+Beginner model strategy:
+
+| Task | Suggested approach |
+|---|---|
+| Quick explanation | Use a faster model and lower reasoning |
+| Planning a code change | Use enough reasoning to compare options |
+| Debugging failing tests | Use a stronger model if the failure is subtle |
+| Large multi-file change | Keep context tight before increasing model capability |
 
 - [app-screenshot: INTERMEDIATE: Plugins settings showing install/manage/enable/disable controls.]
 
@@ -210,7 +234,7 @@ Least-tool principle:
 
 Custom agents are specialized roles. They are useful when you repeatedly need a persona such as security reviewer, documentation writer, or release manager.
 
-Use `/agent` only after you can explain why a role is better than a skill for the task.
+Use `/agent` only after you're able to explain why a role is better than a skill for the task.
 
 - [app-screenshot: ADVANCED: `/agent` picker showing available built-in, custom, plugin, or user agents, with personal details hidden.]
 
@@ -270,15 +294,15 @@ Improve the `book-app-reviewer` skill:
 3. Ask Copilot to review the skill for clarity.
 4. Use the skill in a Plan-mode prompt against `@samples/book-app-web`.
 
-Success criteria: You can explain why the required exercise uses a repo-local skill instead of MCP, plugins, or custom agents.
+Success criteria: You're able to explain why the required exercise uses a repo-local skill instead of MCP, plugins, or custom agents.
 
 ---
 
 ## ➡️ What's next
 
-In Chapter 07, you'll inspect a prepared canvas concept to see how agent work can become visible and steerable. Creating canvases is saved for an advanced section.
+In Chapter 06, you'll inspect a prepared canvas concept to see how agent work can become visible and steerable. Creating canvases is saved for an advanced section.
 
-**[← Back to Chapter 05](../05-settings-and-instructions/README.md)** | **[Next: Canvases →](../07-canvases/README.md)**
+**[← Back to Chapter 04](../04-github-workflows/README.md)** | **[Next: Canvases →](../06-canvases/README.md)**
 
 ---
 

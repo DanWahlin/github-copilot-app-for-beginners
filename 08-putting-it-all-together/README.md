@@ -1,10 +1,10 @@
-![Chapter 09: Putting It All Together](assets/chapter-header.svg)
+![Chapter 08: Putting It All Together](assets/chapter-header.svg)
 
-# Chapter 09: Putting It All Together
+# Chapter 08: Putting It All Together
 
 > **Now you get to run the whole workflow without losing control.**
 
-You have worked through the pieces: sessions, worktrees, context, development loops, GitHub workflows, settings, skills, canvases, and automations. This final chapter combines them into a capstone workflow from issue triage to pull request readiness.
+You've worked through the pieces: settings orientation, sessions, worktrees, context, development loops, GitHub workflows, skills, canvases, and automations. This final chapter combines them into a capstone workflow from issue triage to pull request readiness.
 
 The beginner path uses one session first. Parallel sessions, Model Context Protocol (MCP), automations, and Agent Merge appear inside advanced or capstone sections with explicit pause points.
 
@@ -15,7 +15,8 @@ By the end of this chapter, you'll be able to:
 - Move from issue triage to implementation to review to merge readiness
 - Delegate independent work safely when appropriate
 - Use instructions, rubber duck, canvases, and GitHub integration together
-- Recognize pause points where you should inspect before increasing autonomy
+- Use `/chronicle` to summarize work and understand cost tips
+- Recognize pause points where you'll inspect before increasing autonomy
 - Explain when advanced orchestration is helpful and when it adds risk
 
 > ⏱️ **Estimated time**: ~75 minutes (20 min reading + 55 min hands-on)
@@ -26,10 +27,10 @@ By the end of this chapter, you'll be able to:
 
 Before starting:
 
-- Complete Chapters 00 through 08
+- Complete Chapters 00 through 07
 - Use the course repository in the GitHub Copilot app
 - Use `samples/book-app-web` as the sample app path
-- Have the repo-local skill from Chapter 06 available if you completed that exercise
+- Have the repo-local skill from Chapter 05 available if you completed that exercise
 - Use a GitHub-backed training repository for PR and issue work. Self-paced learners should follow the [Training GitHub Scenarios setup guide](../appendices/training-github-scenarios.md) first.
 
 ---
@@ -66,7 +67,7 @@ Use this loop whenever agent work becomes more than a quick question:
 8. Fix feedback
 9. Decide merge readiness
 
-![End-to-end GitHub Copilot App workflow](assets/end-to-end-workflow.png)
+![End-to-end GitHub Copilot App workflow](assets/end-to-end-workflow.webp)
 
 ### Pause points
 
@@ -102,11 +103,11 @@ Demo output varies.
 
 ### Expected result
 
-You should have one clear task, one likely area of the app, and no code changes yet.
+You've got one clear task, one likely area of the app, and no code changes yet.
 
 ### Pause point 1
 
-Do not start implementation until you can answer:
+Don't start implementation until you can answer:
 
 - What behavior or UI copy is changing?
 - Which files are likely involved?
@@ -122,7 +123,7 @@ Start a session from the issue or prompt in Plan mode:
 Plan a small improvement to the empty-state copy in @samples/book-app-web. Include files to inspect, validation commands, and a pause before implementation.
 ```
 
-If you created the Chapter 06 skill, ask:
+If you created the Chapter 05 skill, ask:
 
 ```text
 Use the book-app-reviewer skill while planning this change.
@@ -202,7 +203,7 @@ The PR description should mention:
 - validation commands run
 - any browser screenshot needed
 
-- [app-screenshot: Final PR ready to merge with checks passing and ADVANCED: Agent Merge or merge controls visible in a safe repository.]
+- [app-screenshot: Final PR summary, checks, and diff ready for human review in a safe repository.]
 
 Demo output varies.
 
@@ -220,6 +221,12 @@ Use the app to inspect review comments or failing checks. Then ask:
 Explain the review comment or failing check in beginner-friendly language. Propose the smallest fix. Do not edit files yet.
 ```
 
+If you don't have a real review comment or failing check, use this fallback prompt:
+
+```text
+Simulate one realistic review comment for this change. Then explain the smallest safe fix. Do not edit files yet.
+```
+
 After you approve the plan, let Copilot implement the fix and rerun validation:
 
 ```bash
@@ -230,7 +237,7 @@ npm run build
 
 ### Expected result
 
-You should see a tighter diff that addresses the feedback without expanding scope.
+You'll see a tighter diff that addresses the feedback without expanding scope.
 
 ---
 
@@ -257,11 +264,11 @@ Safe delegation checklist:
 </details>
 
 <details>
-<summary>Advanced: parallel sessions with explicit pause points</summary>
+<summary>Advanced: parallel sessions and `/orchestrate` with explicit pause points</summary>
 
-Parallel sessions can save time, but they can collide.
+Parallel sessions can save time, but they can collide. The `/orchestrate` command, when available, lets the agent coordinate multi-session or multi-repo work by delegating tasks to child sessions instead of doing everything inline.
 
-![Parallel sessions without collisions](assets/parallel-sessions-without-collisions.png)
+![Parallel sessions without collisions](assets/parallel-sessions-without-collisions.webp)
 
 Use this pattern:
 
@@ -273,6 +280,14 @@ Use this pattern:
 6. Compare diffs before combining.
 
 If two sessions modify the same files, expect merge conflicts or duplicated work. Pause one session, review diffs, and decide which branch is the source of truth.
+
+Optional advanced prompt:
+
+```text
+/orchestrate Split this capstone into two independent child sessions: one session may inspect empty-state copy, and one session may draft documentation notes. Do not let either child session edit files until I approve the scopes.
+```
+
+Use `/orchestrate` only after you can describe the child-session boundaries yourself. If the command is not available, create separate sessions manually and keep the same pause points.
 
 </details>
 
@@ -297,7 +312,7 @@ Do not add broad tool access just because it is available.
 <details>
 <summary>Advanced: Agent Merge after human review</summary>
 
-Agent Merge is a finishing workflow, not a replacement for understanding the work.
+Agent Merge is a finishing workflow, not a replacement for understanding the work. Some app builds expose `/agent-merge` as a command for enabling the Agent Merge loop. Treat it as an advanced entry point, not as permission to merge.
 
 Use it only after:
 
@@ -314,6 +329,29 @@ Pause before enabling it. If the final PR is blocked, triage in this order:
 3. required reviews
 4. branch protection
 5. Agent Merge configuration
+
+If you use `/agent-merge`, type it only after the checks above are true and your training repository is safe for the exercise.
+
+</details>
+
+<details>
+<summary>Optional: summarize the capstone with `/chronicle`</summary>
+
+At the end of the capstone, use `/chronicle` to reflect on what happened:
+
+If `/chronicle` appears in your slash command palette, try these prompts. If it does not, summarize the capstone manually.
+
+```text
+/chronicle standup
+```
+
+If you'd like to understand expensive patterns in your session usage, try:
+
+```text
+/chronicle cost tips
+```
+
+These summaries help you spot long-running sessions, repeated rework, and places where tighter context would have helped.
 
 </details>
 
@@ -376,7 +414,7 @@ Complete the capstone with a small issue in `samples/book-app-web`:
 8. Draft or create a PR.
 9. Respond to one review comment or simulated feedback item.
 
-Success criteria: You can walk from issue triage to validated PR readiness without losing the pause points.
+Success criteria: You're able to walk from issue triage to validated PR readiness without losing the pause points.
 
 ---
 
@@ -390,7 +428,7 @@ You now know how to use the GitHub Copilot app as an agent-driven development co
 | Context | Use prompts, files, issues, and instructions intentionally |
 | Development | Validate with tests, builds, browser previews, and diffs |
 | GitHub | Review issues, PRs, checks, and feedback |
-| Customization | Use settings, instructions, and skills |
+| Customization | Use settings orientation, repository instructions, and skills |
 | Visibility | Use canvases for shared state |
 | Repetition | Use manual automations safely |
 | Capstone | Combine the workflow without giving up control |
@@ -399,7 +437,7 @@ You now know how to use the GitHub Copilot app as an agent-driven development co
 
 Practice on small real issues first. Then gradually add advanced workflows when the work is independent, validated, and reviewable.
 
-**[← Back to Chapter 08](../08-automations/README.md)** | **[Return to Course Home →](../README.md)**
+**[← Back to Chapter 07](../07-automations/README.md)** | **[Return to Course Home →](../README.md)**
 
 ---
 

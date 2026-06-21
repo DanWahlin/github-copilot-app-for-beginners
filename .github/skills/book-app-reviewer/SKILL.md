@@ -1,3 +1,8 @@
+---
+name: book-app-reviewer
+description: Review changes in samples/book-app-web for accessibility, responsive layout, tests/build validation, and small beginner-safe changes.
+---
+
 # Book App Reviewer
 
 Use this skill to review changes in `samples/book-app-web`.

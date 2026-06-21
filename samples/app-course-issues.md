@@ -97,7 +97,7 @@ The message explains that no matching books were found and suggests changing fil
 
 ### Learner goal
 
-Use a PR review comment to request clearer copy, then ask Copilot to address the comment.
+Use a PR conversation comment to request clearer copy, then ask Copilot to address the comment.
 
 ## Issue 4: Polish book card spacing and responsive layout
 
@@ -107,7 +107,7 @@ Book cards should have clear hierarchy, comfortable spacing, and a useful mobile
 
 ### Training branch setup
 
-Create a branch named `practice-card-polish`, then use the default app as the baseline. This is a visual improvement scenario, not a failing-test bug.
+Create a branch named `practice-card-polish`, then use the default app as the baseline. This is a visual improvement scenario, not a failing-test bug. The setup script may add a harmless README note so the branch can be opened as a training PR.
 
 ### Repro steps
 
@@ -132,6 +132,13 @@ The default app should pass tests. For this scenario, create a training branch t
 ### Suggested intentional regression
 
 Change the favorite count to count only read favorites. That should make the seeded `stats.test.tsx` expectation fail because unread favorites are valid favorites too.
+
+Apply this change in `samples/book-app-web/src/components/ReadingStats.tsx`:
+
+```diff
+- const favoriteCount = books.filter((book) => book.isFavorite).length;
++ const favoriteCount = books.filter((book) => book.isFavorite && book.isRead).length;
+```
 
 ### Learner goal
 

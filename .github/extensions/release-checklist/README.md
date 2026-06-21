@@ -1,6 +1,8 @@
 # Release Checklist Canvas Concept
 
-This folder contains the prepared release checklist canvas concept used in Chapter 07. It is intentionally lightweight so beginners can understand the canvas workflow before building or installing a working extension.
+This folder contains the prepared release checklist canvas concept used in Chapter 06. It is intentionally lightweight so beginners can understand the canvas workflow before building or installing a working extension.
+
+This is not a loadable canvas extension yet. It is a design concept for the course exercise.
 
 ## Goal
 

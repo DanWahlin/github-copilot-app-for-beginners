@@ -4,21 +4,21 @@ The root README and Chapter 00 include the normal fork, clone, and setup-script 
 
 Use a fork or disposable training repository. Do not use a production repository.
 
-## What you will create
+## What you'll create
 
 | Course item | Source draft | Used in |
 |---|---|---|
-| Seeded issues | `samples/app-course-issues.md` | Chapter 04, Chapter 09 |
-| Practice branches | Training branch setup steps in each issue draft | Chapters 02, 03, 04, 09 |
-| Pull request scenarios | `samples/app-course-pr-scenarios.md` | Chapter 04, Chapter 09 |
+| Seeded issues | `samples/app-course-issues.md` | Chapter 04, Chapter 08 |
+| Practice branches | Training branch setup steps in each issue draft | Chapters 02, 03, 04, 08 |
+| Pull request scenarios | `samples/app-course-pr-scenarios.md` | Chapter 04, Chapter 08 |
 | Failing check example | PR scenario 2 and the `Book app web` workflow | Chapter 04 |
-| Merge-readiness example | PR scenario 3 | Chapter 04, Chapter 09 |
+| Merge-readiness example | PR scenario 3 | Chapter 04, Chapter 08 |
 
 ## Prerequisites
 
 - A GitHub account with permission to create issues and pull requests in the training repository
 - A fork of this course repository, or another disposable training copy pushed to GitHub
-- GitHub Actions enabled for the repository if you want to practice failing checks
+- GitHub Actions enabled for the repository if you'd like to practice failing checks
 - Git and the GitHub CLI (`gh`)
 - `python3` for the Bash script, or PowerShell for the Windows script
 - `gh auth login` completed for the account that owns the fork or training repository
@@ -81,12 +81,14 @@ The setup script creates:
 - five seeded GitHub issues based on [`samples/app-course-issues.md`](../samples/app-course-issues.md)
 - practice branches with intentional course regressions
 - three pull request scenarios based on [`samples/app-course-pr-scenarios.md`](../samples/app-course-pr-scenarios.md)
-- a safe PR comment for the empty-state copy review exercise
+- a safe PR conversation comment for the empty-state copy exercise
 - one failing-check PR that uses the `Book app web` workflow
+
+The setup scripts assign seeded issues to the GitHub user authenticated with `gh`, so they are easier to find in My Work. Manual fallback issues should be assigned to the learner when possible.
 
 ## Manual fallback: create the seeded issues
 
-If you cannot run the script, open [`samples/app-course-issues.md`](../samples/app-course-issues.md) and create one GitHub issue for each issue draft you want to practice.
+If you cannot run the script, open [`samples/app-course-issues.md`](../samples/app-course-issues.md) and create one GitHub issue for each issue draft you'd like to practice.
 
 Minimum set for the course:
 
@@ -122,24 +124,24 @@ git commit -m "Seed search case practice bug"
 git push -u origin practice-search-case-bug
 ```
 
-Repeat this pattern only for the scenarios you want to use. Keep each regression on its own branch.
+Repeat this pattern only for the scenarios you'd like to use. Keep each regression on its own branch.
 
 ## Manual fallback: create pull request scenarios
 
-Open [`samples/app-course-pr-scenarios.md`](../samples/app-course-pr-scenarios.md). Create one pull request for each scenario you want to practice.
+Open [`samples/app-course-pr-scenarios.md`](../samples/app-course-pr-scenarios.md). Create one pull request for each scenario you'd like to practice.
 
 Recommended minimum:
 
-1. A PR with a safe review comment about empty-state copy
+1. A PR with a safe PR conversation comment about empty-state copy
 2. A PR with a failing stats check
 3. A PR used only to discuss Agent Merge readiness
 
-For a review-comment exercise:
+For a PR conversation comment exercise:
 
 1. Create a branch from the relevant practice branch.
 2. Make a small change to the empty-state copy.
 3. Open a pull request.
-4. Add the seeded review comment from the scenario file.
+4. Add the seeded PR conversation comment from the scenario file.
 
 The learner can then open the PR in the GitHub Copilot App and ask Copilot to propose the smallest safe response.
 

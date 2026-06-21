@@ -63,9 +63,9 @@ Related chapter: [04 GitHub Workflows](../04-github-workflows/)
 | PR remains blocked | Required reviews, checks, branch protection, or conflicts | Triage in this order: failing checks, merge conflicts, required reviews, stale reviews, branch rules |
 | Agent Merge is unavailable | Policy, permissions, or repository settings | Treat Agent Merge as advanced and use manual review or merge flow instead |
 
-## Chapter 05: Settings and Instructions
+## Chapter 05: Skills, Model Context Protocol (MCP) Servers, and Plugins
 
-Related chapter: [05 Settings and Instructions](../05-settings-and-instructions/)
+Related chapter: [05 Skills, Model Context Protocol (MCP) Servers, and Plugins](../05-skills-mcp-plugins/)
 
 | Symptom | Likely cause | Try this |
 |---|---|---|
@@ -74,22 +74,15 @@ Related chapter: [05 Settings and Instructions](../05-settings-and-instructions/
 | Branch names are hard to recognize | Branch prefix is not configured | Set a project or app branch prefix that identifies Copilot App sessions |
 | Screenshot exposes settings | Credentials or org details are visible | Retake the screenshot with private fields cropped or hidden |
 | Provider setup fails | Credential, endpoint, policy, or billing issue | Treat provider setup as intermediate and verify settings outside the beginner path |
-
-## Chapter 06: Skills, Model Context Protocol (MCP) Servers, and Plugins
-
-Related chapter: [06 Skills, Model Context Protocol (MCP) Servers, and Plugins](../06-skills-mcp-plugins/)
-
-| Symptom | Likely cause | Try this |
-|---|---|---|
 | Skill does not seem to apply | Skill location, metadata, or prompt mismatch | Check `.github/skills/.../SKILL.md` and prompt for the skill's purpose |
 | MCP server fails | Authentication, environment variable, or policy issue | Check enabled state, credentials, required variables, and app restart or reload requirements |
 | Plugin capability is missing | Plugin disabled or not scoped to the session | Check plugin settings and restart the session if needed |
 | Custom agent is confusing | Advanced concept introduced too early | Return to repo-local skills first, then explain agents as optional specialization |
 | Agent has too many tools | Toolset adds noise and risk | Disable tools not needed for the task |
 
-## Chapter 07: Canvases
+## Chapter 06: Canvases
 
-Related chapter: [07 Canvases](../07-canvases/)
+Related chapter: [06 Canvases](../06-canvases/)
 
 | Symptom | Likely cause | Try this |
 |---|---|---|
@@ -98,9 +91,9 @@ Related chapter: [07 Canvases](../07-canvases/)
 | Agent action fails | Capability name or input schema mismatch | Check the action name, required fields, and stored state |
 | Canvas contains private content | Shared surface was used like private notes | Remove secrets, private repo details, and customer data before publishing |
 
-## Chapter 08: Automations
+## Chapter 07: Automations
 
-Related chapter: [08 Automations](../08-automations/)
+Related chapter: [07 Automations](../07-automations/)
 
 | Symptom | Likely cause | Try this |
 |---|---|---|
@@ -110,9 +103,9 @@ Related chapter: [08 Automations](../08-automations/)
 | Issue trigger fires too often | Trigger is too broad | Narrow the repository, labels, issue query, or tool permissions |
 | Automation result is unsafe to publish | Run history includes private data | Redact or recreate with sample repository data |
 
-## Chapter 09: Putting It All Together
+## Chapter 08: Putting It All Together
 
-Related chapter: [09 Putting It All Together](../09-putting-it-all-together/)
+Related chapter: [08 Putting It All Together](../08-putting-it-all-together/)
 
 | Symptom | Likely cause | Try this |
 |---|---|---|
