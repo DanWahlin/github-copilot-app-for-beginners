@@ -4,7 +4,7 @@
 
 > **What if the agent's work was not trapped in a chat transcript?**
 
-Chat is great for conversation. But some work is easier to understand when it lives on a visible surface: a checklist, browser preview, terminal output, release board, or plan that both you and Copilot can update.
+Chat works well for conversation. Some work is easier to understand when it lives on a visible surface: a checklist, browser preview, terminal output, release board, or plan that both you and Copilot can update.
 
 That shared surface is a canvas. In this chapter, you will inspect a prepared canvas concept first. Creating new canvas extensions is advanced and optional.
 
@@ -12,23 +12,13 @@ That shared surface is a canvas. In this chapter, you will inspect a prepared ca
 
 By the end of this chapter, you'll be able to:
 
-- Explain why canvases exist and when chat is not enough
+- Explain why canvases exist and when chat is the wrong shape for the job
 - Use a prepared canvas concept for a release checklist or issue triage workflow
 - Recognize canvases as shared surfaces for plans, browser sessions, terminals, dashboards, documents, and structured workflows
 - Use canvas controls to inspect, steer, and verify work
 - Explain the difference between chat history and shared canvas state
 
 > ⏱️ **Estimated time**: ~45 minutes (15 min reading + 30 min hands-on)
-
-## Suggested visuals and screenshots
-
-![Chat versus canvas work surfaces](assets/chat-vs-canvas.png)
-
-![Human and agent shared canvas surface](assets/human-agent-shared-surface.png)
-
-- [app-screenshot: Right-side canvas panel showing a plan, checklist, browser session, terminal session, or markdown artifact open inside the GitHub Copilot App.]
-- [app-screenshot: ADVANCED: `/create-canvas` prompt or resulting canvas extension workflow, using a simple issue triage or release checklist example.]
-- [app-screenshot: Canvas controls being used to update shared state, such as moving a card or checking an item.]
 
 ---
 
@@ -62,12 +52,14 @@ A canvas is the app's whiteboard for human-agent work.
 
 ### A canvas is shared state plus controls
 
-A canvas is not just a prettier response. It can include:
+A canvas can be more than a prettier response. It can include:
 
 - visible state
 - UI controls
 - agent-callable capabilities
 - artifacts such as plans, checklists, dashboards, browser previews, terminals, or documents
+
+![Human and agent shared canvas surface](assets/human-agent-shared-surface.png)
 
 ### When to use a canvas
 
@@ -78,6 +70,8 @@ A canvas is not just a prettier response. It can include:
 | The result can be text | The result needs controls or inspection |
 | You do not need to revisit it | You want a reusable work surface |
 
+![Chat versus canvas work surfaces](assets/chat-vs-canvas.png)
+
 ---
 
 ## Hands-on example 1: inspect the prepared release checklist concept
@@ -85,13 +79,15 @@ A canvas is not just a prettier response. It can include:
 Use the prepared canvas concept included with this repository. Do not create a new canvas yet.
 
 1. Open `.github/extensions/release-checklist/README.md`.
-2. Read the checklist items and expected canvas behavior.
+2. Read the checklist items and the expected canvas behavior described in the concept.
 3. Compare the checklist with the validation commands in `samples/book-app-web/README.md`.
 4. Decide which items should be checked manually before a pull request.
 
-### Suggested release checklist items
+- [app-screenshot: Right-side canvas panel showing a plan, checklist, browser session, terminal session, or markdown artifact open inside the GitHub Copilot App.]
 
-Use the canvas to track a small validation pass for `samples/book-app-web`:
+### Release checklist concept
+
+Use this checklist shape to simulate the shared state a canvas would track for `samples/book-app-web`:
 
 ```text
 Release checklist for samples/book-app-web:
@@ -106,17 +102,17 @@ Release checklist for samples/book-app-web:
 
 ### Expected result
 
-You should understand what the prepared canvas is meant to show before you try it in the app. If your app build supports project-scoped canvas extensions, the same checklist becomes visible state learners can inspect and update.
+You should understand what the prepared canvas is meant to show before you simulate it or try it in the app. If your app build supports project-scoped canvas extensions, the same checklist becomes visible state learners can inspect and update.
 
 ### How it works
 
-The course starts with the concept because canvas extension support and app packaging can change. The important beginner idea is stable: shared state is easier to inspect than a long chat thread.
+The course starts with the concept because canvas extension support and app packaging can change. The beginner idea is stable: shared state is easier to inspect than a long chat thread.
 
 ---
 
-## Hands-on example 2: use the canvas while validating the sample app
+## Hands-on example 2: simulate canvas state while validating the sample app
 
-Run the sample app commands and update the canvas as you go:
+Run the sample app commands and update the checklist state as you go. If your app build supports project-scoped canvas extensions, you can use the visible canvas. If it does not, keep the checklist in the conversation or in a scratch note.
 
 ```bash
 cd samples/book-app-web
@@ -135,25 +131,27 @@ npm run dev -- --host 127.0.0.1 --port 5173
 Prompt Copilot:
 
 ```text
-Use the release checklist canvas to track validation for samples/book-app-web. Mark only the steps that have evidence from terminal or browser output.
+Use the release checklist concept to track validation for samples/book-app-web. Mark only the steps that have evidence from terminal or browser output. If a visible canvas is not available, return the checklist as markdown.
 ```
 
-Demo output varies. The important result is that the canvas reflects evidence you can inspect.
+- [app-screenshot: Canvas controls being used to update shared state, such as moving a card or checking an item.]
+
+Demo output varies. What matters is that the checklist state matches evidence you can inspect.
 
 ### Expected output
 
 - Terminal output shows install, test, and build evidence
 - Browser preview runs at `127.0.0.1:5173`
-- Canvas checklist state matches what you actually verified
+- Checklist or canvas state matches what you actually verified
 
 ---
 
-## Hands-on example 3: use a canvas as a planning surface
+## Hands-on example 3: use a canvas concept as a planning surface
 
 Ask Copilot:
 
 ```text
-Create a short plan in the canvas for improving empty-state copy in @samples/book-app-web. Include a pause point before any code changes.
+Create a short plan using the release checklist concept for improving empty-state copy in @samples/book-app-web. Include a pause point before any code changes. If a visible canvas is available, put the plan there. Otherwise, return the plan as a small markdown checklist.
 ```
 
 Before approving implementation, check that the plan includes:
@@ -165,7 +163,7 @@ Before approving implementation, check that the plan includes:
 
 ### Why this matters
 
-Canvas planning makes the control points visible. You do not have to scroll through the full chat to find the current state.
+Canvas-style planning keeps the control points visible. You do not have to scroll through the full chat to find the current state.
 
 ---
 
@@ -193,6 +191,8 @@ Optional stretch prompt:
 ```text
 /create-canvas Create a simple release checklist canvas for samples/book-app-web with items for install, test, build, browser preview, and PR review.
 ```
+
+- [app-screenshot: ADVANCED: `/create-canvas` prompt or resulting canvas extension workflow, using a simple issue triage or release checklist example.]
 
 Pause before accepting generated extension code. Inspect:
 

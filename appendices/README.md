@@ -7,11 +7,13 @@ These appendices support the hands-on chapters in **GitHub Copilot App for Begin
 | [Git Worktrees](git-worktrees.md) | Understand session worktrees, inspect them safely, avoid conflicts, and clean them up |
 | [Screenshot Capture Guide](screenshot-capture-guide.md) | Capture privacy-safe screenshots for app lessons and course assets |
 | [Privacy-Safe Course Assets](privacy-safe-course-assets.md) | Review screenshots, prompts, canvases, manifests, and examples before publishing |
+| [Training GitHub Scenarios](training-github-scenarios.md) | Create the issues, branches, pull requests, review comments, and failing checks used in later chapters |
 | [Troubleshooting Reference](troubleshooting-reference.md) | Find common issues by module and jump back to the related chapter |
 
 ## How to use these appendices
 
 - Read [Git Worktrees](git-worktrees.md) before Chapter 02 if worktrees are new to you.
+- Use [Training GitHub Scenarios](training-github-scenarios.md) before Chapter 04 if you are working through the course without an instructor-provided training repository.
 - Keep [Screenshot Capture Guide](screenshot-capture-guide.md) open while creating chapter images.
 - Run the [Privacy-Safe Course Assets](privacy-safe-course-assets.md) checklist before sharing course material.
 - Use [Troubleshooting Reference](troubleshooting-reference.md) when a learner gets stuck during setup, sessions, PRs, canvases, or automations.
@@ -25,5 +27,4 @@ The required beginner path is Chapters 00 through 03. The appendices support tha
 - Chapter 02: sessions, worktrees, context controls, and local or cloud execution.
 - Chapter 03: review, debug, test, browser validation, and Pick and Polish.
 
-Intermediate and advanced topics appear later in the course. When an appendix mentions MCP servers, plugins, custom agents, cloud automations, or Agent Merge, treat those as optional unless your chapter says otherwise.
-
+Intermediate and advanced topics appear later in the course. When an appendix mentions Model Context Protocol (MCP) servers, plugins, custom agents, cloud automations, or Agent Merge, treat those as optional unless your chapter says otherwise.

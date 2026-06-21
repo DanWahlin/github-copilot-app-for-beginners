@@ -4,7 +4,7 @@
 
 > **What if your recurring Copilot prompt became a reusable button?**
 
-Automations let you save repeatable agent work. In this chapter, you will start with a manual automation that runs only when you choose. Scheduled, cloud, and issue-triggered automations are useful, but they belong in optional sections because they can involve policy, billing, and permission decisions.
+Automations let you save repeatable agent work. You will start with a manual automation that runs only when you choose. Scheduled, cloud, and issue-triggered automations appear later because they can involve policy, billing, and permission decisions.
 
 ## 🎯 Learning objectives
 
@@ -18,17 +18,6 @@ By the end of this chapter, you'll be able to:
 - Recognize cloud and issue-triggered automations as advanced workflows
 
 > ⏱️ **Estimated time**: ~50 minutes (20 min reading + 30 min hands-on)
-
-## Suggested visuals and screenshots
-
-![Automation trigger to agent run](assets/automation-trigger-to-run.png)
-
-![Local versus cloud automations](assets/local-vs-cloud-automations.png)
-
-- [app-screenshot: Automations tab showing saved automations with name, schedule, repository, and last run status.]
-- [app-screenshot: New automation form showing trigger choices such as Manual, On a schedule, and When an issue is created.]
-- [app-screenshot: ADVANCED: Cloud automation tool selection area showing least-privilege tool choices, with any repository details anonymized.]
-- [app-screenshot: Automation run detail or error state with copyable error text visible, using a safe sample workflow.]
 
 ---
 
@@ -72,6 +61,8 @@ An automation has four beginner-friendly parts:
 | Tools | What is the least access needed? |
 | Review path | Where do I inspect the result? |
 
+![Automation trigger to agent run](assets/automation-trigger-to-run.png)
+
 ### Start manual
 
 Manual automations run on demand. They are the safest first step because you can:
@@ -93,6 +84,8 @@ Book app PR summary
 ```
 
 Use a manual trigger.
+
+- [app-screenshot: New automation form showing trigger choices such as Manual, On a schedule, and When an issue is created.]
 
 Use this prompt:
 
@@ -122,6 +115,8 @@ The automation saves the prompt and trigger so you can run the same bounded task
 
 Run the automation manually. Then open the run details.
 
+- [app-screenshot: Automations tab showing saved automations with name, schedule, repository, and last run status.]
+
 Look for:
 
 - run status
@@ -130,6 +125,8 @@ Look for:
 - selected tools
 - result summary
 - error text if the run failed
+
+- [app-screenshot: Automation run detail or error state with copyable error text visible, using a safe sample workflow.]
 
 ### Pause point
 
@@ -201,7 +198,7 @@ Before scheduling, narrow:
 <details>
 <summary>Advanced: cloud automations</summary>
 
-Cloud automations are powerful because they can run when your machine is off, but they can depend on:
+Cloud automations can run when your machine is off, but they can depend on:
 
 - organization policy
 - repository cloud-agent settings
@@ -210,6 +207,10 @@ Cloud automations are powerful because they can run when your machine is off, bu
 - permissions
 
 Use cloud automations only after the manual version works and after you understand the permission model.
+
+![Local versus cloud automations](assets/local-vs-cloud-automations.png)
+
+- [app-screenshot: ADVANCED: Cloud automation tool selection area showing least-privilege tool choices, with any repository details anonymized.]
 
 </details>
 

@@ -19,17 +19,6 @@ By the end of this chapter, you will be able to:
 
 > ⏱️ **Estimated time**: ~60 minutes (25 min reading + 35 min hands-on)
 
-## Suggested visuals and screenshots
-
-![Development loop in the GitHub Copilot App](assets/development-loop.png)
-
-![Pick and Polish UI iteration workflow](assets/pick-and-polish.png)
-
-- [app-screenshot: Integrated terminal showing a test command running or completed, with project-specific secrets and paths cropped if needed.]
-- [app-screenshot: Integrated browser or browser canvas showing the sample web app preview.]
-- [app-screenshot: Pick and Polish live mode or relevant app UI showing selected browser element and polish options, with any user data hidden.]
-- [app-screenshot: Diff view showing code changes alongside the conversation or validation output.]
-
 ---
 
 ## ✅ Prerequisites
@@ -42,7 +31,7 @@ You should have a session for the course repository and know where to find the s
 
 ## 🧩 Real-world analogy: a builder's inspection loop
 
-A careful builder does not just hammer boards together and declare the work done. They measure, build, test the fit, inspect the result, and adjust.
+A careful builder does not hammer boards together and call the job done. They measure, build, test the fit, inspect the result, and adjust.
 
 Copilot can help with the building, but you still inspect the evidence:
 
@@ -63,6 +52,8 @@ Copilot can help with the building, but you still inspect the evidence:
 | Integrated browser | A visible web preview surface for checking the running app |
 | Rubber duck | Asking Copilot to critique or explain a plan or change before you accept it |
 
+![Development loop in the GitHub Copilot App](assets/development-loop.png)
+
 ---
 
 ## Prepare the sample app
@@ -75,6 +66,8 @@ npm install
 npm test -- --run
 npm run build
 ```
+
+- [app-screenshot: Integrated terminal showing a test command running or completed, with project-specific secrets and paths cropped if needed.]
 
 ### Expected output
 
@@ -141,6 +134,8 @@ Then open the integrated browser to:
 http://127.0.0.1:5173
 ```
 
+- [app-screenshot: Integrated browser or browser canvas showing the sample web app preview.]
+
 ---
 
 ## Hands-on workflow 3: ask for tests
@@ -179,6 +174,8 @@ Use this exact learner prompt:
 Act as a rubber duck reviewer for this session. Critique the plan, diff, tests, and browser validation. What should I double-check before creating a pull request?
 ```
 
+- [app-screenshot: Diff view showing code changes alongside the conversation or validation output.]
+
 ### Expected output
 
 Copilot should point out review areas, missing validation, or confidence checks.
@@ -189,6 +186,8 @@ Copilot should point out review areas, missing validation, or confidence checks.
 <summary>Intermediate: Pick and Polish for UI work</summary>
 
 Pick and Polish is the course name for a visible UI iteration loop:
+
+![Pick and Polish UI iteration workflow](assets/pick-and-polish.png)
 
 1. Run `samples/book-app-web`.
 2. Open the browser preview.
@@ -203,6 +202,8 @@ Use this exact learner prompt:
 Polish the book card UI in samples/book-app-web for spacing, visual hierarchy, accessible copy, and responsive behavior. Keep the design consistent with the existing app and show me the diff before I accept it.
 ```
 
+- [app-screenshot: Pick and Polish live mode or relevant app UI showing selected browser element and polish options, with any user data hidden.]
+
 Remember: visual polish can change accessibility and behavior. Always finish with diff review, tests, build, and browser validation.
 
 </details>
@@ -214,7 +215,7 @@ Remember: visual polish can change accessibility and behavior. Always finish wit
 - A passing agent response is not the same thing as validated software.
 - The best evidence is visible: diff, tests, build output, browser behavior, and PR checks.
 - Keep changes small when learning. It is easier to review and recover.
-- Ask Copilot to explain root cause, not just produce a patch.
+- Ask Copilot to explain the root cause instead of only producing a patch.
 
 ### Common beginner mistakes
 
@@ -244,9 +245,9 @@ Check:
 - Generated files
 - Whether another session changed the same files
 
-### Screenshots are needed for course assets
+### App windows must be visible to capture them
 
-Capture visible app windows only. Hidden or background sessions do not produce visible pixels for normal screenshot tools. Remove account names, private repository names, secrets, and organization-specific data.
+If you capture images for your notes, capture visible app windows only. Hidden or background sessions do not produce visible pixels for normal screenshot tools. Remove account names, private repository names, secrets, and organization-specific data.
 
 </details>
 

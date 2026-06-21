@@ -1,16 +1,16 @@
 # Course Review Issues
 
-This file tracks issues found during the rubber-duck review of the root README and Chapters 00-09.
+This file tracks issues found during course reviews of the root README and Chapters 00-09.
 
-## ✅ Issue 1: Planned visuals and screenshots were missing from learner-facing course files
+## ✅ Issue 1: Course files were too text-heavy for beginners
 
 **Severity:** Blocking
 
 **Files:** `README.md`, `00-quick-start/README.md` through `09-putting-it-all-together/README.md`
 
-**Problem:** The plan called for conceptual visuals and app screenshots throughout the course, but the chapters only included the SVG header images. That made a visual desktop app course feel too text-heavy for beginners.
+**Problem:** The plan called for course imagery and app capture placeholders throughout the course, but the chapters only included the SVG header images. That made a desktop app course feel too text-heavy for beginners.
 
-**Resolution:** Added `Suggested visuals and screenshots` sections to the root README and every chapter, generated PNG assets for the `visual-image` items, replaced those prompt placeholders with image references, and kept the `app-screenshot` placeholders for future app captures.
+**Resolution:** Added PNG assets from the `visual-image` items, replaced those prompt placeholders with image references, and kept the `app-screenshot` placeholders for future app captures.
 
 ## ✅ Issue 2: Chapter template consistency drifted between Chapters 00-04 and 05-09
 
@@ -42,13 +42,13 @@ This file tracks issues found during the rubber-duck review of the root README a
 
 **Resolution:** Removed the internal planning citation and left the public GitHub Copilot App, sessions, canvas, changelog, and product-blog references.
 
-## ✅ Issue 5: Root README promised visuals that chapters did not yet provide
+## ✅ Issue 5: Root README promised chapter imagery that chapters did not yet provide
 
 **Severity:** Medium
 
 **File:** `README.md`
 
-**Problem:** The README said each chapter includes a visual course image or screenshot, but the chapters did not include the planned screenshot or image placeholders beyond header art.
+**Problem:** The README said each chapter includes course imagery or screenshot guidance, but the chapters did not include the planned capture placeholders or image references beyond header art.
 
 **Resolution:** Added generated visual images and planned screenshot placeholders to every chapter, so the README promise now matches the course structure.
 
@@ -81,6 +81,54 @@ This file tracks issues found during the rubber-duck review of the root README a
 **Problem:** The chapters had troubleshooting sections, but they did not consistently include beginner mistake callouts that reinforce safe habits before problems occur.
 
 **Resolution:** Added `Common beginner mistakes` sections to all chapters.
+
+## ✅ Issue 9: Chapter 07 asks learners to use a canvas that is only documented as a concept
+
+**Severity:** High
+
+**Files:** `07-canvases/README.md`, `.github/extensions/release-checklist/README.md`
+
+**Problem:** Chapter 07 correctly starts by calling the release checklist a prepared canvas concept, but the next workflow asks learners to "use the canvas" and update checklist state. The repository currently contains a concept README, not a working canvas extension, so beginners may think something is broken or missing.
+
+**Suggested resolution:** Either reword Chapter 07 so the release checklist is consistently framed as a concept/simulation exercise, or add a minimal working release checklist canvas extension that learners can actually open and update.
+
+**Resolution:** Reworded Chapter 07 so the release checklist is consistently framed as a concept or simulation unless the learner's app build supports a visible project-scoped canvas. The prompts now include a markdown fallback.
+
+## ✅ Issue 10: GitHub issue and PR workflows need a clearer setup path for self-paced learners
+
+**Severity:** High
+
+**Files:** `04-github-workflows/README.md`, `09-putting-it-all-together/README.md`, `samples/app-course-issues.md`, `samples/app-course-pr-scenarios.md`
+
+**Problem:** Chapters 04 and 09 rely on seeded issues, pull requests, review comments, failing checks, and merge-readiness scenarios. The repository provides strong Markdown drafts for those scenarios, but self-paced learners are not given a clear setup path for turning those drafts into real GitHub issues, branches, PRs, comments, and CI states.
+
+**Suggested resolution:** Add a short setup section or appendix for creating the training issues and PR scenarios, then link to it before Chapter 04 and Chapter 09.
+
+**Resolution:** Added `appendices/training-github-scenarios.md`, linked it from the appendices index, and linked it from Chapters 04 and 09 before the GitHub issue and PR workflows.
+
+## ✅ Issue 11: Capstone workflow image says "Merge" instead of "Merge ready"
+
+**Severity:** Medium
+
+**File:** `09-putting-it-all-together/assets/end-to-end-workflow.png`
+
+**Problem:** Chapter 09 consistently teaches merge readiness, human review, and pause points before merge automation. The final step in the capstone workflow image says "Merge," which is a little stronger than the safer lesson language.
+
+**Suggested resolution:** Regenerate or edit the image so the final step says "Merge ready" or "Merge readiness."
+
+**Resolution:** Regenerated `09-putting-it-all-together/assets/end-to-end-workflow.png` so the final workflow step says "Merge Ready."
+
+## ✅ Issue 12: MCP acronym is not expanded on first beginner-facing use
+
+**Severity:** Low
+
+**Files:** `README.md`, `06-skills-mcp-plugins/README.md`
+
+**Problem:** The course introduces "MCP servers" before spelling out Model Context Protocol. Chapter 06 explains the concept later, but beginners should see the expanded term the first time the acronym appears.
+
+**Suggested resolution:** Use "Model Context Protocol (MCP) servers" on first use in the root README and Chapter 06.
+
+**Resolution:** Expanded Model Context Protocol (MCP) on first beginner-facing use in the root README, Chapter 01, Chapter 05, Chapter 06, Chapter 09, the glossary, and related appendices.
 
 ## Open questions
 

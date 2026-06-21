@@ -4,7 +4,7 @@
 
 > **What if Copilot already knew your project rules before you typed the prompt?**
 
-In the first four chapters, you learned how to start sessions, inspect worktrees, fix issues, validate changes, and work with GitHub pull requests. This chapter slows down and tunes the app itself. Settings and instructions are where you make Copilot safer, more predictable, and easier to supervise.
+The first four chapters were about doing work. This one is about shaping the workspace before Copilot starts. Settings and instructions make the app safer, more predictable, and easier to supervise.
 
 ## 🎯 Learning objectives
 
@@ -18,17 +18,6 @@ By the end of this chapter, you'll be able to:
 - Choose least-context and least-tool setups for beginner-friendly work
 
 > ⏱️ **Estimated time**: ~50 minutes (20 min reading + 30 min hands-on)
-
-## Suggested visuals and screenshots
-
-![Safe settings map for the GitHub Copilot App](assets/safe-settings-map.png)
-
-![Better context layers for Copilot](assets/context-layers.png)
-
-- [app-screenshot: General or Sessions settings tab showing default model behavior, custom instructions, branch prefix, or session lifecycle settings, with sensitive fields hidden. If auto-approve, Agent Merge attribution, or remote access appears, label it as ADVANCED.]
-- [app-screenshot: Project-specific settings area showing repository instructions or branch prefix settings.]
-- [app-screenshot: Voice dictation or keyboard shortcuts settings, with account details hidden.]
-- [app-screenshot: INTERMEDIATE: Model providers settings showing available provider configuration without exposing credentials. Use this as orientation only, not as a required beginner setup step.]
 
 ---
 
@@ -45,7 +34,7 @@ Before starting:
 
 ## 🧩 Real-world analogy: setting up a workshop
 
-A good workshop is not just a pile of tools. It has labels, safety rules, task lighting, a clean bench, and a place for each tool.
+A good workshop is more than a pile of tools. It has labels, safety rules, task lighting, a clean bench, and a place for each tool.
 
 Copilot app settings work the same way:
 
@@ -63,9 +52,9 @@ Settings are part of the agent's operating environment. They affect what Copilot
 
 ## Core concepts
 
-### App settings are not just preferences
+### App settings change behavior
 
-Some settings change appearance, such as theme. Others change the way sessions behave. For this course, focus on settings that affect:
+Some settings change appearance, such as theme. Others change the way sessions behave. For this course, focus on the settings that affect:
 
 | Area | Beginner question to ask |
 |---|---|
@@ -74,6 +63,10 @@ Some settings change appearance, such as theme. Others change the way sessions b
 | Productivity | Which shortcuts, voice settings, and project defaults help me move faster? |
 | Cost and speed | Is the selected model and reasoning effort appropriate for this task? |
 | Branch naming | Can I recognize app-created worktree branches later? |
+
+![Safe settings map for the GitHub Copilot App](assets/safe-settings-map.png)
+
+- [app-screenshot: INTERMEDIATE: Model providers settings showing available provider configuration without exposing credentials. Use this as orientation only, not as a required beginner setup step.]
 
 ### Instructions give Copilot stable guidance
 
@@ -84,6 +77,8 @@ Instructions are reusable guidance Copilot can read before it works. Keep them s
 | Global instructions | Personal preferences you want everywhere |
 | Repository instructions | Project-specific build, test, style, and safety guidance |
 | Prompt context | One-time details for the task in front of you |
+
+![Better context layers for Copilot](assets/context-layers.png)
 
 > 💡 **Tip**: Keep global instructions short and stable. Put project-specific commands and conventions in repository instructions so your team can review them in git.
 
@@ -102,13 +97,16 @@ Open the GitHub Copilot app settings and walk through this checklist. Do not cha
 | Voice dictation | Confirm whether microphone permission and shortcut setup are appropriate |
 | Accessibility or shortcuts | Identify three shortcuts you want to use |
 
+- [app-screenshot: General or Sessions settings tab showing default model behavior, custom instructions, branch prefix, or session lifecycle settings, with sensitive fields hidden. If auto-approve, Agent Merge attribution, or remote access appears, label it as ADVANCED.]
+- [app-screenshot: Voice dictation or keyboard shortcuts settings, with account details hidden.]
+
 ### Expected result
 
 You should be able to explain where the main settings are and which ones affect session behavior.
 
 ### How it works
 
-The app reuses some composer choices, such as model, reasoning effort, and context tier, when creating new sessions. That means your setup choices can affect future sessions, not just the current conversation.
+The app can reuse composer choices such as model, reasoning effort, and context tier when creating new sessions. That means your setup choices can carry into future sessions.
 
 <details>
 <summary>Advanced: auto-approve, remote access, and Agent Merge attribution</summary>
@@ -128,6 +126,8 @@ Use these only after you are comfortable inspecting plans, diffs, tests, browser
 ## Hands-on example 2: add repository instructions
 
 In this exercise, add guidance that helps Copilot work safely in `samples/book-app-web`.
+
+- [app-screenshot: Project-specific settings area showing repository instructions or branch prefix settings.]
 
 Create or update `.github/copilot-instructions.md` with guidance like this:
 
@@ -167,7 +167,7 @@ Then ask a more scoped version:
 Using the repository instructions, review @samples/book-app-web and suggest one small accessibility improvement. Do not change files yet.
 ```
 
-Demo output varies. The important result is not exact wording. The important result is that Copilot should use the validation commands and project boundaries from the instructions.
+Demo output varies. Do not worry about exact wording. Look for signs that Copilot used the validation commands and project boundaries from the instructions.
 
 ---
 
@@ -253,7 +253,7 @@ Never screenshot tokens, API keys, private provider URLs, or organization-specif
 
 ## 🔑 Key takeaways
 
-1. Settings shape how Copilot works, not just how the app looks.
+1. Settings shape both the app experience and Copilot's behavior.
 2. Repository instructions are the best place for project-specific rules.
 3. Keep context lean and tools limited to what the task needs.
 4. Model and reasoning choices affect speed, quality, and cost.
@@ -279,9 +279,9 @@ Success criteria: You can explain which settings affect safety, context, cost, a
 
 ## ➡️ What's next
 
-In Chapter 06, you'll extend Copilot with reusable expertise using repo-local skills. MCP servers, plugins, model providers, and custom agents are introduced as optional deeper topics.
+In Chapter 06, you'll extend Copilot with reusable expertise using repo-local skills. Model Context Protocol (MCP) servers, plugins, model providers, and custom agents are introduced as optional deeper topics.
 
-**[← Back to Chapter 04](../04-github-workflows/README.md)** | **[Next: Skills, MCP Servers, and Plugins →](../06-skills-mcp-plugins/README.md)**
+**[← Back to Chapter 04](../04-github-workflows/README.md)** | **[Next: Skills, Model Context Protocol (MCP) Servers, and Plugins →](../06-skills-mcp-plugins/README.md)**
 
 ---
 

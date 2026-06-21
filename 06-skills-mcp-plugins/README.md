@@ -1,12 +1,12 @@
-![Chapter 06: Skills, MCP Servers, and Plugins](assets/chapter-header.svg)
+![Chapter 06: Skills, Model Context Protocol Servers, and Plugins](assets/chapter-header.svg)
 
-# Chapter 06: Skills, MCP Servers, and Plugins
+# Chapter 06: Skills, Model Context Protocol (MCP) Servers, and Plugins
 
 > **What if Copilot could reuse your team's review checklist without gaining any new external access?**
 
-This chapter starts with the safest extension point: repo-local skills. A skill is reusable guidance stored in the repository. It helps Copilot approach a task consistently, while keeping the beginner path local, reviewable, and credential-free.
+This chapter starts with the safest extension point: repo-local skills. A skill is reusable guidance stored in the repository. It helps Copilot approach a task consistently while keeping the beginner path local, reviewable, and credential-free.
 
-MCP servers, plugins, model providers, and custom agents are useful too, but they introduce extra setup, permissions, or policy decisions. You will see them later in collapsible optional sections.
+Model Context Protocol (MCP) servers, plugins, model providers, and custom agents are useful too, but they introduce extra setup, permissions, or policy decisions. You will see them later in collapsible optional sections.
 
 ## 🎯 Learning objectives
 
@@ -17,20 +17,9 @@ By the end of this chapter, you'll be able to:
 - Use a skill-guided review prompt in a Copilot app session
 - Explain the difference between reusable expertise and optional external tool access
 - Choose least-context and least-tool setups
-- Locate, but not depend on, optional MCP, plugin, model provider, and custom agent settings
+- Locate, but not depend on, optional MCP server, plugin, model provider, and custom agent settings
 
 > ⏱️ **Estimated time**: ~55 minutes (20 min reading + 35 min hands-on)
-
-## Suggested visuals and screenshots
-
-![Extending the GitHub Copilot App](assets/extending-copilot-app.png)
-
-![Give the agent only what it needs](assets/least-tool-principle.png)
-
-- [app-screenshot: Skills settings showing installed or available skills.]
-- [app-screenshot: INTERMEDIATE: MCP servers settings showing built-in, plugin, or on-device server grouping.]
-- [app-screenshot: INTERMEDIATE: Plugins settings showing install/manage/enable/disable controls.]
-- [app-screenshot: ADVANCED: `/agent` picker showing available built-in, custom, plugin, or user agents, with personal details hidden.]
 
 ---
 
@@ -73,7 +62,11 @@ Skills package task-specific instructions in a folder with a `SKILL.md` file.
 | Plugins | Bundled capabilities that may include tools, skills, or agents | No |
 | Custom agents | Specialized roles selected with `/agent` | No |
 
-> 💡 **Key insight**: A skill changes how Copilot approaches work. It does not automatically mean Copilot can access new external systems.
+![Extending the GitHub Copilot App](assets/extending-copilot-app.png)
+
+- [app-screenshot: Skills settings showing installed or available skills.]
+
+> 💡 **Tip**: A skill changes how Copilot approaches work. It does not automatically give Copilot access to new external systems.
 
 ### Where repo-local skills live
 
@@ -91,7 +84,7 @@ Repo-local skills are ideal for this course because:
 - They are version controlled
 - Teammates can review them
 - They do not require API keys
-- They keep the beginner path deterministic
+- They keep the beginner path predictable
 
 ---
 
@@ -144,7 +137,7 @@ The skill-guided response should be more likely to mention accessibility, respon
 
 ### How it works
 
-The prompt and skill description both mention the same concepts, which gives Copilot a stronger signal to apply the skill.
+The prompt and skill description point at the same concerns, so Copilot has a clearer reason to use the skill.
 
 ---
 
@@ -176,7 +169,7 @@ Demo output varies.
 <details>
 <summary>Intermediate: MCP servers are optional external tool access</summary>
 
-MCP servers connect Copilot to tools or live data, such as GitHub data, documentation, or internal services. They are powerful, but authentication and organization policy can vary.
+MCP servers connect Copilot to tools or live data, such as GitHub data, documentation, or internal services. They can help a lot, but authentication and organization policy can vary.
 
 Beginner rule:
 
@@ -185,6 +178,10 @@ Beginner rule:
 | Do I need external live data? | If no, use repo files and skills first |
 | Do I need GitHub issue or PR data? | Use built-in GitHub integration when available |
 | Do I need third-party docs or tools? | Add only the MCP server required for the task |
+
+![Give the agent only what it needs](assets/least-tool-principle.png)
+
+- [app-screenshot: INTERMEDIATE: MCP servers settings showing built-in, plugin, or on-device server grouping.]
 
 If an MCP server does not work, check authentication, environment variables, enabled status, and whether the session needs to restart.
 
@@ -196,6 +193,8 @@ If an MCP server does not work, check authentication, environment variables, ena
 Plugins can bundle capabilities such as tools, skills, agents, or canvas extensions. Model providers can affect which models are available to sessions.
 
 Do not require plugin installation for this chapter. Instead, learn where the controls are and how to disable capabilities you do not need.
+
+- [app-screenshot: INTERMEDIATE: Plugins settings showing install/manage/enable/disable controls.]
 
 Least-tool principle:
 
@@ -212,6 +211,8 @@ Least-tool principle:
 Custom agents are specialized roles. They are useful when you repeatedly need a persona such as security reviewer, documentation writer, or release manager.
 
 Use `/agent` only after you can explain why a role is better than a skill for the task.
+
+- [app-screenshot: ADVANCED: `/agent` picker showing available built-in, custom, plugin, or user agents, with personal details hidden.]
 
 | Use a skill when... | Use a custom agent when... |
 |---|---|

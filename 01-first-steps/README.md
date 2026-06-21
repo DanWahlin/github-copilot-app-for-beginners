@@ -4,7 +4,7 @@
 
 > **What if you knew which app surface to use before you typed your next prompt?**
 
-Now that the GitHub Copilot App is installed and connected to the course repository, it is time to learn the control room. In this chapter, you will tour the main navigation areas, compare Quick chats with project sessions, and learn how session modes affect how much autonomy Copilot has.
+Now that the app is installed and connected to the course repository, it is time for the control-room tour. You will walk through the main navigation areas, compare Quick chats with project sessions, and see how session modes change Copilot's level of autonomy.
 
 ## 🎯 Learning objectives
 
@@ -19,22 +19,11 @@ By the end of this chapter, you will be able to:
 
 > ⏱️ **Estimated time**: ~35 minutes (15 min reading + 20 min hands-on)
 
-## Suggested visuals and screenshots
-
-![Mission control view for agent sessions](assets/mission-control-sessions.png)
-
-![Session mode decision ladder](assets/session-mode-decision-ladder.png)
-
-- [app-screenshot: Main app sidebar with My Work, Automations, Search, Sessions, and Quick chats visible.]
-- [app-screenshot: Session composer dropdowns showing mode, model, and reasoning effort controls.]
-- [app-screenshot: Settings area showing the major categories such as General, Sessions, Projects, Skills, Voice dictation, and Accessibility or keyboard shortcuts. If MCP servers, Plugins, or Model providers are visible, label them as INTERMEDIATE orientation topics rather than required setup.]
-- [app-screenshot: Voice dictation settings screen showing shortcut selection and local transcription model setup, with account details hidden.]
-
 ---
 
 ## ✅ Prerequisites
 
-Complete [Chapter 00](../00-quick-start/README.md) first. You should already have the course repository connected in the app.
+Complete [Chapter 00](../00-quick-start/README.md) first. If you jumped straight here, pause and use Chapter 00 to fork and clone the course repository, run the training setup script if needed, and connect the repository in the app.
 
 ---
 
@@ -66,6 +55,8 @@ The Copilot App works the same way:
 | Plan | Copilot proposes before executing | Changes where approach matters |
 | Autopilot | Copilot works more independently | Clear, low-risk tasks with obvious checks |
 
+![Session mode decision ladder](assets/session-mode-decision-ladder.png)
+
 > Note: Session modes are autonomy settings, not skill levels. Beginners can use Plan mode early because it creates a review checkpoint before work starts.
 
 ---
@@ -80,6 +71,10 @@ Find these areas in the sidebar:
 4. Sessions
 5. Quick chats
 
+![Mission control view for agent sessions](assets/mission-control-sessions.png)
+
+- [app-screenshot: Main app sidebar with My Work, Automations, Search, Sessions, and Quick chats visible.]
+
 Then open Settings and locate:
 
 - General
@@ -89,10 +84,12 @@ Then open Settings and locate:
 - Voice dictation
 - Accessibility or keyboard shortcuts
 
+- [app-screenshot: Settings area showing the major categories such as General, Sessions, Projects, Skills, Voice dictation, and Accessibility or keyboard shortcuts. If Model Context Protocol (MCP) servers, Plugins, or Model providers are visible, label them as INTERMEDIATE orientation topics rather than required setup.]
+
 <details>
 <summary>Intermediate: settings you only need to recognize for now</summary>
 
-You may also see MCP servers, Plugins, and Model providers. These are useful professional features, but they are not required for the beginner path.
+You may also see Model Context Protocol (MCP) servers, Plugins, and Model providers. These are useful professional features, but they are not required for the beginner path.
 
 For now, just remember:
 
@@ -148,6 +145,8 @@ Walk me through the files you would inspect for the unread count bug in samples/
 Explain when Autopilot would be appropriate for a small documentation-only task in this repository. Do not edit files.
 ```
 
+- [app-screenshot: Session composer dropdowns showing mode, model, and reasoning effort controls.]
+
 ### Expected output
 
 You should notice that Plan mode emphasizes an approach, Interactive mode encourages step-by-step steering, and Autopilot is framed as higher autonomy.
@@ -179,6 +178,8 @@ Open voice dictation settings and identify:
 - Local transcription model setup
 - The review-before-send behavior
 
+- [app-screenshot: Voice dictation settings screen showing shortcut selection and local transcription model setup, with account details hidden.]
+
 ### How it works
 
 Voice dictation turns speech into editable prompt text. You still review the text before sending it, which is important when prompts can start agent work.
@@ -204,7 +205,7 @@ Voice dictation turns speech into editable prompt text. You still review the tex
 
 ### I cannot find a setting shown in the chapter
 
-Settings can vary by app version, operating system, plan, organization policy, and enabled features. Look for the closest matching category and check official docs if needed.
+Settings can vary by app version, operating system, plan, organization policy, and enabled features. Look for the closest matching category, then check the official docs if the screen still does not match.
 
 ### Voice dictation does not work
 

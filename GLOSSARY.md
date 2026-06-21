@@ -38,7 +38,7 @@ A view of what changed between two versions of files. In this course, the diff i
 
 A local execution environment with restrictions on file system, network, or system access. It keeps work closer to your machine while limiting what the agent can reach.
 
-## MCP server
+## Model Context Protocol (MCP) server
 
 A tool server that uses Model Context Protocol to connect Copilot to external tools or data. MCP servers are useful, but they can add permissions, credentials, and complexity.
 
@@ -77,4 +77,3 @@ Reusable guidance that helps the agent handle a specific kind of task. In this c
 ## Worktree
 
 A second working folder attached to the same git repository. In the Copilot App, a session worktree usually has its own branch so parallel work does not collide with your main checkout.
-

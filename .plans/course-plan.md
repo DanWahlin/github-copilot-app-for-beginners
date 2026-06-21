@@ -534,7 +534,7 @@ Planned notes and troubleshooting callouts:
 - Note: Pick and Polish should still end with code review and validation. Visual polish can affect accessibility, responsiveness, and behavior.
 - Troubleshooting: If the browser preview does not update, check whether the dev server is running in the correct worktree, whether hot reload is active, and whether the browser is pointed at the right port.
 - Troubleshooting: If tests fail only in one session, compare dependency install status, environment variables, branch contents, and generated files in that worktree.
-- Troubleshooting: If screenshots are needed for course assets, capture visible app windows. Hidden or background sessions do not produce visible pixels for normal screenshot tools.
+- Troubleshooting: If you capture app images, capture visible app windows. Hidden or background sessions do not produce visible pixels for normal screenshot tools.
 
 ### Chapter 04: GitHub Workflows
 

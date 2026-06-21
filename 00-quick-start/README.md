@@ -2,9 +2,9 @@
 
 # Chapter 00: Quick Start
 
-> **What if your first ten minutes in the app ended with a connected repository, a safe Quick chat, and a first session you can inspect?**
+> **What if your first setup pass ended with a prepared training repo, a safe Quick chat, and a first session you can inspect?**
 
-Welcome! In this chapter, you will install the GitHub Copilot App, sign in, connect this course repository, and verify that Quick chat can explain the project without changing files. This is the fast setup chapter. Once the app can see the course repository, the hands-on agent workflows begin in Chapter 01.
+Welcome. This chapter gets the basics out of the way: install the GitHub Copilot App, sign in, fork and clone the course repository, run the training setup script if you plan to complete the GitHub workflow chapters, connect the repository, and verify that Quick chat can explain the project without changing files. Once the app can see the repository, the hands-on agent workflows begin in Chapter 01.
 
 ## 🎯 Learning objectives
 
@@ -13,19 +13,13 @@ By the end of this chapter, you will be able to:
 - Confirm the required account, Git, operating system, and Copilot access prerequisites
 - Install and open the GitHub Copilot App
 - Sign in with GitHub or GitHub Enterprise Server
+- Fork and clone the course repository
+- Run the training setup script for later GitHub workflow chapters
 - Connect a local folder, GitHub repository, or repository URL
 - Start a Quick chat for a harmless repository overview
 - Create a first project session in Interactive mode
 
-> ⏱️ **Estimated time**: ~20 minutes (10 min setup + 10 min hands-on)
-
-## Suggested visuals and screenshots
-
-![First 10 minutes in the GitHub Copilot App](assets/first-10-minutes-flow.png)
-
-- [app-screenshot: First-run or setup screen showing sign-in and onboarding flow, with any personal account details hidden or blurred.]
-- [app-screenshot: Add project flow showing options for local folder or repository, GitHub repository, and repository URL.]
-- [app-screenshot: Quick chat composer with a harmless repository overview prompt typed but no sensitive data visible.]
+> ⏱️ **Estimated time**: ~35 minutes (20 min setup + 15 min hands-on)
 
 ---
 
@@ -33,8 +27,9 @@ By the end of this chapter, you will be able to:
 
 - A GitHub account with Copilot access
 - Git installed
-- The course repository available on your machine or GitHub account
+- A fork of the course repository if you plan to complete the GitHub issue and PR chapters
 - Node.js 20.19+ or 22.12+ and npm for later chapters that use `samples/book-app-web`
+- GitHub CLI (`gh`) for the training setup script used by later chapters
 - Permission to use the app if your account belongs to a GitHub Copilot Business or Enterprise organization
 
 > Note: A paid Copilot plan is required for the app. Business or Enterprise users may also need an administrator to enable the Copilot CLI policy or related app policies.
@@ -49,9 +44,13 @@ The Copilot App setup is the same idea:
 
 1. Install the app
 2. Sign in
-3. Connect a repository
-4. Ask a safe first question
-5. Start a small session
+3. Fork and clone the course repository
+4. Run the training setup script for your shell
+5. Connect the repository
+6. Ask a safe first question
+7. Start a small session
+
+![First 10 minutes in the GitHub Copilot App](assets/first-10-minutes-flow.png)
 
 ## Core concepts
 
@@ -73,6 +72,8 @@ The Copilot App setup is the same idea:
 4. Sign in with GitHub, or enter your GitHub Enterprise Server URL if your organization uses one.
 5. Complete any first-run choices such as theme or repository access.
 
+- [app-screenshot: First-run or setup screen showing sign-in and onboarding flow, with any personal account details hidden or blurred.]
+
 ### Expected output
 
 You should see the main app window with navigation areas such as My Work, Automations, Search, Sessions, and Quick chats.
@@ -83,7 +84,60 @@ The app uses your GitHub identity and repository permissions to show work you ca
 
 ---
 
-## Hands-on example 2: connect the course repository
+## Hands-on example 2: fork, clone, and prepare the course repository
+
+Fork the course repository on GitHub first. Then clone your fork:
+
+```bash
+git clone https://github.com/YOUR-USER/github-copilot-app-for-beginners.git
+cd github-copilot-app-for-beginners
+```
+
+Sign in with GitHub CLI if needed:
+
+```bash
+gh auth login
+```
+
+Preview the training setup:
+
+On macOS, Linux, or Git Bash:
+
+```bash
+.github/scripts/setup-training-scenarios.sh --dry-run
+```
+
+On Windows PowerShell:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\.github\scripts\setup-training-scenarios.ps1 -DryRun
+```
+
+Then run it:
+
+On macOS, Linux, or Git Bash:
+
+```bash
+.github/scripts/setup-training-scenarios.sh
+```
+
+On Windows PowerShell:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\.github\scripts\setup-training-scenarios.ps1
+```
+
+The setup script for your shell creates the safe GitHub issues, branches, pull requests, comments, and failing-check scenario used in later chapters. It is safe to rerun because it reuses items that already exist.
+
+If you only want to complete Chapters 00 through 03, you can skip the script and connect a local clone instead.
+
+### Success check
+
+You have a local clone of your fork, and the setup script completed or you intentionally chose the local-only path.
+
+---
+
+## Hands-on example 3: connect the course repository
 
 Choose the option that matches your setup:
 
@@ -93,7 +147,9 @@ Choose the option that matches your setup:
 | A repository on GitHub | Add GitHub repository |
 | A repository URL | Add repository URL |
 
-Use this repository as the connected project:
+- [app-screenshot: Add project flow showing options for local folder or repository, GitHub repository, and repository URL.]
+
+Use your fork or local clone of this repository as the connected project:
 
 ```text
 github-copilot-app-for-beginners
@@ -111,13 +167,15 @@ You can see the course repository in the app, and the app sidebar shows the proj
 
 ---
 
-## Hands-on example 3: ask your first Quick chat
+## Hands-on example 4: ask your first Quick chat
 
 Open a Quick chat and enter this exact learner prompt:
 
 ```text
 Give me an overview of this book app course repository. Focus on the learning path and the samples/book-app-web folder.
 ```
+
+- [app-screenshot: Quick chat composer with a harmless repository overview prompt typed but no sensitive data visible.]
 
 ### Expected output
 
@@ -131,7 +189,7 @@ Quick chat is useful for exploration because it does not create a session branch
 
 ---
 
-## Hands-on example 4: create your first project session
+## Hands-on example 5: create your first project session
 
 Create a new project session in Interactive mode and use this exact learner prompt:
 
@@ -213,18 +271,18 @@ Check:
 
 Before continuing:
 
-1. Connect the course repository.
-2. Run the Quick chat prompt from this chapter.
-3. Create an Interactive session with the no-edit prompt.
-4. Write down one thing Quick chat is good for and one thing a project session is good for.
+1. Fork and clone the course repository, or intentionally choose the local-only path for Chapters 00 through 03.
+2. Run the training setup script if you plan to complete Chapters 04 and 09.
+3. Connect the course repository.
+4. Run the Quick chat prompt from this chapter.
+5. Create an Interactive session with the no-edit prompt.
+6. Write down one thing Quick chat is good for and one thing a project session is good for.
 
 ---
 
 ## ➡️ What's next
 
 In Chapter 01, you will tour the app interface, compare Quick chat with sessions, and learn when to use Interactive, Plan, and Autopilot modes.
-
-**[Continue to Chapter 01: First Steps →](../01-first-steps/README.md)**
 
 **[← Back to course README](../README.md)** | **[Continue to Chapter 01 →](../01-first-steps/README.md)**
 

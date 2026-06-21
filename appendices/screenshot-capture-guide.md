@@ -110,7 +110,7 @@ Suggested entry:
 - Chapter 03: show terminal, browser, and diff evidence without secrets or unrelated file paths.
 - Chapter 04: use safe training issues and PRs only.
 - Chapter 05: never show tokens, provider keys, private endpoints, or organization-only policies.
-- Chapter 06: show skills, MCP servers, plugins, and agents only with safe names and no credentials.
+- Chapter 06: show skills, Model Context Protocol (MCP) servers, plugins, and agents only with safe names and no credentials.
 - Chapter 07: treat canvas content as publishable course content. Remove private notes first.
 - Chapter 08: hide repository secrets, cloud configuration, billing details, and organization settings.
 - Chapter 09: use a safe training repository for capstone screenshots.
@@ -128,4 +128,3 @@ Before publishing a screenshot, confirm:
 - the manifest entry includes app version, OS, and commit.
 
 Related appendix: [Privacy-Safe Course Assets](privacy-safe-course-assets.md).
-

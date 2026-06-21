@@ -4,7 +4,7 @@
 
 > **What if issues, pull requests, review comments, checks, and merge readiness lived in the same supervised workflow?**
 
-The GitHub Copilot App is not only for changing files. It also helps you move work through GitHub: issues, pull requests, review comments, failing checks, and merge readiness. In this chapter, you will use My Work as your issue and pull request inbox, start sessions from GitHub context, review diffs, and use Fix actions safely.
+The GitHub Copilot App also helps you move work through GitHub: issues, pull requests, review comments, failing checks, and merge readiness. In this chapter, you will use My Work as your issue and pull request inbox, start sessions from GitHub context, review diffs, and use Fix actions safely.
 
 ## 🎯 Learning objectives
 
@@ -20,31 +20,19 @@ By the end of this chapter, you will be able to:
 
 > ⏱️ **Estimated time**: ~55 minutes (25 min reading + 30 min hands-on)
 
-## Suggested visuals and screenshots
-
-![Issue to pull request workflow](assets/issue-to-merged-pr.png)
-
-![Human judgment stays in the loop](assets/human-judgment-loop.png)
-
-- [app-screenshot: My Work view showing issue and pull request sections with filters, using a safe sample repository.]
-- [app-screenshot: Issue detail page with New session button visible.]
-- [app-screenshot: Pull request Files changed tab or diff review surface inside the app.]
-- [app-screenshot: Review comment or failing CI check with Copilot Fix action visible.]
-- [app-screenshot: ADVANCED: Agent Merge control or merge drawer in a safe training repository before enabling it.]
-
 ---
 
 ## ✅ Prerequisites
 
 Complete Chapters [00](../00-quick-start/README.md) through [03](../03-development-workflows/README.md).
 
-For the full hands-on flow, use a GitHub-backed training repository with seeded issues and PR scenarios. If you do not have permission to create PRs, read the steps and use screenshots or instructor-provided examples.
+For the full hands-on flow, use a GitHub-backed training repository with seeded issues and PR scenarios. If you are self-paced, follow the [Training GitHub Scenarios setup guide](../appendices/training-github-scenarios.md) before starting this chapter. If you do not have permission to create PRs, read the steps and use screenshots or instructor-provided examples.
 
 ---
 
 ## 🧩 Real-world analogy: an airport control tower
 
-An airport control tower does not just launch planes. It tracks incoming flights, runway status, weather, maintenance checks, and final clearance.
+An airport control tower does more than launch planes. It tracks incoming flights, runway status, weather, maintenance checks, and final clearance.
 
 My Work is similar. It helps you see what needs attention before you launch, review, fix, or merge work.
 
@@ -58,6 +46,8 @@ My Work is similar. It helps you see what needs attention before you launch, rev
 | Fix action | A guided action that asks Copilot to address a review comment or failing check |
 | CI check | An automated validation run, often from GitHub Actions |
 
+![Issue to pull request workflow](assets/issue-to-merged-pr.png)
+
 ---
 
 ## Hands-on workflow 1: find work in My Work
@@ -68,6 +58,8 @@ Open My Work and find:
 - Pull requests authored by you
 - Review requests
 - Pull requests with failing checks
+
+- [app-screenshot: My Work view showing issue and pull request sections with filters, using a safe sample repository.]
 
 Try search qualifiers such as:
 
@@ -99,6 +91,8 @@ Start a Plan-mode session from the issue and use this exact learner prompt:
 Use this issue as the source of truth. Plan a small fix in samples/book-app-web, list the files you expect to change, and name the tests or browser checks that should prove the issue is fixed. Do not edit until I approve the plan.
 ```
 
+- [app-screenshot: Issue detail page with New session button visible.]
+
 ### Expected output
 
 Copilot should summarize the issue, propose a small plan, and identify validation steps.
@@ -118,6 +112,8 @@ Before opening a PR, check:
 - Build passed
 - Browser behavior was checked if UI changed
 - PR description explains the change and validation
+
+- [app-screenshot: Pull request Files changed tab or diff review surface inside the app.]
 
 ### Exact learner prompt for PR description help
 
@@ -142,6 +138,8 @@ Use this exact learner prompt:
 ```text
 Review this PR comment and propose the smallest change that addresses it. Show me the diff and validation plan before I accept the fix.
 ```
+
+- [app-screenshot: Review comment or failing CI check with Copilot Fix action visible.]
 
 ### Expected output
 
@@ -183,6 +181,10 @@ Do not mark the PR ready until local validation and CI evidence agree.
 <summary>Advanced: Agent Merge</summary>
 
 Agent Merge is an advanced finishing workflow. It can help carry a pull request through review comments, checks, and merge requirements in a safe training scenario, but it is not a substitute for understanding the work.
+
+![Human judgment stays in the loop](assets/human-judgment-loop.png)
+
+- [app-screenshot: ADVANCED: Agent Merge control or merge drawer in a safe training repository before enabling it.]
 
 Use Agent Merge only when:
 

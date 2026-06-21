@@ -4,7 +4,7 @@
 
 > **What if every task had its own safe desk, branch, context, and history?**
 
-Sessions are where the GitHub Copilot App starts to feel different from ordinary chat. A session is not just a conversation. It can have its own branch, working folder, plan, diff, terminal output, browser preview, and GitHub context. In this chapter, you will start a session from a task, understand why worktrees keep work separated, and practice giving Copilot just enough context.
+Sessions are where the GitHub Copilot App stops feeling like ordinary chat. A session can have its own branch, working folder, plan, diff, terminal output, browser preview, and GitHub context. In this chapter, you will start a session from a task, learn why worktrees keep work separated, and practice giving Copilot just enough context.
 
 ## 🎯 Learning objectives
 
@@ -21,16 +21,6 @@ By the end of this chapter, you will be able to:
 - Use `/chronicle` to summarize session history
 
 > ⏱️ **Estimated time**: ~45 minutes (20 min reading + 25 min hands-on)
-
-## Suggested visuals and screenshots
-
-![One repository with many safe worktrees](assets/one-repo-many-worktrees.png)
-
-![Where a session should run](assets/session-run-location-comparison.png)
-
-- [app-screenshot: New session composer showing the choice between local repository, new worktree, and cloud sandbox if available.]
-- [app-screenshot: Session details or sidebar area showing the generated branch/worktree name so learners can connect the app UI to git concepts.]
-- [app-screenshot: Settings screen where branch prefix or session lifecycle settings are visible, with sensitive details hidden.]
 
 ---
 
@@ -61,6 +51,8 @@ A git worktree is a second working directory attached to the same repository. It
 | Tests and diffs can mix together | Diffs stay tied to the session |
 | Harder to compare work | Easier to inspect and approve |
 
+![One repository with many safe worktrees](assets/one-repo-many-worktrees.png)
+
 ### Context controls
 
 | Syntax | Use it for | Example |
@@ -82,6 +74,8 @@ Create a new session in Plan mode and use this exact learner prompt:
 ```text
 Improve the empty-state copy in samples/book-app-web. First inspect the relevant files and propose a plan. Do not edit files until I approve the plan.
 ```
+
+- [app-screenshot: New session composer showing the choice between local repository, new worktree, and cloud sandbox if available.]
 
 ### Expected output
 
@@ -120,7 +114,7 @@ If your training repository includes seeded issues, open Issue 3 from [`samples/
 Use this exact learner prompt after the issue context is loaded:
 
 ```text
-Use the issue details as the source of truth. Summarize the bug, identify likely files in samples/book-app-web, and propose a safe validation plan before making changes.
+Use the issue details as the source of truth. Summarize the task, identify likely files in samples/book-app-web, and propose a safe validation plan before making changes.
 ```
 
 ### Expected output
@@ -137,6 +131,8 @@ From the app, locate:
 - Branch name
 - Worktree or workspace path
 - Diff view
+
+- [app-screenshot: Session details or sidebar area showing the generated branch/worktree name so learners can connect the app UI to git concepts.]
 
 If you open the folder in an editor, confirm the branch and path before making any edits.
 
@@ -177,6 +173,8 @@ Copilot should summarize what happened in the session and what decisions or chan
 | New worktree | Most course exercises and parallel work | Ports, databases, and background processes are still shared |
 | Cloud sandbox | Isolated GitHub-hosted work when available | Requires plan, policy, repository settings, and possible billing awareness |
 
+![Where a session should run](assets/session-run-location-comparison.png)
+
 </details>
 
 <details>
@@ -189,6 +187,8 @@ For beginner work, focus on:
 - Clear branch prefixes
 - Safe default model and reasoning choices
 - Review checkpoints before edits
+
+- [app-screenshot: Settings screen where branch prefix or session lifecycle settings are visible, with sensitive details hidden.]
 
 Treat auto-approve, Agent Merge attribution, and remote access as optional advanced settings that depend on policy and team workflow.
 

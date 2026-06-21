@@ -75,9 +75,9 @@ Related chapter: [05 Settings and Instructions](../05-settings-and-instructions/
 | Screenshot exposes settings | Credentials or org details are visible | Retake the screenshot with private fields cropped or hidden |
 | Provider setup fails | Credential, endpoint, policy, or billing issue | Treat provider setup as intermediate and verify settings outside the beginner path |
 
-## Chapter 06: Skills, MCP Servers, and Plugins
+## Chapter 06: Skills, Model Context Protocol (MCP) Servers, and Plugins
 
-Related chapter: [06 Skills, MCP Servers, and Plugins](../06-skills-mcp-plugins/)
+Related chapter: [06 Skills, Model Context Protocol (MCP) Servers, and Plugins](../06-skills-mcp-plugins/)
 
 | Symptom | Likely cause | Try this |
 |---|---|---|

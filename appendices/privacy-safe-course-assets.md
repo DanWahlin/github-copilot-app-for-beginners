@@ -73,7 +73,7 @@ Never publish:
 - `.env` values,
 - connection strings,
 - model provider keys,
-- private MCP server credentials.
+- private Model Context Protocol (MCP) server credentials.
 
 If a lesson needs to mention a secret, use a placeholder:
 
@@ -157,4 +157,3 @@ Avoid:
 - organization policy text.
 
 Related appendix: [Screenshot Capture Guide](screenshot-capture-guide.md).
-

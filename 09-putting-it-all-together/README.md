@@ -4,9 +4,9 @@
 
 > **Now you get to run the whole workflow without losing control.**
 
-You have learned the pieces: sessions, worktrees, context, development loops, GitHub workflows, settings, skills, canvases, and automations. This final chapter combines them into a capstone workflow from issue triage to pull request readiness.
+You have worked through the pieces: sessions, worktrees, context, development loops, GitHub workflows, settings, skills, canvases, and automations. This final chapter combines them into a capstone workflow from issue triage to pull request readiness.
 
-The beginner path uses one session first. Parallel sessions, MCP, automations, and Agent Merge appear inside advanced or capstone sections with explicit pause points.
+The beginner path uses one session first. Parallel sessions, Model Context Protocol (MCP), automations, and Agent Merge appear inside advanced or capstone sections with explicit pause points.
 
 ## 🎯 Learning objectives
 
@@ -20,16 +20,6 @@ By the end of this chapter, you'll be able to:
 
 > ⏱️ **Estimated time**: ~75 minutes (20 min reading + 55 min hands-on)
 
-## Suggested visuals and screenshots
-
-![End-to-end GitHub Copilot App workflow](assets/end-to-end-workflow.png)
-
-![Parallel sessions without collisions](assets/parallel-sessions-without-collisions.png)
-
-- [app-screenshot: App sidebar showing multiple active sessions under the same repository or across repositories.]
-- [app-screenshot: Capstone session conversation with plan, tasks, changes, terminal/browser validation, and PR context visible in a single workspace.]
-- [app-screenshot: Final PR ready to merge with checks passing and ADVANCED: Agent Merge or merge controls visible in a safe repository.]
-
 ---
 
 ## ✅ Prerequisites
@@ -40,13 +30,13 @@ Before starting:
 - Use the course repository in the GitHub Copilot app
 - Use `samples/book-app-web` as the sample app path
 - Have the repo-local skill from Chapter 06 available if you completed that exercise
-- Use a GitHub-backed training repository for PR and issue work
+- Use a GitHub-backed training repository for PR and issue work. Self-paced learners should follow the [Training GitHub Scenarios setup guide](../appendices/training-github-scenarios.md) first.
 
 ---
 
 ## 🧩 Real-world analogy: air traffic control
 
-Air traffic control does not just launch planes. It monitors each route, checks weather, coordinates runways, and pauses takeoffs when conditions change.
+Air traffic control does more than launch planes. It monitors each route, checks weather, coordinates runways, and pauses takeoffs when conditions change.
 
 The Copilot app is similar when you run agent work:
 
@@ -75,6 +65,8 @@ Use this loop whenever agent work becomes more than a quick question:
 7. Create or update the PR
 8. Fix feedback
 9. Decide merge readiness
+
+![End-to-end GitHub Copilot App workflow](assets/end-to-end-workflow.png)
 
 ### Pause points
 
@@ -178,6 +170,8 @@ npm run dev -- --host 127.0.0.1 --port 5173
 - Browser preview shows the intended empty-state change
 - Diff only includes files needed for the issue
 
+- [app-screenshot: Capstone session conversation with plan, tasks, changes, terminal/browser validation, and PR context visible in a single workspace.]
+
 ### Pause point 3
 
 Before creating a PR, inspect:
@@ -207,6 +201,8 @@ The PR description should mention:
 - why it changed
 - validation commands run
 - any browser screenshot needed
+
+- [app-screenshot: Final PR ready to merge with checks passing and ADVANCED: Agent Merge or merge controls visible in a safe repository.]
 
 Demo output varies.
 
@@ -256,12 +252,16 @@ Safe delegation checklist:
 4. Distinct validation steps.
 5. Human review before combining work.
 
+- [app-screenshot: App sidebar showing multiple active sessions under the same repository or across repositories.]
+
 </details>
 
 <details>
 <summary>Advanced: parallel sessions with explicit pause points</summary>
 
-Parallel sessions are powerful, but they can collide.
+Parallel sessions can save time, but they can collide.
+
+![Parallel sessions without collisions](assets/parallel-sessions-without-collisions.png)
 
 Use this pattern:
 
@@ -277,7 +277,7 @@ If two sessions modify the same files, expect merge conflicts or duplicated work
 </details>
 
 <details>
-<summary>Advanced: MCP and automations in the capstone</summary>
+<summary>Advanced: Model Context Protocol (MCP) and automations in the capstone</summary>
 
 Add MCP or automations only after the core flow works.
 
@@ -353,7 +353,7 @@ Pause before enabling it. If the final PR is blocked, triage in this order:
 2. Pause points are the main safety feature.
 3. Start with one session before adding parallel work.
 4. MCP, automations, and Agent Merge are advanced additions, not prerequisites.
-5. Human judgment stays in the loop at every important control point.
+5. Human judgment stays in the loop at every major control point.
 
 ---
 
