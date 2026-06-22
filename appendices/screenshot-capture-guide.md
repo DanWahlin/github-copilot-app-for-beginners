@@ -104,16 +104,16 @@ Suggested entry:
 
 ## Chapter-specific guidance
 
-- Chapter 00: hide sign-in details, account names, and private repository lists.
-- Chapter 01: hide model provider credentials and account settings.
-- Chapter 02: show branch and worktree concepts, but crop personal home folder paths if needed.
-- Chapter 03: show terminal, browser, and diff evidence without secrets or unrelated file paths.
-- Chapter 04: use safe training issues and PRs only.
-- Chapter 01: never show tokens, provider keys, private endpoints, or organization-only policies in settings screenshots.
-- Chapter 05: show skills, Model Context Protocol (MCP) servers, plugins, and agents only with safe names and no credentials.
-- Chapter 06: treat canvas content as publishable course content. Remove private notes first.
-- Chapter 07: hide repository secrets, cloud configuration, billing details, and organization settings.
-- Chapter 08: use a safe training repository for capstone screenshots.
+- Chapter 00: Hide sign-in details, account names, and private repository lists.
+- Chapter 01: Hide model provider credentials and account settings.
+- Chapter 02: Show branch and worktree concepts, but crop personal home folder paths if needed.
+- Chapter 03: Show terminal, browser, and diff evidence without secrets or unrelated file paths.
+- Chapter 04: Use safe training issues and PRs only.
+- Chapter 01: Never show tokens, provider keys, private endpoints, or organization-only policies in settings screenshots.
+- Chapter 05: Show skills, Model Context Protocol (MCP) servers, plugins, and agents only with safe names and no credentials.
+- Chapter 06: Treat canvas content as publishable course content. Remove private notes first.
+- Chapter 07: Hide repository secrets, cloud configuration, billing details, and organization settings.
+- Chapter 08: Use a safe training repository for capstone screenshots.
 
 ## Final review checklist
 

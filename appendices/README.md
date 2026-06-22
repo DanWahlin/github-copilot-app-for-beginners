@@ -22,9 +22,9 @@ These appendices support the hands-on chapters in **GitHub Copilot App for Begin
 
 The required beginner path is Chapters 00 through 03. The appendices support that path without adding more required exercises.
 
-- Chapter 00: setup, sign in, repository connection, and Quick chat.
-- Chapter 01: app orientation, modes, model choices, settings, shortcuts, and voice.
-- Chapter 02: sessions, worktrees, context controls, and local or cloud execution.
-- Chapter 03: review, debug, test, browser validation, and Pick and Polish.
+- Chapter 00: Setup, sign in, repository connection, and Quick chat.
+- Chapter 01: App orientation, modes, model choices, settings, shortcuts, and voice.
+- Chapter 02: Sessions, worktrees, context controls, and local or cloud execution.
+- Chapter 03: Review, debug, test, browser validation, and Pick and Polish.
 
 Intermediate and advanced topics appear later in the course. When an appendix mentions Model Context Protocol (MCP) servers, plugins, custom agents, cloud automations, or Agent Merge, treat those as optional unless your chapter says otherwise.

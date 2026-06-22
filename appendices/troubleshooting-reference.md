@@ -116,4 +116,4 @@ Related chapter: [08 Putting It All Together](../08-putting-it-all-together/)
 
 ## General rule
 
-If the agent says a task is complete, still inspect the evidence. A good course workflow ends with visible validation: diff, tests, build, browser preview, PR checks, or review result.
+If the agent says a task is complete, still inspect the evidence. A good course workflow ends with visible validation: Diff, tests, build, browser preview, PR checks, or review result.

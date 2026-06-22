@@ -2,7 +2,7 @@
 
 > **What if the app could help you review, debug, test, preview, and polish a change without losing the evidence?**
 
-In this chapter, you'll use the GitHub Copilot App as a development loop for `samples/book-app-web`: ask, plan, change, test, preview, review the diff, and iterate.
+In this chapter, you'll use the GitHub Copilot App as a development loop for `samples/book-app-web`: Ask, plan, change, test, preview, review the diff, and iterate.
 
 ## 🎯 Learning objectives
 
@@ -27,7 +27,7 @@ At this point, you've got a session for the course repository and know where to 
 
 ---
 
-## 🧩 Real-world analogy: a builder's inspection loop
+## 🧩 Real-world analogy: A builder's inspection loop
 
 A careful builder does not hammer boards together and call the job done. They measure, build, test the fit, inspect the result, and adjust.
 
@@ -108,7 +108,7 @@ Tests and builds are evidence. A confident chat response is not enough.
 
 ---
 
-## Hands-on workflow 1: review a buggy area
+## Hands-on workflow 1: Review a buggy area
 
 Use this exact learner prompt in a session:
 
@@ -128,7 +128,7 @@ The review should mention behavior that you can verify with tests or browser int
 
 ---
 
-## Hands-on workflow 2: debug and fix a small issue
+## Hands-on workflow 2: Debug and fix a small issue
 
 The default app passes tests. Before this workflow, use the `practice-unread-count-bug` branch created by the setup script, or follow the Issue 2 training-branch setup in [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-2-keep-unread-stats-correct-when-filters-are-active) so there is a real unread-count regression to fix. If you're unsure how to base the session on that branch, use the [Chapter 02 practice branch note](../02-sessions-worktrees-context/README.md#practice-branches-in-this-course).
 
@@ -171,7 +171,7 @@ http://127.0.0.1:5173
 
 ---
 
-## Hands-on workflow 3: ask for tests
+## Hands-on workflow 3: Ask for tests
 
 Stay on the same training branch from the previous workflow.
 
@@ -199,7 +199,7 @@ Both commands should complete before you treat the change as ready.
 
 ---
 
-## Hands-on workflow 4: rubber duck review
+## Hands-on workflow 4: Rubber duck review
 
 The `/rubber-duck` slash command asks a critic agent to review your current plan, diff, tests, or design. Use it before you create a PR, especially when the session made code changes.
 
@@ -241,7 +241,7 @@ Polish the book card UI in samples/book-app-web for spacing, visual hierarchy, a
 
 - [app-screenshot: Pick and Polish live mode or relevant app UI showing selected browser element and polish options, with any user data hidden.]
 
-Remember: visual polish can change accessibility and behavior. Always finish with diff review, tests, build, and browser validation.
+Remember: Visual polish can change accessibility and behavior. Always finish with diff review, tests, build, and browser validation.
 
 </details>
 
@@ -250,7 +250,7 @@ Remember: visual polish can change accessibility and behavior. Always finish wit
 ## Notes and tips
 
 - A passing agent response is not the same thing as validated software.
-- The best evidence is visible: diff, tests, build output, browser behavior, and PR checks.
+- The best evidence is visible: Diff, tests, build output, browser behavior, and PR checks.
 - Keep changes small when learning. It is easier to review and recover.
 - Ask Copilot to explain the root cause instead of only producing a patch.
 
@@ -261,7 +261,7 @@ Remember: visual polish can change accessibility and behavior. Always finish wit
 - Treating visual polish as harmless without checking accessibility, responsive layout, and tests
 
 <details>
-<summary>Troubleshooting: development workflow issues</summary>
+<summary>Troubleshooting: Development workflow issues</summary>
 
 ### Browser preview does not update
 
@@ -292,7 +292,7 @@ If you capture images for your notes, capture visible app windows only. Hidden o
 
 ## 🔑 Key takeaways
 
-1. Use the app as a loop: ask, plan, change, test, preview, review, iterate.
+1. Use the app as a loop: Ask, plan, change, test, preview, review, iterate.
 2. Terminal and browser surfaces make agent work inspectable.
 3. Tests and builds are required evidence.
 4. Rubber duck review helps you pause before accepting or shipping.
@@ -320,7 +320,7 @@ Then check:
 
 ## ➡️ What's next
 
-In Chapter 04, you'll connect the development loop to GitHub work: issues, pull requests, review comments, failing checks, Fix actions, and advanced Agent Merge.
+In Chapter 04, you'll connect the development loop to GitHub work: Issues, pull requests, review comments, failing checks, Fix actions, and advanced Agent Merge.
 
 **[← Back to Chapter 02](../02-sessions-worktrees-context/README.md)** | **[Continue to Chapter 04 →](../04-github-workflows/README.md)**
 

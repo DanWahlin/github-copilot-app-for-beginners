@@ -29,7 +29,7 @@ Complete Chapters [00](../00-quick-start/README.md) and [01](../01-first-steps/R
 
 ---
 
-## 🧩 Real-world analogy: separate desks for separate projects
+## 🧩 Real-world analogy: Separate desks for separate projects
 
 Imagine you've got one important notebook, but three people need to work on different ideas from it. You wouldn't ask everyone to write on the same page at the same time. You'd make separate working copies, label them, and compare the results later.
 
@@ -144,7 +144,7 @@ Use the branch name shown in the chapter you're working through.
 
 ---
 
-## Hands-on example 1: start a session from a task
+## Hands-on example 1: Start a session from a task
 
 The default sample app is stable. To practice a real planning workflow without overlapping the Chapter 03 debugging example, first read Issue 3 in [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-3-improve-the-empty-state-copy). This issue asks for clearer empty-state copy. Use the `practice-empty-state-copy` branch created by the setup script, or manually apply Issue 3's training-branch setup before this exercise. Follow the practice branch note above before starting the session.
 
@@ -168,7 +168,7 @@ You'll find the session in the app and identify whether it's using a worktree, l
 
 ---
 
-## Hands-on example 2: give focused file context
+## Hands-on example 2: Give focused file context
 
 Use this exact learner prompt in the same session:
 
@@ -186,7 +186,7 @@ The `@` reference narrows context. It helps Copilot spend attention on the files
 
 ---
 
-## Hands-on example 3: start from an issue
+## Hands-on example 3: Start from an issue
 
 If your training repository includes seeded issues, open Issue 3 from [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-3-improve-the-empty-state-copy) and start a session from it. If you skipped the setup script, paste the issue text into the session prompt instead.
 
@@ -202,7 +202,7 @@ Copilot should summarize the issue, connect it to sample app files, and suggest 
 
 ---
 
-## Hands-on example 4: inspect the branch and worktree safely
+## Hands-on example 4: Inspect the branch and worktree safely
 
 From the app, locate:
 
@@ -236,7 +236,7 @@ nothing to commit, working tree clean
 
 ---
 
-## Hands-on example 5: use `/chronicle`
+## Hands-on example 5: Use `/chronicle`
 
 After a small completed session or plan, type:
 
@@ -252,7 +252,7 @@ Copilot should summarize what happened in the session and what decisions or chan
 
 ---
 
-## Hands-on example 6: check session context with `/context`
+## Hands-on example 6: Check session context with `/context`
 
 Type:
 
@@ -271,7 +271,7 @@ If `/context` is not available, open the slash command palette and look for a si
 Context is the material Copilot is using for the current session. Checking it helps you notice when a session is getting too broad before you add more files, issues, or instructions.
 
 <details>
-<summary>Intermediate: local repository, new worktree, and cloud sandbox tradeoffs</summary>
+<summary>Intermediate: Local repository, new worktree, and cloud sandbox tradeoffs</summary>
 
 | Option | Good for | Watch out for |
 |---|---|---|
@@ -284,7 +284,7 @@ Context is the material Copilot is using for the current session. Checking it he
 </details>
 
 <details>
-<summary>Advanced: session settings that change agent behavior</summary>
+<summary>Advanced: Session settings that change agent behavior</summary>
 
 Some settings affect default model behavior, custom instructions, branch prefixes, session lifecycle, auto-approve behavior, Agent Merge attribution, and remote access.
 
@@ -316,7 +316,7 @@ Treat auto-approve, Agent Merge attribution, and remote access as optional advan
 - Assuming worktrees isolate ports, containers, databases, or background services
 
 <details>
-<summary>Troubleshooting: sessions and worktrees</summary>
+<summary>Troubleshooting: Sessions and worktrees</summary>
 
 ### Two sessions cannot run the web app at the same time
 
@@ -369,7 +369,7 @@ Then answer:
 
 ## ➡️ What's next
 
-In Chapter 03, you'll use the app for real development workflows: review, debugging, tests, terminal validation, browser preview, and UI polish.
+In Chapter 03, you'll use the app for real development workflows: Review, debugging, tests, terminal validation, browser preview, and UI polish.
 
 **[← Back to Chapter 01](../01-first-steps/README.md)** | **[Continue to Chapter 03 →](../03-development-workflows/README.md)**
 

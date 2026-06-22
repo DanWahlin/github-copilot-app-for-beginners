@@ -25,7 +25,7 @@ Use a fork or disposable training repository. Do not use a production repository
 
 If you cannot create issues or pull requests, read the workflows and use instructor-provided screenshots instead.
 
-## Recommended path: fork, clone, run the setup script for your shell
+## Recommended path: Fork, clone, run the setup script for your shell
 
 1. Fork this repository on GitHub.
 2. Clone your fork:
@@ -86,7 +86,7 @@ The setup script creates:
 
 The setup scripts assign seeded issues to the GitHub user authenticated with `gh`, so they are easier to find in My Work. Manual fallback issues should be assigned to the learner when possible.
 
-## Manual fallback: create the seeded issues
+## Manual fallback: Create the seeded issues
 
 If you cannot run the script, open [`samples/app-course-issues.md`](../samples/app-course-issues.md) and create one GitHub issue for each issue draft you'd like to practice.
 
@@ -106,7 +106,7 @@ gh issue create --title "Make search case-insensitive" --label "bug,good first i
 
 That command uses the full file as the body, so it is only a shortcut. For a cleaner training repo, copy each issue section into its own issue. If the labels do not exist in your repository, create them first or omit the `--label` option.
 
-## Manual fallback: create practice branches
+## Manual fallback: Create practice branches
 
 For each issue you plan to practice, create the branch named in that issue draft, then apply only that issue's training-branch setup.
 
@@ -126,7 +126,7 @@ git push -u origin practice-search-case-bug
 
 Repeat this pattern only for the scenarios you'd like to use. Keep each regression on its own branch.
 
-## Manual fallback: create pull request scenarios
+## Manual fallback: Create pull request scenarios
 
 Open [`samples/app-course-pr-scenarios.md`](../samples/app-course-pr-scenarios.md). Create one pull request for each scenario you'd like to practice.
 
@@ -145,7 +145,7 @@ For a PR conversation comment exercise:
 
 The learner can then open the PR in the GitHub Copilot App and ask Copilot to propose the smallest safe response.
 
-## Manual fallback: create a failing check example
+## Manual fallback: Create a failing check example
 
 The repository includes `.github/workflows/book-app-web.yml`. It installs dependencies, runs tests, and builds `samples/book-app-web`.
 

@@ -2,7 +2,7 @@
 
 > **What if issues, pull requests, review comments, checks, and merge readiness lived in the same supervised workflow?**
 
-The GitHub Copilot App also helps you move work through GitHub: issues, pull requests, review comments, failing checks, and merge readiness. In this chapter, you'll use My Work as your issue and pull request inbox, start sessions from GitHub context, review diffs, and use Fix actions safely.
+The GitHub Copilot App also helps you move work through GitHub: Issues, pull requests, review comments, failing checks, and merge readiness. In this chapter, you'll use My Work as your issue and pull request inbox, start sessions from GitHub context, review diffs, and use Fix actions safely.
 
 ## 🎯 Learning objectives
 
@@ -28,7 +28,7 @@ For the full hands-on flow, use a GitHub-backed training repository with seeded 
 
 ---
 
-## 🧩 Real-world analogy: an airport control tower
+## 🧩 Real-world analogy: An airport control tower
 
 An airport control tower does more than launch planes. It tracks incoming flights, runway status, weather, maintenance checks, and final clearance.
 
@@ -48,7 +48,7 @@ My Work is similar. It helps you see what needs attention before you launch, rev
 
 ---
 
-## Hands-on workflow 1: find work in My Work
+## Hands-on workflow 1: Find work in My Work
 
 Open My Work and find:
 
@@ -75,7 +75,7 @@ You're able to explain whether a missing issue or PR is more likely caused by fi
 
 ---
 
-## Hands-on workflow 2: start from an issue
+## Hands-on workflow 2: Start from an issue
 
 Open a seeded issue for the sample app. Choose Issue 1 from [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-1-make-search-case-insensitive) and use the `practice-search-case-bug` branch created by the setup script. If you skipped the script, manually apply Issue 1's training-branch diff before asking Copilot to fix it. If you're unsure how to base the session on that branch, use the [Chapter 02 practice branch note](../02-sessions-worktrees-context/README.md#practice-branches-in-this-course):
 
@@ -99,7 +99,7 @@ Copilot should summarize the issue, propose a small plan, and identify validatio
 
 ---
 
-## Hands-on workflow 3: create or review a pull request
+## Hands-on workflow 3: Create or review a pull request
 
 After completing and validating a small session, use the app's PR flow to open or inspect a pull request.
 
@@ -127,7 +127,7 @@ Copilot should draft a PR summary that you can edit before submitting.
 
 ---
 
-## Hands-on workflow 4: respond to a PR conversation comment
+## Hands-on workflow 4: Respond to a PR conversation comment
 
 Open the PR conversation comment from [PR scenario 1](../samples/app-course-pr-scenarios.md#pr-scenario-1-review-comment-asks-for-clearer-empty-state-copy), which asks for clearer empty-state copy.
 
@@ -149,7 +149,7 @@ You're able to explain whether the comment is fully addressed and whether the fi
 
 ---
 
-## Hands-on workflow 5: fix a failing check safely
+## Hands-on workflow 5: Fix a failing check safely
 
 Open [PR scenario 2](../samples/app-course-pr-scenarios.md#pr-scenario-2-failing-ci-points-to-the-stats-test), which should fail the `Book app web` workflow, or use an instructor-provided example.
 

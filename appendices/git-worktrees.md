@@ -70,7 +70,7 @@ Worktrees isolate files and branches. They do not automatically isolate ports, l
 
 Two sessions can still collide if they use the same outside resource.
 
-### Example: web server port conflict
+### Example: Web server port conflict
 
 The sample web app uses Vite. The default course command uses port `5173`:
 
@@ -86,11 +86,11 @@ npm run dev -- --host 127.0.0.1 --port 5174
 
 Label browser tabs or canvas previews so you know which session you're viewing.
 
-### Example: shared local files
+### Example: Shared local files
 
 If two sessions read the same `.env.local`, cache folder, or generated file outside the worktree, they can affect each other. Prefer session-local files and avoid putting secrets in course examples.
 
-### Example: containers and services
+### Example: Containers and services
 
 If a chapter later uses containers or local services, give each session a unique service name, container name, database name, or port. Stop unused services before starting another session.
 

@@ -2,7 +2,7 @@
 
 > **What if Copilot could reuse your team's review checklist without gaining any new external access?**
 
-This chapter starts with the safest extension point: repo-local skills. A skill is reusable guidance stored in the repository. It helps Copilot approach a task consistently while keeping the beginner path local, reviewable, and credential-free.
+This chapter starts with the safest extension point: Repo-local skills. A skill is reusable guidance stored in the repository. It helps Copilot approach a task consistently while keeping the beginner path local, reviewable, and credential-free.
 
 Model Context Protocol (MCP) servers, plugins, model providers, and custom agents are useful too, but they introduce extra setup, permissions, or policy decisions. You'll see them later in collapsible optional sections.
 
@@ -33,7 +33,7 @@ Before starting:
 
 ---
 
-## 🧩 Real-world analogy: a checklist on the workbench
+## 🧩 Real-world analogy: A checklist on the workbench
 
 Imagine a bike repair shop. A mechanic may be skilled, but the shop still posts a checklist near the bench:
 
@@ -89,7 +89,7 @@ Repo-local skills are ideal for this course because:
 
 ---
 
-## Hands-on example 1: inspect the `book-app-reviewer` skill
+## Hands-on example 1: Inspect the `book-app-reviewer` skill
 
 This repository already includes the skill so you can inspect it before using it:
 
@@ -128,7 +128,7 @@ If you're unsure whether the skill was used, explicitly name `book-app-reviewer`
 
 ---
 
-## Hands-on example 2: compare generic review and skill-guided review
+## Hands-on example 2: Compare generic review and skill-guided review
 
 Open a new Plan or Interactive session in the app. Try a generic prompt first:
 
@@ -154,7 +154,7 @@ The prompt and skill description point at the same concerns, so Copilot has a cl
 
 ---
 
-## Hands-on example 3: use the skill before a real change
+## Hands-on example 3: Use the skill before a real change
 
 Ask Copilot to plan a small improvement:
 
@@ -201,7 +201,7 @@ If an MCP server does not work, check authentication, environment variables, ena
 </details>
 
 <details>
-<summary>Intermediate: plugins, model providers, and model strategy are orientation-only here</summary>
+<summary>Intermediate: Plugins, model providers, and model strategy are orientation-only here</summary>
 
 Plugins can bundle capabilities such as tools, skills, agents, or canvas extensions. Model providers can affect which models are available to sessions.
 
@@ -228,7 +228,7 @@ Least-tool principle:
 </details>
 
 <details>
-<summary>Advanced: custom agents and `/agent`</summary>
+<summary>Advanced: Custom agents and `/agent`</summary>
 
 Custom agents are specialized roles. They are useful when you repeatedly need a persona such as security reviewer, documentation writer, or release manager.
 

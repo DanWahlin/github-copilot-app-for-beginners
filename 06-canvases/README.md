@@ -2,7 +2,7 @@
 
 > **What if the agent's work was not trapped in a chat transcript?**
 
-Chat works well for conversation. Some work is easier to understand when it lives on a visible surface: a checklist, browser preview, terminal output, release board, or plan that both you and Copilot can update.
+Chat works well for conversation. Some work is easier to understand when it lives on a visible surface: A checklist, browser preview, terminal output, release board, or plan that both you and Copilot can update.
 
 That shared surface is a canvas. In this chapter, you'll inspect a prepared canvas concept first. Creating new canvas extensions is advanced and optional.
 
@@ -31,7 +31,7 @@ Before starting:
 
 ---
 
-## 🧩 Real-world analogy: a whiteboard in a team room
+## 🧩 Real-world analogy: A whiteboard in a team room
 
 Imagine a team planning a release. They could discuss every task in a chat thread, but a whiteboard works better:
 
@@ -72,7 +72,7 @@ A canvas can be more than a prettier response. It can include:
 
 ---
 
-## Hands-on example 1: inspect the prepared release checklist concept
+## Hands-on example 1: Inspect the prepared release checklist concept
 
 Use the prepared canvas concept included with this repository. Do not create a new canvas yet.
 
@@ -105,11 +105,11 @@ You'll want to understand what the prepared canvas is meant to show before you s
 
 ### How it works
 
-The course starts with the concept because canvas extension support and app packaging can change. The beginner idea is stable: shared state is easier to inspect than a long chat thread.
+The course starts with the concept because canvas extension support and app packaging can change. The beginner idea is stable: Shared state is easier to inspect than a long chat thread.
 
 ---
 
-## Hands-on example 2: simulate canvas state while validating the sample app
+## Hands-on example 2: Simulate canvas state while validating the sample app
 
 Run the sample app commands and update the checklist state as you go. If your app build supports project-scoped canvas extensions, you can use the visible canvas. If it doesn't, keep the checklist in the conversation or in a scratch note.
 
@@ -145,7 +145,7 @@ Demo output varies. What matters is that the checklist state matches evidence yo
 
 ---
 
-## Hands-on example 3: use a canvas concept as a planning surface
+## Hands-on example 3: Use a canvas concept as a planning surface
 
 Ask Copilot:
 
@@ -167,7 +167,7 @@ Canvas-style planning keeps the control points visible. You don't have to scroll
 ---
 
 <details>
-<summary>Advanced: project-scoped and user-scoped canvases</summary>
+<summary>Advanced: Project-scoped and user-scoped canvases</summary>
 
 Prepared canvases can live in different places:
 
@@ -181,7 +181,7 @@ Project-scoped canvases can become team assets. User-scoped canvases are better 
 </details>
 
 <details>
-<summary>Advanced: canvas authoring and `/create-canvas`</summary>
+<summary>Advanced: Canvas authoring and `/create-canvas`</summary>
 
 Create or revise a canvas only after you're comfortable with the prepared canvas concept.
 

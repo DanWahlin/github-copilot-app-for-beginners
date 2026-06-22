@@ -30,7 +30,7 @@ Before starting:
 
 ---
 
-## 🧩 Real-world analogy: a kitchen prep list
+## 🧩 Real-world analogy: A kitchen prep list
 
 A chef does not rewrite the morning prep list every day. They create a reusable list and run it when needed:
 
@@ -73,7 +73,7 @@ Manual automations run on demand. They're the safest first step because you can:
 
 ---
 
-## Hands-on example 1: create a manual PR summary automation
+## Hands-on example 1: Create a manual PR summary automation
 
 This exercise works best after Chapter 04 has created at least one PR. If your training repository has no open PRs yet, skip to the local validation reminder in Hands-on example 3, then come back later.
 
@@ -85,7 +85,7 @@ Book app PR summary
 
 Use a manual trigger.
 
-Use this UI path if your app exposes automation creation: open **Automations**, choose **New automation**, select **Manual trigger**, paste the prompt, select the smallest read-only tool set, save, then run it.
+Use this UI path if your app exposes automation creation: Open **Automations**, choose **New automation**, select **Manual trigger**, paste the prompt, select the smallest read-only tool set, save, then run it.
 
 - [app-screenshot: New automation form showing trigger choices such as Manual, On a schedule, and When an issue is created.]
 
@@ -113,7 +113,7 @@ The automation saves the prompt and trigger so you can run the same bounded task
 
 ---
 
-## Hands-on example 2: run it and inspect history
+## Hands-on example 2: Run it and inspect history
 
 Run the automation manually. Then open the run details.
 
@@ -141,7 +141,7 @@ Before editing the automation, ask:
 
 ---
 
-## Hands-on example 3: create a manual validation reminder
+## Hands-on example 3: Create a manual validation reminder
 
 Create another manual automation for local project validation:
 
@@ -176,7 +176,7 @@ Demo output varies, but the commands should remain exact.
 ---
 
 <details>
-<summary>Intermediate: scheduled automations</summary>
+<summary>Intermediate: Scheduled automations</summary>
 
 After a manual automation works reliably, you can consider a schedule.
 
@@ -198,7 +198,7 @@ Before scheduling, narrow:
 </details>
 
 <details>
-<summary>Advanced: cloud automations</summary>
+<summary>Advanced: Cloud automations</summary>
 
 Cloud automations can run when your machine is off, but they can depend on:
 
@@ -217,7 +217,7 @@ Use cloud automations only after the manual version works and after you understa
 </details>
 
 <details>
-<summary>Advanced: issue-created triggers</summary>
+<summary>Advanced: Issue-created triggers</summary>
 
 Issue-triggered automations can respond when an issue is created. This is advanced because a broad trigger can run too often or act on untrusted input.
 
@@ -290,7 +290,7 @@ Success criteria: You're able to explain why the automation is safe to run again
 
 ## ➡️ What's next
 
-In Chapter 08, you'll combine the app workflow into a capstone: issue triage, planning, implementation, validation, PR review, and merge readiness. Advanced orchestration stays behind explicit pause points.
+In Chapter 08, you'll combine the app workflow into a capstone: Issue triage, planning, implementation, validation, PR review, and merge readiness. Advanced orchestration stays behind explicit pause points.
 
 **[← Back to Chapter 06](../06-canvases/README.md)** | **[Next: Putting It All Together →](../08-putting-it-all-together/README.md)**
 

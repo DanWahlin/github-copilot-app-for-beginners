@@ -2,7 +2,7 @@
 
 > **Now you get to run the whole workflow without losing control.**
 
-You've worked through the pieces: settings orientation, sessions, worktrees, context, development loops, GitHub workflows, skills, canvases, and automations. This final chapter combines them into a capstone workflow from issue triage to pull request readiness.
+You've worked through the pieces: Settings orientation, sessions, worktrees, context, development loops, GitHub workflows, skills, canvases, and automations. This final chapter combines them into a capstone workflow from issue triage to pull request readiness.
 
 The beginner path uses one session first. Parallel sessions, Model Context Protocol (MCP), automations, and Agent Merge appear inside advanced or capstone sections with explicit pause points.
 
@@ -33,7 +33,7 @@ Before starting:
 
 ---
 
-## 🧩 Real-world analogy: air traffic control
+## 🧩 Real-world analogy: Air traffic control
 
 Air traffic control does more than launch planes. It monitors each route, checks weather, coordinates runways, and pauses takeoffs when conditions change.
 
@@ -83,7 +83,7 @@ These pause points keep you in control.
 
 ---
 
-## Capstone part 1: prioritize one issue
+## Capstone part 1: Prioritize one issue
 
 Use Quick chat or My Work to identify one small task. For this course, choose a seeded issue like:
 
@@ -113,7 +113,7 @@ Don't start implementation until you can answer:
 
 ---
 
-## Capstone part 2: start one Plan-mode session
+## Capstone part 2: Start one Plan-mode session
 
 Start a session from the issue or prompt in Plan mode:
 
@@ -144,7 +144,7 @@ Approve the plan only if it is small, understandable, and testable.
 
 ---
 
-## Capstone part 3: implement and validate
+## Capstone part 3: Implement and validate
 
 After approving the plan, let Copilot make the change. Then validate with the exact sample app commands:
 
@@ -182,7 +182,7 @@ Before creating a PR, inspect:
 
 ---
 
-## Capstone part 4: create and review the PR
+## Capstone part 4: Create and review the PR
 
 Ask Copilot to draft a PR only after validation:
 
@@ -211,7 +211,7 @@ Before asking Copilot to fix feedback, read the review comment or failing check 
 
 ---
 
-## Capstone part 5: respond to feedback
+## Capstone part 5: Respond to feedback
 
 Use the app to inspect review comments or failing checks. Then ask:
 
@@ -240,7 +240,7 @@ You'll see a tighter diff that addresses the feedback without expanding scope.
 ---
 
 <details>
-<summary>Intermediate: delegate independent work safely</summary>
+<summary>Intermediate: Delegate independent work safely</summary>
 
 Delegation is useful when tasks are independent. For example:
 
@@ -262,7 +262,7 @@ Safe delegation checklist:
 </details>
 
 <details>
-<summary>Advanced: parallel sessions and `/orchestrate` with explicit pause points</summary>
+<summary>Advanced: Parallel sessions and `/orchestrate` with explicit pause points</summary>
 
 Parallel sessions can save time, but they can collide. The `/orchestrate` command, when available, lets the agent coordinate multi-session or multi-repo work by delegating tasks to child sessions instead of doing everything inline.
 
@@ -333,7 +333,7 @@ If you use `/agent-merge`, type it only after the checks above are true and your
 </details>
 
 <details>
-<summary>Optional: summarize the capstone with `/chronicle`</summary>
+<summary>Optional: Summarize the capstone with `/chronicle`</summary>
 
 At the end of the capstone, use `/chronicle` to reflect on what happened:
 

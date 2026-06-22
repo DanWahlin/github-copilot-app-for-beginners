@@ -26,7 +26,7 @@ Complete [Chapter 00](../00-quick-start/README.md) first. If you jumped straight
 
 ---
 
-## 🧩 Real-world analogy: mission control
+## 🧩 Real-world analogy: Mission control
 
 Mission control does not fly every spacecraft the same way. Some missions need close steering. Some need an approved flight plan. Some routine tasks can run mostly on their own.
 
@@ -60,7 +60,7 @@ The Copilot App works the same way:
 
 ---
 
-## Hands-on example 1: tour the app
+## Hands-on example 1: Tour the app
 
 Find these areas in the sidebar:
 
@@ -101,7 +101,7 @@ Use this beginner-safe settings checklist:
 Don't change settings you don't understand yet. The goal is to know where controls live before later chapters depend on them.
 
 <details>
-<summary>Intermediate: settings you only need to recognize for now</summary>
+<summary>Intermediate: Settings you only need to recognize for now</summary>
 
 You may also see Model Context Protocol (MCP) servers, Plugins, and Model providers. These are useful professional features, but they are not required for the beginner path.
 
@@ -117,7 +117,7 @@ You'll revisit these later in the course. Never screenshot tokens, API keys, pri
 
 ---
 
-## Hands-on example 2: use Quick chat for brainstorming
+## Hands-on example 2: Use Quick chat for brainstorming
 
 Open Quick chat and use this exact learner prompt:
 
@@ -137,7 +137,7 @@ Quick chat helps you learn without starting a branch. It's a good first stop whe
 
 ---
 
-## Hands-on example 3: compare session modes safely
+## Hands-on example 3: Compare session modes safely
 
 Create three small sessions or use one session with mode changes if your app version supports it. Do not ask Copilot to edit files.
 
@@ -169,7 +169,7 @@ For this course, keep the default model and reasoning effort unless a chapter sa
 
 ---
 
-## Hands-on example 4: search and shortcuts
+## Hands-on example 4: Search and shortcuts
 
 Use the app Search view to find:
 
@@ -185,7 +185,7 @@ You're able to explain where to find a file, where to change settings, and where
 
 ---
 
-## Hands-on example 5: voice dictation orientation
+## Hands-on example 5: Voice dictation orientation
 
 Open voice dictation settings and identify:
 
@@ -219,7 +219,7 @@ If voice dictation is unavailable in your app, skip this exercise and note which
 - Changing model or reasoning settings without noticing the effect on speed, cost, and output
 
 <details>
-<summary>Troubleshooting: first navigation problems</summary>
+<summary>Troubleshooting: First navigation problems</summary>
 
 ### I cannot find a setting shown in the chapter
 
