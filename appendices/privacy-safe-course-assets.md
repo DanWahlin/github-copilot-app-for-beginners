@@ -57,7 +57,7 @@ Use the course sample repository for examples. If a screenshot shows a repositor
 
 Safe replacements:
 
-- `github-copilot-app-for-beginners`
+- `copilot-app-for-beginners`
 - `book-app-web`
 - `copilot-app-training`
 - `sample-org`

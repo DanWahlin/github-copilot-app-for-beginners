@@ -37,6 +37,8 @@ Before starting:
 
 Air traffic control does more than launch planes. It monitors each route, checks weather, coordinates runways, and pauses takeoffs when conditions change.
 
+![Air traffic control analogy for the capstone workflow](assets/air-traffic-control-capstone.webp)
+
 The Copilot app is similar when you run agent work:
 
 | Air traffic control | Copilot app workflow |

@@ -31,8 +31,8 @@ If you cannot create issues or pull requests, read the workflows and use instruc
 2. Clone your fork:
 
    ```bash
-   git clone https://github.com/YOUR-USER/github-copilot-app-for-beginners.git
-   cd github-copilot-app-for-beginners
+   git clone https://github.com/YOUR-USER/copilot-app-for-beginners.git
+   cd copilot-app-for-beginners
    ```
 
 3. Sign in with GitHub CLI if needed:

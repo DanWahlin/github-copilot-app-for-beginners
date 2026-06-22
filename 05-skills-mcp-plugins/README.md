@@ -37,6 +37,8 @@ Before starting:
 
 Imagine a bike repair shop. A mechanic may be skilled, but the shop still posts a checklist near the bench:
 
+![Workbench checklist analogy for Copilot skills](assets/workbench-checklist-skills.webp)
+
 | Checklist item | Why it helps |
 |---|---|
 | Check brakes | Safety |

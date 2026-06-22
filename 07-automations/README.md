@@ -34,6 +34,8 @@ Before starting:
 
 A chef does not rewrite the morning prep list every day. They create a reusable list and run it when needed:
 
+![Kitchen prep list analogy for automations](assets/kitchen-prep-automation.webp)
+
 | Kitchen workflow | App automation |
 |---|---|
 | Prep list | Saved prompt |

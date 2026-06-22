@@ -32,6 +32,8 @@ For the full hands-on flow, use a GitHub-backed training repository with seeded 
 
 An airport control tower does more than launch planes. It tracks incoming flights, runway status, weather, maintenance checks, and final clearance.
 
+![Airport control tower analogy for GitHub issues and pull requests](assets/airport-control-tower-github-work.webp)
+
 My Work is similar. It helps you see what needs attention before you launch, review, fix, or merge work.
 
 ## Core concepts
@@ -62,11 +64,11 @@ Open My Work and find:
 Try search qualifiers such as:
 
 ```text
-repo:your-org-or-user/github-copilot-app-for-beginners is:issue is:open
+repo:your-org-or-user/copilot-app-for-beginners is:issue is:open
 ```
 
 ```text
-repo:your-org-or-user/github-copilot-app-for-beginners is:pr is:open
+repo:your-org-or-user/copilot-app-for-beginners is:pr is:open
 ```
 
 ### Success check
@@ -83,7 +85,7 @@ Open a seeded issue for the sample app. Choose Issue 1 from [`samples/app-course
 Search should be case-insensitive in samples/book-app-web
 ```
 
-Start a Plan-mode session from the issue and use this exact learner prompt:
+Start a Plan-mode session from the issue, then try this prompt:
 
 ```text
 Use this issue as the source of truth. Plan a small fix in samples/book-app-web, list the files you expect to change, and name the tests or browser checks that should prove the issue is fixed. Do not edit until I approve the plan.
@@ -113,7 +115,7 @@ Before opening a PR, check:
 
 - [app-screenshot: Pull request Files changed tab or diff review surface inside the app.]
 
-### Exact learner prompt for PR description help
+### Prompt for PR description help
 
 ```text
 Draft a pull request summary for this session. Include what changed, why it changed, and validation performed. Do not claim checks passed unless you saw the terminal or CI output.
@@ -131,7 +133,7 @@ Copilot should draft a PR summary that you can edit before submitting.
 
 Open the PR conversation comment from [PR scenario 1](../samples/app-course-pr-scenarios.md#pr-scenario-1-review-comment-asks-for-clearer-empty-state-copy), which asks for clearer empty-state copy.
 
-Use this exact learner prompt:
+Try this prompt:
 
 ```text
 Review this PR conversation comment and propose the smallest change that addresses it. Show me the diff and validation plan before I accept the fix.
@@ -153,7 +155,7 @@ You're able to explain whether the comment is fully addressed and whether the fi
 
 Open [PR scenario 2](../samples/app-course-pr-scenarios.md#pr-scenario-2-failing-ci-points-to-the-stats-test), which should fail the `Book app web` workflow, or use an instructor-provided example.
 
-Use this exact learner prompt:
+Try this prompt:
 
 ```text
 Analyze the failing check. Explain the failure, identify the likely file in samples/book-app-web, propose a minimal fix, and tell me which command should pass afterward.
@@ -203,7 +205,7 @@ Do not use Agent Merge when:
 - Your organization policy does not allow it
 - You're working in a public or upstream repository where you lack merge rights
 
-Exact learner prompt for a safe orientation:
+Safe orientation prompt:
 
 ```text
 Explain whether this training PR is a good candidate for Agent Merge. Consider diff size, tests, review comments, branch protection, and what I should inspect before enabling it.

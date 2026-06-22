@@ -37,6 +37,8 @@ By the end of this chapter, you'll be able to:
 
 Before you use a shared workshop, you check in, prove you're allowed to use the tools, choose a workbench, and make sure the lights turn on.
 
+![Workshop check-in analogy for GitHub Copilot App setup](assets/workshop-check-in.webp)
+
 The Copilot App setup is the same idea. In the following examples you'll do the following:
 
 1. Fork and clone the course repository
@@ -145,7 +147,7 @@ In the app sidebar, select the **+** button next to **Sessions**. There are seve
 
 | If you've got... | Use this app option |
 |---|---|
-| A cloned copy on your machine | **Add local folder**, then select your local `github-copilot-app-for-beginners` folder |
+| A cloned copy on your machine | **Add local folder**, then select your local `copilot-app-for-beginners` folder |
 | A repository on GitHub | **Add GitHub repository**, then search for your fork |
 | A repository URL | **Add repository URL**, then paste the fork URL |
 
@@ -183,7 +185,7 @@ Quick chat is useful for exploration because it does not create a session branch
 
 ## Hands-on example 5: Create your first project session
 
-Create a new project session in Interactive mode by selecting the **+** next to `copilot-app-for-beginners` in the sidebar. In the session composer, choose **Interactive** from the mode selector and submit the followingprompt.
+Create a new project session in Interactive mode by selecting the **+** next to `copilot-app-for-beginners` in the sidebar. In the session composer, choose **Interactive** from the mode selector and submit the following prompt.
 
 ```text
 Explain the app structure and suggest one beginner-friendly improvement. Do not edit files yet.

@@ -35,6 +35,8 @@ Before starting:
 
 Imagine a team planning a release. They could discuss every task in a chat thread, but a whiteboard works better:
 
+![Team whiteboard analogy for canvases](assets/team-whiteboard-canvas.webp)
+
 | Chat thread | Whiteboard |
 |---|---|
 | Good for discussion | Good for shared state |

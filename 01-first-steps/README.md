@@ -11,10 +11,9 @@ By the end of this chapter, you'll be able to:
 - Navigate My Work, Automations, Search, Sessions, and Quick chats
 - Locate major settings areas such as General, Sessions, Projects, Skills, Voice dictation, and accessibility or keyboard shortcuts
 - Identify beginner-safe settings that affect safety, context, productivity, speed, and cost
-- Choose between Quick chat and a project session
 - Explain Interactive, Plan, and Autopilot
 - Select a model and reasoning effort based on task complexity
-- Understand voice dictation at a beginner level
+- Understand how to use voice dictation
 
 > ⏱️ **Estimated time**: ~35 minutes (15 min reading + 20 min hands-on)
 
@@ -22,20 +21,22 @@ By the end of this chapter, you'll be able to:
 
 ## ✅ Prerequisites
 
-Complete [Chapter 00](../00-quick-start/README.md) first. If you jumped straight here, pause and use Chapter 00 to fork and clone the course repository, run the training setup script if needed, and connect the repository in the app.
+Complete [Chapter 00](../00-quick-start/README.md) first. If you jumped straight here, pause and use Chapter 00 to fork and clone the course repository, run the training setup script, and connect the repository in the GitHub Copilot App.
 
 ---
 
 ## 🧩 Real-world analogy: Mission control
 
-Mission control does not fly every spacecraft the same way. Some missions need close steering. Some need an approved flight plan. Some routine tasks can run mostly on their own.
+Mission control doesn't fly every spacecraft the same way. Some missions need close steering. Some need an adjusted flight plan. Some routine tasks can run mostly on their own.
+
+![Mission control analogy for GitHub Copilot App session modes](assets/mission-control-session-modes.webp)
 
 The Copilot App works the same way:
 
 - Quick chat is like asking a mission specialist a question.
 - Interactive mode is like steering with frequent check-ins.
 - Plan mode is like approving the route before launch.
-- Autopilot is like giving a clear routine task to a trusted system.
+- Autopilot is like giving a clearly defined task to a trusted system and letting it complete it with minimal intervention.
 
 ## Core concepts
 
@@ -48,15 +49,13 @@ The Copilot App works the same way:
 
 ### Session modes
 
-| Mode | Beginner meaning | Good first use |
+| Mode | Beginner meaning | Use case |
 |---|---|---|
 | Interactive | Copilot works with you step by step | Guided exploration or small edits |
-| Plan | Copilot proposes before executing | Changes where approach matters |
-| Autopilot | Copilot works more independently | Clear, low-risk tasks with obvious checks |
+| Plan | Copilot creates a plan before executing | Project changes where the initial approach and project details matter |
+| Autopilot | Copilot works independently | Tasks that are well defined and have clear outcomes |
 
 ![Session mode decision ladder](assets/session-mode-decision-ladder.webp)
-
-> Note: Session modes are autonomy settings, not skill levels. Beginners can use Plan mode early because it creates a review checkpoint before work starts.
 
 ---
 
@@ -64,90 +63,106 @@ The Copilot App works the same way:
 
 Find these areas in the sidebar:
 
-1. My Work
+1. My work
 2. Automations
 3. Search
 4. Sessions
-5. Quick chats
 
-![Mission control view for agent sessions](assets/mission-control-sessions.webp)
+<img width="400" src="assets/app-sidebar.webp" alt="App sidebar with My Work, Automations, Search, Sessions, and Quick chats">
 
-- [app-screenshot: Main app sidebar with My Work, Automations, Search, Sessions, and Quick chats visible.]
-
-Then open Settings and locate:
+Now open **Settings** and locate:
 
 - General
+- Accounts
 - Sessions
-- Projects
-- Skills
+- Themes
+- Accessibility
 - Voice dictation
-- Accessibility or keyboard shortcuts
 
-- [app-screenshot: Settings area showing the major categories such as General, Sessions, Projects, Skills, Voice dictation, and Accessibility or keyboard shortcuts. If Model Context Protocol (MCP) servers, Plugins, or Model providers are visible, label them as INTERMEDIATE orientation topics rather than required setup.]
+![App settings](assets/app-settings.webp)
 
-![Safe settings map for the GitHub Copilot App](assets/safe-settings-map.webp)
-
-Use this beginner-safe settings checklist:
+Here's a summary of the key settings areas:
 
 | Setting area | What to notice now |
 |---|---|
 | General | Theme and notification preferences |
-| Sessions | Default model, reasoning effort, branch prefix, and session lifecycle settings |
-| Projects | Project-specific settings for this repository |
-| Skills | Where skills are managed, without changing anything yet |
-| Voice dictation | Microphone permission, shortcut setup, and review-before-send behavior |
-| Accessibility or shortcuts | Three shortcuts you'd like to practice |
+| Accounts | Personal and Enterprise account information |
+| Sessions | Default model, reasoning effort, custom instructions, remote access, branch prefix, and session lifecycle settings |
+| Themes | Theme settings for the app (dark/light mode themes) |
+| Accessibility | Display zoom and keyboard shortcuts |
+| Voice dictation | Microphone settings, shortcut setup, and transcription models |
 
-Don't change settings you don't understand yet. The goal is to know where controls live before later chapters depend on them.
+Don't worry about changing any settings at this point - unless you want to. The goal is to know where key app settings live.
 
 <details>
-<summary>Intermediate: Settings you only need to recognize for now</summary>
+<summary>Additional settings</summary>
 
-You may also see Model Context Protocol (MCP) servers, Plugins, and Model providers. These are useful professional features, but they are not required for the beginner path.
+You'll also see Skills, Model Context Protocol (MCP) servers, Plugins, and Model providers.
 
-For now, just remember:
-
-- MCP servers can connect the agent to external tools or data.
-- Plugins can add bundled capabilities.
-- Model providers can affect which models are available.
-
-You'll revisit these later in the course. Never screenshot tokens, API keys, private provider URLs, or organization-specific settings.
+- Skills are specific capabilities that can be used to extend the functionality of the app.
+- MCP servers can connect the app to external tools or data.
+- Plugins can add bundled capabilities (Skills, MCP servers, etc.).
+- Model providers can be used to add custom models to the app.
 
 </details>
 
----
-
 ## Hands-on example 2: Use Quick chat for brainstorming
 
-Open Quick chat and use this exact learner prompt:
+Open Quick chat and try this prompt:
 
 ```text
-I'm learning the GitHub Copilot App with this repository. What are three safe things I can ask before changing code?
+I'm learning the GitHub Copilot App with the copilot-app-for-beginners repository. What are three safe things I can ask before changing code?
+```
+
+Now try the following prompt and notice the response:
+
+```text
+Can this quick chat modify code if I tell it to do that?
 ```
 
 ### Expected output
 
-Copilot should suggest safe exploration tasks such as explaining structure, identifying test commands, or summarizing the sample app.
+Copilot should suggest exploration tasks such as explaining structure, identifying test commands, or summarizing the sample app.
 
-> Demo output varies. Treat the response as guidance, not a script.
+For the second prompts, the response may say something like the following:
+
+> Not directly in your configured repositories.
+>
+> This quick chat can **read and inspect** your repos, but it should not modify files in those primary working copies. If you ask for code changes, I’ll create or open a dedicated project session with its own isolated worktree and coding agent, then delegate the work there.
+
+> Note: Demo output varies. Treat the response as guidance, not a reproducible script.
 
 ### How it works
 
-Quick chat helps you learn without starting a branch. It's a good first stop when you're unsure what to ask.
+Quick chat helps you learn without starting a branch. It's a great way to explore and understand your codebase before making changes.
 
 ---
 
-## Hands-on example 3: Compare session modes safely
+## Hands-on example 3: Compare session modes
 
-Create three small sessions or use one session with mode changes if your app version supports it. Do not ask Copilot to edit files.
+You'll compare the session modes by starting from the course project in the sidebar. Keep these prompts read-only so you can focus on how the modes feel before asking Copilot to change files.
+
+![Session modes](assets/app-session-modes.webp)
+
+1. In the left sidebar, find the **copilot-app-for-beginners** project you connected in Chapter 00.
+2. Click the **+** button next to the project name.
+3. When the session composer opens, find the mode dropdown near the prompt box. It will show **Interactive**, **Plan**, or **Autopilot**.
+4. Choose the mode listed below, paste the matching prompt, and run it.
+5. After you review the response, change the dropdown to the next mode and repeat.
 
 ### Plan mode prompt
 
+Set the mode dropdown to **Plan**, then use this prompt:
+
 ```text
-Plan how you'd investigate a hypothetical unread count bug in samples/book-app-web. You'll seed and fix a real one in Chapter 03. Don't edit files.
+Plan how you'd investigate a hypothetical unread count bug in samples/book-app-web.
 ```
 
+Once the plan is generated, review it and consider how you would implement the steps.
+
 ### Interactive mode prompt
+
+Set the mode dropdown to **Interactive**, then use this prompt:
 
 ```text
 Walk me through the files you'd inspect for a hypothetical unread count bug in samples/book-app-web. Ask before suggesting any code change.
@@ -155,68 +170,68 @@ Walk me through the files you'd inspect for a hypothetical unread count bug in s
 
 ### Autopilot orientation prompt
 
+Set the mode dropdown to **Autopilot**, then use this prompt:
+
 ```text
 Explain when Autopilot would be appropriate for a small documentation-only task in this repository. Do not edit files.
 ```
-
-- [app-screenshot: Session composer dropdowns showing mode, model, and reasoning effort controls.]
 
 ### Expected output
 
 You'll notice that Plan mode emphasizes an approach, Interactive mode encourages step-by-step steering, and Autopilot is framed as higher autonomy.
 
-For this course, keep the default model and reasoning effort unless a chapter says otherwise. Increase reasoning for harder planning or debugging work. Use lower reasoning for simple summaries.
-
 ---
 
-## Hands-on example 4: Search and shortcuts
+## Hands-on example 4: Search
 
-Use the app Search view to find:
+Select **Search** from the sidebar. Notice that you can search for sessions, PRs, issues, or paste a URL. Type `copilot-app-for-beginners` into the textbox and you should be presented with the option to create a new session.
 
-```text
-samples/book-app-web
-```
+Close **Search** and reopen it. Scroll through the other options to see the other options it provides. Notice that several actions can be performed such as:
 
-Then open keyboard shortcuts from Help and identify three shortcuts you'd like to practice.
+- New session
+- Start from a canvas
+- Add a project
+- New issue
+
+Experiment with some of the actions to learn how to use them.
+
 
 ### Success check
 
-You're able to explain where to find a file, where to change settings, and where to start a new session.
+You're able to explain what the **Search** feature does and how it can be used.
 
 ---
 
-## Hands-on example 5: Voice dictation orientation
+## Hands-on example 5: Voice dictation
 
-Open voice dictation settings and identify:
+Go back to the GitHub Copilot App's Settings dialog. Select **Voice dictation** and explore the available options:
 
-- The shortcut
-- Microphone permission status
-- Local transcription model setup
-- The review-before-send behavior
+- Input device
+- Microphone privacy
+- Test microphone
+- Keyboard shortcut
+- Push to talk
+- Transcription models
 
-- [app-screenshot: Voice dictation settings screen showing shortcut selection and local transcription model setup, with account details hidden.]
+Perform the following actions:
+1. Select **Microphone privacy**, **Open preferences** and ensure the GitHub Copilot App has the necessary permissions to use the microphone.
+2. Select **Test microphone** to verify that it's working correctly.
+3. Note the keyboard shortcut for activating voice dictation. Try it out (you'll probably see a message saying that you need to use it with a text box).
+4. Create a new **Quick chat** session and test voice dictation by using the keyboard shortcut.
 
 ### How it works
 
-Voice dictation turns speech into editable prompt text. You still review the text before sending it, which is important when prompts can start agent work.
-
-If voice dictation is unavailable in your app, skip this exercise and note which setting or permission is missing.
+Voice dictation turns speech into editable prompt text which can save time and effort when creating prompts.
 
 ---
 
 ## Notes and tips
 
-- Use Quick chat when you're learning before acting.
-- Use Plan when the approach matters.
-- Use Interactive when you'd like to steer closely.
-- Use Autopilot only for clear, bounded tasks with safe validation.
+- Use **Quick chat** when you're learning before acting.
+- Use **Plan** when the approach matters and you need to plan out building an app or feature, fix a complex bug, etc.
+- Use **Interactive** when you'd like to steer the agent at each step.
+- Use **Autopilot** when you have a clear, bounded task with well defined success criteria that you'd like the agent to complete with minimal intervention.
 - Model and reasoning choices affect speed, quality, and cost. Use enough capability for the task, but not more than needed.
-
-### Common beginner mistakes
-
-- Treating Quick chat and project sessions as interchangeable
-- Using Autopilot for a vague task that should start in Plan mode
-- Changing model or reasoning settings without noticing the effect on speed, cost, and output
 
 <details>
 <summary>Troubleshooting: First navigation problems</summary>
@@ -240,9 +255,9 @@ Check your plan, organization policy, project settings, and app version.
 ## 🔑 Key takeaways
 
 1. The app is organized around work surfaces: My Work, Search, Sessions, Quick chats, and Automations.
-2. Quick chat is for exploration. Sessions are for focused repository work.
-3. Interactive, Plan, and Autopilot change autonomy and review checkpoints.
-4. Settings are part of safe agent use because they affect models, context, tools, and shortcuts.
+2. **Quick chat** is for exploration. **Sessions** are for focused repository work.
+3. **Interactive**, **Plan**, and **Autopilot** change autonomy.
+
 
 ---
 
@@ -259,7 +274,7 @@ Create a small mode decision note for yourself:
 
 ## ➡️ What's next
 
-In Chapter 02, you'll start real sessions, learn what worktrees are, and practice giving Copilot focused context with `@`, `#`, and `/`.
+In Chapter 02, you'll start real sessions, learn what worktrees are, and practice giving Copilot App focused context with `@`, `#`, and `/`.
 
 **[← Back to Chapter 00](../00-quick-start/README.md)** | **[Continue to Chapter 02 →](../02-sessions-worktrees-context/README.md)**
 

@@ -31,6 +31,8 @@ At this point, you've got a session for the course repository and know where to 
 
 A careful builder does not hammer boards together and call the job done. They measure, build, test the fit, inspect the result, and adjust.
 
+![Builder's inspection loop analogy for development workflows](assets/builders-inspection-loop.webp)
+
 Copilot can help with the building, but you still inspect the evidence:
 
 - Plan
@@ -110,7 +112,7 @@ Tests and builds are evidence. A confident chat response is not enough.
 
 ## Hands-on workflow 1: Review a buggy area
 
-Use this exact learner prompt in a session:
+In a session, try this prompt:
 
 ```text
 Review @samples/book-app-web/src for issues related to filtering, unread counts, and reading statistics. Create a short checklist grouped by high, medium, and low risk. Do not edit files yet.
@@ -132,7 +134,7 @@ The review should mention behavior that you can verify with tests or browser int
 
 The default app passes tests. Before this workflow, use the `practice-unread-count-bug` branch created by the setup script, or follow the Issue 2 training-branch setup in [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-2-keep-unread-stats-correct-when-filters-are-active) so there is a real unread-count regression to fix. If you're unsure how to base the session on that branch, use the [Chapter 02 practice branch note](../02-sessions-worktrees-context/README.md#practice-branches-in-this-course).
 
-Use this exact learner prompt:
+Try this prompt:
 
 ```text
 Fix the unread count when filters are active in samples/book-app-web. Keep the change small, explain the root cause, and run the relevant tests.
@@ -175,7 +177,7 @@ http://127.0.0.1:5173
 
 Stay on the same training branch from the previous workflow.
 
-Use this exact learner prompt:
+Try this prompt:
 
 ```text
 Add or update tests for the unread count behavior so the bug would fail before the fix and pass after the fix. Keep the tests focused on samples/book-app-web.
@@ -203,7 +205,7 @@ Both commands should complete before you treat the change as ready.
 
 The `/rubber-duck` slash command asks a critic agent to review your current plan, diff, tests, or design. Use it before you create a PR, especially when the session made code changes.
 
-Use this exact learner prompt:
+Try this prompt:
 
 ```text
 /rubber-duck Critique the plan, diff, tests, and browser validation for this session. What should I double-check before creating a pull request?
@@ -233,7 +235,7 @@ Pick and Polish is the course name for a visible UI iteration loop:
 5. Preview the result.
 6. Review the diff and run tests.
 
-Use this exact learner prompt:
+Try this prompt:
 
 ```text
 Polish the book card UI in samples/book-app-web for spacing, visual hierarchy, accessible copy, and responsive behavior. Keep the design consistent with the existing app and show me the diff before I accept it.

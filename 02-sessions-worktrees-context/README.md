@@ -33,6 +33,8 @@ Complete Chapters [00](../00-quick-start/README.md) and [01](../01-first-steps/R
 
 Imagine you've got one important notebook, but three people need to work on different ideas from it. You wouldn't ask everyone to write on the same page at the same time. You'd make separate working copies, label them, and compare the results later.
 
+![Separate desks analogy for worktrees and focused context](assets/separate-desks-worktrees.webp)
+
 A worktree is like that separate working desk. It is connected to the same repository, but it has its own folder and branch so parallel work does not collide.
 
 ## Core concepts
@@ -148,7 +150,7 @@ Use the branch name shown in the chapter you're working through.
 
 The default sample app is stable. To practice a real planning workflow without overlapping the Chapter 03 debugging example, first read Issue 3 in [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-3-improve-the-empty-state-copy). This issue asks for clearer empty-state copy. Use the `practice-empty-state-copy` branch created by the setup script, or manually apply Issue 3's training-branch setup before this exercise. Follow the practice branch note above before starting the session.
 
-Create a new session in Plan mode and use this exact learner prompt:
+Create a new session in Plan mode, then try this prompt:
 
 ```text
 Improve the empty-state copy in samples/book-app-web. First inspect the relevant files and propose a plan. Do not edit files until I approve the plan.
@@ -170,7 +172,7 @@ You'll find the session in the app and identify whether it's using a worktree, l
 
 ## Hands-on example 2: Give focused file context
 
-Use this exact learner prompt in the same session:
+In the same session, try this prompt:
 
 ```text
 Use @samples/book-app-web/src to focus on the React app code. Which files are most likely involved in the empty-state copy?
@@ -190,7 +192,7 @@ The `@` reference narrows context. It helps Copilot spend attention on the files
 
 If your training repository includes seeded issues, open Issue 3 from [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-3-improve-the-empty-state-copy) and start a session from it. If you skipped the setup script, paste the issue text into the session prompt instead.
 
-Use this exact learner prompt after the issue context is loaded:
+After the issue context loads, try this prompt:
 
 ```text
 Use the issue details as the source of truth. Summarize the task, identify likely files in samples/book-app-web, and propose a safe validation plan before making changes.
