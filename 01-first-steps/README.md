@@ -248,12 +248,47 @@ Check your plan, organization policy, project settings, and app version.
 
 ## 📝 Assignment
 
-Create a small mode decision note for yourself:
+Create a small mode map for the Book App. The goal is to use the app surfaces from this chapter without changing files yet.
 
-1. Write one task you'd do in Quick chat.
-2. Write one task you'd do in Plan mode.
-3. Write one task you'd do in Interactive mode.
-4. Write one task you wouldn't give to Autopilot yet, and explain why.
+1. Open Quick chat and submit this prompt:
+
+   ```text
+   I'm learning this course with samples/book-app-web. Give me a beginner-friendly overview of what the app does, which files look important, and one safe question I should ask before editing code.
+   ```
+
+   Write down one useful thing Quick chat taught you about the app.
+
+2. Create a Plan-mode session and submit this prompt:
+
+   ```text
+   Plan how you would investigate why the Book App's reading stats might look wrong after filters are applied. Do not edit files. Tell me which files you would inspect and what evidence would prove the behavior.
+   ```
+
+   Write down the first file Copilot would inspect and one validation idea it suggested.
+
+3. Create an Interactive-mode session, or switch modes if your app version supports it, and submit this prompt:
+
+   ```text
+   Walk me through how search and filters work in samples/book-app-web. Ask me before recommending any code changes, and do not edit files.
+   ```
+
+   Write down one question Copilot asked or one checkpoint where you stayed in control.
+
+4. Open Search in the app and search for:
+
+   ```text
+   samples/book-app-web
+   ```
+
+   Confirm you can find the sample app folder or an important file such as `src/App.tsx`.
+
+5. Finish with this short decision:
+
+   ```text
+   I would not give Autopilot a Book App bug fix yet because...
+   ```
+
+   Your answer should mention one concrete reason from this chapter, such as needing a plan first, not knowing the right branch or worktree yet, or wanting to review tests before approving edits.
 
 ---
 
