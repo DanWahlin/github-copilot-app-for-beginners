@@ -1,10 +1,21 @@
+<!--
+---
+id: CopilotApp-02
+title: !translate Sessions, Worktrees, and Context
+description: !translate Start isolated worktree-backed sessions and give Copilot focused context with @, #, and / in the GitHub Copilot App.
+audience: Developers / Students / Desktop users
+slug: sessions-worktrees-and-context
+weight: 3
+---
+-->
+
 ![Chapter 02: Sessions, Worktrees, and Context](assets/chapter-header.svg)
 
 > **What if every task had its own safe desk, branch, context, and history?**
 
 Sessions are where the GitHub Copilot App stops feeling like ordinary chat. A session can have its own branch, working folder, plan, diff, terminal output, browser preview, and GitHub context. In this chapter, you'll start a session from a task, learn why worktrees keep work separated, and practice giving Copilot just enough context.
 
-## 🎯 Learning objectives
+## 🎯 Learning Objectives
 
 By the end of this chapter, you'll be able to:
 
@@ -19,7 +30,7 @@ By the end of this chapter, you'll be able to:
 - Use `/chronicle` to summarize session history
 - Use `/context` to inspect session context and token usage when available
 
-> ⏱️ **Estimated time**: ~50 minutes (25 min reading + 25 min hands-on)
+> ⏱️ **Estimated Time**: ~50 minutes (25 min reading + 25 min hands-on)
 
 ---
 
@@ -29,7 +40,7 @@ Complete Chapters [00](../00-quick-start/README.md) and [01](../01-first-steps/R
 
 ---
 
-## 🧩 Real-world analogy: Separate desks for separate projects
+## 🧩 Real-World Analogy: Separate Desks for Separate Projects
 
 Imagine you've got one important notebook, but three people need to work on different ideas from it. You wouldn't ask everyone to write on the same page at the same time. You'd make separate working copies, label them, and compare the results later.
 
@@ -37,13 +48,13 @@ Imagine you've got one important notebook, but three people need to work on diff
 
 A worktree is like that separate working desk. It is connected to the same repository, but it has its own folder and branch so parallel work does not collide.
 
-## Core concepts
+## Core Concepts
 
-### What is a worktree?
+### What Is a Worktree?
 
 A git worktree is a second working directory attached to the same repository. It usually uses a separate branch. This lets you work on more than one task without mixing files in the same folder.
 
-### Why the app uses worktrees
+### Why the App Uses Worktrees
 
 | Without isolation | With a worktree-backed session |
 |---|---|
@@ -54,7 +65,7 @@ A git worktree is a second working directory attached to the same repository. It
 
 ![One repository with many safe worktrees](assets/one-repo-many-worktrees.webp)
 
-### Session settings that matter here
+### Session Settings That Matter Here
 
 Before you run multiple sessions, find the app's session settings you toured in Chapter 01:
 
@@ -66,7 +77,7 @@ Before you run multiple sessions, find the app's session settings you toured in 
 
 Keep the defaults unless your instructor or team has a reason to change them.
 
-### Context controls
+### Context Controls
 
 | Syntax | Use it for | Example |
 |---|---|---|
@@ -76,7 +87,7 @@ Keep the defaults unless your instructor or team has a reason to change them.
 
 > Tip: Context controls are not a contest to attach the most information. Give the smallest useful context.
 
-### Slash commands in the app
+### Slash Commands in the App
 
 Slash commands are shortcuts you type in the composer. They can open app utilities, invoke agent behaviors, inspect usage, or trigger installed skills. The safest way to discover what your app supports is to type `/` in the composer and read the palette. Commands vary by app version, plan, enabled plugins, installed skills, and organization policy.
 
@@ -106,7 +117,7 @@ The `copilot-cli-for-beginners` course lists many Copilot CLI commands. This tab
 | `/skills` | Confirmed in the app changelog command palette examples | Chapter 05 |
 | `/collect-debug-logs` | Confirmed in the app README and changelog examples | Chapter 00 troubleshooting |
 | `/agent-merge` | Confirmed in the app changelog as an Agent Merge loop command | Chapter 04 and Chapter 08, advanced |
-| `/create-canvas` | Available when canvas-authoring capabilities are installed or exposed in the app | Chapter 06, advanced |
+| `/create-canvas` | Confirmed in GitHub Docs as a built-in skill for creating a canvas from a session | Chapter 06, advanced |
 | `/remote` | Mentioned in the app changelog command palette examples, but primarily a Copilot CLI remote-control workflow | Advanced appendix or Chapter 08 note only |
 | `/model` | Prefer the app model picker. The CLI command may not be the right teaching path in the app | Chapter 01 via UI |
 | `/plan` | Prefer the app Plan mode selector. The CLI command is not the beginner app path | Chapter 01 via mode selector |
@@ -126,7 +137,7 @@ When in doubt, type `/` and trust the in-app palette over a printed list.
 
 </details>
 
-### Practice branches in this course
+### Practice Branches in This Course
 
 Some later exercises use setup-script branches such as `practice-empty-state-copy`, `practice-unread-count-bug`, and `practice-search-case-bug`. Those branches contain intentional regressions or training changes.
 
@@ -146,7 +157,7 @@ Use the branch name shown in the chapter you're working through.
 
 ---
 
-## Hands-on example 1: Start a session from a task
+## Hands-On Example 1: Start a Session from a Task
 
 The default sample app is stable. To practice a real planning workflow without overlapping the Chapter 03 debugging example, first read Issue 3 in [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-3-improve-the-empty-state-copy). This issue asks for clearer empty-state copy. Use the `practice-empty-state-copy` branch created by the setup script, or manually apply Issue 3's training-branch setup before this exercise. Follow the practice branch note above before starting the session.
 
@@ -156,21 +167,21 @@ Create a new session in Plan mode, then try this prompt:
 Improve the empty-state copy in samples/book-app-web. First inspect the relevant files and propose a plan. Do not edit files until I approve the plan.
 ```
 
-- [app-screenshot: New session composer showing the choice between local repository, new worktree, and cloud sandbox if available.]
+<!-- app-screenshot: New session composer showing the choice between local repository, new worktree, and cloud sandbox if available. -->
 
-### Expected output
+### Expected Output
 
 Copilot should identify likely files to inspect, describe the current behavior, and propose a plan before editing.
 
 > Demo output varies. The exact files and wording may differ.
 
-### Success check
+### Success Check
 
 You'll find the session in the app and identify whether it's using a worktree, local repository, or cloud sandbox.
 
 ---
 
-## Hands-on example 2: Give focused file context
+## Hands-On Example 2: Give Focused File Context
 
 In the same session, try this prompt:
 
@@ -178,17 +189,17 @@ In the same session, try this prompt:
 Use @samples/book-app-web/src to focus on the React app code. Which files are most likely involved in the empty-state copy?
 ```
 
-### Expected output
+### Expected Output
 
 Copilot should focus on the sample app source folder instead of discussing unrelated course chapters.
 
-### How it works
+### How It Works
 
 The `@` reference narrows context. It helps Copilot spend attention on the files that matter.
 
 ---
 
-## Hands-on example 3: Start from an issue
+## Hands-On Example 3: Start from an Issue
 
 If your training repository includes seeded issues, open Issue 3 from [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-3-improve-the-empty-state-copy) and start a session from it. If you skipped the setup script, paste the issue text into the session prompt instead.
 
@@ -198,13 +209,13 @@ After the issue context loads, try this prompt:
 Use the issue details as the source of truth. Summarize the task, identify likely files in samples/book-app-web, and propose a safe validation plan before making changes.
 ```
 
-### Expected output
+### Expected Output
 
 Copilot should summarize the issue, connect it to sample app files, and suggest checks such as tests and browser validation.
 
 ---
 
-## Hands-on example 4: Inspect the branch and worktree safely
+## Hands-On Example 4: Inspect the Branch and Worktree Safely
 
 From the app, locate:
 
@@ -213,7 +224,7 @@ From the app, locate:
 - Worktree or workspace path
 - Diff view
 
-- [app-screenshot: Session details or sidebar area showing the generated branch/worktree name so learners can connect the app UI to git concepts.]
+<!-- app-screenshot: Session details or sidebar area showing the generated branch/worktree name so learners can connect the app UI to git concepts. -->
 
 If you open the folder in an editor, confirm the branch and path before making any edits.
 
@@ -223,7 +234,7 @@ Use this safe terminal check from the session terminal or your local terminal if
 git status
 ```
 
-### Expected output
+### Expected Output
 
 Git should show the current branch and whether files are modified.
 
@@ -238,7 +249,7 @@ nothing to commit, working tree clean
 
 ---
 
-## Hands-on example 5: Use `/chronicle`
+## Hands-On Example 5: Use `/chronicle`
 
 After a small completed session or plan, type:
 
@@ -246,7 +257,7 @@ After a small completed session or plan, type:
 /chronicle
 ```
 
-### Expected output
+### Expected Output
 
 Copilot should summarize what happened in the session and what decisions or changes were made.
 
@@ -254,7 +265,7 @@ Copilot should summarize what happened in the session and what decisions or chan
 
 ---
 
-## Hands-on example 6: Check session context with `/context`
+## Hands-On Example 6: Check Session Context with `/context`
 
 Type:
 
@@ -262,13 +273,13 @@ Type:
 /context
 ```
 
-### Expected output
+### Expected Output
 
 If your app version supports it, Copilot opens or summarizes session context details such as token count, context window, and usage information.
 
 If `/context` is not available, open the slash command palette and look for a similar usage or context command. App commands change over time, so the palette is the source of truth.
 
-### How it works
+### How It Works
 
 Context is the material Copilot is using for the current session. Checking it helps you notice when a session is getting too broad before you add more files, issues, or instructions.
 
@@ -296,7 +307,7 @@ For beginner work, focus on:
 - Safe default model and reasoning choices
 - Review checkpoints before edits
 
-- [app-screenshot: Settings screen where branch prefix or session lifecycle settings are visible, with sensitive details hidden.]
+<!-- app-screenshot: Settings screen where branch prefix or session lifecycle settings are visible, with sensitive details hidden. -->
 
 Treat auto-approve, Agent Merge attribution, and remote access as optional advanced settings that depend on policy and team workflow.
 
@@ -304,14 +315,14 @@ Treat auto-approve, Agent Merge attribution, and remote access as optional advan
 
 ---
 
-## Notes and tips
+## Notes and Tips
 
 - Worktrees are real directories and branches, not disposable chat history.
 - Do not manually edit or delete a worktree while a session is active unless you understand the consequences.
 - Worktrees isolate files and branches, but they do not automatically isolate ports, databases, containers, caches, or background processes.
 - If two sessions run the sample app, use different ports.
 
-### Common beginner mistakes
+### Common Beginner Mistakes
 
 - Opening the wrong worktree folder in an editor and editing the main checkout by accident
 - Attaching the whole repository when `@samples/book-app-web/src` is enough
@@ -320,11 +331,11 @@ Treat auto-approve, Agent Merge attribution, and remote access as optional advan
 <details>
 <summary>Troubleshooting: Sessions and worktrees</summary>
 
-### Two sessions cannot run the web app at the same time
+### Two Sessions Cannot Run the Web App at the Same Time
 
 They may both be trying to use the same port. For later chapters, run one session on `5173` and another on a different safe port such as `5174`.
 
-### A session behaves differently from the main checkout
+### A Session Behaves Differently from the Main Checkout
 
 Check:
 
@@ -334,7 +345,7 @@ Check:
 - Environment variables
 - Uncommitted changes
 
-### The app lost track of a worktree
+### The App Lost Track of a Worktree
 
 This can happen if the folder was moved or deleted outside the app. Prefer app-managed cleanup whenever possible.
 
@@ -342,7 +353,7 @@ This can happen if the folder was moved or deleted outside the app. Prefer app-m
 
 ---
 
-## 🔑 Key takeaways
+## 🔑 Key Takeaways
 
 1. Sessions are focused agent workspaces.
 2. Worktrees keep session changes separate from your main checkout.
@@ -369,7 +380,7 @@ Then answer:
 
 ---
 
-## ➡️ What's next
+## ➡️ What's Next
 
 In Chapter 03, you'll use the app for real development workflows: Review, debugging, tests, terminal validation, browser preview, and UI polish.
 
@@ -377,7 +388,7 @@ In Chapter 03, you'll use the app for real development workflows: Review, debugg
 
 ---
 
-## Source references
+## Source References
 
 - [Working with agent sessions][agent-sessions]
 - [About the GitHub Copilot App][about-app]

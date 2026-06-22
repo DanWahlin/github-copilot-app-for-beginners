@@ -1,10 +1,21 @@
+<!--
+---
+id: CopilotApp-04
+title: !translate GitHub Workflows
+description: !translate Use My Work, issues, pull requests, review comments, failing checks, Fix actions, and Agent Merge in the GitHub Copilot App.
+audience: Developers / Students / Desktop users
+slug: github-workflows
+weight: 5
+---
+-->
+
 ![Chapter 04: GitHub Workflows](assets/chapter-header.svg)
 
 > **What if issues, pull requests, review comments, checks, and merge readiness lived in the same supervised workflow?**
 
 The GitHub Copilot App also helps you move work through GitHub: Issues, pull requests, review comments, failing checks, and merge readiness. In this chapter, you'll use My Work as your issue and pull request inbox, start sessions from GitHub context, review diffs, and use Fix actions safely.
 
-## 🎯 Learning objectives
+## 🎯 Learning Objectives
 
 By the end of this chapter, you'll be able to:
 
@@ -16,7 +27,7 @@ By the end of this chapter, you'll be able to:
 - Know when to open a PR in the external browser
 - Understand why advanced Agent Merge still needs human judgment
 
-> ⏱️ **Estimated time**: ~55 minutes (25 min reading + 30 min hands-on)
+> ⏱️ **Estimated Time**: ~55 minutes (25 min reading + 30 min hands-on)
 
 ---
 
@@ -28,7 +39,7 @@ For the full hands-on flow, use a GitHub-backed training repository with seeded 
 
 ---
 
-## 🧩 Real-world analogy: An airport control tower
+## 🧩 Real-World Analogy: An Airport Control Tower
 
 An airport control tower does more than launch planes. It tracks incoming flights, runway status, weather, maintenance checks, and final clearance.
 
@@ -36,7 +47,7 @@ An airport control tower does more than launch planes. It tracks incoming flight
 
 My Work is similar. It helps you see what needs attention before you launch, review, fix, or merge work.
 
-## Core concepts
+## Core Concepts
 
 | Concept | Beginner explanation |
 |---|---|
@@ -50,7 +61,7 @@ My Work is similar. It helps you see what needs attention before you launch, rev
 
 ---
 
-## Hands-on workflow 1: Find work in My Work
+## Hands-On Workflow 1: Find Work in My Work
 
 Open My Work and find:
 
@@ -59,7 +70,7 @@ Open My Work and find:
 - Review requests
 - Pull requests with failing checks
 
-- [app-screenshot: My Work view showing issue and pull request sections with filters, using a safe sample repository.]
+<!-- app-screenshot: My Work view showing issue and pull request sections with filters, using a safe sample repository. -->
 
 Try search qualifiers such as:
 
@@ -71,13 +82,13 @@ repo:your-org-or-user/copilot-app-for-beginners is:issue is:open
 repo:your-org-or-user/copilot-app-for-beginners is:pr is:open
 ```
 
-### Success check
+### Success Check
 
 You're able to explain whether a missing issue or PR is more likely caused by filters, permissions, repository selection, or organization policy.
 
 ---
 
-## Hands-on workflow 2: Start from an issue
+## Hands-On Workflow 2: Start from an Issue
 
 Open a seeded issue for the sample app. Choose Issue 1 from [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-1-make-search-case-insensitive) and use the `practice-search-case-bug` branch created by the setup script. If you skipped the script, manually apply Issue 1's training-branch diff before asking Copilot to fix it. If you're unsure how to base the session on that branch, use the [Chapter 02 practice branch note](../02-sessions-worktrees-context/README.md#practice-branches-in-this-course):
 
@@ -91,9 +102,9 @@ Start a Plan-mode session from the issue, then try this prompt:
 Use this issue as the source of truth. Plan a small fix in samples/book-app-web, list the files you expect to change, and name the tests or browser checks that should prove the issue is fixed. Do not edit until I approve the plan.
 ```
 
-- [app-screenshot: Issue detail page with New session button visible.]
+<!-- app-screenshot: Issue detail page with New session button visible. -->
 
-### Expected output
+### Expected Output
 
 Copilot should summarize the issue, propose a small plan, and identify validation steps.
 
@@ -101,7 +112,7 @@ Copilot should summarize the issue, propose a small plan, and identify validatio
 
 ---
 
-## Hands-on workflow 3: Create or review a pull request
+## Hands-On Workflow 3: Create or Review a Pull Request
 
 After completing and validating a small session, use the app's PR flow to open or inspect a pull request.
 
@@ -113,15 +124,15 @@ Before opening a PR, check:
 - Browser behavior was checked if UI changed
 - PR description explains the change and validation
 
-- [app-screenshot: Pull request Files changed tab or diff review surface inside the app.]
+<!-- app-screenshot: Pull request Files changed tab or diff review surface inside the app. -->
 
-### Prompt for PR description help
+### Prompt for PR Description Help
 
 ```text
 Draft a pull request summary for this session. Include what changed, why it changed, and validation performed. Do not claim checks passed unless you saw the terminal or CI output.
 ```
 
-### Expected output
+### Expected Output
 
 Copilot should draft a PR summary that you can edit before submitting.
 
@@ -129,7 +140,7 @@ Copilot should draft a PR summary that you can edit before submitting.
 
 ---
 
-## Hands-on workflow 4: Respond to a PR conversation comment
+## Hands-On Workflow 4: Respond to a PR Conversation Comment
 
 Open the PR conversation comment from [PR scenario 1](../samples/app-course-pr-scenarios.md#pr-scenario-1-review-comment-asks-for-clearer-empty-state-copy), which asks for clearer empty-state copy.
 
@@ -139,19 +150,19 @@ Try this prompt:
 Review this PR conversation comment and propose the smallest change that addresses it. Show me the diff and validation plan before I accept the fix.
 ```
 
-- [app-screenshot: PR conversation comment, review comment, or failing CI check, with a Copilot Fix action visible if your app exposes one.]
+<!-- app-screenshot: PR conversation comment, review comment, or failing CI check, with a Copilot Fix action visible if your app exposes one. -->
 
-### Expected output
+### Expected Output
 
 Copilot should connect the comment to the relevant file, propose a focused fix, and suggest validation.
 
-### Success check
+### Success Check
 
 You're able to explain whether the comment is fully addressed and whether the fix changes anything unrelated.
 
 ---
 
-## Hands-on workflow 5: Fix a failing check safely
+## Hands-On Workflow 5: Fix a Failing Check Safely
 
 Open [PR scenario 2](../samples/app-course-pr-scenarios.md#pr-scenario-2-failing-ci-points-to-the-stats-test), which should fail the `Book app web` workflow, or use an instructor-provided example.
 
@@ -161,11 +172,11 @@ Try this prompt:
 Analyze the failing check. Explain the failure, identify the likely file in samples/book-app-web, propose a minimal fix, and tell me which command should pass afterward.
 ```
 
-### Expected output
+### Expected Output
 
 Copilot should summarize the failing check and suggest a minimal fix.
 
-### Check the result
+### Check the Result
 
 When the failure is related to the sample app, run:
 
@@ -186,7 +197,7 @@ Agent Merge is an advanced finishing workflow. It can help carry a pull request 
 
 ![Human judgment stays in the loop](assets/human-judgment-loop.webp)
 
-- [app-screenshot: ADVANCED: Agent Merge control or merge drawer in a safe training repository before enabling it.]
+<!-- app-screenshot: ADVANCED: Agent Merge control or merge drawer in a safe training repository before enabling it. -->
 
 Use Agent Merge only when:
 
@@ -225,14 +236,14 @@ Run it only in the training fork after you've reviewed the PR diff, checks, comm
 
 ---
 
-## Notes and tips
+## Notes and Tips
 
 - My Work reflects GitHub data and permissions.
 - If a learner cannot see an issue, PR, review request, or check, verify repository access and filters first.
 - Fix actions are helpers, not approvals.
 - Open the PR in the browser when you need GitHub settings, branch protection details, full Actions logs, or repository administration controls.
 
-### Common beginner mistakes
+### Common Beginner Mistakes
 
 - Assuming My Work shows every issue or PR regardless of filters and permissions
 - Letting a Fix action change more than the failing check or review comment requires
@@ -241,7 +252,7 @@ Run it only in the training fork after you've reviewed the PR diff, checks, comm
 <details>
 <summary>Troubleshooting: GitHub workflow issues</summary>
 
-### I cannot see an issue or PR
+### I Cannot See an Issue or PR
 
 Check:
 
@@ -252,7 +263,7 @@ Check:
 - Search qualifiers
 - Whether the issue or PR is in a fork
 
-### A check fails locally or in CI only
+### A Check Fails Locally or in CI Only
 
 Check:
 
@@ -262,7 +273,7 @@ Check:
 - Branch protection
 - Whether the failing workflow is unrelated to your change
 
-### A PR is still blocked after the fix
+### A PR Is Still Blocked After the Fix
 
 Triage in this order:
 
@@ -273,7 +284,7 @@ Triage in this order:
 5. Branch protection
 6. Agent Merge configuration if using the advanced flow
 
-### I cannot push to the repository
+### I Cannot Push to the Repository
 
 Public or shared training repositories may require forks. Ask your instructor or repository owner which workflow is expected.
 
@@ -281,7 +292,7 @@ Public or shared training repositories may require forks. Ask your instructor or
 
 ---
 
-## 🔑 Key takeaways
+## 🔑 Key Takeaways
 
 1. My Work turns GitHub issues and PRs into an app workflow surface.
 2. Starting from an issue gives Copilot better task context.
@@ -308,7 +319,7 @@ Then answer:
 
 ---
 
-## ➡️ What's next
+## ➡️ What's Next
 
 Chapter 05 will show how repo-local skills add reusable review guidance without adding external tools.
 
@@ -316,7 +327,7 @@ Chapter 05 will show how repo-local skills add reusable review guidance without 
 
 ---
 
-## Source references
+## Source References
 
 - [Managing issues and pull requests in the GitHub Copilot App][issues-prs]
 - [Getting started with the GitHub Copilot App][getting-started]

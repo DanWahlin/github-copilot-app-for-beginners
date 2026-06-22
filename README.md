@@ -1,10 +1,21 @@
+<!--
+---
+id: CopilotApp-ROOT
+title: !translate GitHub Copilot App for Beginners
+description: !translate Learn to direct and orchestrate AI coding agents from a single desktop app.
+audience: Developers / Students / Desktop users
+slug: copilot-app-for-beginners
+weight: 0
+---
+-->
+
 ![GitHub Copilot App for Beginners](assets/course-hero-command-center.webp)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)&ensp;
 [![GitHub Copilot App documentation](https://img.shields.io/badge/GitHub-Copilot_App_Docs-00a3ee?style=flat-square&logo=github)](https://docs.github.com/en/copilot/concepts/agents/github-copilot-app)&ensp;
 [![Course level](https://img.shields.io/badge/Level-Beginner-success?style=flat-square)](#target-audience)
 
-🎯 [What you'll learn](#what-youll-learn) &ensp; 👥 [Target audience](#target-audience) &ensp; 🤖 [Copilot family](#understanding-the-github-copilot-family) &ensp; 📚 [Course structure](#course-structure) &ensp; 🙋 [Getting help](#getting-help)
+🎯 [What You'll Learn](#what-youll-learn) &ensp; 👥 [Target Audience](#target-audience) &ensp; 🤖 [Copilot Family](#understanding-the-github-copilot-family) &ensp; 📚 [Course Structure](#course-structure) &ensp; 🙋 [Getting Help](#getting-help)
 
 # GitHub Copilot App for Beginners
 
@@ -16,7 +27,7 @@ This course treats the app as a place to guide and review work, not a magic code
 
 ![GitHub Copilot App](assets/github-copilot-app.webp)
 
-## 🎯 What you'll learn
+## 🎯 What You'll Learn
 
 By the end of the course, you'll be able to:
 
@@ -36,7 +47,7 @@ The main sample used throughout the course can be found at:
 samples/book-app-web
 ```
 
-## Target audience
+## Target Audience
 
 This course is designed for:
 
@@ -47,7 +58,7 @@ This course is designed for:
 
 No agentic development experience is required. Basic GitHub, Git, and JavaScript project familiarity will help. The sample app is a small React/Vite project, so basic npm command familiarity helps in the development chapters.
 
-## 🤖 Understanding the GitHub Copilot family
+## 🤖 Understanding the GitHub Copilot Family
 
 | Product | Where it runs | Best for |
 |---|---|---|
@@ -60,7 +71,7 @@ No agentic development experience is required. Basic GitHub, Git, and JavaScript
 
 This course focuses on the GitHub Copilot App. Along the way, you'll see how it connects to GitHub, local tools, browser previews, terminal output, and cloud capabilities when available.
 
-## 📚 Course structure
+## 📚 Course Structure
 
 | Chapter | Title | What learners do |
 |:--:|---|---|
@@ -74,7 +85,7 @@ This course focuses on the GitHub Copilot App. Along the way, you'll see how it 
 | 07 | 🔁 [Automations](./07-automations/README.md) | Create manual, scheduled, and advanced cloud automations |
 | 08 | 🧭 [Putting It All Together](./08-putting-it-all-together/README.md) | Complete an end-to-end multi-session workflow |
 
-## 📖 How this course works
+## 📖 How This Course Works
 
 Each chapter follows the same beginner-friendly pattern:
 
@@ -91,7 +102,7 @@ Each chapter follows the same beginner-friendly pattern:
 
 When a chapter shows a model response, remember that demo output varies. Your app version, model, reasoning setting, repository context, and enabled tools can change the response.
 
-## Command, reference, and help
+## Command, Reference, and Help
 
 - [GitHub Copilot App overview][about-app]
 - [Getting started with the app][getting-started]
@@ -101,7 +112,7 @@ When a chapter shows a model response, remember that demo output varies. Your ap
 - [Working with canvas extensions][canvas-docs]
 - [Customizing the GitHub Copilot App][customizing]
 
-## Getting help
+## Getting Help
 
 - Re-read the troubleshooting section in the chapter you're working on
 - Check the official GitHub Copilot App documentation
@@ -123,7 +134,7 @@ Suggested flow:
 
 This project is licensed under the terms of the MIT open source license. See [LICENSE](./LICENSE) when available.
 
-## Additional references
+## Additional References
 
 - [Public app repository][app-readme]
 - [GitHub Copilot App GA changelog][ga-changelog]

@@ -1,3 +1,14 @@
+<!--
+---
+id: CopilotApp-08
+title: !translate Putting It All Together
+description: !translate Run a complete end-to-end GitHub Copilot App workflow from issue triage to pull request readiness with clear pause points.
+audience: Developers / Students / Desktop users
+slug: putting-it-all-together
+weight: 9
+---
+-->
+
 ![Chapter 08: Putting It All Together](assets/chapter-header.svg)
 
 > **Now you get to run the whole workflow without losing control.**
@@ -6,7 +17,7 @@ You've worked through the pieces: Settings orientation, sessions, worktrees, con
 
 The beginner path uses one session first. Parallel sessions, Model Context Protocol (MCP), automations, and Agent Merge appear inside advanced or capstone sections with explicit pause points.
 
-## 🎯 Learning objectives
+## 🎯 Learning Objectives
 
 By the end of this chapter, you'll be able to:
 
@@ -17,7 +28,7 @@ By the end of this chapter, you'll be able to:
 - Recognize pause points where you'll inspect before increasing autonomy
 - Explain when advanced orchestration is helpful and when it adds risk
 
-> ⏱️ **Estimated time**: ~75 minutes (20 min reading + 55 min hands-on)
+> ⏱️ **Estimated Time**: ~75 minutes (20 min reading + 55 min hands-on)
 
 ---
 
@@ -33,7 +44,7 @@ Before starting:
 
 ---
 
-## 🧩 Real-world analogy: Air traffic control
+## 🧩 Real-World Analogy: Air Traffic Control
 
 Air traffic control does more than launch planes. It monitors each route, checks weather, coordinates runways, and pauses takeoffs when conditions change.
 
@@ -51,9 +62,9 @@ The Copilot app is similar when you run agent work:
 
 ---
 
-## Core concepts
+## Core Concepts
 
-### The control loop
+### The Control Loop
 
 Use this loop whenever agent work becomes more than a quick question:
 
@@ -69,7 +80,7 @@ Use this loop whenever agent work becomes more than a quick question:
 
 ![End-to-end GitHub Copilot App workflow](assets/end-to-end-workflow.webp)
 
-### Pause points
+### Pause Points
 
 Pause before:
 
@@ -85,7 +96,7 @@ These pause points keep you in control.
 
 ---
 
-## Capstone part 1: Prioritize one issue
+## Capstone Part 1: Prioritize One Issue
 
 Use Quick chat or My Work to identify one small task. For this course, choose a seeded issue like:
 
@@ -101,11 +112,11 @@ Summarize the issue and identify the smallest safe improvement in samples/book-a
 
 Demo output varies.
 
-### Expected result
+### Expected Result
 
 You've got one clear task, one likely area of the app, and no code changes yet.
 
-### Pause point 1
+### Pause Point 1
 
 Don't start implementation until you can answer:
 
@@ -115,7 +126,7 @@ Don't start implementation until you can answer:
 
 ---
 
-## Capstone part 2: Start one Plan-mode session
+## Capstone Part 2: Start One Plan-Mode Session
 
 Start a session from the issue or prompt in Plan mode:
 
@@ -129,7 +140,7 @@ If you created the Chapter 05 skill, ask:
 Use the book-app-reviewer skill while planning this change.
 ```
 
-### Expected result
+### Expected Result
 
 The plan should include:
 
@@ -140,13 +151,13 @@ The plan should include:
 
 Demo output varies.
 
-### Pause point 2
+### Pause Point 2
 
 Approve the plan only if it is small, understandable, and testable.
 
 ---
 
-## Capstone part 3: Implement and validate
+## Capstone Part 3: Implement and Validate
 
 After approving the plan, let Copilot make the change. Then validate with the exact sample app commands:
 
@@ -164,16 +175,16 @@ cd samples/book-app-web
 npm run dev -- --host 127.0.0.1 --port 5173
 ```
 
-### Expected result
+### Expected Result
 
 - Tests pass or failures are clearly understood
 - Build passes
 - Browser preview shows the intended empty-state change
 - Diff only includes files needed for the issue
 
-- [app-screenshot: Capstone session conversation with plan, tasks, changes, terminal/browser validation, and PR context visible in a single workspace.]
+<!-- app-screenshot: Capstone session conversation with plan, tasks, changes, terminal/browser validation, and PR context visible in a single workspace. -->
 
-### Pause point 3
+### Pause Point 3
 
 Before creating a PR, inspect:
 
@@ -184,7 +195,7 @@ Before creating a PR, inspect:
 
 ---
 
-## Capstone part 4: Create and review the PR
+## Capstone Part 4: Create and Review the PR
 
 Ask Copilot to draft a PR only after validation:
 
@@ -194,7 +205,7 @@ Draft a pull request summary for this change. Include summary, validation perfor
 
 If your training repository supports PR creation, create the PR in the app and inspect it in My Work.
 
-### Expected result
+### Expected Result
 
 The PR description should mention:
 
@@ -203,17 +214,17 @@ The PR description should mention:
 - validation commands run
 - any browser screenshot needed
 
-- [app-screenshot: Final PR summary, checks, and diff ready for human review in a safe repository.]
+<!-- app-screenshot: Final PR summary, checks, and diff ready for human review in a safe repository. -->
 
 Demo output varies.
 
-### Pause point 4
+### Pause Point 4
 
 Before asking Copilot to fix feedback, read the review comment or failing check yourself. Confirm the fix is relevant.
 
 ---
 
-## Capstone part 5: Respond to feedback
+## Capstone Part 5: Respond to Feedback
 
 Use the app to inspect review comments or failing checks. Then ask:
 
@@ -235,7 +246,7 @@ npm test -- --run
 npm run build
 ```
 
-### Expected result
+### Expected Result
 
 You'll see a tighter diff that addresses the feedback without expanding scope.
 
@@ -259,7 +270,7 @@ Safe delegation checklist:
 4. Distinct validation steps.
 5. Human review before combining work.
 
-- [app-screenshot: App sidebar showing multiple active sessions under the same repository or across repositories.]
+<!-- app-screenshot: App sidebar showing multiple active sessions under the same repository or across repositories. -->
 
 </details>
 
@@ -351,27 +362,29 @@ If you'd like to understand expensive patterns in your session usage, try:
 /chronicle cost tips
 ```
 
+`/chronicle` supports several subcommands you can explore from the palette: `standup`, `tips`, `cost tips`, `search`, `improve`, and `reindex`.
+
 These summaries help you spot long-running sessions, repeated rework, and places where tighter context would have helped.
 
 </details>
 
 ---
 
-## Notes and tips
+## Notes and Tips
 
 - Parallel sessions are useful only when the tasks are independent.
 - Multiple running web surfaces need distinct ports and clear labels.
 - A canvas can help track pause points, but it does not replace validation.
 - If browser validation is required, confirm the dev server is running in the correct worktree.
 
-### Common beginner mistakes
+### Common Beginner Mistakes
 
 - Trying parallel sessions before completing the same workflow with one session
 - Treating a capstone PR as merge-ready before checking diff, tests, build, browser behavior, and review feedback
 - Adding MCP, automations, or Agent Merge because they are available rather than because the workflow needs them
 
 <details>
-<summary>🔧 Troubleshooting</summary>
+<summary>Troubleshooting: Capstone workflow issues</summary>
 
 | Problem | What to check |
 |---|---|
@@ -385,7 +398,7 @@ These summaries help you spot long-running sessions, repeated rework, and places
 
 ---
 
-## 🔑 Key takeaways
+## 🔑 Key Takeaways
 
 1. The complete workflow is issue, plan, implement, validate, review, and merge readiness.
 2. Pause points are the main safety feature.
@@ -418,7 +431,7 @@ Success criteria: You're able to walk from issue triage to validated PR readines
 
 ---
 
-## 🎓 Course complete
+## 🎓 Course Complete
 
 You now know how to use the GitHub Copilot app as an agent-driven development control center:
 
@@ -433,7 +446,7 @@ You now know how to use the GitHub Copilot app as an agent-driven development co
 | Repetition | Use manual automations safely |
 | Capstone | Combine the workflow without giving up control |
 
-## ➡️ What's next
+## ➡️ What's Next
 
 Practice on small real issues first. Then gradually add advanced workflows when the work is independent, validated, and reviewable.
 
@@ -441,7 +454,7 @@ Practice on small real issues first. Then gradually add advanced workflows when 
 
 ---
 
-## Source references
+## Source References
 
 - [About the GitHub Copilot app](https://docs.github.com/en/copilot/concepts/agents/github-copilot-app)
 - [Working with agent sessions](https://docs.github.com/en/copilot/how-tos/github-copilot-app/agent-sessions)

@@ -130,6 +130,168 @@ This file tracks issues found during course reviews of the root README and Chapt
 
 **Resolution:** Expanded Model Context Protocol (MCP) on first beginner-facing use in the root README, Chapter 01, Chapter 05, Chapter 06, Chapter 08, the glossary, and related appendices.
 
+---
+
+# Deep Content and Template Review (Round 2)
+
+The issues below come from a deep review of the root README and Chapters 00-08 focused on: (0) matching the `copilot-cli-for-beginners` template, (1) chapter flow and readability for newcomers, (2) hands-on developer scenario coverage, (3) the `samples/book-app-web` code sample, and (4) consistency between what chapters claim and what exists in the repository.
+
+## ✅ Issue 13: Chapters and README were missing the CLI course's frontmatter block
+
+**Severity:** High
+
+**Files:** `README.md`, `00-quick-start/README.md` through `08-putting-it-all-together/README.md`
+
+**Problem:** Every `copilot-cli-for-beginners` chapter and its README begin with an HTML frontmatter comment block (`id`, `title: !translate`, `description: !translate`, `audience`, `slug`, `weight`) used by the Awesome Copilot learning hub. The App course had no frontmatter at all, so the template did not match.
+
+**Resolution:** Added the frontmatter comment block to the root README and all nine chapters, using `id: CopilotApp-ROOT`/`CopilotApp-00..08`, `audience: Developers / Students / Desktop users`, per-chapter slugs, and `weight` values 0-9, mirroring the CLI course pattern.
+
+## ✅ Issue 14: Headings used sentence case instead of the CLI course's Title Case
+
+**Severity:** High
+
+**Files:** `README.md`, `00-quick-start/README.md` through `08-putting-it-all-together/README.md`
+
+**Problem:** The App course used sentence-case headings ("Learning objectives", "Real-world analogy", "Hands-on example", "Estimated time") while the CLI course uses Title Case ("Learning Objectives", "Real-World Analogy", "Hands-On Example", "Estimated Time").
+
+**Resolution:** Converted every heading (and the bold "Estimated Time" label and the README top-nav link text) to Title Case across all ten files, preserving code spans and acronyms (PR, MCP, CI, UI, GitHub, Copilot). GitHub generates lowercase anchors, so internal and cross-file anchor links still resolve.
+
+## ✅ Issue 15: 26 `app-screenshot` placeholders rendered as broken-looking text
+
+**Severity:** Medium
+
+**Files:** `02-sessions-worktrees-context/README.md`, `03-development-workflows/README.md`, `04-github-workflows/README.md`, `05-skills-mcp-plugins/README.md`, `06-canvases/README.md`, `07-automations/README.md`, `08-putting-it-all-together/README.md`
+
+**Problem:** Capture placeholders were left as visible Markdown list items, for example `- [app-screenshot: My Work view ...]`. On GitHub these render as literal bullet text that looks unfinished or broken to a newcomer, hurting reading flow.
+
+**Resolution:** Converted all 26 placeholders to HTML comments (`<!-- app-screenshot: ... -->`). They no longer render for learners but remain in the source as capture TODOs for the author.
+
+## ✅ Issue 16: Chapter 01 settings list mismatched between objective and hands-on
+
+**Severity:** Medium
+
+**File:** `01-first-steps/README.md`
+
+**Problem:** The learning objective listed settings areas as "General, Sessions, Projects, Skills, Voice dictation, and accessibility or keyboard shortcuts," but the hands-on tour and table listed "General, Accounts, Sessions, Themes, Accessibility, Voice dictation." Projects/Skills appeared only in the objective, and Accounts/Themes only in the hands-on.
+
+**Resolution:** Aligned the objective to the settings areas the learner actually tours: "General, Accounts, Sessions, Themes, Accessibility, and Voice dictation." Skills/MCP/Plugins/Model providers remain in the "Additional settings" collapsible.
+
+## ✅ Issue 17: Chapter 01 sidebar tour omitted Quick chats and used inconsistent "My work" casing
+
+**Severity:** Low
+
+**File:** `01-first-steps/README.md`
+
+**Problem:** The "Tour the App" numbered list showed only My work, Automations, Search, and Sessions, even though the objective, image alt text, and Chapter 00 all reference Quick chats as a sidebar area. The list also used "My work" while the rest of the course uses the product term "My Work."
+
+**Resolution:** Added "Quick chats" as item 5 and corrected "My work" to "My Work."
+
+## ✅ Issue 18: Chapter 01 minor copy issues
+
+**Severity:** Low
+
+**File:** `01-first-steps/README.md`
+
+**Problem:** "For the second prompts, the response may say..." used a plural where one prompt is meant, and a sample response used a curly apostrophe (`I’ll`) inconsistent with the straight apostrophes used elsewhere.
+
+**Resolution:** Changed to "For the second prompt..." and replaced the curly apostrophe with a straight one.
+
+## ✅ Issue 19: Chapter 01 objective "select a model and reasoning effort" was never demonstrated
+
+**Severity:** Low
+
+**File:** `01-first-steps/README.md`
+
+**Problem:** A stated learning objective was to "Select a model and reasoning effort based on task complexity," but no hands-on example pointed learners at those controls; they were only mentioned later in Notes.
+
+**Resolution:** Extended the "Compare Session Modes" example to note the model and reasoning effort dropdowns beside the mode selector, plus a tip on choosing capability to match task complexity.
+
+## ✅ Issue 20: Troubleshooting collapsible labels were inconsistent across chapters
+
+**Severity:** Low
+
+**Files:** `05-skills-mcp-plugins/README.md`, `06-canvases/README.md`, `07-automations/README.md`, `08-putting-it-all-together/README.md`
+
+**Problem:** Chapters 00-04 used descriptive `<summary>Troubleshooting: <topic></summary>` labels (matching the Intermediate:/Advanced: prefix style used for other collapsibles), while Chapters 05-08 used a generic `<summary>🔧 Troubleshooting</summary>`.
+
+**Resolution:** Standardized Chapters 05-08 to the descriptive form (for example, "Troubleshooting: Canvas issues").
+
+## ✅ Issue 21: Chapter 00 connect-repository step used a UI label not in its own table
+
+**Severity:** Low
+
+**File:** `00-quick-start/README.md`
+
+**Problem:** The connect-repository table lists "Add local folder," "Add GitHub repository," and "Add repository URL," but the following sentence told learners to "Select `Local folder or repository...`," a fourth label that matches none of the table options and could confuse a newcomer.
+
+**Resolution:** Changed the instruction to "Select **Add local folder**," matching the table.
+
+## ✅ Issue 22: Chapter 02 slash-command "Confirmed" claims — verified against changelog, README, and docs
+
+**Severity:** Low (verification)
+
+**File:** `02-sessions-worktrees-context/README.md`
+
+**Problem:** The slash-command reference table asserts that many commands are "Confirmed in the app changelog" or "Confirmed in GitHub Docs." Those claims needed checking against authoritative sources.
+
+**Resolution:** Verified every claim against the public `github/app` `changelog.md`, the `github/app` README, and GitHub Docs (`agent-sessions`). All claims hold up, so no wording changes were needed:
+
+- `/agent` — confirmed (changelog v0.2.32 "Use the /agent slash command ... to select a custom agent"; v1.0.2 "User, plugin, and remote agents are now shown in the /agent command ... not just project-scoped agents").
+- `/chronicle` — confirmed (GitHub Docs "Using `/chronicle` with app sessions," including `/chronicle standup`; changelog v0.2.9).
+- `/context` — confirmed (changelog v0.2.33 "/context opens the session usage summary (token count, context window, and AI credit spend)").
+- `/usage` — confirmed (changelog v0.2.33 "/usage opens your plan's usage and rate limits").
+- `/rubber-duck` — confirmed (GitHub Docs "Using the rubber duck agent"; changelog v0.2.14 "via the /rubber-duck slash command").
+- `/orchestrate` — confirmed (changelog v0.2.33 "Added a /orchestrate composer command for coordinating multi-session and multi-repo work").
+- `/skills` — confirmed (changelog v0.2.2 lists `/skills` among command-palette enum-argument slash commands; v0.2.3/v0.2.4 add skill `/skill-name` invocation).
+- `/collect-debug-logs` — confirmed (README "Logs from the `/collect-debug-logs` command"; changelog v0.2.2).
+- `/agent-merge` — confirmed (changelog v0.2.8 "The /agent-merge slash command now correctly enables the agent-merge loop").
+- `/remote` — confirmed (changelog v0.2.2 lists `/remote` among command-palette slash commands).
+- `/create-canvas` — the course hedges this appropriately ("available when canvas-authoring capabilities are installed or exposed"); canvases are a confirmed feature and the course does not over-claim a changelog confirmation.
+
+(CLI-only commands the course steers away from — `/review`, `/plan`, `/model`, `/pr`, `/diff` — are being cross-checked by a separate web/CLI research pass.)
+
+**Follow-up after the broader web/docs research pass:** The research pass corroborated every command above with the same sources, and confirmed `/review`, `/plan`, `/model`, `/pr`, and `/diff` are all real Copilot CLI slash commands (the app intentionally exposes equivalent UI surfaces instead, so steering learners to the UI is correct). It found exactly one inaccuracy, now fixed: the `/create-canvas` row previously read "Available when canvas-authoring capabilities are installed or exposed in the app," but GitHub Docs present `/create-canvas` as a built-in skill available to all app users (canvases are GA and enabled by default). The row now reads "Confirmed in GitHub Docs as a built-in skill for creating a canvas from a session." Optional, applied: Chapter 08 now lists the full `/chronicle` subcommand set (`standup`, `tips`, `cost tips`, `search`, `improve`, `reindex`) alongside the standup and cost-tips examples.
+
+## ✅ Issue 23: Chapter header images are SVG while the CLI course uses PNG
+
+**Severity:** Low
+
+**Files:** `00-quick-start/assets/chapter-header.svg` through `08-putting-it-all-together/assets/chapter-header.svg`
+
+**Problem:** The CLI course uses `assets/chapter-header.png` for each chapter header; the App course uses `chapter-header.svg`. The SVGs render correctly on GitHub, but it is one remaining difference from the CLI template.
+
+**Resolution:** Confirmed with the author that SVG is intentional for the App course, so the headers are left as SVG. Recorded as a repository convention so future template-matching does not convert them to PNG.
+
+## Issue 24: App screenshots still need to be captured before publishing
+
+**Severity:** Low (pending task, not a defect)
+
+**Files:** Chapters 02-08 (26 `<!-- app-screenshot: ... -->` comments)
+
+**Problem:** The course relies heavily on the app UI as the learning surface, but 26 planned app screenshots are still unfilled (now tracked as HTML comments). The visuals are described in each comment and in `.plans/course-plan.md`.
+
+**Suggested resolution:** Capture the screenshots from a sanitized training account per `appendices/screenshot-capture-guide.md`, then replace each comment with an image reference.
+
+## ✅ Issue 25: No explicit refactoring hands-on scenario in Chapter 03
+
+**Severity:** Low (enhancement)
+
+**File:** `03-development-workflows/README.md`
+
+**Problem:** The course plan lists "refactor" among development workflows, and the CLI course has a dedicated refactoring workflow. Chapter 03 covered review, debug/fix, tests, rubber duck, and Pick and Polish, but not an explicit refactor-with-tests example.
+
+**Resolution:** Added "Hands-On Workflow 4: Refactor Safely with Tests" (an extract-function refactor of `filterBooks` in `App.tsx` that runs tests before and after to prove behavior is unchanged), renumbered Rubber Duck Review to Workflow 5, added a matching learning objective ("Refactor code safely using tests as a guardrail") and a key takeaway.
+
+## Positive highlights
+
+- Hands-on examples cover a strong, realistic range of developer scenarios: setup, Quick chat, sessions/modes, focused context, issue-driven sessions, worktree inspection, `/chronicle` and `/context`, code review, debug-and-fix, test generation, rubber duck, Pick and Polish, My Work, PR creation/review, responding to review comments, fixing failing checks, Agent Merge, repo-local skills, canvases, automations, and an end-to-end capstone.
+- Chapter-to-repository consistency is excellent: the `book-app-reviewer` skill, `.github/extensions/release-checklist` concept, `.github/copilot-instructions.md`, the `Book app web` CI workflow, the `appendices/training-github-scenarios.md` guide, the seeded issues/PR scenarios, and every practice branch referenced in the chapters all exist, and the setup script creates them.
+- The `samples/book-app-web` sample is solid and appropriately simple: clean React/TypeScript/Vite/Vitest, pure testable `filterBooks`/`getReadingStats` functions, accessible labels and regions, a responsive stylesheet, and 12 seed books whose read/unread/favorite counts match the tests.
+- No em-dashes were found anywhere in the course Markdown.
+
 ## Open questions
 
-None.
+None. Both prior open questions are resolved:
+
+- **Chapter header image format (Issue 23):** SVG is intentional for the App course (author confirmed).
+- **Slash-command claims (Issue 22):** All Chapter 02 slash-command claims were verified against the `github/app` changelog, the `github/app` README, and GitHub Docs. They are accurate.

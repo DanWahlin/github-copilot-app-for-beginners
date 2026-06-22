@@ -1,10 +1,21 @@
+<!--
+---
+id: CopilotApp-00
+title: !translate Quick Start
+description: !translate Install the GitHub Copilot App, sign in, connect the course repository, and verify a read-only Quick chat overview.
+audience: Developers / Students / Desktop users
+slug: quick-start
+weight: 1
+---
+-->
+
 ![Chapter 00: Quick Start](assets/chapter-header.svg)
 
 > **What if your first setup pass ended with a prepared training repo, a read-only Quick chat overview, and a first session you can inspect?**
 
 Welcome! This chapter gets the basics out of the way: Install the GitHub Copilot App, sign in, fork and clone the course repository, run the training setup script if you plan to complete the GitHub workflow chapters, connect the repository, and verify that Quick chat can explain the project without changing files. Once the app can see the repository, the hands-on agent workflows begin in Chapter 01.
 
-## 🎯 Learning objectives
+## 🎯 Learning Objectives
 
 By the end of this chapter, you'll be able to:
 
@@ -15,7 +26,7 @@ By the end of this chapter, you'll be able to:
 - Use Quick chat for a read-only repository overview
 - Create a first project session in Interactive mode
 
-> ⏱️ **Estimated time**: ~35 minutes (20 min setup + 15 min hands-on)
+> ⏱️ **Estimated Time**: ~35 minutes (20 min setup + 15 min hands-on)
 
 ---
 
@@ -33,7 +44,7 @@ By the end of this chapter, you'll be able to:
 
 ---
 
-## 🧩 Real-world analogy: Checking into a workshop
+## 🧩 Real-World Analogy: Checking into a Workshop
 
 Before you use a shared workshop, you check in, prove you're allowed to use the tools, choose a workbench, and make sure the lights turn on.
 
@@ -51,7 +62,7 @@ The Copilot App setup is the same idea. In the following examples you'll do the 
 
 ![First 10 minutes in the GitHub Copilot App](assets/first-10-minutes-flow.webp)
 
-## Core concepts
+## Core Concepts
 
 | Concept | Description |
 |---|---|
@@ -63,7 +74,7 @@ The Copilot App setup is the same idea. In the following examples you'll do the 
 
 ---
 
-## Hands-on example 1: Install and sign in
+## Hands-On Example 1: Install and Sign In
 
 1. [Download and install the GitHub Copilot App][getting-started] for your operating system.
 2. Open the app
@@ -71,19 +82,19 @@ The Copilot App setup is the same idea. In the following examples you'll do the 
 4. Sign in with your [GitHub account][github-signup], or enter your GitHub Enterprise Server URL if your organization uses one
 5. Complete any first-run choices such as theme or repository access
 
-### Expected output
+### Expected Output
 
 You'll see the main app window with navigation areas such as My Work, Automations, Search, Sessions, and Quick chats.
 
 ![GitHub Copilot App First Look](./assets/github-copilot-app-first-look.webp)
 
-### How it works
+### How It Works
 
 The app uses your GitHub identity and repository permissions to show work you can access. If a repository or issue is missing, the first thing to check is account access and organization policy.
 
 ---
 
-## Hands-on example 2: Fork, clone, and prepare the course repository
+## Hands-On Example 2: Fork, Clone, and Prepare the Course Repository
 
 1. Fork this [course's repository on GitHub][course-repository] by selecting the `Fork` button on the repository page. 
 
@@ -135,13 +146,13 @@ The app uses your GitHub identity and repository permissions to show work you ca
 
     The setup script for your shell creates the GitHub issues, branches, pull requests, comments, and failing-check scenario used in later chapters. It is safe to rerun if needed because it reuses items that already exist.
 
-### Success check
+### Success Check
 
 You've got a local clone of your fork, and the setup script completed or you intentionally chose the local-only path.
 
 ---
 
-## Hands-on example 3: Connect the course repository
+## Hands-On Example 3: Connect the Course Repository
 
 In the app sidebar, select the **+** button next to **Sessions**. There are several options available for connecting a project.
 
@@ -153,19 +164,19 @@ In the app sidebar, select the **+** button next to **Sessions**. There are seve
 
 ![Add project from dialog](./assets/add-project.webp)
 
-Select `Local folder or repository...` and navigate to your clone of the course repository.
+Select **Add local folder** and navigate to your clone of the course repository.
 
 ```text
 copilot-app-for-beginners
 ```
 
-### Success check
+### Success Check
 
 You'll see the course repository in the app, and the app sidebar will show the project as available.
 
 ---
 
-## Hands-on example 4: Ask your first Quick chat
+## Hands-On Example 4: Ask Your First Quick Chat
 
 Select the **+** next to `Quick chats` in the sidebar and submit the following prompt:
 
@@ -173,17 +184,17 @@ Select the **+** next to `Quick chats` in the sidebar and submit the following p
 Give me an overview of the copilot-app-for-beginners course repository. Focus on the learning path and the samples/book-app-web folder.
 ```
 
-### Expected output
+### Expected Output
 
 Copilot should summarize the course structure and identify `samples/book-app-web` as the web sample used for later exercises.
 
-### How it works
+### How It Works
 
 Quick chat is useful for exploration because it does not create a session branch or worktree. Use it when you're asking questions before changing code.
 
 ---
 
-## Hands-on example 5: Create your first project session
+## Hands-On Example 5: Create Your First Project Session
 
 Create a new project session in Interactive mode by selecting the **+** next to `copilot-app-for-beginners` in the sidebar. In the session composer, choose **Interactive** from the mode selector and submit the following prompt.
 
@@ -191,11 +202,11 @@ Create a new project session in Interactive mode by selecting the **+** next to 
 Explain the app structure and suggest one beginner-friendly improvement. Do not edit files yet.
 ```
 
-### Expected output
+### Expected Output
 
 Copilot should explain the repository at a high level and suggest a small possible improvement without making changes.
 
-### Success check
+### Success Check
 
 You're able to answer these questions:
 
@@ -206,7 +217,7 @@ You're able to answer these questions:
 
 ---
 
-## Notes and tips
+## Notes and Tips
 
 - Quick chat is best for orientation and questions.
 - A project session is best when you want the agent to plan, inspect, or make changes to a repository.
@@ -214,7 +225,7 @@ You're able to answer these questions:
 <details>
 <summary>Troubleshooting: Setup and access problems</summary>
 
-### I cannot sign in
+### I Cannot Sign In
 
 Check:
 
@@ -223,7 +234,7 @@ Check:
 - Your organization allows the app and related Copilot policies
 - You entered the correct GitHub Enterprise Server URL if required
 
-### I cannot see the repository
+### I Cannot See the Repository
 
 Check:
 
@@ -232,7 +243,7 @@ Check:
 - You tried the local folder option if the repository is already cloned
 - You tried the repository URL option if search does not find it
 
-### Quick chat cannot explain the repository
+### Quick Chat Cannot Explain the Repository
 
 Check:
 
@@ -244,7 +255,7 @@ Check:
 
 ---
 
-## 🔑 Key takeaways
+## 🔑 Key Takeaways
 
 1. The GitHub Copilot App is a desktop control center for agentic coding work
 2. Quick chat is safe for exploration since it doesn't create a branch or worktree
@@ -253,7 +264,7 @@ Check:
 
 ---
 
-## ➡️ What's next
+## ➡️ What's Next
 
 In Chapter 01, you'll tour the app interface, compare Quick chat with sessions, and learn when to use Interactive, Plan, and Autopilot modes.
 
@@ -261,7 +272,7 @@ In Chapter 01, you'll tour the app interface, compare Quick chat with sessions, 
 
 ---
 
-## Source references
+## Source References
 
 - [Getting started with the GitHub Copilot App][getting-started]
 - [About the GitHub Copilot App][about-app]

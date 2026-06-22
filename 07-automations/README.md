@@ -1,10 +1,21 @@
+<!--
+---
+id: CopilotApp-07
+title: !translate Automations
+description: !translate Turn repeatable Copilot prompts into manual, scheduled, and cloud automations with least-privilege tool selection.
+audience: Developers / Students / Desktop users
+slug: automations
+weight: 8
+---
+-->
+
 ![Chapter 07: Automations](assets/chapter-header.svg)
 
 > **What if your recurring Copilot prompt became a reusable button?**
 
 Automations let you save repeatable agent work. You'll start with a manual automation that runs only when you choose. Scheduled, cloud, and issue-triggered automations appear later because they can involve policy, billing, and permission decisions.
 
-## 🎯 Learning objectives
+## 🎯 Learning Objectives
 
 By the end of this chapter, you'll be able to:
 
@@ -15,7 +26,7 @@ By the end of this chapter, you'll be able to:
 - Understand scheduled automations as an intermediate next step
 - Recognize cloud and issue-triggered automations as advanced workflows
 
-> ⏱️ **Estimated time**: ~50 minutes (20 min reading + 30 min hands-on)
+> ⏱️ **Estimated Time**: ~50 minutes (20 min reading + 30 min hands-on)
 
 ---
 
@@ -30,7 +41,7 @@ Before starting:
 
 ---
 
-## 🧩 Real-world analogy: A kitchen prep list
+## 🧩 Real-World Analogy: A Kitchen Prep List
 
 A chef does not rewrite the morning prep list every day. They create a reusable list and run it when needed:
 
@@ -48,9 +59,9 @@ Start with a manual automation so you can test the prompt safely before giving i
 
 ---
 
-## Core concepts
+## Core Concepts
 
-### Automation is a saved agent run
+### Automation Is a Saved Agent Run
 
 An automation has four beginner-friendly parts:
 
@@ -63,7 +74,7 @@ An automation has four beginner-friendly parts:
 
 ![Automation trigger to agent run](assets/automation-trigger-to-run.webp)
 
-### Start manual
+### Start Manual
 
 Manual automations run on demand. They're the safest first step because you can:
 
@@ -75,7 +86,7 @@ Manual automations run on demand. They're the safest first step because you can:
 
 ---
 
-## Hands-on example 1: Create a manual PR summary automation
+## Hands-On Example 1: Create a Manual PR Summary Automation
 
 This exercise works best after Chapter 04 has created at least one PR. If your training repository has no open PRs yet, skip to the local validation reminder in Hands-on example 3, then come back later.
 
@@ -89,7 +100,7 @@ Use a manual trigger.
 
 Use this UI path if your app exposes automation creation: Open **Automations**, choose **New automation**, select **Manual trigger**, paste the prompt, select the smallest read-only tool set, save, then run it.
 
-- [app-screenshot: New automation form showing trigger choices such as Manual, On a schedule, and When an issue is created.]
+<!-- app-screenshot: New automation form showing trigger choices such as Manual, On a schedule, and When an issue is created. -->
 
 Use this prompt:
 
@@ -103,23 +114,23 @@ Tool guidance:
 - Do not grant write-capable tools for this beginner exercise.
 - Keep the automation local if local automations are available in your setup.
 
-### Expected output
+### Expected Output
 
 The run should produce a short PR summary and a suggested next human action.
 
 Demo output varies. Repository state, permissions, and available tools will change the result.
 
-### How it works
+### How It Works
 
 The automation saves the prompt and trigger so you can run the same bounded task again later. The selected tools control what the agent can inspect or do.
 
 ---
 
-## Hands-on example 2: Run it and inspect history
+## Hands-On Example 2: Run It and Inspect History
 
 Run the automation manually. Then open the run details.
 
-- [app-screenshot: Automations tab showing saved automations with name, schedule, repository, and last run status.]
+<!-- app-screenshot: Automations tab showing saved automations with name, schedule, repository, and last run status. -->
 
 Look for:
 
@@ -130,9 +141,9 @@ Look for:
 - result summary
 - error text if the run failed
 
-- [app-screenshot: Automation run detail or error state with copyable error text visible, using a safe sample workflow.]
+<!-- app-screenshot: Automation run detail or error state with copyable error text visible, using a safe sample workflow. -->
 
-### Pause point
+### Pause Point
 
 Before editing the automation, ask:
 
@@ -143,7 +154,7 @@ Before editing the automation, ask:
 
 ---
 
-## Hands-on example 3: Create a manual validation reminder
+## Hands-On Example 3: Create a Manual Validation Reminder
 
 Create another manual automation for local project validation:
 
@@ -169,7 +180,7 @@ npm run dev -- --host 127.0.0.1 --port 5173
 Do not run commands or edit files. Return the checklist only.
 ```
 
-### Expected output
+### Expected Output
 
 The automation should return a checklist. It should not modify files or run commands.
 
@@ -214,7 +225,7 @@ Use cloud automations only after the manual version works and after you understa
 
 ![Local versus cloud automations](assets/local-vs-cloud-automations.webp)
 
-- [app-screenshot: ADVANCED: Cloud automation tool selection area showing least-privilege tool choices, with any repository details anonymized.]
+<!-- app-screenshot: ADVANCED: Cloud automation tool selection area showing least-privilege tool choices, with any repository details anonymized. -->
 
 </details>
 
@@ -237,21 +248,21 @@ If an issue-triggered automation fires too often, narrow the issue search query,
 
 ---
 
-## Notes and tips
+## Notes and Tips
 
 - Automations are best for repeatable, bounded work with a clear review path.
 - Start with manual triggers before schedules or issue-created triggers.
 - Least privilege means selecting only the tools required for the task.
 - Treat prompts that read issue content as potentially exposed to prompt injection. Keep write actions out of early automations.
 
-### Common beginner mistakes
+### Common Beginner Mistakes
 
 - Scheduling an automation before testing it manually
 - Giving broad write tools to a reminder or summary workflow
 - Forgetting that cloud automations may have policy, billing, and repository-access implications
 
 <details>
-<summary>🔧 Troubleshooting</summary>
+<summary>Troubleshooting: Automation issues</summary>
 
 | Problem | What to check |
 |---|---|
@@ -265,7 +276,7 @@ If an issue-triggered automation fires too often, narrow the issue search query,
 
 ---
 
-## 🔑 Key takeaways
+## 🔑 Key Takeaways
 
 1. Automations turn repeatable prompts into reusable runs.
 2. Manual automations are the safest first step.
@@ -290,7 +301,7 @@ Success criteria: You're able to explain why the automation is safe to run again
 
 ---
 
-## ➡️ What's next
+## ➡️ What's Next
 
 In Chapter 08, you'll combine the app workflow into a capstone: Issue triage, planning, implementation, validation, PR review, and merge readiness. Advanced orchestration stays behind explicit pause points.
 
@@ -298,7 +309,7 @@ In Chapter 08, you'll combine the app workflow into a capstone: Issue triage, pl
 
 ---
 
-## Source references
+## Source References
 
 - [Using automations in the GitHub Copilot app](https://docs.github.com/en/copilot/how-tos/github-copilot-app/using-automations)
 - [GitHub Copilot app generally available](https://github.blog/changelog/2026-06-17-github-copilot-app-generally-available/)
