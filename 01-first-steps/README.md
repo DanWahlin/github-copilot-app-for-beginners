@@ -62,8 +62,8 @@ The Copilot App works the same way:
 
 | Mode | Beginner meaning | Use case |
 |---|---|---|
-| Interactive | Copilot works with you step by step | Guided exploration or small edits |
-| Plan | Copilot creates a plan before executing | Project changes where the initial approach and project details matter |
+| Interactive | Copilot works with you step by step | You'd like to be involved throughout the entire process |
+| Plan | Copilot creates a plan before executing | The initial approach and project details matter |
 | Autopilot | Copilot works independently | Tasks that are well defined and have clear outcomes |
 
 ![Session mode decision ladder](assets/session-mode-decision-ladder.webp)
