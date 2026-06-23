@@ -44,16 +44,16 @@ By the end of this chapter, you'll be able to:
 
 ---
 
-## 🧩 Real-World Analogy: Checking into a Workshop
+## 🧩 Real-World Analogy: Setting Up the Recording Studio
 
-Before you use a shared workshop, you check in, prove you're allowed to use the tools, choose a workbench, and make sure the lights turn on.
+Before you record anything, you get the recordingstudio ready. You sign in for access, plug in your gear, load the song you'll work on, and run a quick soundcheck to make sure everything sounds right before you commit a single take.
 
-![Workshop check-in analogy for GitHub Copilot App setup](assets/workshop-check-in.webp)
+![Setting up the studio analogy for GitHub Copilot App setup](assets/studio-setup-soundcheck.webp)
 
 The Copilot App setup is the same idea. In the following examples you'll do the following:
 
-1. Fork and clone the course repository
-2. Install the GitHub Copilot App
+1. Install the GitHub Copilot App
+2. Fork and clone the course repository
 3. Sign in to the app
 4. Run a setup script
 5. Connect the course repository to the app

@@ -39,13 +39,13 @@ For the full hands-on flow, use a GitHub-backed training repository with seeded 
 
 ---
 
-## 🧩 Real-World Analogy: An Airport Control Tower
+## 🧩 Real-World Analogy: The Producer's Review Desk
 
-An airport control tower does more than launch planes. It tracks incoming flights, runway status, weather, maintenance checks, and final clearance.
+A music producer's desk does more than start new songs. It tracks song briefs, takes waiting for approval, notes for the players, quality checks, and the final call on what makes the album.
 
-![Airport control tower analogy for GitHub issues and pull requests](assets/airport-control-tower-github-work.webp)
+![Producer's review desk analogy for GitHub issues and pull requests](assets/producer-review-desk-github.webp)
 
-My Work is similar. It helps you see what needs attention before you launch, review, fix, or merge work.
+My Work is similar. It helps you see what needs attention before you start, review, fix, or merge work.
 
 ## Core Concepts
 

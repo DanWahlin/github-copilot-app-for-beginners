@@ -44,20 +44,20 @@ Before starting:
 
 ---
 
-## 🧩 Real-World Analogy: A Checklist on the Workbench
+## 🧩 Real-World Analogy: A Song Chart for the Session
 
-Imagine a bike repair shop. A mechanic may be skilled, but the shop still posts a checklist near the bench:
+Imagine a session band. The players are skilled, but the bandleader still hands out a chart for each song:
 
-![Workbench checklist analogy for Copilot skills](assets/workbench-checklist-skills.webp)
+![Song chart analogy for Copilot skills](assets/song-chart-skills.webp)
 
-| Checklist item | Why it helps |
+| Chart note | Why it helps |
 |---|---|
-| Check brakes | Safety |
-| Check tire pressure | Reliability |
-| Check chain tension | Performance |
-| Test ride before pickup | Validation |
+| Key and tempo | Everyone stays in sync |
+| Song structure | No one gets lost |
+| Dynamics marked | A consistent feel |
+| Final run-through | Validation before the take |
 
-A skill is like that checklist. It does not give the mechanic a new tool. It reminds them how this shop wants the job done.
+A skill is like that chart. It does not hand the player a new instrument. It reminds them how this band wants the song played.
 
 ---
 

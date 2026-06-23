@@ -11,24 +11,22 @@ weight: 3
 
 ![Chapter 02: Sessions, Worktrees, and Context](assets/chapter-header.svg)
 
-> **What if every task had its own safe desk, branch, context, and history?**
+> **What if every task had its own workspace, branch, context, and history?**
 
-Sessions are where the GitHub Copilot App stops feeling like ordinary chat. A session can have its own branch, working folder, plan, diff, terminal output, browser preview, and GitHub context. In this chapter, you'll start a session from a task, learn why worktrees keep work separated, and practice giving Copilot just enough context.
+Sessions are where the GitHub Copilot App stops feeling like ordinary chat. A session can have its own branch, working folder, plan, diff, terminal output, browser preview, and GitHub context. In this chapter, you'll start a session from a task, learn how worktrees keep work separated, and practice giving Copilot proper context.
 
 ## 🎯 Learning Objectives
 
 By the end of this chapter, you'll be able to:
 
 - Start a session from a prompt, issue, or pull request
-- Explain a git worktree in beginner terms
-- Understand why isolated sessions protect your main checkout
+- Explain what a git worktree is and why you'd use it
+- Understand why isolated sessions protect your main branch
 - Use `@` for file and folder context
 - Use `#` for issue or PR context when available
-- Use `/` for app commands and know where to check availability
+- Use `/` for app commands
 - Decide between local repository, new worktree, and cloud sandbox options
 - Recognize branch prefixes and session lifecycle settings
-- Use `/chronicle` to summarize session history
-- Use `/context` to inspect session context and token usage when available
 
 > ⏱️ **Estimated Time**: ~50 minutes (25 min reading + 25 min hands-on)
 
@@ -36,17 +34,17 @@ By the end of this chapter, you'll be able to:
 
 ## ✅ Prerequisites
 
-Complete Chapters [00](../00-quick-start/README.md) and [01](../01-first-steps/README.md). At this point, you've connected the course repository and understand the difference between Quick chat and a project session.
+Complete Chapters [00](../00-quick-start/README.md) and [01](../01-first-steps/README.md). At this point, you've connected the course repository and understand the difference between Quick chats and project sessions.
 
 ---
 
-## 🧩 Real-World Analogy: Separate Desks for Separate Projects
+## 🧩 Real-World Analogy: One Studio, Many Recording Booths
 
-Imagine you've got one important notebook, but three people need to work on different ideas from it. You wouldn't ask everyone to write on the same page at the same time. You'd make separate working copies, label them, and compare the results later.
+Imagine one song that three musicians playing different instruments (guitar, bass, drums) need to record at the same time. To get the best results, you wouldn't crowd them around a single microphone and hope it works out. You'd put each one in their own soundproof booth to lay down a different part in parallel, then mix the takes together later.
 
-![Separate desks analogy for worktrees and focused context](assets/separate-desks-worktrees.webp)
+![Recording studio booths analogy for worktrees and focused context](assets/recording-booths-worktrees.webp)
 
-A worktree is like that separate working desk. It is connected to the same repository, but it has its own folder and branch so parallel work does not collide.
+A worktree is like a separate recording booth. It's connected to the same repository (the same song), but it has its own folder and branch so parallel work doesn't collide.
 
 ## Core Concepts
 
@@ -75,9 +73,9 @@ Before you run multiple sessions, find the app's session settings you toured in 
 | Session lifecycle | Helps you understand when sessions, branches, or worktrees are reused or cleaned up |
 | Default model and reasoning | Affects speed, quality, and cost for new sessions |
 
-Keep the defaults unless your instructor or team has a reason to change them.
-
 ### Context Controls
+
+It's to provide your agent session with the necessary context to understand the problem and generate helpful responses. Fortunately, the app provides a dedicated context syntax to help you do this effectively.
 
 | Syntax | Use it for | Example |
 |---|---|---|
@@ -85,7 +83,7 @@ Keep the defaults unless your instructor or team has a reason to change them.
 | `#` | Issues or pull requests | `#12` |
 | `/` | Commands | `/chronicle` |
 
-> Tip: Context controls are not a contest to attach the most information. Give the smallest useful context.
+> Tip: Context controls are not a contest to attach the most information. Provide the smallest useful context.
 
 ### Slash Commands in the App
 
@@ -103,7 +101,7 @@ Start with these beginner-safe commands:
 <details>
 <summary>Reference: Copilot CLI slash commands and GitHub Copilot App availability</summary>
 
-The `copilot-cli-for-beginners` course lists many Copilot CLI commands. This table compares those commands with App-specific commands learners see in this course. The GitHub Copilot App is built on Copilot CLI, but the desktop app also has its own UI flows. Treat this table as a practical map, not a promise that every command appears in every app build.
+The [`copilot-cli-for-beginners`](https://github.com/github/copilot-cli-for-beginners) course lists many Copilot CLI commands. This table compares those commands with App-specific commands in this course. The GitHub Copilot App is built on Copilot CLI, but the desktop app also has its own UI flows.
 
 | Command | App status | Course placement |
 |---|---|---|
@@ -201,34 +199,49 @@ The `@` reference narrows context. It helps Copilot spend attention on the files
 
 ## Hands-On Example 3: Start from an Issue
 
-If your training repository includes seeded issues, open Issue 3 from [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-3-improve-the-empty-state-copy) and start a session from it. If you skipped the setup script, paste the issue text into the session prompt instead.
+Your forked repository should include seeded issues if you ran the setup script in [00 - Quick Start](../00-quick-start/README.md). With the GitHub Copilot App, you can open an issue directly without having to leave the app. 
 
-After the issue context loads, try this prompt:
+Open Issue #3 from your repository by selecting the `Create from` icon next to your `copilot-app-for-beginners` project, selecting the `Issues` tab, and then selecting the issue.
 
-```text
-Use the issue details as the source of truth. Summarize the task, identify likely files in samples/book-app-web, and propose a safe validation plan before making changes.
-```
+![Open Issue in Copilot App](assets/app-create-from-icon.webp)
+
+> Note: If you skipped the setup script, you can go back to the [00 - Quick Start](../00-quick-start/README.md) section and run the seed script to get the issues and other resources used in the course in your repository.
+
+You should see that the app analyzes the issue and generates a plan to address it. A huge time saver!
 
 ### Expected Output
 
-Copilot should summarize the issue, connect it to sample app files, and suggest checks such as tests and browser validation.
+Copilot should analyze the issue and generate a plan that you can then review and approve before making any changes.
 
 ---
 
 ## Hands-On Example 4: Inspect the Branch and Worktree Safely
+
+A session keeps its evidence in a few surfaces. In this example, you'll explore those surfaces and how they relate to the git concepts you're learning. Open them now so you'll know exactly where to look when you start making changes in upcoming chapters.
 
 From the app, locate:
 
 - Session name
 - Branch name
 - Worktree or workspace path
-- Diff view
 
 <!-- app-screenshot: Session details or sidebar area showing the generated branch/worktree name so learners can connect the app UI to git concepts. -->
 
 If you open the folder in an editor, confirm the branch and path before making any edits.
 
-Use this safe terminal check from the session terminal or your local terminal if the folder is open:
+### Open the Review Panel and Check the Diff
+
+Select the **Review panel** toggle in the upper-right corner of the screen. This is where a session's diff and terminal surfaces live.
+
+Open the **Changes** tab to see the diff. This session has only planned and inspected, and you haven't approved any edits, so the Changes tab is empty. That's expected. In Chapter 03 you'll make real changes and watch diffs appear here.
+
+<!-- app-screenshot: Review panel open with the Changes tab selected, showing an empty diff for a plan-only session. -->
+
+### Start a Terminal and Check Git Status
+
+In the Review panel, select the **Terminal** tab. If no terminal exists yet, press **+** to start one.
+
+Run this safe check in the session terminal:
 
 ```bash
 git status

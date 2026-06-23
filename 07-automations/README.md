@@ -41,19 +41,19 @@ Before starting:
 
 ---
 
-## 🧩 Real-World Analogy: A Kitchen Prep List
+## 🧩 Real-World Analogy: Programming the Sequencer
 
-A chef does not rewrite the morning prep list every day. They create a reusable list and run it when needed:
+A producer does not replay the same drum pattern by hand every night. They program it into a sequencer once and let it run when needed:
 
-![Kitchen prep list analogy for automations](assets/kitchen-prep-automation.webp)
+![Sequencer analogy for automations](assets/sequencer-automation.webp)
 
-| Kitchen workflow | App automation |
+| Sequencer | App automation |
 |---|---|
-| Prep list | Saved prompt |
-| Start prep manually | Manual trigger |
-| Daily prep time | Schedule |
-| Check pantry first | Selected tools |
-| Chef reviews the station | Human reviews the result |
+| Programmed pattern | Saved prompt |
+| Hit play | Manual trigger |
+| Run on the clock | Schedule |
+| Chosen instruments | Selected tools |
+| Producer checks the mix | Human reviews the result |
 
 Start with a manual automation so you can test the prompt safely before giving it a schedule or trigger.
 

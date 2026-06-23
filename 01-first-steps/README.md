@@ -36,17 +36,17 @@ Complete [Chapter 00](../00-quick-start/README.md) first. If you jumped straight
 
 ---
 
-## 🧩 Real-World Analogy: Mission Control
+## 🧩 Real-World Analogy: The Producer's Control Room
 
-Mission control doesn't fly every spacecraft the same way. Some missions need close steering. Some need an adjusted flight plan. Some routine tasks can run mostly on their own.
+A producer in the control room doesn't handle every song the same way. Some takes need close direction. Some need the arrangement charted out first. Some quick questions just need a fast answer.
 
-![Mission control analogy for GitHub Copilot App session modes](assets/mission-control-session-modes.webp)
+![Producer's control room analogy for GitHub Copilot App session modes](assets/producer-control-room-modes.webp)
 
 The Copilot App works the same way:
 
-- Quick chat is like asking a mission specialist a question.
-- Interactive mode is like steering with frequent check-ins.
-- Plan mode is like approving the route before launch.
+- Quick chat is like asking a session musician a quick question.
+- Interactive mode is like directing a take with frequent check-ins.
+- Plan mode is like charting the arrangement and approving it before the first take.
 - Autopilot is like giving a clearly defined task to a trusted system and letting it complete it with minimal intervention.
 
 ## Core Concepts

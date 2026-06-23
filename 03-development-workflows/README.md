@@ -35,17 +35,17 @@ By the end of this chapter, you'll be able to:
 
 Complete Chapters [00](../00-quick-start/README.md), [01](../01-first-steps/README.md), and [02](../02-sessions-worktrees-context/README.md).
 
-At this point, you've got a session for the course repository and know where to find the session diff, terminal, and browser surfaces.
+At this point, you've got a session for the course repository and know where to find the session diff and terminal surfaces.
 
 ---
 
-## 🧩 Real-World Analogy: A Builder's Inspection Loop
+## 🧩 Real-World Analogy: Record, Play Back, Re-take
 
-A careful builder does not hammer boards together and call the job done. They measure, build, test the fit, inspect the result, and adjust.
+A good musician doesn't keep the first take just because it's finished. They record a take, play it back, listen closely for anything off, and re-record until it's right.
 
-![Builder's inspection loop analogy for development workflows](assets/builders-inspection-loop.webp)
+![Record, play back, re-take analogy for development workflows](assets/record-playback-retake-loop.webp)
 
-Copilot can help with the building, but you still inspect the evidence:
+Copilot can help you lay down the take, but you still listen back to the evidence:
 
 - Plan
 - Diff

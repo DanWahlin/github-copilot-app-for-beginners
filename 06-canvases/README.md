@@ -42,20 +42,20 @@ Before starting:
 
 ---
 
-## 🧩 Real-World Analogy: A Whiteboard in a Team Room
+## 🧩 Real-World Analogy: The Band's Arrangement Board
 
-Imagine a team planning a release. They could discuss every task in a chat thread, but a whiteboard works better:
+Imagine a band planning a song. They could argue every part in a long group chat, but a shared arrangement board works better:
 
-![Team whiteboard analogy for canvases](assets/team-whiteboard-canvas.webp)
+![Arrangement board analogy for canvases](assets/arrangement-board-canvas.webp)
 
-| Chat thread | Whiteboard |
+| Group chat | Arrangement board |
 |---|---|
 | Good for discussion | Good for shared state |
 | Hard to scan later | Easy to inspect at a glance |
-| Mostly linear | Can show boards, lists, previews, and controls |
+| Mostly linear | Can show sections, parts, previews, and controls |
 | Updates are buried | Updates are visible |
 
-A canvas is the app's whiteboard for human-agent work.
+A canvas is the app's arrangement board for human-agent work.
 
 ---
 

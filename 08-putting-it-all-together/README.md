@@ -44,21 +44,21 @@ Before starting:
 
 ---
 
-## 🧩 Real-World Analogy: Air Traffic Control
+## 🧩 Real-World Analogy: Mixing the Final Album
 
-Air traffic control does more than launch planes. It monitors each route, checks weather, coordinates runways, and pauses takeoffs when conditions change.
+Mixing a final album is more than playing tracks. You balance each part, watch the levels, keep the timing tight, and hold the release until it sounds right.
 
-![Air traffic control analogy for the capstone workflow](assets/air-traffic-control-capstone.webp)
+![Mixing the final album analogy for the capstone workflow](assets/final-mix-capstone.webp)
 
 The Copilot app is similar when you run agent work:
 
-| Air traffic control | Copilot app workflow |
+| Mixing the album | Copilot app workflow |
 |---|---|
-| Flight plan | Plan-mode session |
-| Separate routes | Separate branches and worktrees |
-| Radar | Session sidebar, diffs, terminal, browser, PR checks |
-| Hold short | Pause points before editing, PR creation, or merge |
-| Landing clearance | Human review and merge readiness |
+| The arrangement | Plan-mode session |
+| Separate tracks | Separate branches and worktrees |
+| Monitors and meters | Session sidebar, diffs, terminal, browser, PR checks |
+| Hold the take | Pause points before editing, PR creation, or merge |
+| Final sign-off | Human review and merge readiness |
 
 ---
 
