@@ -1,1 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="260" viewBox="0 0 1000 260" role="img" aria-labelledby="title desc"><title id="title">Chapter 04: GitHub Workflows</title><desc id="desc">Header placeholder for Chapter 04.</desc><rect width="1000" height="260" rx="24" fill="#082f49"/><rect x="46" y="46" width="908" height="168" rx="20" fill="#0284c7" opacity="0.25"/><text x="70" y="120" fill="#bae6fd" font-family="Arial, sans-serif" font-size="28" font-weight="700">Chapter 04</text><text x="70" y="172" fill="#ffffff" font-family="Arial, sans-serif" font-size="54" font-weight="800">GitHub Workflows</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="260" viewBox="0 0 1000 260" role="img" aria-labelledby="t04 d04"><title id="t04">Chapter 04: GitHub Workflows</title><desc id="d04">Studio-themed header for Chapter 04.</desc>
+<defs>
+<linearGradient id="bg04" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#082f49"/><stop offset="1" stop-color="#0a5c86"/></linearGradient>
+<radialGradient id="gl04" cx="0.86" cy="0.16" r="0.7"><stop offset="0" stop-color="#32b2ec" stop-opacity="0.34"/><stop offset="1" stop-color="#32b2ec" stop-opacity="0"/></radialGradient>
+<clipPath id="cp04"><rect width="1000" height="260" rx="24"/></clipPath>
+</defs>
+<g clip-path="url(#cp04)">
+<rect width="1000" height="260" fill="url(#bg04)"/>
+<rect width="1000" height="260" fill="url(#gl04)"/>
+<rect width="1000" height="260" rx="24" fill="none" stroke="#bae6fd" stroke-opacity="0.10" stroke-width="2"/>
+<path d="M28 195 L44 210 L60 228 L76 234 L92 225 L108 212 L124 206 L140 207 L156 209 L172 212 L188 218 L204 224 L220 223 L236 210 L252 194 L268 188 L284 199 L300 215 L316 223 L332 221 L348 215 L364 211 L380 208 L396 205 L412 206 L428 216 L444 230 L460 234 L476 223 L492 205 L508 195 L524 199 L540 208 L556 214 L572 216 L588 216 L604 215 L620 207 L636 197 L652 194 L668 205 L684 224 L700 234 L716 228 L732 215 L748 207 L764 206 L780 209 L796 211 L812 216 L828 223 L844 225 L860 214 L876 198 L892 188 L908 195 L924 211 L940 222 L956 222 L972 217" fill="none" stroke="#bae6fd" stroke-opacity="0.16" stroke-width="2.5" stroke-linecap="round"/>
+<g><rect x="824" y="141" width="10" height="69" rx="5" fill="#bae6fd" opacity="0.45"/><rect x="841" y="141" width="10" height="69" rx="5" fill="#fbbf24" opacity="0.85"/><rect x="841" y="132" width="10" height="5" rx="2.5" fill="#fbbf24"/><rect x="858" y="132" width="10" height="78" rx="5" fill="#bae6fd" opacity="0.45"/><rect x="875" y="108" width="10" height="102" rx="5" fill="#bae6fd" opacity="0.45"/><rect x="892" y="87" width="10" height="123" rx="5" fill="#fbbf24" opacity="0.85"/><rect x="892" y="78" width="10" height="5" rx="2.5" fill="#fbbf24"/><rect x="909" y="87" width="10" height="123" rx="5" fill="#bae6fd" opacity="0.45"/><rect x="926" y="135" width="10" height="75" rx="5" fill="#bae6fd" opacity="0.45"/></g>
+<rect x="58" y="82" width="6" height="108" rx="3" fill="#fbbf24"/>
+<g font-family="Helvetica, Arial, sans-serif">
+<circle cx="96" cy="74" r="6" fill="#fbbf24"/>
+<text x="112" y="80" fill="#bae6fd" font-size="21" font-weight="700" letter-spacing="3">CHAPTER 04</text>
+<text x="84" y="146" fill="#ffffff" font-size="56" font-weight="800">GitHub Workflows</text>
+<text x="86" y="186" fill="#bae6fd" font-size="15" font-weight="600" letter-spacing="3" opacity="0.62">GITHUB COPILOT APP</text>
+</g>
+</g></svg>
