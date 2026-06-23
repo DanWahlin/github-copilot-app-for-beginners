@@ -70,7 +70,16 @@ The Copilot App works the same way:
 
 ---
 
-## Hands-On Example 1: Tour the App
+## Hands-On Exercises
+
+In these exercises, you'll:
+
+- Tour the app's main surfaces
+- Brainstorm with Quick chats
+- Compare session modes to feel how much control each one gives you
+- Try search and voice dictation
+
+### 1. Tour the App
 
 Open GitHub Copilot App and notice these areas in the sidebar:
 
@@ -118,9 +127,9 @@ You'll also see Skills, Model Context Protocol (MCP) servers, Plugins, and Model
 
 </details>
 
-## Hands-On Example 2: Use Quick Chat for Brainstorming
+### 2. Use Quick Chats for Brainstorming
 
-Open Quick chat and try this prompt:
+Open Quick chats and try this prompt:
 
 ```text
 I'm learning the GitHub Copilot App with the copilot-app-for-beginners repository. What are three safe things I can ask before changing code?
@@ -132,7 +141,7 @@ Now try the following prompt and notice the response:
 Can this quick chat modify code if I tell it to do that?
 ```
 
-### Expected Output
+#### Expected Output
 
 Copilot should suggest exploration tasks such as explaining structure, identifying test commands, or summarizing the sample app.
 
@@ -144,13 +153,13 @@ For the second prompt, the response may say something like the following:
 
 > Note: Demo output varies. Treat the response as guidance, not a reproducible script.
 
-### How It Works
+#### How It Works
 
-Quick chat helps you learn without starting a branch. It's a great way to explore and understand your codebase before making changes.
+Quick chats help you learn without starting a branch. It's a great way to explore and understand your codebase before making changes.
 
 ---
 
-## Hands-On Example 3: Compare Session Modes
+### 3. Compare Session Modes
 
 You'll compare the session modes by starting from the course project in the sidebar. Keep these prompts read-only so you can focus on how the modes feel before asking Copilot to change files.
 
@@ -164,7 +173,7 @@ You'll compare the session modes by starting from the course project in the side
 
 > 💡 **Tip**: The model and reasoning effort controls sit beside the mode selector. Choose a faster model with lower reasoning for quick questions, and a stronger model with higher reasoning for complex changes. Use enough capability for the task, but not more than you need.
 
-### Plan Mode Prompt
+#### Plan Mode Prompt
 
 Set the mode dropdown to **Plan**, then use this prompt:
 
@@ -174,7 +183,7 @@ Plan how you'd investigate a hypothetical unread count bug in samples/book-app-w
 
 Once the plan is generated, review it and consider how you would implement the steps.
 
-### Interactive Mode Prompt
+#### Interactive Mode Prompt
 
 Set the mode dropdown to **Interactive**, then use this prompt:
 
@@ -182,7 +191,7 @@ Set the mode dropdown to **Interactive**, then use this prompt:
 Walk me through the files you'd inspect for a hypothetical unread count bug in samples/book-app-web. Ask before suggesting any code change.
 ```
 
-### Autopilot Orientation Prompt
+#### Autopilot Orientation Prompt
 
 Set the mode dropdown to **Autopilot**, then use this prompt:
 
@@ -190,13 +199,13 @@ Set the mode dropdown to **Autopilot**, then use this prompt:
 Explain when Autopilot would be appropriate for a small documentation-only task in this repository. Do not edit files.
 ```
 
-### Expected Output
+#### Expected Output
 
 You'll notice that Plan mode emphasizes an approach, Interactive mode encourages step-by-step steering, and Autopilot is framed as higher autonomy.
 
 ---
 
-## Hands-On Example 4: Search
+### 4. Search
 
 Select **Search** from the sidebar. Notice that you can search for sessions, PRs, issues, or paste a URL. Type `copilot-app-for-beginners` into the textbox and you should be presented with the option to create a new session.
 
@@ -209,13 +218,13 @@ Close **Search** and reopen it. Scroll through the other options to see the othe
 
 Experiment with some of the actions to learn how to use them.
 
-### Success Check
+#### Success Check
 
 You're able to explain what the **Search** feature does and how it can be used.
 
 ---
 
-## Hands-On Example 5: Voice Dictation
+### 5. Voice Dictation
 
 Go back to the GitHub Copilot App's Settings dialog. Select **Voice dictation** and explore the available options:
 
@@ -232,7 +241,7 @@ Perform the following actions:
 3. Note the keyboard shortcut for activating voice dictation. Try it out (you'll probably see a message saying that you need to use it with a text box).
 4. Create a new **Quick chat** session and test voice dictation by using the keyboard shortcut.
 
-### How It Works
+#### How It Works
 
 Voice dictation turns speech into editable prompt text which can save time and effort when creating prompts.
 

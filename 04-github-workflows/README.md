@@ -61,7 +61,16 @@ My Work is similar. It helps you see what needs attention before you start, revi
 
 ---
 
-## Hands-On Workflow 1: Find Work in My Work
+## Hands-On Exercises
+
+In these exercises, you'll:
+
+- Find work in My Work and start a session from an issue
+- Create and review a pull request
+- Respond to a PR conversation comment
+- Investigate and fix a failing check safely
+
+### 1. Find Work in My Work
 
 Open My Work and find:
 
@@ -82,13 +91,13 @@ repo:your-org-or-user/copilot-app-for-beginners is:issue is:open
 repo:your-org-or-user/copilot-app-for-beginners is:pr is:open
 ```
 
-### Success Check
+#### Success Check
 
 You're able to explain whether a missing issue or PR is more likely caused by filters, permissions, repository selection, or organization policy.
 
 ---
 
-## Hands-On Workflow 2: Start from an Issue
+### 2. Start from an Issue
 
 Open a seeded issue for the sample app. Choose Issue 1 from [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-1-make-search-case-insensitive) and use the `practice-search-case-bug` branch created by the setup script. If you skipped the script, manually apply Issue 1's training-branch diff before asking Copilot to fix it. If you're unsure how to base the session on that branch, use the [Chapter 02 practice branch note](../02-sessions-worktrees-context/README.md#practice-branches-in-this-course):
 
@@ -104,7 +113,7 @@ Use this issue as the source of truth. Plan a small fix in samples/book-app-web,
 
 <!-- app-screenshot: Issue detail page with New session button visible. -->
 
-### Expected Output
+#### Expected Output
 
 Copilot should summarize the issue, propose a small plan, and identify validation steps.
 
@@ -112,7 +121,7 @@ Copilot should summarize the issue, propose a small plan, and identify validatio
 
 ---
 
-## Hands-On Workflow 3: Create or Review a Pull Request
+### 3. Create or Review a Pull Request
 
 After completing and validating a small session, use the app's PR flow to open or inspect a pull request.
 
@@ -126,13 +135,13 @@ Before opening a PR, check:
 
 <!-- app-screenshot: Pull request Files changed tab or diff review surface inside the app. -->
 
-### Prompt for PR Description Help
+#### Prompt for PR Description Help
 
 ```text
 Draft a pull request summary for this session. Include what changed, why it changed, and validation performed. Do not claim checks passed unless you saw the terminal or CI output.
 ```
 
-### Expected Output
+#### Expected Output
 
 Copilot should draft a PR summary that you can edit before submitting.
 
@@ -140,7 +149,7 @@ Copilot should draft a PR summary that you can edit before submitting.
 
 ---
 
-## Hands-On Workflow 4: Respond to a PR Conversation Comment
+### 4. Respond to a PR Conversation Comment
 
 Open the PR conversation comment from [PR scenario 1](../samples/app-course-pr-scenarios.md#pr-scenario-1-review-comment-asks-for-clearer-empty-state-copy), which asks for clearer empty-state copy.
 
@@ -152,17 +161,17 @@ Review this PR conversation comment and propose the smallest change that address
 
 <!-- app-screenshot: PR conversation comment, review comment, or failing CI check, with a Copilot Fix action visible if your app exposes one. -->
 
-### Expected Output
+#### Expected Output
 
 Copilot should connect the comment to the relevant file, propose a focused fix, and suggest validation.
 
-### Success Check
+#### Success Check
 
 You're able to explain whether the comment is fully addressed and whether the fix changes anything unrelated.
 
 ---
 
-## Hands-On Workflow 5: Fix a Failing Check Safely
+### 5. Fix a Failing Check Safely
 
 Open [PR scenario 2](../samples/app-course-pr-scenarios.md#pr-scenario-2-failing-ci-points-to-the-stats-test), which should fail the `Book app web` workflow, or use an instructor-provided example.
 
@@ -172,11 +181,11 @@ Try this prompt:
 Analyze the failing check. Explain the failure, identify the likely file in samples/book-app-web, propose a minimal fix, and tell me which command should pass afterward.
 ```
 
-### Expected Output
+#### Expected Output
 
 Copilot should summarize the failing check and suggest a minimal fix.
 
-### Check the Result
+#### Check the Result
 
 When the failure is related to the sample app, run:
 

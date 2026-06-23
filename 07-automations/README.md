@@ -86,7 +86,15 @@ Manual automations run on demand. They're the safest first step because you can:
 
 ---
 
-## Hands-On Example 1: Create a Manual PR Summary Automation
+## Hands-On Exercises
+
+In these exercises, you'll:
+
+- Create a manual PR summary automation
+- Run it and inspect its history
+- Create a manual validation reminder automation
+
+### 1. Create a Manual PR Summary Automation
 
 This exercise works best after Chapter 04 has created at least one PR. If your training repository has no open PRs yet, skip to the local validation reminder in Hands-on example 3, then come back later.
 
@@ -114,19 +122,19 @@ Tool guidance:
 - Do not grant write-capable tools for this beginner exercise.
 - Keep the automation local if local automations are available in your setup.
 
-### Expected Output
+#### Expected Output
 
 The run should produce a short PR summary and a suggested next human action.
 
 Demo output varies. Repository state, permissions, and available tools will change the result.
 
-### How It Works
+#### How It Works
 
 The automation saves the prompt and trigger so you can run the same bounded task again later. The selected tools control what the agent can inspect or do.
 
 ---
 
-## Hands-On Example 2: Run It and Inspect History
+### 2. Run It and Inspect History
 
 Run the automation manually. Then open the run details.
 
@@ -143,7 +151,7 @@ Look for:
 
 <!-- app-screenshot: Automation run detail or error state with copyable error text visible, using a safe sample workflow. -->
 
-### Pause Point
+#### Pause Point
 
 Before editing the automation, ask:
 
@@ -154,7 +162,7 @@ Before editing the automation, ask:
 
 ---
 
-## Hands-On Example 3: Create a Manual Validation Reminder
+### 3. Create a Manual Validation Reminder
 
 Create another manual automation for local project validation:
 
@@ -180,7 +188,7 @@ npm run dev -- --host 127.0.0.1 --port 5173
 Do not run commands or edit files. Return the checklist only.
 ```
 
-### Expected Output
+#### Expected Output
 
 The automation should return a checklist. It should not modify files or run commands.
 

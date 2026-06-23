@@ -102,7 +102,15 @@ Repo-local skills are ideal for this course because:
 
 ---
 
-## Hands-On Example 1: Inspect the `book-app-reviewer` Skill
+## Hands-On Exercises
+
+In these exercises, you'll:
+
+- Inspect the `book-app-reviewer` skill to see what guidance it adds
+- Compare a generic review with a skill-guided review
+- Use the skill before making a real change
+
+### 1. Inspect the `book-app-reviewer` Skill
 
 This repository already includes the skill so you can inspect it before using it:
 
@@ -127,11 +135,11 @@ The output should show skills Copilot can find from built-in, user, plugin, or p
 
 If you'd like to rebuild it manually for practice, copy the existing file to a scratch folder first. Don't overwrite the course copy during the beginner path.
 
-### Expected Result
+#### Expected Result
 
 You now know what the skill tells Copilot to care about before it reviews `samples/book-app-web`.
 
-### How It Works
+#### How It Works
 
 Copilot can use the skill when your prompt matches the skill description. You can also refer to the skill by name in your prompt.
 
@@ -141,7 +149,7 @@ If you're unsure whether the skill was used, explicitly name `book-app-reviewer`
 
 ---
 
-## Hands-On Example 2: Compare Generic Review and Skill-Guided Review
+### 2. Compare Generic Review and Skill-Guided Review
 
 Open a new Plan or Interactive session in the app. Try a generic prompt first:
 
@@ -157,17 +165,17 @@ Use the book-app-reviewer skill to review @samples/book-app-web for one small ac
 
 Demo output varies. Look for differences in focus, not exact wording.
 
-### Expected Output
+#### Expected Output
 
 The skill-guided response should be more likely to mention accessibility, responsive layout, tests, validation commands, and safe change boundaries.
 
-### How It Works
+#### How It Works
 
 The prompt and skill description point at the same concerns, so Copilot has a clearer reason to use the skill.
 
 ---
 
-## Hands-On Example 3: Use the Skill Before a Real Change
+### 3. Use the Skill Before a Real Change
 
 Ask Copilot to plan a small improvement:
 
@@ -177,7 +185,7 @@ Using the book-app-reviewer skill, create a plan to improve the empty-state copy
 
 Pause and inspect the plan before allowing implementation.
 
-### Expected Result
+#### Expected Result
 
 The plan should include:
 

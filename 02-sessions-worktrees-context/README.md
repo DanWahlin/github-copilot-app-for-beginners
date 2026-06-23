@@ -22,9 +22,7 @@ By the end of this chapter, you'll be able to:
 - Start a session from a prompt, issue, or pull request
 - Explain what a git worktree is and why you'd use it
 - Understand why isolated sessions protect your main branch
-- Use `@` for file and folder context
-- Use `#` for issue or PR context when available
-- Use `/` for app commands
+- Use `@` for file and folder context, `#` for issue or PR context, and `/` for app commands
 - Decide between local repository, new worktree, and cloud sandbox options
 - Recognize branch prefixes and session lifecycle settings
 
@@ -40,7 +38,7 @@ Complete Chapters [00](../00-quick-start/README.md) and [01](../01-first-steps/R
 
 ## 🧩 Real-World Analogy: One Studio, Many Recording Booths
 
-Imagine one song that three musicians playing different instruments (guitar, bass, drums) need to record at the same time. To get the best results, you wouldn't crowd them around a single microphone and hope it works out. You'd put each one in their own soundproof booth to lay down a different part in parallel, then mix the takes together later.
+Imagine one song that three musicians (vocalist, guitar, drums) need to record at the same time. To get the best results, you wouldn't crowd them around a single microphone and hope it works out. You'd put each one in their own soundproof booth to lay down a different part individually or possibly in parallel (to get more of that "live" feel), then mix the takes together later. This approach allows each recorded track to be edited and modified separately.
 
 ![Recording studio booths analogy for worktrees and focused context](assets/recording-booths-worktrees.webp)
 
@@ -48,11 +46,13 @@ A worktree is like a separate recording booth. It's connected to the same reposi
 
 ## Core Concepts
 
-### What Is a Worktree?
+### What Is a Git Worktree?
 
-A git worktree is a second working directory attached to the same repository. It usually uses a separate branch. This lets you work on more than one task without mixing files in the same folder.
+A **Git worktree** lets you create additional working directories for the same repository. Each worktree is usually checked out to a different branch (or commit). 
 
-### Why the App Uses Worktrees
+This allows you to work on multiple tasks or branches simultaneously without stashing changes or constantly switching branches in a single folder.
+
+### Why Copilot App Uses Worktrees
 
 | Without isolation | With a worktree-backed session |
 |---|---|
@@ -69,69 +69,55 @@ Before you run multiple sessions, find the app's session settings you toured in 
 
 | Setting | Why it matters |
 |---|---|
-| Branch prefix | Makes app-created session branches easier to recognize |
-| Session lifecycle | Helps you understand when sessions, branches, or worktrees are reused or cleaned up |
 | Default model and reasoning | Affects speed, quality, and cost for new sessions |
+| Branch prefix | Makes app-created session branches easier to recognize |
+| Instructions | Instructions for the agent to follow for every session across projects |
 
-### Context Controls
+### Context Syntax
 
-It's to provide your agent session with the necessary context to understand the problem and generate helpful responses. Fortunately, the app provides a dedicated context syntax to help you do this effectively.
+Copilot App provides a dedicated context syntax (`@` and `#`) that you can use to give a session the context it needs to understand the problem and generate helpful responses.
 
 | Syntax | Use it for | Example |
 |---|---|---|
 | `@` | Files or folders | `@samples/book-app-web/src` |
 | `#` | Issues or pull requests | `#12` |
-| `/` | Commands | `/chronicle` |
 
-> Tip: Context controls are not a contest to attach the most information. Provide the smallest useful context.
+> Tip: Provide the smallest amount of useful context - less is often more.
 
-### Slash Commands in the App
+### Slash Commands
 
-Slash commands are shortcuts you type in the composer. They can open app utilities, invoke agent behaviors, inspect usage, or trigger installed skills. The safest way to discover what your app supports is to type `/` in the composer and read the palette. Commands vary by app version, plan, enabled plugins, installed skills, and organization policy.
+Slash commands are shortcuts you type in the composer. They can open app utilities, invoke agent behaviors, inspect usage, or trigger installed skills. The safest way to discover what your app supports is to type `/` in the composer and read the palette. Commands can vary by app version, enabled plugins, installed skills, and organization policy.
 
-Start with these beginner-safe commands:
+Here are some common slash commands you might use:
 
 | Command | What it's for | Use it when... |
 |---|---|---|
 | `/chronicle` | Summarizes session history and past work | You want a session recap or standup-style summary |
 | `/context` | Opens session context and token usage details when available | You want to see how much context the session is using |
 | `/usage` | Opens usage, rate limit, or credit information when available | You want to understand cost or plan limits |
+| `/research` | Conducts research on a topic or question | You want to gather detailed information or insights on a specific subject |
+| `/review` | Requests a review of the current session or a specific piece of code | You want to get feedback on your work before finalizing it |
 | `/rubber-duck` | Asks a critic agent to review a plan, diff, tests, or design | You want a second opinion before accepting work |
 
 <details>
-<summary>Reference: Copilot CLI slash commands and GitHub Copilot App availability</summary>
+<summary>GitHub Copilot App Slash Commands Reference</summary>
 
-The [`copilot-cli-for-beginners`](https://github.com/github/copilot-cli-for-beginners) course lists many Copilot CLI commands. This table compares those commands with App-specific commands in this course. The GitHub Copilot App is built on Copilot CLI, but the desktop app also has its own UI flows.
+| Command | Description |
+|---|---|
+| `/agent` | Select or switch the active agent for a session. |
+| `/agent-merge` | Start or enable the Agent Merge workflow for PR merge-readiness automation. |
+| `/chronicle` | Summarize session history, generate standups, search past work, or get workflow/cost tips. |
+| `/collect-debug-logs` | Collect app logs for troubleshooting or filing GitHub Copilot App issues. |
+| `/context` | Show session context details such as token usage, context window, and AI credit spend. |
+| `/create-canvas` | Create a canvas from the current session for a richer editable/inspectable surface. |
+| `/orchestrate` | Coordinate multi-session or multi-repo work by delegating to child sessions. |
+| `/remote` | Work with remote-session/remote-control flows when available in your build. |
+| `/rubber-duck` | Ask a critic agent to review a plan, diff, tests, design, or proposed approach. |
+| `/skills` | Discover available skills; `/skills reload` reloads skills during a session. |
+| `/usage` | Open usage, rate-limit, plan-limit, or credit information. |
+| `/[skill-name]` | Invoke an installed skill directly, such as `/security-audit`; available commands depend on installed skills. |
 
-| Command | App status | Course placement |
-|---|---|---|
-| `/agent` | Confirmed in the app changelog for selecting custom, user, plugin, project, and remote agents | Chapter 05 |
-| `/ask` | CLI command. Use Quick chat in the app for the same beginner need | Chapter 01 concept |
-| `/chronicle` | Confirmed in GitHub Docs for app sessions | This chapter and Chapter 08 |
-| `/context` | Confirmed in the app changelog for session context, token count, context window, and credit spend | This chapter |
-| `/usage` | Confirmed in the app changelog for usage, rate limits, and plan limits | This chapter |
-| `/rubber-duck` | Confirmed in GitHub Docs and the app changelog | Chapter 03 |
-| `/orchestrate` | Confirmed in the app changelog for coordinating child sessions and multi-repo work | Chapter 08, advanced |
-| `/skills` | Confirmed in the app changelog command palette examples | Chapter 05 |
-| `/collect-debug-logs` | Confirmed in the app README and changelog examples | Chapter 00 troubleshooting |
-| `/agent-merge` | Confirmed in the app changelog as an Agent Merge loop command | Chapter 04 and Chapter 08, advanced |
-| `/create-canvas` | Confirmed in GitHub Docs as a built-in skill for creating a canvas from a session | Chapter 06, advanced |
-| `/remote` | Mentioned in the app changelog command palette examples, but primarily a Copilot CLI remote-control workflow | Advanced appendix or Chapter 08 note only |
-| `/model` | Prefer the app model picker. The CLI command may not be the right teaching path in the app | Chapter 01 via UI |
-| `/plan` | Prefer the app Plan mode selector. The CLI command is not the beginner app path | Chapter 01 via mode selector |
-| `/review` | CLI code-review agent command. In the app, teach review prompts, diff review, Fix actions, and `/rubber-duck` | Chapter 03 |
-| `/pr` | CLI PR command. In the app, use My Work and PR surfaces | Chapter 04 via UI |
-| `/diff` | CLI diff command. In the app, use the Changes or diff surface | Chapter 03 via UI |
-| `/clear`, `/new`, `/resume`, `/rename`, `/session`, `/rewind`, `/share`, `/compact` | CLI session-management commands. The app has visible session, history, and sharing surfaces, so teach the UI first | Chapter 02 concept only |
-| `/env`, `/init`, `/mcp` | CLI configuration commands. The app exposes settings, instructions, MCP, skills, and plugins through settings and project files | Chapters 05 and 06 |
-| `/add-dir`, `/list-dirs`, `/cwd`, `/cd` | CLI directory-permission and working-directory commands. The app uses project/session workspace choices instead | Chapter 02 concept only |
-| `/allow-all`, `/yolo` | CLI permission commands. Do not teach on the beginner app path because they bypass review habits | Not recommended |
-| `/delegate`, `/fleet`, `/tasks` | CLI subagent/cloud-agent commands. The app equivalent is sessions, child sessions, background agents, and `/orchestrate` when available | Chapter 08, advanced |
-| `/memory`, `/keep-alive`, `/statusline`, `/footer`, `/theme`, `/terminal-setup`, `/changelog`, `/feedback`, `/voice`, `/help`, `/exit` | CLI convenience commands. The app has settings, menus, command palette, voice settings, feedback controls, and window/session UI for these needs | Mention only if the app palette shows them |
-| `/research` | CLI deep-research command. Use normal prompts, installed skills, or approved web/documentation tools when available in the app | Optional, not required |
-| `/skill-name` such as `/security-audit` or `/generate-tests` | Skill-provided commands vary by installed skills. Use `/skills` or the slash palette to discover them | Chapter 05 |
-
-When in doubt, type `/` and trust the in-app palette over a printed list.
+When in doubt, type `/` and use the in-app palette to discover what's available.
 
 </details>
 
@@ -155,7 +141,16 @@ Use the branch name shown in the chapter you're working through.
 
 ---
 
-## Hands-On Example 1: Start a Session from a Task
+## Hands-On Exercises
+
+In these exercises, you'll:
+
+- Start a worktree-backed session from a task in Plan mode
+- Give a session focused context with `@` and an issue reference
+- Inspect the session's branch, diff, and terminal to confirm the work stays isolated
+- Recap session history and check context usage with `/chronicle` and `/context`
+
+### 1. Start a Session from a Task
 
 The default sample app is stable. To practice a real planning workflow without overlapping the Chapter 03 debugging example, first read Issue 3 in [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-3-improve-the-empty-state-copy). This issue asks for clearer empty-state copy. Use the `practice-empty-state-copy` branch created by the setup script, or manually apply Issue 3's training-branch setup before this exercise. Follow the practice branch note above before starting the session.
 
@@ -167,19 +162,19 @@ Improve the empty-state copy in samples/book-app-web. First inspect the relevant
 
 <!-- app-screenshot: New session composer showing the choice between local repository, new worktree, and cloud sandbox if available. -->
 
-### Expected Output
+#### Expected Output
 
 Copilot should identify likely files to inspect, describe the current behavior, and propose a plan before editing.
 
 > Demo output varies. The exact files and wording may differ.
 
-### Success Check
+#### Success Check
 
 You'll find the session in the app and identify whether it's using a worktree, local repository, or cloud sandbox.
 
 ---
 
-## Hands-On Example 2: Give Focused File Context
+### 2. Give Focused File Context
 
 In the same session, try this prompt:
 
@@ -187,17 +182,17 @@ In the same session, try this prompt:
 Use @samples/book-app-web/src to focus on the React app code. Which files are most likely involved in the empty-state copy?
 ```
 
-### Expected Output
+#### Expected Output
 
 Copilot should focus on the sample app source folder instead of discussing unrelated course chapters.
 
-### How It Works
+#### How It Works
 
 The `@` reference narrows context. It helps Copilot spend attention on the files that matter.
 
 ---
 
-## Hands-On Example 3: Start from an Issue
+### 3. Start from an Issue
 
 Your forked repository should include seeded issues if you ran the setup script in [00 - Quick Start](../00-quick-start/README.md). With the GitHub Copilot App, you can open an issue directly without having to leave the app. 
 
@@ -209,13 +204,13 @@ Open Issue #3 from your repository by selecting the `Create from` icon next to y
 
 You should see that the app analyzes the issue and generates a plan to address it. A huge time saver!
 
-### Expected Output
+#### Expected Output
 
 Copilot should analyze the issue and generate a plan that you can then review and approve before making any changes.
 
 ---
 
-## Hands-On Example 4: Inspect the Branch and Worktree Safely
+### 4. Inspect the Branch and Worktree Safely
 
 A session keeps its evidence in a few surfaces. In this example, you'll explore those surfaces and how they relate to the git concepts you're learning. Open them now so you'll know exactly where to look when you start making changes in upcoming chapters.
 
@@ -229,7 +224,7 @@ From the app, locate:
 
 If you open the folder in an editor, confirm the branch and path before making any edits.
 
-### Open the Review Panel and Check the Diff
+#### Open the Review Panel and Check the Diff
 
 Select the **Review panel** toggle in the upper-right corner of the screen. This is where a session's diff and terminal surfaces live.
 
@@ -237,7 +232,7 @@ Open the **Changes** tab to see the diff. This session has only planned and insp
 
 <!-- app-screenshot: Review panel open with the Changes tab selected, showing an empty diff for a plan-only session. -->
 
-### Start a Terminal and Check Git Status
+#### Start a Terminal and Check Git Status
 
 In the Review panel, select the **Terminal** tab. If no terminal exists yet, press **+** to start one.
 
@@ -247,7 +242,7 @@ Run this safe check in the session terminal:
 git status
 ```
 
-### Expected Output
+#### Expected Output
 
 Git should show the current branch and whether files are modified.
 
@@ -262,7 +257,7 @@ nothing to commit, working tree clean
 
 ---
 
-## Hands-On Example 5: Use `/chronicle`
+### 5. Use `/chronicle`
 
 After a small completed session or plan, type:
 
@@ -270,7 +265,7 @@ After a small completed session or plan, type:
 /chronicle
 ```
 
-### Expected Output
+#### Expected Output
 
 Copilot should summarize what happened in the session and what decisions or changes were made.
 
@@ -278,7 +273,7 @@ Copilot should summarize what happened in the session and what decisions or chan
 
 ---
 
-## Hands-On Example 6: Check Session Context with `/context`
+### 6. Check Session Context with `/context`
 
 Type:
 
@@ -286,13 +281,13 @@ Type:
 /context
 ```
 
-### Expected Output
+#### Expected Output
 
 If your app version supports it, Copilot opens or summarizes session context details such as token count, context window, and usage information.
 
 If `/context` is not available, open the slash command palette and look for a similar usage or context command. App commands change over time, so the palette is the source of truth.
 
-### How It Works
+#### How It Works
 
 Context is the material Copilot is using for the current session. Checking it helps you notice when a session is getting too broad before you add more files, issues, or instructions.
 

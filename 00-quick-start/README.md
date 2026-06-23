@@ -74,7 +74,16 @@ The Copilot App setup is the same idea. In the following examples you'll do the 
 
 ---
 
-## Hands-On Example 1: Install and Sign In
+## Hands-On Exercises
+
+In these exercises, you'll:
+
+- Install the GitHub Copilot App and sign in
+- Fork, clone, and prepare the course repository with the setup script
+- Connect the repository to the app
+- Ask a read-only question in Quick chat, then create your first project session
+
+### 1. Install and Sign In
 
 1. [Download and install the GitHub Copilot App][getting-started] for your operating system.
 2. Open the app
@@ -82,19 +91,19 @@ The Copilot App setup is the same idea. In the following examples you'll do the 
 4. Sign in with your [GitHub account][github-signup], or enter your GitHub Enterprise Server URL if your organization uses one
 5. Complete any first-run choices such as theme or repository access
 
-### Expected Output
+#### Expected Output
 
 You'll see the main app window with navigation areas such as My Work, Automations, Search, Sessions, and Quick chats.
 
 ![GitHub Copilot App First Look](./assets/github-copilot-app-first-look.webp)
 
-### How It Works
+#### How It Works
 
 The app uses your GitHub identity and repository permissions to show work you can access. If a repository or issue is missing, the first thing to check is account access and organization policy.
 
 ---
 
-## Hands-On Example 2: Fork, Clone, and Prepare the Course Repository
+### 2. Fork, Clone, and Prepare the Course Repository
 
 1. Fork this [course's repository on GitHub][course-repository] by selecting the `Fork` button on the repository page. 
 
@@ -146,13 +155,13 @@ The app uses your GitHub identity and repository permissions to show work you ca
 
     The setup script for your shell creates the GitHub issues, branches, pull requests, comments, and failing-check scenario used in later chapters. It is safe to rerun if needed because it reuses items that already exist.
 
-### Success Check
+#### Success Check
 
 You've got a local clone of your fork, and the setup script completed or you intentionally chose the local-only path.
 
 ---
 
-## Hands-On Example 3: Connect the Course Repository
+### 3. Connect the Course Repository
 
 In the app sidebar, select the **+** button next to **Sessions**. There are several options available for connecting a project.
 
@@ -170,13 +179,13 @@ Select **Add local folder** and navigate to your clone of the course repository.
 copilot-app-for-beginners
 ```
 
-### Success Check
+#### Success Check
 
 You'll see the course repository in the app, and the app sidebar will show the project as available.
 
 ---
 
-## Hands-On Example 4: Ask Your First Quick Chat
+### 4. Ask Your First Quick Chat
 
 Select the **+** next to `Quick chats` in the sidebar and submit the following prompt:
 
@@ -184,17 +193,17 @@ Select the **+** next to `Quick chats` in the sidebar and submit the following p
 Give me an overview of the copilot-app-for-beginners course repository. Focus on the learning path and the samples/book-app-web folder.
 ```
 
-### Expected Output
+#### Expected Output
 
 Copilot should summarize the course structure and identify `samples/book-app-web` as the web sample used for later exercises.
 
-### How It Works
+#### How It Works
 
 Quick chat is useful for exploration because it does not create a session branch or worktree. Use it when you're asking questions before changing code.
 
 ---
 
-## Hands-On Example 5: Create Your First Project Session
+### 5. Create Your First Project Session
 
 Create a new project session in Interactive mode by selecting the **+** next to `copilot-app-for-beginners` in the sidebar. In the session composer, choose **Interactive** from the mode selector and submit the following prompt.
 
@@ -202,11 +211,11 @@ Create a new project session in Interactive mode by selecting the **+** next to 
 Explain the app structure and suggest one beginner-friendly improvement. Do not edit files yet.
 ```
 
-### Expected Output
+#### Expected Output
 
 Copilot should explain the repository at a high level and suggest a small possible improvement without making changes.
 
-### Success Check
+#### Success Check
 
 You're able to answer these questions:
 

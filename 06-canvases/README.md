@@ -85,7 +85,15 @@ A canvas can be more than a prettier response. It can include:
 
 ---
 
-## Hands-On Example 1: Inspect the Prepared Release Checklist Concept
+## Hands-On Exercises
+
+In these exercises, you'll:
+
+- Inspect a prepared release checklist as a canvas concept
+- Simulate canvas state while you validate the sample app
+- Use a canvas as a shared planning surface
+
+### 1. Inspect the Prepared Release Checklist Concept
 
 Use the prepared canvas concept included with this repository. Do not create a new canvas yet.
 
@@ -97,7 +105,7 @@ Use the prepared canvas concept included with this repository. Do not create a n
 
 <!-- app-screenshot: Right-side canvas panel showing a plan, checklist, browser session, terminal session, or markdown artifact open inside the GitHub Copilot App. -->
 
-### Release Checklist Concept
+#### Release Checklist Concept
 
 Use this checklist shape to simulate the shared state a canvas would track for `samples/book-app-web`:
 
@@ -112,17 +120,17 @@ Release checklist for samples/book-app-web:
 - Review diff before PR
 ```
 
-### Expected Result
+#### Expected Result
 
 You'll want to understand what the prepared canvas is meant to show before you simulate it or try it in the app. If your app build supports project-scoped canvas extensions, the same checklist becomes visible state learners can inspect and update.
 
-### How It Works
+#### How It Works
 
 The course starts with the concept because canvas extension support and app packaging can change. The beginner idea is stable: Shared state is easier to inspect than a long chat thread.
 
 ---
 
-## Hands-On Example 2: Simulate Canvas State While Validating the Sample App
+### 2. Simulate Canvas State While Validating the Sample App
 
 Run the sample app commands and update the checklist state as you go. If your app build supports project-scoped canvas extensions, you can use the visible canvas. If it doesn't, keep the checklist in the conversation or in a scratch note.
 
@@ -150,7 +158,7 @@ Use the release checklist concept to track validation for samples/book-app-web. 
 
 Demo output varies. What matters is that the checklist state matches evidence you're able to inspect.
 
-### Expected Output
+#### Expected Output
 
 - Terminal output shows install, test, and build evidence
 - Browser preview runs at `127.0.0.1:5173`
@@ -158,7 +166,7 @@ Demo output varies. What matters is that the checklist state matches evidence yo
 
 ---
 
-## Hands-On Example 3: Use a Canvas Concept as a Planning Surface
+### 3. Use a Canvas Concept as a Planning Surface
 
 Ask Copilot:
 
@@ -173,7 +181,7 @@ Before approving implementation, check that the plan includes:
 3. Validation commands
 4. A pause point before editing files
 
-### Why This Matters
+#### Why This Matters
 
 Canvas-style planning keeps the control points visible. You don't have to scroll through the full chat to find the current state.
 

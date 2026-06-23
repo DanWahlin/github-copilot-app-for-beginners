@@ -122,7 +122,16 @@ Tests and builds are evidence. A confident chat response is not enough.
 
 ---
 
-## Hands-On Workflow 1: Review a Buggy Area
+## Hands-On Exercises
+
+In these exercises, you'll:
+
+- Review a buggy area and debug a small fix with agent help
+- Ask Copilot to generate or update tests
+- Refactor safely using tests as a guardrail
+- Critique the work with a rubber duck review before you finalize
+
+### 1. Review a Buggy Area
 
 In a session, try this prompt:
 
@@ -130,19 +139,19 @@ In a session, try this prompt:
 Review @samples/book-app-web/src for issues related to filtering, unread counts, and reading statistics. Create a short checklist grouped by high, medium, and low risk. Do not edit files yet.
 ```
 
-### Expected Output
+#### Expected Output
 
 Copilot should produce a review checklist that points to likely files and behaviors.
 
 > Demo output varies. Focus on whether the checklist is specific and testable.
 
-### Success Check
+#### Success Check
 
 The review should mention behavior that you can verify with tests or browser interaction.
 
 ---
 
-## Hands-On Workflow 2: Debug and Fix a Small Issue
+### 2. Debug and Fix a Small Issue
 
 The default app passes tests. Before this workflow, use the `practice-unread-count-bug` branch created by the setup script, or follow the Issue 2 training-branch setup in [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-2-keep-unread-stats-correct-when-filters-are-active) so there is a real unread-count regression to fix. If you're unsure how to base the session on that branch, use the [Chapter 02 practice branch note](../02-sessions-worktrees-context/README.md#practice-branches-in-this-course).
 
@@ -152,11 +161,11 @@ Try this prompt:
 Fix the unread count when filters are active in samples/book-app-web. Keep the change small, explain the root cause, and run the relevant tests.
 ```
 
-### Expected Output
+#### Expected Output
 
 Copilot should make a focused change, explain the cause, and run or suggest a test command.
 
-### Check the Result
+#### Check the Result
 
 Run:
 
@@ -185,7 +194,7 @@ http://127.0.0.1:5173
 
 ---
 
-## Hands-On Workflow 3: Ask for Tests
+### 3. Ask for Tests
 
 Stay on the same training branch from the previous workflow.
 
@@ -195,11 +204,11 @@ Try this prompt:
 Add or update tests for the unread count behavior so the bug would fail before the fix and pass after the fix. Keep the tests focused on samples/book-app-web.
 ```
 
-### Expected Output
+#### Expected Output
 
 Copilot should add or update tests in the sample app test area.
 
-### Success Check
+#### Success Check
 
 Run:
 
@@ -213,7 +222,7 @@ Both commands should complete before you treat the change as ready.
 
 ---
 
-## Hands-On Workflow 4: Refactor Safely with Tests
+### 4. Refactor Safely with Tests
 
 Refactoring changes the shape of code without changing what it does. Tests are what make that safe: if they pass before and after, you have evidence the behavior held.
 
@@ -232,13 +241,13 @@ Try this prompt:
 Refactor filterBooks in @samples/book-app-web/src/App.tsx to extract the search, genre, and status checks into small, clearly named helper functions. Do not change behavior, and keep the filterBooks signature the same. Then run the tests to prove the behavior is unchanged.
 ```
 
-### Expected Output
+#### Expected Output
 
 Copilot should propose a behavior-preserving refactor, such as small `matchesSearch`, `matchesGenre`, and `matchesStatus` helpers, and then run the existing tests.
 
 > Demo output varies. The goal is the same behavior with clearer structure, proven by tests.
 
-### Success Check
+#### Success Check
 
 Run the tests and the build again, and confirm both still pass:
 
@@ -252,7 +261,7 @@ If a test fails after the refactor, the change altered behavior. Revert or adjus
 
 ---
 
-## Hands-On Workflow 5: Rubber Duck Review
+### 5. Rubber Duck Review
 
 The `/rubber-duck` slash command asks a critic agent to review your current plan, diff, tests, or design. Use it before you create a PR, especially when the session made code changes.
 
@@ -266,7 +275,7 @@ Try this prompt:
 
 If `/rubber-duck` is not available in your app build, use the same prompt without the slash command.
 
-### Expected Output
+#### Expected Output
 
 Copilot should point out review areas, missing validation, or confidence checks.
 
