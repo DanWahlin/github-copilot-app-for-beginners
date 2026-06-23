@@ -7,6 +7,19 @@ description: Automate and research the GitHub Copilot App desktop experience. Us
 
 Use this skill when the task is about **driving, testing, mapping, or experimenting with the GitHub Copilot App**. Prefer app/session APIs first, then app-native canvases/automations, and use GUI Accessibility only when the visible desktop UI itself must be exercised.
 
+## Where to Run This
+
+This skill's power depends heavily on where the agent runs:
+
+| Context | Session/app APIs | Capture reliability | Best for |
+|---|---|---|---|
+| **Inside the GitHub Copilot App agent** (recommended) | Available: `list_projects`, `create_session`, `navigate_to`, `open_issue_session`, `open_pr_session`, plus canvas + workflow APIs | High — `navigate_to` brings the target state to the foreground on the active Space, then `screencapture` grabs it | End-to-end screenshot capture; driving sessions/issues/PRs/canvases/automations to exact states |
+| **GitHub Copilot CLI** (terminal) | Not available | Low/manual — a human must navigate the app, and its window must be on the same macOS Space as the terminal | Read-only mapping (`map-app.sh`), the dynamic `screenshots.sh` list/embed flow, and one-off captures of an already-visible window |
+
+For the missing course screenshots, **drive this from inside the app**. The agent can programmatically set up and navigate to each state (the hardest part), and `navigate_to` makes the window visible and capturable, which removes the macOS Spaces/visibility problem the CLI hits. The shell scripts here (`screenshots.sh`, `capture-window.sh`, `map-app.sh`) run in both contexts because the app agent is built on Copilot CLI.
+
+Regardless of context: pixels still come from `screencapture` (there is no pure render/export API yet, so the window must be visible), Screen Recording permission is required, captures must come from a **sanitized training account** on the training fork, and advanced features (Agent Merge, cloud automations) stay policy/billing-gated.
+
 ## Non-Interactive / Hidden-Session Rule
 
 If the user asks for a **fresh**, **separate**, or **hidden** Copilot App instance/session:
@@ -49,7 +62,7 @@ Observed on this machine:
 
 - App path: `/Applications/GitHub Copilot.app`
 - Bundle id: `com.github.githubapp`
-- Bundle version observed: `1.0.3`
+- Bundle version observed: `1.0.4` (drifts across releases; re-run `map-app.sh` and re-check after updates)
 - Executable: `/Applications/GitHub Copilot.app/Contents/MacOS/github`
 - Binary type: native macOS Mach-O arm64
 - Frameworks observed include AppKit and WebKit.
@@ -105,19 +118,30 @@ Use [type-and-clear-draft.applescript](sample_codes/macos-accessibility/type-and
 
 ### Capture Screenshots for Course Assets
 
-Only use this workflow when the user has agreed the App can be visible or when the target state is already visible in a dedicated App window.
+Only use this workflow when the user has agreed the App can be visible or when the target state is already visible in a dedicated App window. Capture from a **sanitized training account** on the training fork — never the user's real private projects.
 
-1. Navigate the app to the exact state.
-2. Wait for transient status text/spinners to settle.
-3. Capture the Copilot App window to PNG.
-4. Convert the PNG to WebP with `cwebp` when available, falling back to ImageMagick or ffmpeg.
+1. Map first with `map-app.sh` so steps match the current app build.
+2. Put the Copilot window on the **same macOS Space/desktop** as the terminal running the capture. `screencapture` and CoreGraphics only see the active Space, so a window on another desktop or unreachable display cannot be captured even though it is "open."
+3. Navigate the app to the exact state and let spinners settle.
+4. Capture by CoreGraphics window id (robust for the WebKit-backed window) and convert to WebP:
+   ```bash
+   bash sample_codes/macos-accessibility/capture-window.sh <chapter>/assets <base-name> 40
+   ```
 5. Keep PNG as the source artifact; use WebP in web/course pages.
 6. Review screenshots for private data before committing or publishing.
 
+To work through the course's pending shots, discover them dynamically and process one at a time (never hardcode the list): `screenshots.sh list` -> `screenshots.sh next` -> capture -> `screenshots.sh embed`. See [missing-screenshots.md](references/missing-screenshots.md).
+
 Use:
 
-- [screenshot-capture.md](references/screenshot-capture.md)
-- [capture-copilot-window.sh](sample_codes/macos-accessibility/capture-copilot-window.sh)
+- [screenshot-capture.md](references/screenshot-capture.md) — full method, permissions, and the macOS Spaces constraint
+- [missing-screenshots.md](references/missing-screenshots.md) — the generic, one-at-a-time capture workflow (shots are discovered dynamically, never hardcoded)
+- [screenshots.sh](sample_codes/macos-accessibility/screenshots.sh) — dynamically `list` / `next` / `embed` the chapters' `<!-- app-screenshot: ... -->` placeholders
+- [app-ui-map.md](references/app-ui-map.md) — sanitized factual UI map (menus, sidebar, composer controls), regenerable via map-app.sh
+- [capture-window.sh](sample_codes/macos-accessibility/capture-window.sh) — recommended: CoreGraphics window-id capture + WebP; polls until the window appears
+- [find-copilot-window.swift](sample_codes/macos-accessibility/find-copilot-window.swift) — lists on-screen Copilot windows and their ids
+- [map-app.sh](sample_codes/macos-accessibility/map-app.sh) — version-stamped UI map for grounding steps and diffing app updates
+- [capture-copilot-window.sh](sample_codes/macos-accessibility/capture-copilot-window.sh) — older Accessibility-rectangle fallback
 
 ### Drive App Work Without GUI Scripting
 

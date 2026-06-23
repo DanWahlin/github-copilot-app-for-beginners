@@ -115,3 +115,42 @@ This creates:
 assets/screenshots/01-first-steps-session-ui.png
 assets/screenshots/01-first-steps-session-ui.webp
 ```
+
+## Recommended: capture by window id (robust)
+
+The Accessibility-rectangle method above can fail on this WebKit-backed app when
+`System Events` reports `count of windows = 0` even though a window is visible
+(observed on app v1.0.4). The more reliable method captures by CoreGraphics
+window id and polls until the window appears:
+
+```bash
+bash sample_codes/macos-accessibility/capture-window.sh <chapter>/assets <base-name> 40
+```
+
+It uses [find-copilot-window.swift](../sample_codes/macos-accessibility/find-copilot-window.swift)
+(CoreGraphics) to locate the window id, then `screencapture -x -l <id>` plus a
+WebP encode, and warns if the capture looks blank (a sign Screen Recording is
+denied).
+
+## macOS Spaces constraint (important)
+
+CoreGraphics and `screencapture` only see windows on the **currently active
+macOS Space**. If the Copilot app is on a different desktop/Space, or on a
+display the capture context cannot reach, no window is found and nothing can be
+captured — even though the window is "open." Drag the app onto the same desktop
+as the terminal running the capture, then retry. `capture-window.sh` polls for
+the duration of its timeout, so you can move the window while it waits.
+
+## Use a sanitized training account
+
+Real captures expose live project names, session titles, prompts, diffs, and
+possibly tokens. Capture from a sanitized training account connected to the
+training fork (with `setup-training-scenarios.sh` run), and review every image
+before committing. See [missing-screenshots.md](missing-screenshots.md) for the
+full shot list and which states need seeded data.
+
+## Map first
+
+Run [map-app.sh](../sample_codes/macos-accessibility/map-app.sh) to record the
+app's actual menus and named controls (version-stamped) before writing capture
+steps, and re-run it after an app update to diff exactly what changed.
