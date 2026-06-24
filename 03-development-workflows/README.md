@@ -101,14 +101,23 @@ Demo output varies. Look for signs that Copilot used the validation commands and
 
 ## Prepare the Sample App
 
-From the repository root, use the session terminal for these commands:
+Before the exercises, install the sample app's dependencies and confirm it builds and tests cleanly. You'll run these commands in a session's integrated terminal, so this is also where you'll learn to open that terminal.
 
-```bash
-cd samples/book-app-web
-npm install
-npm test -- --run
-npm run build
-```
+Perform these steps:
+
+1. In the sidebar, open a session for the `copilot-app-for-beginners` project, or create one by selecting the **New session** (**+**) icon next to the project name.
+2. Select the **Review panel** toggle in the upper-right corner of the app. This is where the session's terminal and diff surfaces live. (You can also use **View → Toggle Terminal** from the menu bar.)
+3. Select the **Terminal** tab. If no terminal exists yet, press **+** to start one.
+4. In the terminal, run these commands from the repository root:
+
+   ```bash
+   cd samples/book-app-web
+   npm install
+   npm test -- --run
+   npm run build
+   ```
+
+> Note: This baseline runs in the session's current workspace. Each practice-branch exercise below opens its **own worktree** (a separate folder), so you'll run `npm install` again the first time you use that worktree's terminal.
 
 <!-- app-screenshot: Integrated terminal showing a test command running or completed, with project-specific secrets and paths cropped if needed. -->
 
@@ -133,15 +142,26 @@ In these exercises, you'll:
 
 ### 1. Review a Buggy Area
 
-In a session, try this prompt:
+Before you change anything, ask Copilot to review the app and point out risky areas. Starting on a practice branch that already contains a bug gives the review something real to find, and sets up the fix you'll make in Exercise 2.
 
-```text
-Review @samples/book-app-web/src for issues related to filtering, unread counts, and reading statistics. Create a short checklist grouped by high, medium, and low risk. Do not edit files yet.
-```
+Perform these steps:
+
+1. Make sure the `practice-unread-count-bug` branch is ready. The setup script from [Chapter 00](../00-quick-start/README.md#2-fork-clone-and-prepare-the-course-repository) created it. If you skipped that script, go back and run it now.
+
+   > Note: Prefer to set the scenario up manually? See the [Issue 2 training-branch steps](../samples/app-course-issues.md#issue-2-keep-unread-stats-correct-when-filters-are-active).
+
+2. In the sidebar, locate the `copilot-app-for-beginners` project and select the **`Create from`** icon next to it.
+3. In the dialog, select the **Branches** tab, then choose `practice-unread-count-bug`. This starts a new session based on that branch and creates a new worktree.
+4. In the session composer, set the **Mode** selector to **Plan** so Copilot reviews without editing files.
+5. Submit the following prompt:
+
+   ```text
+   Review @samples/book-app-web/src for issues related to filtering, unread counts, and reading statistics. Create a short checklist grouped by high, medium, and low risk. Do not edit files yet.
+   ```
 
 #### Expected Output
 
-Copilot should produce a review checklist that points to likely files and behaviors.
+Copilot should produce a review checklist that points to likely files and behaviors, including the unread-count behavior you'll fix next.
 
 > Demo output varies. Focus on whether the checklist is specific and testable.
 
@@ -153,13 +173,24 @@ The review should mention behavior that you can verify with tests or browser int
 
 ### 2. Debug and Fix a Small Issue
 
-The default app passes tests. Before this workflow, use the `practice-unread-count-bug` branch created by the setup script, or follow the Issue 2 training-branch setup in [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-2-keep-unread-stats-correct-when-filters-are-active) so there is a real unread-count regression to fix. If you're unsure how to base the session on that branch, use the [Chapter 02 practice branch note](../02-sessions-worktrees-context/README.md#practice-branches-in-this-course).
+Now fix the unread-count bug the review surfaced. This time Copilot will edit files, so you'll switch the session to **Interactive** mode and stay in control of each change.
 
-Try this prompt:
+Perform these steps:
 
-```text
-Fix the unread count when filters are active in samples/book-app-web. Keep the change small, explain the root cause, and run the relevant tests.
-```
+1. Stay in the same session you started in Exercise 1 (the one on the `practice-unread-count-bug` branch).
+
+   > Note: Starting here without Exercise 1? Base a new session on the `practice-unread-count-bug` branch first, using the [Chapter 02 practice-branch steps](../02-sessions-worktrees-context/README.md#practice-branches-in-this-course).
+
+2. In the session composer, change the **Mode** selector from **Plan** to **Interactive** so Copilot can propose and apply edits while you steer.
+3. Submit the following prompt:
+
+   ```text
+   Fix the unread count when filters are active in samples/book-app-web. Keep the change small, explain the root cause, and run the relevant tests.
+   ```
+
+4. When Copilot proposes changes, review them in the **Changes** tab of the Review panel before you approve them.
+
+   <!-- MANUAL STEP TO VERIFY: Confirm the exact affordance to approve/apply Copilot's proposed edits in Interactive mode (for example a "Keep" or "Approve" button on the diff or in the composer), then add a screenshot. -->
 
 #### Expected Output
 
@@ -167,42 +198,48 @@ Copilot should make a focused change, explain the cause, and run or suggest a te
 
 #### Check the Result
 
-Run:
+1. In the session terminal, install this worktree's dependencies (a new worktree starts without them), then run the tests from the repository root:
 
-From the repository root:
+   ```bash
+   cd samples/book-app-web
+   npm install
+   npm test -- --run
+   ```
 
-```bash
-cd samples/book-app-web
-npm test -- --run
-```
+2. To see the change in the running app, start the dev server in the same terminal:
 
-If the app has a browser-visible behavior change, also run:
+   ```bash
+   npm run dev -- --host 127.0.0.1 --port 5173
+   ```
 
-```bash
-npm run dev -- --host 127.0.0.1 --port 5173
-```
+   This command keeps running so the browser can preview the app. Leave that terminal open while you test, then press `Ctrl+C` when you're finished.
 
-This dev-server command keeps running so the browser can preview the app. Leave that terminal open while you test, then press `Ctrl+C` when you're finished.
+3. Open the app's integrated browser and navigate to:
 
-Then open the integrated browser to:
+   ```text
+   http://127.0.0.1:5173
+   ```
 
-```text
-http://127.0.0.1:5173
-```
+   <!-- MANUAL STEP TO VERIFY: Confirm how to open the integrated browser/preview in the current app build (for example Review panel → Browser tab, or a Preview / Open in browser button), then add a screenshot. -->
 
-<!-- app-screenshot: Integrated browser or browser canvas showing the sample web app preview. -->
+   <!-- app-screenshot: Integrated browser or browser canvas showing the sample web app preview. -->
 
 ---
 
 ### 3. Ask for Tests
 
-Stay on the same training branch from the previous workflow.
+Tests lock in the fix so it can't silently regress later. You'll ask Copilot to add a test that fails on the old behavior and passes on your fix.
 
-Try this prompt:
+Perform these steps:
 
-```text
-Add or update tests for the unread count behavior so the bug would fail before the fix and pass after the fix. Keep the tests focused on samples/book-app-web.
-```
+1. Stay in the same **Interactive** session on the `practice-unread-count-bug` branch.
+2. In the session composer, submit the following prompt:
+
+   ```text
+   Add or update tests for the unread count behavior so the bug would fail before the fix and pass after the fix. Keep the tests focused on samples/book-app-web.
+   ```
+
+3. Review the new or updated test files in the **Changes** tab before you approve them.
 
 #### Expected Output
 
@@ -210,7 +247,7 @@ Copilot should add or update tests in the sample app test area.
 
 #### Success Check
 
-Run:
+In the session terminal, run:
 
 ```bash
 cd samples/book-app-web
@@ -226,20 +263,23 @@ Both commands should complete before you treat the change as ready.
 
 Refactoring changes the shape of code without changing what it does. Tests are what make that safe: if they pass before and after, you have evidence the behavior held.
 
-Start on a branch where the tests already pass, and confirm your baseline:
+Perform these steps:
 
-```bash
-cd samples/book-app-web
-npm test -- --run
-```
+1. Stay in the same session. With the fix and tests from Exercises 2 and 3 in place, this branch's tests now pass, which is the green baseline a safe refactor needs.
+2. In the session terminal, confirm the baseline is green:
 
-The `filterBooks` function in `samples/book-app-web/src/App.tsx` combines the search, genre, and reading-status checks inline, which makes it a good candidate for a small extract-function refactor.
+   ```bash
+   cd samples/book-app-web
+   npm test -- --run
+   ```
 
-Try this prompt:
+3. The `filterBooks` function in `samples/book-app-web/src/App.tsx` combines the search, genre, and reading-status checks inline, which makes it a good candidate for a small extract-function refactor. In the session composer (still in **Interactive** mode), submit the following prompt:
 
-```text
-Refactor filterBooks in @samples/book-app-web/src/App.tsx to extract the search, genre, and status checks into small, clearly named helper functions. Do not change behavior, and keep the filterBooks signature the same. Then run the tests to prove the behavior is unchanged.
-```
+   ```text
+   Refactor filterBooks in @samples/book-app-web/src/App.tsx to extract the search, genre, and status checks into small, clearly named helper functions. Do not change behavior, and keep the filterBooks signature the same. Then run the tests to prove the behavior is unchanged.
+   ```
+
+4. Review the refactor in the **Changes** tab, then approve it.
 
 #### Expected Output
 
@@ -249,7 +289,7 @@ Copilot should propose a behavior-preserving refactor, such as small `matchesSea
 
 #### Success Check
 
-Run the tests and the build again, and confirm both still pass:
+In the session terminal, run the tests and the build again, and confirm both still pass:
 
 ```bash
 cd samples/book-app-web
@@ -263,17 +303,20 @@ If a test fails after the refactor, the change altered behavior. Revert or adjus
 
 ### 5. Rubber Duck Review
 
-The `/rubber-duck` slash command asks a critic agent to review your current plan, diff, tests, or design. Use it before you create a PR, especially when the session made code changes.
+Before you would open a pull request, ask a critic agent to poke holes in your work. The `/rubber-duck` slash command reviews your current plan, diff, tests, or design, which is especially useful when the session made code changes.
 
-Try this prompt:
+Perform these steps:
 
-```text
-/rubber-duck Critique the plan, diff, tests, and browser validation for this session. What should I double-check before creating a pull request?
-```
+1. Stay in the same session, which now has your fix, tests, and refactor.
+2. In the session composer, type `/` to open the slash-command palette, then submit the following:
+
+   ```text
+   /rubber-duck Critique the plan, diff, tests, and browser validation for this session. What should I double-check before creating a pull request?
+   ```
+
+   > If `/rubber-duck` is not available in your app build, submit the same prompt without the slash command.
 
 <!-- app-screenshot: Diff view showing code changes alongside the conversation or validation output. -->
-
-If `/rubber-duck` is not available in your app build, use the same prompt without the slash command.
 
 #### Expected Output
 
@@ -288,18 +331,28 @@ Pick and Polish is the course name for a visible UI iteration loop:
 
 ![Pick and Polish UI iteration workflow](assets/pick-and-polish.webp)
 
-1. Run `samples/book-app-web`.
-2. Open the browser preview.
-3. Pick or describe a visible area, such as a book card, filter panel, or reading stats area.
-4. Ask Copilot to polish spacing, hierarchy, contrast, copy, accessibility, or responsive layout.
-5. Preview the result.
-6. Review the diff and run tests.
+Perform these steps:
 
-Try this prompt:
+1. In the sidebar, select the **`Create from`** icon next to the `copilot-app-for-beginners` project, choose the **Branches** tab, and select `practice-card-polish` to start a session for UI work.
+2. In the session terminal (Review panel → **Terminal** tab), install this worktree's dependencies and start the app:
 
-```text
-Polish the book card UI in samples/book-app-web for spacing, visual hierarchy, accessible copy, and responsive behavior. Keep the design consistent with the existing app and show me the diff before I accept it.
-```
+   ```bash
+   cd samples/book-app-web
+   npm install
+   npm run dev -- --host 127.0.0.1 --port 5173
+   ```
+
+3. Open the app's integrated browser to `http://127.0.0.1:5173` to preview the running app.
+
+   <!-- MANUAL STEP TO VERIFY: Confirm how to open the integrated browser/preview and, if available, the Pick and Polish live-select mode in the current app build, then add a screenshot. -->
+
+4. Set the **Mode** selector to **Interactive**, then submit this prompt to polish a visible area such as a book card:
+
+   ```text
+   Polish the book card UI in samples/book-app-web for spacing, visual hierarchy, accessible copy, and responsive behavior. Keep the design consistent with the existing app and show me the diff before I accept it.
+   ```
+
+5. Preview the result in the browser, then review the diff in the **Changes** tab and run the tests before you accept it.
 
 <!-- app-screenshot: Pick and Polish live mode or relevant app UI showing selected browser element and polish options, with any user data hidden. -->
 

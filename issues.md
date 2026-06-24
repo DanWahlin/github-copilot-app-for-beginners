@@ -224,7 +224,7 @@ The issues below come from a deep review of the root README and Chapters 00-08 f
 
 **Problem:** The connect-repository table lists "Add local folder," "Add GitHub repository," and "Add repository URL," but the following sentence told learners to "Select `Local folder or repository...`," a fourth label that matches none of the table options and could confuse a newcomer.
 
-**Resolution:** Changed the instruction to "Select **Add local folder**," matching the table.
+**Resolution:** Verified the actual dialog against `00-quick-start/assets/add-project.webp`: it is titled **Add project from** with options **Local folder or repository**, **GitHub repository**, and **Repository URL**. Aligned both the table and the follow-up sentence to these real app labels. (An earlier pass had changed the sentence to "Add local folder" to match the table, but the table itself did not match the app; the labels above are the screenshot-verified source of truth.)
 
 ## ✅ Issue 22: Chapter 02 slash-command "Confirmed" claims — verified against changelog, README, and docs
 
@@ -251,6 +251,8 @@ The issues below come from a deep review of the root README and Chapters 00-08 f
 (CLI-only commands the course steers away from — `/review`, `/plan`, `/model`, `/pr`, `/diff` — are being cross-checked by a separate web/CLI research pass.)
 
 **Follow-up after the broader web/docs research pass:** The research pass corroborated every command above with the same sources, and confirmed `/review`, `/plan`, `/model`, `/pr`, and `/diff` are all real Copilot CLI slash commands (the app intentionally exposes equivalent UI surfaces instead, so steering learners to the UI is correct). It found exactly one inaccuracy, now fixed: the `/create-canvas` row previously read "Available when canvas-authoring capabilities are installed or exposed in the app," but GitHub Docs present `/create-canvas` as a built-in skill available to all app users (canvases are GA and enabled by default). The row now reads "Confirmed in GitHub Docs as a built-in skill for creating a canvas from a session." Optional, applied: Chapter 08 now lists the full `/chronicle` subcommand set (`standup`, `tips`, `cost tips`, `search`, `improve`, `reindex`) alongside the standup and cost-tips examples.
+
+**Follow-up (common-commands table alignment):** Per author decision, `/research` and `/review` are kept in the Chapter 02 "common slash commands you might use" table and were also added to the verified reference table above so the two tables stay consistent. Note: the CLI research classified `/review` as a CLI-only command with an app UI equivalent; re-verify `/review` (and `/research`) as app slash commands before publishing, since this differs from that earlier assessment.
 
 ## ✅ Issue 23: Chapter header images are SVG while the CLI course uses PNG
 

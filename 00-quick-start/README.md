@@ -46,15 +46,15 @@ By the end of this chapter, you'll be able to:
 
 ## 🧩 Real-World Analogy: Setting Up the Recording Studio
 
-Before you record anything, you get the recordingstudio ready. You sign in for access, plug in your gear, load the song you'll work on, and run a quick soundcheck to make sure everything sounds right before you commit a single take.
+Before you record anything, you get the recording studio ready. You sign in for access, plug in your gear, load the song you'll work on, and run a quick soundcheck to make sure everything sounds right before you commit a single take.
 
 ![Setting up the studio analogy for GitHub Copilot App setup](assets/studio-setup-soundcheck.webp)
 
 The Copilot App setup is the same idea. In the following examples you'll do the following:
 
 1. Install the GitHub Copilot App
-2. Fork and clone the course repository
-3. Sign in to the app
+2. Sign in to the app
+3. Fork and clone the course repository
 4. Run a setup script
 5. Connect the course repository to the app
 6. Ask a first question about the repository
@@ -86,16 +86,16 @@ In these exercises, you'll:
 ### 1. Install and Sign In
 
 1. [Download and install the GitHub Copilot App][getting-started] for your operating system.
-2. Open the app
-3. Select *Sign in to GitHub*
-4. Sign in with your [GitHub account][github-signup], or enter your GitHub Enterprise Server URL if your organization uses one
-5. Complete any first-run choices such as theme or repository access
+2. Open the app.
+3. Select *Sign in to GitHub*.
+4. Sign in with your [GitHub account][github-signup], or enter your GitHub Enterprise Server URL if your organization uses one.
+5. Complete any first-run choices such as theme or repository access.
 
 #### Expected Output
 
 You'll see the main app window with navigation areas such as My Work, Automations, Search, Sessions, and Quick chats.
 
-![GitHub Copilot App First Look](./assets/github-copilot-app-first-look.webp)
+![GitHub Copilot App First Look](assets/github-copilot-app-first-look.webp)
 
 #### How It Works
 
@@ -104,6 +104,8 @@ The app uses your GitHub identity and repository permissions to show work you ca
 ---
 
 ### 2. Fork, Clone, and Prepare the Course Repository
+
+Forking gives you your own copy of the course repository so the setup script can add the issues, branches, and pull requests used in later chapters.
 
 1. Fork this [course's repository on GitHub][course-repository] by selecting the `Fork` button on the repository page. 
 
@@ -126,7 +128,8 @@ The app uses your GitHub identity and repository permissions to show work you ca
     >
     > If you only want to complete Chapters 01 through 03, you can skip the script and connect a local clone instead.
 
-    ##### Do a dry run of the setup script
+    **Do a dry run of the setup script**
+
     *MacOS, Linux, or Git Bash (requires Python 3)*
 
     ```bash
@@ -139,7 +142,7 @@ The app uses your GitHub identity and repository permissions to show work you ca
     powershell -ExecutionPolicy Bypass -File .\.github\scripts\setup-training-scenarios.ps1 -DryRun
     ```
 
-    ##### Run the Script
+    **Run the Script**
 
     *MacOS, Linux, or Git Bash*
 
@@ -163,17 +166,17 @@ You've got a local clone of your fork, and the setup script completed or you int
 
 ### 3. Connect the Course Repository
 
-In the app sidebar, select the **+** button next to **Sessions**. There are several options available for connecting a project.
+In the app sidebar, select the **+** button next to **Sessions** to open the **Add project from** dialog. It offers several options for connecting a project.
 
 | If you've got... | Use this app option |
 |---|---|
-| A cloned copy on your machine | **Add local folder**, then select your local `copilot-app-for-beginners` folder |
-| A repository on GitHub | **Add GitHub repository**, then search for your fork |
-| A repository URL | **Add repository URL**, then paste the fork URL |
+| A cloned copy on your machine | **Local folder or repository**, then select your local `copilot-app-for-beginners` folder |
+| A repository on GitHub | **GitHub repository**, then search for your fork |
+| A repository URL | **Repository URL**, then paste the fork URL |
 
-![Add project from dialog](./assets/add-project.webp)
+![Add project from dialog](assets/add-project.webp)
 
-Select **Add local folder** and navigate to your clone of the course repository.
+Select **Local folder or repository** and navigate to your clone of the course repository.
 
 ```text
 copilot-app-for-beginners
@@ -294,5 +297,3 @@ In Chapter 01, you'll tour the app interface, compare Quick chat with sessions, 
 [github-signup]: https://github.com/signup
 [git-install]: https://git-scm.com/install
 [github-cli]: https://cli.github.com
-[node-downloads]: https://nodejs.org
-[python-downloads]: https://www.python.org/downloads

@@ -76,7 +76,7 @@ In these exercises, you'll:
 
 - Tour the app's main surfaces
 - Brainstorm with Quick chats
-- Compare session modes to feel how much control each one gives you
+- Compare session modes to learn how you can use them
 - Try search and voice dictation
 
 ### 1. Tour the App
@@ -89,7 +89,7 @@ Open GitHub Copilot App and notice these areas in the sidebar:
 4. Sessions
 5. Quick chats
 
-<img width="400" src="assets/app-sidebar.webp" alt="App sidebar with My Work, Automations, Search, Sessions, and Quick chats">
+![App sidebar with My Work, Automations, Search, Sessions, and Quick chats](assets/app-sidebar.webp)
 
 Now open **Settings** and locate:
 
@@ -203,13 +203,17 @@ Explain when Autopilot would be appropriate for a small documentation-only task 
 
 You'll notice that Plan mode emphasizes an approach, Interactive mode encourages step-by-step steering, and Autopilot is framed as higher autonomy.
 
+#### Success Check
+
+You're able to describe, in your own words, how Plan, Interactive, and Autopilot differ in how much you stay involved while Copilot works.
+
 ---
 
 ### 4. Search
 
 Select **Search** from the sidebar. Notice that you can search for sessions, PRs, issues, or paste a URL. Type `copilot-app-for-beginners` into the textbox and you should be presented with the option to create a new session.
 
-Close **Search** and reopen it. Scroll through the other options to see the other options it provides. Notice that several actions can be performed such as:
+Close **Search** and reopen it. Scroll through the list to see what else it offers. Notice that several actions can be performed such as:
 
 - New session
 - Start from a canvas
@@ -236,10 +240,13 @@ Go back to the GitHub Copilot App's Settings dialog. Select **Voice dictation** 
 - Transcription models
 
 Perform the following actions:
+
+> Note: Microphone permission is granted at the operating-system level, so the exact screen differs by platform (for example, System Settings on macOS, or Settings → Privacy & security → Microphone on Windows). Follow your OS prompts to allow the GitHub Copilot App to use the microphone.
+
 1. Select **Microphone privacy**, **Open preferences** and ensure the GitHub Copilot App has the necessary permissions to use the microphone.
 2. Select **Test microphone** to verify that it's working correctly.
 3. Note the keyboard shortcut for activating voice dictation. Try it out (you'll probably see a message saying that you need to use it with a text box).
-4. Create a new **Quick chat** session and test voice dictation by using the keyboard shortcut.
+4. Create a new **Quick chats** session and test voice dictation by using the keyboard shortcut.
 
 #### How It Works
 
@@ -249,7 +256,7 @@ Voice dictation turns speech into editable prompt text which can save time and e
 
 ## Notes and Tips
 
-- Use **Quick chat** when you're learning before acting.
+- Use **Quick chats** when you're learning before acting.
 - Use **Plan** when the approach matters and you need to plan out building an app or feature, fix a complex bug, etc.
 - Use **Interactive** when you'd like to steer the agent at each step.
 - Use **Autopilot** when you have a clear, bounded task with well defined success criteria that you'd like the agent to complete with minimal intervention.
@@ -277,7 +284,7 @@ Check your plan, organization policy, project settings, and app version.
 ## 🔑 Key Takeaways
 
 1. The app is organized around work surfaces: My Work, Search, Sessions, Quick chats, and Automations.
-2. **Quick chat** is for exploration. **Sessions** are for focused repository work.
+2. **Quick chats** are for exploration. **Sessions** are for focused repository work.
 3. **Interactive**, **Plan**, and **Autopilot** change autonomy.
 
 ---
@@ -286,7 +293,7 @@ Check your plan, organization policy, project settings, and app version.
 
 Create a small mode map for the Book App. The goal is to use the app surfaces from this chapter without changing files yet.
 
-1. Open Quick chat and submit this prompt:
+1. Open Quick chats and submit this prompt:
 
    ```text
    I'm learning this course with samples/book-app-web. Give me a beginner-friendly overview of what the app does, which files look important, and one safe question I should ask before editing code.

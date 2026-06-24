@@ -111,6 +111,8 @@ Here are some common slash commands you might use:
 | `/create-canvas` | Create a canvas from the current session for a richer editable/inspectable surface. |
 | `/orchestrate` | Coordinate multi-session or multi-repo work by delegating to child sessions. |
 | `/remote` | Work with remote-session/remote-control flows when available in your build. |
+| `/research` | Conduct research on a topic or question and summarize the findings. |
+| `/review` | Request a review of the current session or a specific piece of code. |
 | `/rubber-duck` | Ask a critic agent to review a plan, diff, tests, design, or proposed approach. |
 | `/skills` | Discover available skills; `/skills reload` reloads skills during a session. |
 | `/usage` | Open usage, rate-limit, plan-limit, or credit information. |
@@ -165,7 +167,7 @@ Perform these steps:
 1. Read Issue 3 in your forked GitHub repository, to understand the task:
 
 ```text
-https://github.com/[YOUR_GITHUB_USERNAME]/copilot-app-for-beginners/issues/3
+https://github.com/YOUR-USER/copilot-app-for-beginners/issues/3
 ```
 
 > Note: You can also find the issue in [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-3-improve-the-empty-state-copy) if you'd like to manually add it to your repository.
@@ -253,17 +255,17 @@ Perform these steps:
    ```
 3. Click on that value to open a dialog that provides more information about the session, the worktree path, and other relevant details. An example of the dialog is shown below: 
 
-![Session Details Dialog](assets/app-session-details.webp)
+   ![Session Details Dialog](assets/app-session-details.webp)
 
-> Note: [prefix] will be replaced with your personal prefix that's defined in the app settings.
+   > Note: [your-prefix] will be replaced with your personal prefix that's defined in the app settings.
 
-3. Select the **Review panel** toggle in the upper-right corner of the app. This is where a session's diff and terminal surfaces live.
+4. Select the **Review panel** toggle in the upper-right corner of the app. This is where a session's diff and terminal surfaces live.
 
-![Review Panel](assets/app-toggle-review-panel.webp)
+   ![Review Panel](assets/app-toggle-review-panel.webp)
 
-4. Select the **Changes** tab to see the diff. This session has only planned and inspected, and you haven't approved any edits, so the Changes tab should be empty. That's expected. In a later chapter you'll make real changes and watch diffs appear here.
-5. If no terminal exists yet, press **+** to start one.
-6. In the terminal, run this command to check the git status:
+5. Select the **Changes** tab to see the diff. This session has only planned and inspected, and you haven't approved any edits, so the Changes tab should be empty. That's expected. In a later chapter you'll make real changes and watch diffs appear here.
+6. If no terminal exists yet, press **+** to start one.
+7. In the terminal, run this command to check the git status:
 
    ```bash
    git status
@@ -284,7 +286,7 @@ nothing to commit, working tree clean
 
 ### 5. Use `/chronicle`
 
-Slash commands are shortcuts you run in the composer. Here you'll use `/chronicle` to get a quick recap of what the session has done so far.
+Slash commands are shortcuts you run in the composer. Here you'll use `/chronicle` to get a quick recap of what the session has done so far. Adding the `standup` argument formats that recap as a short, standup-style summary.
 
 Perform these steps:
 

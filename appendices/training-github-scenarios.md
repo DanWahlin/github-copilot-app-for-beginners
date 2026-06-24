@@ -8,7 +8,7 @@ Use a fork or disposable training repository. Do not use a production repository
 
 | Course item | Source draft | Used in |
 |---|---|---|
-| Seeded issues | `samples/app-course-issues.md` | Chapter 04, Chapter 08 |
+| Seeded issues | `samples/app-course-issues.md` | Chapters 02, 04, 08 |
 | Practice branches | Training branch setup steps in each issue draft | Chapters 02, 03, 04, 08 |
 | Pull request scenarios | `samples/app-course-pr-scenarios.md` | Chapter 04, Chapter 08 |
 | Failing check example | PR scenario 2 and the `Book app web` workflow | Chapter 04 |
@@ -77,7 +77,7 @@ The setup scripts are designed to be safe to rerun. They reuse existing labels, 
 
 The setup script creates:
 
-- course labels such as `book-app-web`, `bug`, `tests`, `accessibility`, `copy`, `ui`, `responsive`, and `ci`
+- course labels such as `book-app-web`, `good first issue`, `bug`, `tests`, `accessibility`, `copy`, `ui`, `responsive`, and `ci`
 - five seeded GitHub issues based on [`samples/app-course-issues.md`](../samples/app-course-issues.md)
 - practice branches with intentional course regressions
 - three pull request scenarios based on [`samples/app-course-pr-scenarios.md`](../samples/app-course-pr-scenarios.md)
