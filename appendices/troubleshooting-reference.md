@@ -57,7 +57,7 @@ Related chapter: [04 GitHub Workflows](../04-github-workflows/)
 
 | Symptom | Likely cause | Try this |
 |---|---|---|
-| Issue or PR is missing from My Work | Filters or permissions | Clear filters, check repository access, and confirm assignment or review request |
+| Issue or PR is missing from My work | Filters or permissions | Clear filters, check repository access, and confirm assignment or review request |
 | Cannot push a branch | No write access to upstream | Use a fork or a repository where the learner has write access |
 | CI fails but local tests pass | Different environment, secrets, or branch protection | Read the failing check log and compare Node version, commands, and secrets |
 | PR remains blocked | Required reviews, checks, branch protection, or conflicts | Triage in this order: failing checks, merge conflicts, required reviews, stale reviews, branch rules |

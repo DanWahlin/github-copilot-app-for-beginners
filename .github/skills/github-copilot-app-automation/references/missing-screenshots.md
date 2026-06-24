@@ -56,7 +56,7 @@ Judge each shot from its description — don't rely on a stored list:
 - **App-chrome shots** (settings tabs, composer, pickers, the new-automation
   form): capturable any time; no seeded data needed. Keep private panels (e.g.,
   the sidebar session list) out of frame, or capture from a clean account.
-- **Data shots** (My Work, issue/PR details, diffs, failing checks, run history,
+- **Data shots** (My work, issue/PR details, diffs, failing checks, run history,
   a live session or canvas): need the **training fork** with
   `.github/scripts/setup-training-scenarios.sh` run, from a sanitized account.
 - **Policy/build-gated shots** (Agent Merge, cloud automations, canvas authoring):

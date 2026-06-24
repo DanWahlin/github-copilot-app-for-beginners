@@ -98,7 +98,7 @@ These pause points keep you in control.
 
 ## Capstone Part 1: Prioritize One Issue
 
-Use Quick chat or My Work to identify one small task. For this course, choose a seeded issue like:
+Use Quick chat or My work to identify one small task. For this course, choose a seeded issue like:
 
 ```text
 Empty-state copy is unclear and not accessible enough in samples/book-app-web.
@@ -203,7 +203,7 @@ Ask Copilot to draft a PR only after validation:
 Draft a pull request summary for this change. Include summary, validation performed, and screenshots needed. Do not merge.
 ```
 
-If your training repository supports PR creation, create the PR in the app and inspect it in My Work.
+If your training repository supports PR creation, create the PR in the app and inspect it in My work.
 
 ### Expected Result
 

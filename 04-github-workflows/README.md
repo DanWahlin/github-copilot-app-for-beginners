@@ -2,7 +2,7 @@
 ---
 id: CopilotApp-04
 title: !translate GitHub Workflows
-description: !translate Use My Work, issues, pull requests, review comments, failing checks, Fix actions, and Agent Merge in the GitHub Copilot App.
+description: !translate Use My work, issues, pull requests, review comments, failing checks, Fix actions, and Agent Merge in the GitHub Copilot App.
 audience: Developers / Students / Desktop users
 slug: github-workflows
 weight: 5
@@ -13,13 +13,13 @@ weight: 5
 
 > **What if issues, pull requests, review comments, checks, and merge readiness lived in the same supervised workflow?**
 
-The GitHub Copilot App also helps you move work through GitHub: Issues, pull requests, review comments, failing checks, and merge readiness. In this chapter, you'll use My Work as your issue and pull request inbox, start sessions from GitHub context, review diffs, and use Fix actions safely.
+The GitHub Copilot App also helps you move work through GitHub: Issues, pull requests, review comments, failing checks, and merge readiness. In this chapter, you'll use My work as your issue and pull request inbox, start sessions from GitHub context, review diffs, and use Fix actions safely.
 
 ## 🎯 Learning Objectives
 
 By the end of this chapter, you'll be able to:
 
-- Use My Work as an issue and pull request inbox
+- Use My work as an issue and pull request inbox
 - Filter issues and PRs with search qualifiers
 - Start sessions from issues and pull requests
 - Review diffs and comments in the app
@@ -45,13 +45,13 @@ A music producer's desk does more than start new songs. It tracks song briefs, t
 
 ![Producer's review desk analogy for GitHub issues and pull requests](assets/producer-review-desk-github.webp)
 
-My Work is similar. It helps you see what needs attention before you start, review, fix, or merge work.
+My work is similar. It helps you see what needs attention before you start, review, fix, or merge work.
 
 ## Core Concepts
 
 | Concept | Beginner explanation |
 |---|---|
-| My Work | An app view for GitHub issues, pull requests, review requests, and checks |
+| My work | An app view for GitHub issues, pull requests, review requests, and checks |
 | Issue session | A session started with issue context already attached |
 | Pull request session | A session connected to a PR so Copilot can inspect diff, comments, and checks |
 | Fix action | A guided action that asks Copilot to address a review comment or failing check |
@@ -65,21 +65,21 @@ My Work is similar. It helps you see what needs attention before you start, revi
 
 In these exercises, you'll:
 
-- Find work in My Work and start a session from an issue
+- Find work in My work and start a session from an issue
 - Create and review a pull request
 - Respond to a PR conversation comment
 - Investigate and fix a failing check safely
 
-### 1. Find Work in My Work
+### 1. Find Work in My work
 
-Open My Work and find:
+Open My work and find:
 
 - Issues assigned to you
 - Pull requests authored by you
 - Review requests
 - Pull requests with failing checks
 
-<!-- app-screenshot: My Work view showing issue and pull request sections with filters, using a safe sample repository. -->
+<!-- app-screenshot: My work view showing issue and pull request sections with filters, using a safe sample repository. -->
 
 Try search qualifiers such as:
 
@@ -247,14 +247,14 @@ Run it only in the training fork after you've reviewed the PR diff, checks, comm
 
 ## Notes and Tips
 
-- My Work reflects GitHub data and permissions.
+- My work reflects GitHub data and permissions.
 - If a learner cannot see an issue, PR, review request, or check, verify repository access and filters first.
 - Fix actions are helpers, not approvals.
 - Open the PR in the browser when you need GitHub settings, branch protection details, full Actions logs, or repository administration controls.
 
 ### Common Beginner Mistakes
 
-- Assuming My Work shows every issue or PR regardless of filters and permissions
+- Assuming My work shows every issue or PR regardless of filters and permissions
 - Letting a Fix action change more than the failing check or review comment requires
 - Treating Agent Merge as a shortcut before understanding the diff, checks, and branch rules
 
@@ -268,7 +268,7 @@ Check:
 - Repository access
 - Current account
 - Organization membership
-- My Work filters
+- My work filters
 - Search qualifiers
 - Whether the issue or PR is in a fork
 
@@ -303,7 +303,7 @@ Public or shared training repositories may require forks. Ask your instructor or
 
 ## 🔑 Key Takeaways
 
-1. My Work turns GitHub issues and PRs into an app workflow surface.
+1. My work turns GitHub issues and PRs into an app workflow surface.
 2. Starting from an issue gives Copilot better task context.
 3. PR review still belongs to the human.
 4. Fix actions can help with comments and failing checks, but you inspect the diff and validation.
@@ -316,7 +316,7 @@ Public or shared training repositories may require forks. Ask your instructor or
 Use a training issue or instructor-provided scenario:
 
 ```text
-Start from an issue in My Work, create a Plan-mode session, propose a fix for samples/book-app-web, validate it locally, and draft a PR summary that only claims evidence you actually saw.
+Start from an issue in My work, create a Plan-mode session, propose a fix for samples/book-app-web, validate it locally, and draft a PR summary that only claims evidence you actually saw.
 ```
 
 Then answer:

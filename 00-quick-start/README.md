@@ -93,7 +93,7 @@ In these exercises, you'll:
 
 #### Expected Output
 
-You'll see the main app window with navigation areas such as My Work, Automations, Search, Sessions, and Quick chats.
+You'll see the main app window with navigation areas such as My work, Automations, Search, Sessions, and Quick chats.
 
 ![GitHub Copilot App First Look](assets/github-copilot-app-first-look.webp)
 

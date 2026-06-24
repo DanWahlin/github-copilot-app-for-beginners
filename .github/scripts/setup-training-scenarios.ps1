@@ -589,7 +589,7 @@ Write-Log ""
 Write-Log "Setup complete."
 Write-Log "Next checks:"
 Write-Log "- Open the GitHub Copilot App and connect this fork/training repository."
-Write-Log "- Confirm the seeded issues and PRs appear in My Work."
+Write-Log "- Confirm the seeded issues and PRs appear in My work."
 Write-Log "- Wait for the failing-check PR workflow to finish before using that lesson."
 
 if (-not [string]::IsNullOrWhiteSpace($startBranch) -and -not $DryRun) {

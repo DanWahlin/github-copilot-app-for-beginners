@@ -84,7 +84,7 @@ The setup script creates:
 - a safe PR conversation comment for the empty-state copy exercise
 - one failing-check PR that uses the `Book app web` workflow
 
-The setup scripts assign seeded issues to the GitHub user authenticated with `gh`, so they are easier to find in My Work. Manual fallback issues should be assigned to the learner when possible.
+The setup scripts assign seeded issues to the GitHub user authenticated with `gh`, so they are easier to find in My work. Manual fallback issues should be assigned to the learner when possible.
 
 ## Manual fallback: Create the seeded issues
 

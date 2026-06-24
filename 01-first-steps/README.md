@@ -19,7 +19,7 @@ Now that the app is installed and connected to the course repository, it's time 
 
 By the end of this chapter, you'll be able to:
 
-- Navigate My Work, Automations, Search, Sessions, and Quick chats
+- Navigate My work, Automations, Search, Sessions, and Quick chats
 - Locate major settings areas such as General, Accounts, Sessions, Themes, Accessibility, and Voice dictation
 - Identify beginner-safe settings that affect safety, context, productivity, speed, and cost
 - Explain Interactive, Plan, and Autopilot
@@ -83,13 +83,13 @@ In these exercises, you'll:
 
 Open GitHub Copilot App and notice these areas in the sidebar:
 
-1. My Work
+1. My work
 2. Automations
 3. Search
 4. Sessions
 5. Quick chats
 
-![App sidebar with My Work, Automations, Search, Sessions, and Quick chats](assets/app-sidebar.webp)
+![App sidebar with My work, Automations, Search, Sessions, and Quick chats](assets/app-sidebar.webp)
 
 Now open **Settings** and locate:
 
@@ -283,7 +283,7 @@ Check your plan, organization policy, project settings, and app version.
 
 ## 🔑 Key Takeaways
 
-1. The app is organized around work surfaces: My Work, Search, Sessions, Quick chats, and Automations.
+1. The app is organized around work surfaces: My work, Search, Sessions, Quick chats, and Automations.
 2. **Quick chats** are for exploration. **Sessions** are for focused repository work.
 3. **Interactive**, **Plan**, and **Autopilot** change autonomy.
 

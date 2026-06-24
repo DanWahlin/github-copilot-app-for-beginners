@@ -318,7 +318,7 @@ Perform these steps:
 
 #### Expected Output
 
-Copilot app opens the dialog you viewed earlier to display session context details and usage information.
+Copilot App opens the session dialog to display session context details and usage information.
 
 ![Session Context](assets/app-session-context.webp)
 

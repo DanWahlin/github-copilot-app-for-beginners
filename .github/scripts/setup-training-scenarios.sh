@@ -458,7 +458,7 @@ log ""
 log "Setup complete."
 log "Next checks:"
 log "- Open the GitHub Copilot App and connect this fork/training repository."
-log "- Confirm the seeded issues and PRs appear in My Work."
+log "- Confirm the seeded issues and PRs appear in My work."
 log "- Wait for the failing-check PR workflow to finish before using that lesson."
 
 if [[ -n "$START_BRANCH" && "$DRY_RUN" -eq 0 ]]; then

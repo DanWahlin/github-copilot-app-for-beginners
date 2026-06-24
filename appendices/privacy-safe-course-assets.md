@@ -53,7 +53,7 @@ Do not rely only on a small blur if the original text is still readable. Crop wh
 
 ## Private repositories
 
-Use the course sample repository for examples. If a screenshot shows a repository picker, My Work list, issue list, PR list, or Search result, make sure no private repositories are visible.
+Use the course sample repository for examples. If a screenshot shows a repository picker, My work list, issue list, PR list, or Search result, make sure no private repositories are visible.
 
 Safe replacements:
 

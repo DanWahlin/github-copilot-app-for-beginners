@@ -38,7 +38,7 @@ By the end of the course, you'll be able to:
 - Use worktree-backed sessions without colliding with your main branch
 - Attach useful context with `@`, `#`, and `/`
 - Review diffs, run tests, preview a web app, and validate changes
-- Use My Work for issues, PRs, review comments, and failing checks
+- Use My work for issues, PRs, review comments, and failing checks
 - Understand where settings, instructions, skills, canvases, automations, and Agent Merge fit
 
 The main sample used throughout the course can be found at:
@@ -79,7 +79,7 @@ This course focuses on the GitHub Copilot App. Along the way, you'll see how it 
 | 01 | 👋 [First Steps](./01-first-steps/README.md) | Learn the UI, Quick chats, settings, sessions, modes, and model controls |
 | 02 | 🌳 [Sessions, Worktrees, and Context](./02-sessions-worktrees-context/README.md) | Start isolated sessions and use `@`, `#`, and `/` for context |
 | 03 | ⚡ [Development Workflows](./03-development-workflows/README.md) | Use repository instructions, review, debug, test, preview, and polish `samples/book-app-web` |
-| 04 | 🔀 [GitHub Workflows](./04-github-workflows/README.md) | Use My Work, issues, PRs, review comments, checks, Fix actions, and advanced Agent Merge |
+| 04 | 🔀 [GitHub Workflows](./04-github-workflows/README.md) | Use My work, issues, PRs, review comments, checks, Fix actions, and advanced Agent Merge |
 | 05 | 🧰 [Skills, Model Context Protocol (MCP) Servers, and Plugins](./05-skills-mcp-plugins/README.md) | Add reusable expertise and optional tool integrations |
 | 06 | 🖼️ [Canvases](./06-canvases/README.md) | Use shared visual work surfaces |
 | 07 | 🔁 [Automations](./07-automations/README.md) | Create manual, scheduled, and advanced cloud automations |
