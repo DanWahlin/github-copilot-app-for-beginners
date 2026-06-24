@@ -93,9 +93,9 @@ In these exercises, you'll:
 
 #### Expected Output
 
-You'll see the main app window with navigation areas such as My work, Automations, Search, Sessions, and Quick chats.
+You'll see the main app window with navigation areas such as Home, My work, Automations, Search, and Sessions, and Quick chats.
 
-![GitHub Copilot App First Look](assets/github-copilot-app-first-look.webp)
+![GitHub Copilot App First Look](assets/app-github-copilot-app-first-look.webp)
 
 #### How It Works
 
@@ -174,7 +174,7 @@ In the app sidebar, select the **+** button next to **Sessions** to open the **A
 | A repository on GitHub | **GitHub repository**, then search for your fork |
 | A repository URL | **Repository URL**, then paste the fork URL |
 
-![Add project from dialog](assets/add-project.webp)
+![Add project from dialog](assets/app-add-project.webp)
 
 Select **Local folder or repository** and navigate to your clone of the course repository.
 

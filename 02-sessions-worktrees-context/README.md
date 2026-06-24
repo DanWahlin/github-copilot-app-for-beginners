@@ -186,7 +186,7 @@ https://github.com/YOUR-USER/copilot-app-for-beginners/issues/3
 
 Copilot should identify files to inspect, describe the current behavior, and propose a plan before editing. You'll see something *similar* to the following:
 
-![Expected output of the prompt](assets/exercise-1-plan.webp)
+![Expected output of the prompt](assets/app-exercise-1-plan.webp)
 
 If you'd like to see the full plan, select **View full plan**.
 
@@ -261,7 +261,7 @@ Perform these steps:
 
 4. Select the **Review panel** toggle in the upper-right corner of the app. This is where a session's diff and terminal surfaces live.
 
-   ![Review Panel](assets/app-toggle-review-panel.webp)
+   ![Toggle review panel](assets/app-toggle-review-panel.webp)
 
 5. Select the **Changes** tab to see the diff. This session has only planned and inspected, and you haven't approved any edits, so the Changes tab should be empty. That's expected. In a later chapter you'll make real changes and watch diffs appear here.
 6. If no terminal exists yet, press **+** to start one.
