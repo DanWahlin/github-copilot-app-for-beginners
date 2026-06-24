@@ -123,21 +123,28 @@ When in doubt, type `/` and use the in-app palette to discover what's available.
 
 ### Practice Branches in This Course
 
-Some later exercises use setup-script branches such as `practice-empty-state-copy`, `practice-unread-count-bug`, and `practice-search-case-bug`. Those branches contain intentional regressions or training changes.
+Back in [Chapter 00](../00-quick-start/README.md), the setup script added a few *practice branches* to your forked repository. As a quick refresher, each practice branch is a copy of the sample app prepared for one specific exercise later in the course, usually with an intentional bug for you to find and fix. Your `main` branch stays clean and passing, so these branches give you a safe, realistic way to inspect or fix without breaking the working app.
 
-Before starting one of those exercises, make sure the session is based on the named branch:
+Each exercise names the branch it needs. For reference, here is the full set:
 
-1. If the app lets you choose a branch or worktree base, choose the named practice branch.
-2. If the app uses your local checkout, switch your local clone first:
+- `practice-search-case-bug`: book search is case-sensitive when it should match regardless of case
+- `practice-unread-count-bug`: the unread stats count is wrong while a filter is active
+- `practice-empty-state-copy`: the "no results" empty-state message needs clearer, friendlier copy
+- `practice-card-polish`: a starting point for improving book card spacing and responsive layout
+- `practice-failing-stats-check`: a stats test fails on purpose so you can practice fixing a failing CI check
 
-   ```bash
-   git switch practice-empty-state-copy
-   git status
-   ```
+When an exercise calls for one of these branches, base your GitHub Copilot App session on it before you start by selecting the projects' `Create from` icon in the sidebar and then selecting the desired branch from the dialog.
 
-3. Confirm `git status` shows the expected branch before asking Copilot to inspect or fix the scenario.
+![Create from branch](assets/app-create-from-icon.webp)
 
-Use the branch name shown in the chapter you're working through.
+Try it out!
+1. Locate the **copilot-app-for-beginners** project in the sidebar.
+2. Select the `Create from` icon next to the project name.
+3. Notice that branches, PRs, and issues are available to select from the dialog.
+
+There's no need to select anything quite yet. You'll do that in later exercises.
+
+> Don't see the branches? You may have skipped the setup script, or you're on a different clone. Run it now from [Chapter 00](../00-quick-start/README.md#2-fork-clone-and-prepare-the-course-repository), or follow the manual steps in [appendices/training-github-scenarios.md](../appendices/training-github-scenarios.md).
 
 ---
 
@@ -152,57 +159,80 @@ In these exercises, you'll:
 
 ### 1. Start a Session from a Task
 
-The default sample app is stable. To practice a real planning workflow without overlapping the Chapter 03 debugging example, first read Issue 3 in [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-3-improve-the-empty-state-copy). This issue asks for clearer empty-state copy. Use the `practice-empty-state-copy` branch created by the setup script, or manually apply Issue 3's training-branch setup before this exercise. Follow the practice branch note above before starting the session.
+The default sample app is stable, so this exercise uses a practice branch that contains a real task to plan against. The task is to improve the app's *empty state*: the message shown when a search or filter matches no books. Right now that message isn't very helpful, so the goal is to make it clearer and friendlier.
 
-Create a new session in Plan mode, then try this prompt:
+Perform these steps:
+
+1. Read Issue 3 in your forked GitHub repository, to understand the task:
 
 ```text
-Improve the empty-state copy in samples/book-app-web. First inspect the relevant files and propose a plan. Do not edit files until I approve the plan.
+https://github.com/[YOUR_GITHUB_USERNAME]/copilot-app-for-beginners/issues/3
 ```
 
-<!-- app-screenshot: New session composer showing the choice between local repository, new worktree, and cloud sandbox if available. -->
+> Note: You can also find the issue in [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-3-improve-the-empty-state-copy) if you'd like to manually add it to your repository.
+
+2. Make sure the `practice-empty-state-copy` branch is ready. The setup script from [Chapter 00](../00-quick-start/README.md#2-fork-clone-and-prepare-the-course-repository) created it for you. If you skipped that script, go back and run it now.
+3. In the sidebar, locate the `copilot-app-for-beginners` project and select the **`Create from`** icon next to it.
+4. In the dialog, select the **Branches** tab, then choose `practice-empty-state-copy`. This starts a new session based on that branch and creates a new worktree.
+5. In the session composer, set the **Mode** selector to **Plan**.
+6. Submit the following prompt:
+
+   ```text
+   Improve the message the book app shows when no books match a search or filter (its empty state) in samples/book-app-web. First inspect the relevant files and propose a plan. Do not edit files until I approve the plan.
+   ```
 
 #### Expected Output
 
-Copilot should identify likely files to inspect, describe the current behavior, and propose a plan before editing.
+Copilot should identify files to inspect, describe the current behavior, and propose a plan before editing. You'll see something *similar* to the following:
 
-> Demo output varies. The exact files and wording may differ.
+![Expected output of the prompt](assets/exercise-1-plan.webp)
+
+If you'd like to see the full plan, select **View full plan**.
+
+Notice that you can then approve and implement the plan using autopilot, exit plan mode and add your own prompts, or suggest changes to the plan.
 
 #### Success Check
 
-You'll find the session in the app and identify whether it's using a worktree, local repository, or cloud sandbox.
+You'll find the new project session in the app's sidebar. Mouse over the session to identify the branch being used.
+
+Select `Exit plan mode and I will prompt myself` to exit plan mode and continue with your own prompts.
 
 ---
 
 ### 2. Give Focused File Context
 
-In the same session, try this prompt:
+Now you'll narrow the session's focus to just the app's source code using an `@` file reference, so Copilot doesn't waste attention on unrelated files.
 
-```text
-Use @samples/book-app-web/src to focus on the React app code. Which files are most likely involved in the empty-state copy?
-```
+Perform these steps:
+
+1. Stay in the same session you started in Exercise 1 (the one on the `practice-empty-state-copy` branch).
+2. In the session composer, submit this prompt. The `@` reference points Copilot at a specific folder:
+
+   ```text
+   Use @samples/book-app-web/src to focus on the React app code. Which files are most likely involved in the empty-state copy?
+   ```
 
 #### Expected Output
 
-Copilot should focus on the sample app source folder instead of discussing unrelated course chapters.
+Copilot should focus on the sample app source folder instead of referencing unrelated files or folders and show a list of files that are likely involved in the empty-state copy.
 
 #### How It Works
 
-The `@` reference narrows context. It helps Copilot spend attention on the files that matter.
+The `@` reference narrows context. It helps Copilot spend attention on the files that matter and saves on overall token usage.
 
 ---
 
 ### 3. Start from an Issue
 
-Your forked repository should include seeded issues if you ran the setup script in [00 - Quick Start](../00-quick-start/README.md). With the GitHub Copilot App, you can open an issue directly without having to leave the app. 
+In Exercise 1 you started a session from a branch. This time you'll start a brand-new session directly from a GitHub issue, without leaving the app - a big time saver! Your forked repository already has seeded issues if you ran the setup script in [00 - Quick Start](../00-quick-start/README.md).
 
-Open Issue #3 from your repository by selecting the `Create from` icon next to your `copilot-app-for-beginners` project, selecting the `Issues` tab, and then selecting the issue.
+Perform these steps:
+
+1. In the sidebar, locate the `copilot-app-for-beginners` project and select the **`Create from`** icon next to it.
+2. In the dialog, select the **Issues** tab.
+3. Select Issue #3 from the list. The app starts a new session, reads the issue, and begins planning how to address it automatically.
 
 ![Open Issue in Copilot App](assets/app-create-from-icon.webp)
-
-> Note: If you skipped the setup script, you can go back to the [00 - Quick Start](../00-quick-start/README.md) section and run the seed script to get the issues and other resources used in the course in your repository.
-
-You should see that the app analyzes the issue and generates a plan to address it. A huge time saver!
 
 #### Expected Output
 
@@ -210,37 +240,35 @@ Copilot should analyze the issue and generate a plan that you can then review an
 
 ---
 
-### 4. Inspect the Branch and Worktree Safely
+### 4. Inspect the Branch and Worktree
 
-A session keeps its evidence in a few surfaces. In this example, you'll explore those surfaces and how they relate to the git concepts you're learning. Open them now so you'll know exactly where to look when you start making changes in upcoming chapters.
+A session keeps its evidence in a few places. In this exercise you'll open those surfaces and connect them to the git concepts you're learning, so you'll know exactly where to look when you start making changes in upcoming chapters.
 
-From the app, locate:
+Perform these steps:
 
-- Session name
-- Branch name
-- Worktree or workspace path
+1. In the sidebar, return to the session you started in Exercise 1 (the one on the `practice-empty-state-copy` branch) and select the session.
+2. At the top of the session window, you'll see its **branch name** and its **worktree name**. It'll look something like:
 
-<!-- app-screenshot: Session details or sidebar area showing the generated branch/worktree name so learners can connect the app UI to git concepts. -->
+   ```text
+   practice-empty-state-copy · [your-prefix]-practice-empty-state-copy
+   ```
+3. Click on that value to open a dialog that provides more information about the session, the worktree path, and other relevant details. An example of the dialog is shown below: 
 
-If you open the folder in an editor, confirm the branch and path before making any edits.
+![Session Details Dialog](assets/app-session-details.webp)
 
-#### Open the Review Panel and Check the Diff
+> Note: [prefix] will be replaced with your personal prefix that's defined in the app settings.
 
-Select the **Review panel** toggle in the upper-right corner of the screen. This is where a session's diff and terminal surfaces live.
+3. Select the **Review panel** toggle in the upper-right corner of the app. This is where a session's diff and terminal surfaces live.
 
-Open the **Changes** tab to see the diff. This session has only planned and inspected, and you haven't approved any edits, so the Changes tab is empty. That's expected. In Chapter 03 you'll make real changes and watch diffs appear here.
+![Review Panel](assets/app-toggle-review-panel.webp)
 
-<!-- app-screenshot: Review panel open with the Changes tab selected, showing an empty diff for a plan-only session. -->
+4. Select the **Changes** tab to see the diff. This session has only planned and inspected, and you haven't approved any edits, so the Changes tab should be empty. That's expected. In a later chapter you'll make real changes and watch diffs appear here.
+5. If no terminal exists yet, press **+** to start one.
+6. In the terminal, run this command to check the git status:
 
-#### Start a Terminal and Check Git Status
-
-In the Review panel, select the **Terminal** tab. If no terminal exists yet, press **+** to start one.
-
-Run this safe check in the session terminal:
-
-```bash
-git status
-```
+   ```bash
+   git status
+   ```
 
 #### Expected Output
 
@@ -253,43 +281,49 @@ On branch practice-empty-state-copy
 nothing to commit, working tree clean
 ```
 
-> Note: Do not delete an active worktree from Finder, Explorer, or terminal. Clean up sessions through the app when possible.
-
 ---
 
 ### 5. Use `/chronicle`
 
-After a small completed session or plan, type:
+Slash commands are shortcuts you run in the composer. Here you'll use `/chronicle` to get a quick recap of what the session has done so far.
 
-```text
-/chronicle
-```
+Perform these steps:
+
+1. Make sure you're in the `practice-empty-state-copy` session.
+2. In the session composer, submit the following slash command:
+
+   ```text
+   /chronicle standup
+   ```
 
 #### Expected Output
 
 Copilot should summarize what happened in the session and what decisions or changes were made.
 
-> Demo output varies. Use `/chronicle` as a reflection aid, not as the only record of truth.
-
 ---
 
 ### 6. Check Session Context with `/context`
 
-Type:
+In this final exercise, you'll check how much context the session is using, so you can keep it focused.
 
-```text
-/context
-```
+Perform these steps:
+
+1. Stay in the same session.
+2. In the session composer, submit the following:
+
+   ```text
+   /context
+   ```
 
 #### Expected Output
 
-If your app version supports it, Copilot opens or summarizes session context details such as token count, context window, and usage information.
+Copilot app opens the dialog you viewed earlier to display session context details and usage information.
 
-If `/context` is not available, open the slash command palette and look for a similar usage or context command. App commands change over time, so the palette is the source of truth.
+![Session Context](assets/app-session-context.webp)
 
 #### How It Works
 
-Context is the material Copilot is using for the current session. Checking it helps you notice when a session is getting too broad before you add more files, issues, or instructions.
+Context is the content Copilot App is using for the current session. Checking it helps you notice when a session's context is getting overloaded before you add more files, issues, or instructions.
 
 <details>
 <summary>Intermediate: Local repository, new worktree, and cloud sandbox tradeoffs</summary>
@@ -390,7 +424,7 @@ Then answer:
 
 ## ➡️ What's Next
 
-In Chapter 03, you'll use the app for real development workflows: Review, debugging, tests, terminal validation, browser preview, and UI polish.
+In the next chapter, you'll use the app for real development workflows: Review, debugging, tests, terminal validation, browser preview, and UI polish.
 
 **[← Back to Chapter 01](../01-first-steps/README.md)** | **[Continue to Chapter 03 →](../03-development-workflows/README.md)**
 
