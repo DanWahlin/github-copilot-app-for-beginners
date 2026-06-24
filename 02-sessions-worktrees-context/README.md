@@ -23,8 +23,7 @@ By the end of this chapter, you'll be able to:
 - Explain what a git worktree is and why you'd use it
 - Understand why isolated sessions protect your main branch
 - Use `@` for file and folder context, `#` for issue or PR context, and `/` for app commands
-- Decide between local repository, new worktree, and cloud sandbox options
-- Recognize branch prefixes and session lifecycle settings
+- Decide between working directly with a local repository or using worktrees
 
 > ⏱️ **Estimated Time**: ~50 minutes (25 min reading + 25 min hands-on)
 
@@ -325,73 +324,13 @@ Copilot app opens the dialog you viewed earlier to display session context detai
 
 Context is the content Copilot App is using for the current session. Checking it helps you notice when a session's context is getting overloaded before you add more files, issues, or instructions.
 
-<details>
-<summary>Intermediate: Local repository, new worktree, and cloud sandbox tradeoffs</summary>
-
-| Option | Good for | Watch out for |
-|---|---|---|
-| Local repository | Very small work in the current folder | Edits touch your main checkout directly |
-| New worktree | Most course exercises and parallel work | Ports, databases, and background processes are still shared |
-| Cloud sandbox | Isolated GitHub-hosted work when available | Requires plan, policy, repository settings, and possible billing awareness |
-
-![Where a session should run](assets/session-run-location-comparison.webp)
-
-</details>
-
-<details>
-<summary>Advanced: Session settings that change agent behavior</summary>
-
-Some settings affect default model behavior, custom instructions, branch prefixes, session lifecycle, auto-approve behavior, Agent Merge attribution, and remote access.
-
-For beginner work, focus on:
-
-- Clear branch prefixes
-- Safe default model and reasoning choices
-- Review checkpoints before edits
-
-<!-- app-screenshot: Settings screen where branch prefix or session lifecycle settings are visible, with sensitive details hidden. -->
-
-Treat auto-approve, Agent Merge attribution, and remote access as optional advanced settings that depend on policy and team workflow.
-
-</details>
-
 ---
 
 ## Notes and Tips
 
 - Worktrees are real directories and branches, not disposable chat history.
-- Do not manually edit or delete a worktree while a session is active unless you understand the consequences.
 - Worktrees isolate files and branches, but they do not automatically isolate ports, databases, containers, caches, or background processes.
 - If two sessions run the sample app, use different ports.
-
-### Common Beginner Mistakes
-
-- Opening the wrong worktree folder in an editor and editing the main checkout by accident
-- Attaching the whole repository when `@samples/book-app-web/src` is enough
-- Assuming worktrees isolate ports, containers, databases, or background services
-
-<details>
-<summary>Troubleshooting: Sessions and worktrees</summary>
-
-### Two Sessions Cannot Run the Web App at the Same Time
-
-They may both be trying to use the same port. For later chapters, run one session on `5173` and another on a different safe port such as `5174`.
-
-### A Session Behaves Differently from the Main Checkout
-
-Check:
-
-- Branch name
-- Worktree path
-- Dependency install status
-- Environment variables
-- Uncommitted changes
-
-### The App Lost Track of a Worktree
-
-This can happen if the folder was moved or deleted outside the app. Prefer app-managed cleanup whenever possible.
-
-</details>
 
 ---
 
@@ -400,14 +339,13 @@ This can happen if the folder was moved or deleted outside the app. Prefer app-m
 1. Sessions are focused agent workspaces.
 2. Worktrees keep session changes separate from your main checkout.
 3. `@`, `#`, and `/` help you control context and commands.
-4. Cloud sandboxes are useful when available, but they are not required for the beginner path.
-5. `/chronicle`, `/context`, and `/usage` help summarize session history and inspect context or usage when available.
+4. Slash commands can be used to quickly access features and information within the app.
 
 ---
 
 ## 📝 Assignment
 
-Start a Plan-mode session for this safe task:
+Start a new Plan mode session for the following task:
 
 ```text
 Investigate how samples/book-app-web calculates reading stats. Do not edit files. Explain which files are involved and what tests would prove the behavior.
@@ -424,7 +362,7 @@ Then answer:
 
 ## ➡️ What's Next
 
-In the next chapter, you'll use the app for real development workflows: Review, debugging, tests, terminal validation, browser preview, and UI polish.
+In the next chapter, you'll use the app for common development workflows: Review, debugging, tests, terminal validation, browser preview, and UI polish.
 
 **[← Back to Chapter 01](../01-first-steps/README.md)** | **[Continue to Chapter 03 →](../03-development-workflows/README.md)**
 
@@ -432,16 +370,14 @@ In the next chapter, you'll use the app for real development workflows: Review, 
 
 ## Source References
 
-- [Working with agent sessions][agent-sessions]
 - [About the GitHub Copilot App][about-app]
+- [Working with agent sessions][agent-sessions]
 - [GitHub Copilot App repository][app-readme]
-- [GitHub Copilot App GA changelog][ga-changelog]
+- [GitHub Copilot App changelog][changelog]
 - [GitHub Copilot App product blog][app-blog]
-- [Cloud and local sandboxes][sandboxes]
 
 [agent-sessions]: https://docs.github.com/en/copilot/how-tos/github-copilot-app/agent-sessions
 [about-app]: https://docs.github.com/en/copilot/concepts/agents/github-copilot-app
 [app-readme]: https://github.com/github/app
-[ga-changelog]: https://github.blog/changelog/2026-06-17-github-copilot-app-generally-available/
+[changelog]: https://github.blog/changelog/2026-06-17-github-copilot-app-generally-available/
 [app-blog]: https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience/
-[sandboxes]: https://docs.github.com/en/copilot/concepts/about-cloud-and-local-sandboxes
