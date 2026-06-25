@@ -256,21 +256,10 @@ If an issue-triggered automation fires too often, narrow the issue search query,
 
 ---
 
-## Notes and Tips
-
-- Automations are best for repeatable, bounded work with a clear review path.
-- Start with manual triggers before schedules or issue-created triggers.
-- Least privilege means selecting only the tools required for the task.
-- Treat prompts that read issue content as potentially exposed to prompt injection. Keep write actions out of early automations.
-
-### Common Beginner Mistakes
-
-- Scheduling an automation before testing it manually
-- Giving broad write tools to a reminder or summary workflow
-- Forgetting that cloud automations may have policy, billing, and repository-access implications
+## Troubleshooting
 
 <details>
-<summary>Troubleshooting: Automation issues</summary>
+<summary>Automation issues</summary>
 
 | Problem | What to check |
 |---|---|
@@ -291,6 +280,7 @@ If an issue-triggered automation fires too often, narrow the issue search query,
 3. Every automation needs a trigger, prompt, tool set, and review path.
 4. Scheduled automations are intermediate because they run without you clicking each time.
 5. Cloud and issue-triggered automations are advanced because policy, billing, and permissions matter.
+6. Apply least privilege: give an automation only the tools it needs, and keep write actions out of early automations that read issue content, which can carry prompt-injection risk.
 
 ---
 
@@ -311,7 +301,7 @@ Success criteria: You're able to explain why the automation is safe to run again
 
 ## ➡️ What's Next
 
-In Chapter 08, you'll combine the app workflow into a capstone: Issue triage, planning, implementation, validation, PR review, and merge readiness. Advanced orchestration stays behind explicit pause points.
+In the next chapter, you'll combine the app workflow into a capstone: Issue triage, planning, implementation, validation, PR review, and merge readiness.
 
 **[← Back to Chapter 06](../06-canvases/README.md)** | **[Next: Putting It All Together →](../08-putting-it-all-together/README.md)**
 

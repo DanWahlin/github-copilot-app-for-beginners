@@ -245,21 +245,10 @@ Run it only in the training fork after you've reviewed the PR diff, checks, comm
 
 ---
 
-## Notes and Tips
-
-- My work reflects GitHub data and permissions.
-- If a learner cannot see an issue, PR, review request, or check, verify repository access and filters first.
-- Fix actions are helpers, not approvals.
-- Open the PR in the browser when you need GitHub settings, branch protection details, full Actions logs, or repository administration controls.
-
-### Common Beginner Mistakes
-
-- Assuming My work shows every issue or PR regardless of filters and permissions
-- Letting a Fix action change more than the failing check or review comment requires
-- Treating Agent Merge as a shortcut before understanding the diff, checks, and branch rules
+## Troubleshooting
 
 <details>
-<summary>Troubleshooting: GitHub workflow issues</summary>
+<summary>GitHub workflow issues</summary>
 
 ### I Cannot See an Issue or PR
 
@@ -306,7 +295,7 @@ Public or shared training repositories may require forks. Ask your instructor or
 1. My work turns GitHub issues and PRs into an app workflow surface.
 2. Starting from an issue gives Copilot better task context.
 3. PR review still belongs to the human.
-4. Fix actions can help with comments and failing checks, but you inspect the diff and validation.
+4. Fix actions are helpers, not approvals: they can help with comments and failing checks, but you inspect the diff and validation.
 5. Agent Merge is advanced and should be used only after clear review checkpoints.
 
 ---
@@ -330,7 +319,7 @@ Then answer:
 
 ## ➡️ What's Next
 
-Chapter 05 will show how repo-local skills add reusable review guidance without adding external tools.
+The next chapter will show how skills add reusable review guidance without adding external tools.
 
 **[← Back to Chapter 03](../03-development-workflows/README.md)** | **[Continue to Chapter 05 →](../05-skills-mcp-plugins/README.md)**
 

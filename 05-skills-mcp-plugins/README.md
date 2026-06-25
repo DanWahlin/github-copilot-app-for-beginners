@@ -267,20 +267,10 @@ Use `/agent` only after you're able to explain why a role is better than a skill
 
 ---
 
-## Notes and Tips
-
-- Skills belong on the beginner path because they are easy to inspect and version control.
-- MCP servers and plugins expand what the agent can see or do. Add only what the workflow requires.
-- If a capability appears in settings but not in a session, check project scope, enabled state, and whether the session needs restarting.
-
-### Common Beginner Mistakes
-
-- Installing MCP servers or plugins before proving the task needs external data
-- Treating a skill as a secret tool instead of a reviewable instruction file
-- Letting too many enabled tools distract a simple review task
+## Troubleshooting
 
 <details>
-<summary>Troubleshooting: Skills and extension issues</summary>
+<summary>Skills and extension issues</summary>
 
 | Problem | What to check |
 |---|---|
@@ -319,7 +309,7 @@ Success criteria: You're able to explain why the required exercise uses a repo-l
 
 ## ➡️ What's Next
 
-In Chapter 06, you'll inspect a prepared canvas concept to see how agent work can become visible and steerable. Creating canvases is saved for an advanced section.
+In the next chapter, you'll inspect a prepared canvas concept to see how agent work can become visible and steerable.
 
 **[← Back to Chapter 04](../04-github-workflows/README.md)** | **[Next: Canvases →](../06-canvases/README.md)**
 

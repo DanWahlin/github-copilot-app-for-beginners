@@ -255,20 +255,14 @@ Voice dictation turns speech into editable prompt text which can save time and e
 
 ---
 
-## Notes and Tips
-
-- Use **Quick chats** when you're learning before acting.
-- Use **Plan** when the approach matters and you need to plan out building an app or feature, fix a complex bug, etc.
-- Use **Interactive** when you'd like to steer the agent at each step.
-- Use **Autopilot** when you have a clear, bounded task with well defined success criteria that you'd like the agent to complete with minimal intervention.
-- Model and reasoning choices affect speed, quality, and cost. Use enough capability for the task, but not more than needed.
+## Troubleshooting
 
 <details>
-<summary>Troubleshooting: First navigation problems</summary>
+<summary>First navigation problems</summary>
 
 ### I Cannot Find a Setting Shown in the Chapter
 
-Settings can vary by app version, operating system, plan, organization policy, and enabled features. Look for the closest matching category, then check the official docs if the screen still does not match.
+Settings can vary by app version, operating system, organization policy, and enabled features. Look for the closest matching category, then check the official docs if the screen still does not match.
 
 ### Voice Dictation Does Not Work
 
@@ -286,7 +280,8 @@ Check your plan, organization policy, project settings, and app version.
 
 1. The app is organized around work surfaces: Home, My work, Search, Sessions, Quick chats, and Automations.
 2. **Quick chats** are for exploration. **Sessions** are for focused repository work.
-3. **Interactive**, **Plan**, and **Autopilot** change autonomy.
+3. **Interactive**, **Plan**, and **Autopilot** change the level of autonomy.
+4. Model and reasoning choices affect speed, quality, and cost. Use enough capability for the task, but not more than needed.
 
 ---
 
@@ -297,7 +292,7 @@ Create a small mode map for the Book App. The goal is to use the app surfaces fr
 1. Open Quick chats and submit this prompt:
 
    ```text
-   I'm learning this course with samples/book-app-web. Give me a beginner-friendly overview of what the app does, which files look important, and one safe question I should ask before editing code.
+   I'm learning the copilot-app-for-beginners course with samples/book-app-web. Give me a beginner-friendly overview of what the app does, which files look important, and one safe question I should ask before editing code.
    ```
 
    Write down one useful thing Quick chat taught you about the app.
@@ -310,7 +305,7 @@ Create a small mode map for the Book App. The goal is to use the app surfaces fr
 
    Write down the first file Copilot would inspect and one validation idea it suggested.
 
-3. Create an Interactive-mode session, or switch modes if your app version supports it, and submit this prompt:
+3. Switch to Interactive-mode and submit this prompt:
 
    ```text
    Walk me through how search and filters work in samples/book-app-web. Ask me before recommending any code changes, and do not edit files.
@@ -318,27 +313,11 @@ Create a small mode map for the Book App. The goal is to use the app surfaces fr
 
    Write down one question Copilot asked or one checkpoint where you stayed in control.
 
-4. Open Search in the app and search for:
-
-   ```text
-   samples/book-app-web
-   ```
-
-   Confirm you can find the sample app folder or an important file such as `src/App.tsx`.
-
-5. Finish with this short decision:
-
-   ```text
-   I would not give Autopilot a Book App bug fix yet because...
-   ```
-
-   Your answer should mention one concrete reason from this chapter, such as needing a plan first, not knowing the right branch or worktree yet, or wanting to review tests before approving edits.
-
 ---
 
 ## ➡️ What's Next
 
-In Chapter 02, you'll start real sessions, learn what worktrees are, and practice giving Copilot App focused context with `@`, `#`, and `/`.
+In the next chapter, you'll start using project sessions, learn what worktrees are, and learn how to provide focused context with `@`, `#`, and `/`.
 
 **[← Back to Chapter 00](../00-quick-start/README.md)** | **[Continue to Chapter 02 →](../02-sessions-worktrees-context/README.md)**
 

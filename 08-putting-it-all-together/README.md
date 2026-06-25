@@ -370,21 +370,10 @@ These summaries help you spot long-running sessions, repeated rework, and places
 
 ---
 
-## Notes and Tips
-
-- Parallel sessions are useful only when the tasks are independent.
-- Multiple running web surfaces need distinct ports and clear labels.
-- A canvas can help track pause points, but it does not replace validation.
-- If browser validation is required, confirm the dev server is running in the correct worktree.
-
-### Common Beginner Mistakes
-
-- Trying parallel sessions before completing the same workflow with one session
-- Treating a capstone PR as merge-ready before checking diff, tests, build, browser behavior, and review feedback
-- Adding MCP, automations, or Agent Merge because they are available rather than because the workflow needs them
+## Troubleshooting
 
 <details>
-<summary>Troubleshooting: Capstone workflow issues</summary>
+<summary>Capstone workflow issues</summary>
 
 | Problem | What to check |
 |---|---|
@@ -402,7 +391,7 @@ These summaries help you spot long-running sessions, repeated rework, and places
 
 1. The complete workflow is issue, plan, implement, validate, review, and merge readiness.
 2. Pause points are the main safety feature.
-3. Start with one session before adding parallel work.
+3. Start with one session before adding parallel work, and only parallelize independent tasks.
 4. MCP, automations, and Agent Merge are advanced additions, not prerequisites.
 5. Human judgment stays in the loop at every major control point.
 

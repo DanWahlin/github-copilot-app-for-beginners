@@ -228,21 +228,10 @@ If a canvas fails to open after edits, check extension dependencies, reload requ
 
 ---
 
-## Notes and Tips
-
-- Treat canvas contents as potentially shareable artifacts.
-- Do not put secrets, customer data, private repository names, tokens, or unreleased business details in course canvases.
-- A canvas action should match visible state. If the UI says an item moved, verify it moved.
-- Use canvases when you need progress to stay visible over time.
-
-### Common Beginner Mistakes
-
-- Using a long chat thread when a checklist or plan surface would be easier to inspect
-- Assuming a canvas changed state without checking the visible result
-- Putting private data into a reusable canvas artifact or screenshot
+## Troubleshooting
 
 <details>
-<summary>Troubleshooting: Canvas issues</summary>
+<summary>Canvas issues</summary>
 
 | Problem | What to check |
 |---|---|
@@ -281,7 +270,7 @@ Success criteria: You're able to explain the difference between a chat answer an
 
 ## ➡️ What's Next
 
-In Chapter 07, you'll turn repeatable prompts into automations. You'll start with manual automations before trying schedules or cloud/event-triggered workflows.
+In the next chapter, you'll turn repeatable prompts into automations. You'll start with manual automations before trying schedules or cloud/event-triggered workflows.
 
 **[← Back to Chapter 05](../05-skills-mcp-plugins/README.md)** | **[Next: Automations →](../07-automations/README.md)**
 

@@ -362,21 +362,10 @@ Remember: Visual polish can change accessibility and behavior. Always finish wit
 
 ---
 
-## Notes and Tips
-
-- A passing agent response is not the same thing as validated software.
-- The best evidence is visible: Diff, tests, build output, browser behavior, and PR checks.
-- Keep changes small when learning. It is easier to review and recover.
-- Ask Copilot to explain the root cause instead of only producing a patch.
-
-### Common Beginner Mistakes
-
-- Accepting a fix because the chat response sounds confident
-- Running tests in the wrong session worktree
-- Treating visual polish as harmless without checking accessibility, responsive layout, and tests
+## Troubleshooting
 
 <details>
-<summary>Troubleshooting: Development workflow issues</summary>
+<summary>Development workflow issues</summary>
 
 ### Browser Preview Does Not Update
 
@@ -409,7 +398,7 @@ If you capture images for your notes, capture visible app windows only. Hidden o
 
 1. Use the app as a loop: Ask, plan, change, test, preview, review, iterate.
 2. Terminal and browser surfaces make agent work inspectable.
-3. Tests and builds are required evidence.
+3. A passing agent response is not validated software; tests and builds are the required evidence.
 4. Refactor with tests as a guardrail so the behavior stays the same.
 5. Rubber duck review helps you pause before accepting or shipping.
 6. Pick and Polish is useful for UI work, but it still needs validation.
@@ -436,7 +425,7 @@ Then check:
 
 ## ➡️ What's Next
 
-In Chapter 04, you'll connect the development loop to GitHub work: Issues, pull requests, review comments, failing checks, Fix actions, and advanced Agent Merge.
+In the next chapter, you'll connect the development loop to GitHub work: Issues, pull requests, review comments, failing checks, Fix actions, and advanced Agent Merge.
 
 **[← Back to Chapter 02](../02-sessions-worktrees-context/README.md)** | **[Continue to Chapter 04 →](../04-github-workflows/README.md)**
 

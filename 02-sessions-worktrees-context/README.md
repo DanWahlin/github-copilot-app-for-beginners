@@ -174,7 +174,7 @@ There's no need to select anything quite yet. You'll do that in later exercises.
 In these exercises, you'll:
 
 - Start a worktree-backed session from a task in Plan mode
-- Give a session focused context with `@` and an issue reference
+- Give a session focused context with `@` or `#`
 - Inspect the session's branch, diff, and terminal to confirm the work stays isolated
 - Recap session history and check context usage with `/chronicle` and `/context`
 
@@ -194,13 +194,25 @@ Perform these steps:
 
 2. Make sure the `practice-empty-state-copy` branch is ready. The setup script from [Chapter 00](../00-quick-start/README.md#2-fork-clone-and-prepare-the-course-repository) created it for you. If you skipped that script, go back and run it now.
 3. In the sidebar, locate the `copilot-app-for-beginners` project and select the **`Create from`** icon next to it.
+
+   ![Create from branch](assets/app-create-from-icon.webp)
+
 4. In the dialog, select the **Branches** tab, then choose `practice-empty-state-copy`. This starts a new session based on that branch and creates a new worktree.
 5. In the session composer, set the **Mode** selector to **Plan**.
-6. Submit the following prompt:
+6. Submit the following prompt which includes details from the issue:
 
    ```text
+   The empty state should be clear for beginners and screen reader users.
+   Repro:
+   - Search for text that matches no books.
+   - Review the empty state.
+
+   Expected result: The message explains that no matching books were found and suggests changing filters.
+
    Improve the message the book app shows when no books match a search or filter (its empty state) in samples/book-app-web. First inspect the relevant files and propose a plan. Do not edit files until I approve the plan.
    ```
+
+   > Note: Later you'll learn different ways to reference an issue directly without having to manually open it and copy and paste details into the prompt.
 
 #### Expected Output
 
@@ -220,40 +232,47 @@ Select `Exit plan mode and I will prompt myself` to exit plan mode and continue 
 
 ---
 
-### 2. Give Focused File Context
+### 2. Give Focused Context using `@` and `#`
 
-Now you'll narrow the session's focus to just the app's source code using an `@` file reference, so Copilot doesn't waste attention on unrelated files.
+Now you'll narrow the session's focus using an `@` file reference or a `#` PR or issue reference, so Copilot knows what to focus on.
 
 Perform these steps:
 
-1. Stay in the same session you started in Exercise 1 (the one on the `practice-empty-state-copy` branch).
-2. In the session composer, submit this prompt. The `@` reference points Copilot at a specific folder:
+1. Start a new session in the `copilot-app-for-beginners` project.
+2. In the session composer, submit this prompt:
 
    ```text
    Use @samples/book-app-web/src to focus on the React app code. Which files are most likely involved in the empty-state copy?
    ```
 
+3. Switch to Plan mode in the composer. Although this session wasn't started from an existing issue or PR, you can use the `#` reference to access them.
+4. Type `#` into the composer. Notice that all of the issues and PRs associated with the repository appear.
+5. Select one of the issues from the list. You should see something like `#1` (depending on the issue you selected) appear in the composer. 
+6. Submit it and a plan will be created to fix the issue.
+
+   > Note: Depending on the issue you selected, you may be prompted to change to a different branch. Press escape to exit if asked. 
+
 #### Expected Output
 
-Copilot should focus on the sample app source folder instead of referencing unrelated files or folders and show a list of files that are likely involved in the empty-state copy.
+Copilot will focus on the sample app source folder instead of referencing unrelated files or folders and show a list of files that are likely involved in the empty-state copy. When you use the `#` reference, Copilot App will focus on the selected issue or PR.
 
 #### How It Works
 
-The `@` reference narrows context. It helps Copilot spend attention on the files that matter and saves on overall token usage.
+The `@` and `#` references narrow context. It helps Copilot App focus on the files, issues, or PRs that matter and saves on overall token usage.
 
 ---
 
 ### 3. Start from an Issue
 
-In Exercise 1 you started a session from a branch. This time you'll start a brand-new session directly from a GitHub issue, without leaving the app - a big time saver! Your forked repository already has seeded issues if you ran the setup script in [00 - Quick Start](../00-quick-start/README.md).
+Up to this point you've started a session from a branch. This time you'll start a new session directly from a GitHub issue, without leaving the app - a big time saver! Your forked repository already has seeded issues if you ran the setup script in [00 - Quick Start](../00-quick-start/README.md).
 
 Perform these steps:
 
 1. In the sidebar, locate the `copilot-app-for-beginners` project and select the **`Create from`** icon next to it.
 2. In the dialog, select the **Issues** tab.
-3. Select Issue #3 from the list. The app starts a new session, reads the issue, and begins planning how to address it automatically.
+3. Select `Issue #3` from the list. The app starts a new session, reads the issue, and begins planning how to address it automatically.
 
-![App Issues Dialog](assets/app-issues-dialog.webp)
+   ![App Issues Dialog](assets/app-issues-dialog.webp)
 
 #### Expected Output
 
@@ -263,27 +282,27 @@ Copilot should analyze the issue and generate a plan that you can then review an
 
 ### 4. Inspect the Branch and Worktree
 
-A session keeps its evidence in a few places. In this exercise you'll open those surfaces and connect them to the git concepts you're learning, so you'll know exactly where to look when you start making changes in upcoming chapters.
+A session keeps its evidence in a few places. In this exercise you'll open those surfaces and connect them to the git concepts you're learning. As a result, you'll know exactly where to look when you start making changes in upcoming chapters.
 
 Perform these steps:
 
 1. In the sidebar, return to the session you started in Exercise 1 (the one on the `practice-empty-state-copy` branch) and select the session.
-2. At the top of the session window, you'll see its **branch name** and its **worktree name**. It'll look something like:
+2. At the top of the session window, you'll see its **branch name** and **worktree name**. It'll look something like:
 
    ```text
    practice-empty-state-copy · [your-prefix]-practice-empty-state-copy
    ```
-3. Click on that value to open a dialog that provides more information about the session, the worktree path, and other relevant details. An example of the dialog is shown below: 
+3. Select the **branch name** or **worktree name** to open a dialog that provides more information about the session, the worktree path, and other relevant details. An example of the dialog is shown here: 
 
    ![Session Details Dialog](assets/app-session-details.webp)
 
    > Note: [your-prefix] will be replaced with your personal prefix that's defined in the app settings.
 
-4. Select the **Review panel** toggle in the upper-right corner of the app. This is where a session's diff and terminal surfaces live.
+4. Select the **Review panel** toggle in the upper-right corner of the app. This is where a session's diff, terminal surfaces, and other tools live.
 
    ![Toggle review panel](assets/app-toggle-review-panel.webp)
 
-5. Select the **Changes** tab to see the diff. This session has only planned and inspected, and you haven't approved any edits, so the Changes tab should be empty. That's expected. In a later chapter you'll make real changes and watch diffs appear here.
+5. Select the **Changes** tab to see the diff. You haven't approved any edits yet so the **Changes** tab should be empty. That's expected. In a later chapter you'll make real changes and watch diffs appear here.
 6. If no terminal exists yet, press **+** to start one.
 7. In the terminal, run this command to check the git status:
 
@@ -295,7 +314,7 @@ Perform these steps:
 
 Git should show the current branch and whether files are modified.
 
-Example clean output looks like this:
+Example clean output looks something like this:
 
 ```text
 On branch practice-empty-state-copy
@@ -304,9 +323,9 @@ nothing to commit, working tree clean
 
 ---
 
-### 5. Use `/chronicle`
+### 5. Use a Slash Command to Recap the Session
 
-Slash commands are shortcuts you run in the composer. Here you'll use `/chronicle` to get a quick recap of what the session has done so far. Adding the `standup` argument formats that recap as a short, standup-style summary.
+Slash commands are shortcuts you run in the composer. Here you'll use `/chronicle` to get a quick recap of what the session has done so far. Adding the `standup` argument formats that recap as a short, standup meeting-style summary.
 
 Perform these steps:
 
@@ -325,12 +344,12 @@ Copilot should summarize what happened in the session and what decisions or chan
 
 ### 6. Check Session Context with `/context`
 
-In this final exercise, you'll check how much context the session is using, so you can keep it focused.
+In this final exercise, you'll check how much context the session is using.
 
 Perform these steps:
 
 1. Stay in the same session.
-2. In the session composer, submit the following:
+2. Submit the following:
 
    ```text
    /context
@@ -344,15 +363,7 @@ Copilot App opens the session dialog to display session context details and usag
 
 #### How It Works
 
-Context is the content Copilot App is using for the current session. Checking it helps you notice when a session's context is getting overloaded before you add more files, issues, or instructions.
-
----
-
-## Notes and Tips
-
-- Worktrees are real directories and branches, not disposable chat history.
-- Worktrees isolate files and branches, but they do not automatically isolate ports, databases, containers, caches, or background processes.
-- If two sessions run the sample app, use different ports.
+Context is the content Copilot App is using for the current session. Checking it helps you know when a session's context is getting overloaded before you add more files, issues, or instructions.
 
 ---
 
@@ -360,9 +371,10 @@ Context is the content Copilot App is using for the current session. Checking it
 
 1. Sessions are focused agent workspaces.
 2. Worktrees keep session changes separate from your main checkout.
-3. The **Workspace** selector lets a session run in your local clone, a new worktree, or a cloud sandbox; a new worktree is the safe default.
-4. `@`, `#`, and `/` help you control context and commands.
-5. Slash commands can be used to quickly access features and information within the app.
+3. The workspace /selector lets a session run in your local clone, a new worktree, or a cloud sandbox; a new worktree is the safe default.
+4. Worktrees isolate files and branches, but not ports, databases, or background processes, so run parallel sessions on different ports.
+5. `@`, `#`, and `/` help you control context and commands.
+6. Slash commands can be used to quickly access features and information within the app.
 
 ---
 

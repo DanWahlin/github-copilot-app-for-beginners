@@ -229,13 +229,10 @@ You're able to answer these questions:
 
 ---
 
-## Notes and Tips
-
-- Quick chat is best for orientation and questions.
-- A project session is best when you want the agent to plan, inspect, or make changes to a repository.
+## Troubleshooting
 
 <details>
-<summary>Troubleshooting: Setup and access problems</summary>
+<summary>Setup and access problems</summary>
 
 ### I Cannot Sign In
 
@@ -253,7 +250,6 @@ Check:
 - You've got access to the repository on GitHub
 - You selected the correct account or organization
 - You tried the local folder option if the repository is already cloned
-- You tried the repository URL option if search does not find it
 
 ### Quick Chat Cannot Explain the Repository
 
@@ -278,7 +274,7 @@ Check:
 
 ## ➡️ What's Next
 
-In Chapter 01, you'll tour the app interface, compare Quick chat with sessions, and learn when to use Interactive, Plan, and Autopilot modes.
+In the next chapter, you'll tour the app interface, compare Quick chat with sessions, and learn when to use Interactive, Plan, and Autopilot modes.
 
 **[← Back to course README](../README.md)** | **[Continue to Chapter 01 →](../01-first-steps/README.md)**
 
