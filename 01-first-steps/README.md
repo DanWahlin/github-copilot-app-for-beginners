@@ -349,7 +349,7 @@ In Chapter 02, you'll start real sessions, learn what worktrees are, and practic
 - [Getting started with the GitHub Copilot App][getting-started]
 - [Working with agent sessions][agent-sessions]
 - [GitHub Copilot App changelog][app-changelog]
-- [Voice input documentation][voice-input]
+- [Voice input documentation (Copilot CLI, which the app is built on)][voice-input]
 - [AI models reference][ai-models]
 
 [getting-started]: https://docs.github.com/en/copilot/how-tos/github-copilot-app/getting-started

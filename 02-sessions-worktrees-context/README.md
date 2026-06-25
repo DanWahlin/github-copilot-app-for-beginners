@@ -23,7 +23,7 @@ By the end of this chapter, you'll be able to:
 - Explain what a git worktree is and why you'd use it
 - Understand why isolated sessions protect your main branch
 - Use `@` for file and folder context, `#` for issue or PR context, and `/` for app commands
-- Decide between working directly with a local repository or using worktrees
+- Decide between working directly with a local repository, an isolated worktree, or a cloud sandbox
 
 > ⏱️ **Estimated Time**: ~50 minutes (25 min reading + 25 min hands-on)
 
@@ -61,6 +61,24 @@ This allows you to work on multiple tasks or branches simultaneously without sta
 | Harder to compare work | Easier to inspect and approve |
 
 ![One repository with many safe worktrees](assets/one-repo-many-worktrees.webp)
+
+### Where a Session Runs
+
+When you start a session, the composer's **Workspace** selector lets you choose *where* the work happens. 
+
+![Workspace selector in the GitHub Copilot App](assets/app-workspace-selector.webp)
+
+The choices trade off speed against isolation:
+
+| Workspace | What it means | Choose it when... |
+|---|---|---|
+| Local repo | The session works directly in your existing clone, with no separate folder | You want a quick, low-stakes look and don't mind the session touching your working folder |
+| New worktree | The session gets its own folder and branch beside your clone | You want changes, branches, and diffs kept separate from your main checkout (the safe default this course uses) |
+| Cloud sandbox | The session runs on GitHub's hosted infrastructure instead of your machine | You want to offload the work or keep your local environment untouched |
+
+![Where should this session run: local repo, new worktree, or cloud sandbox](assets/session-run-location-comparison.webp)
+
+> Tip: When in doubt, choose a new worktree. It keeps your `main` checkout clean while still running on your machine, which is why the rest of this course leans on worktree-backed sessions. 
 
 ### Session Settings That Matter Here
 
@@ -122,11 +140,11 @@ When in doubt, type `/` and use the in-app palette to discover what's available.
 
 </details>
 
-### Practice Branches in This Course
+### Branches Used in This Course
 
-Back in [Chapter 00](../00-quick-start/README.md), the setup script added a few *practice branches* to your forked repository. As a quick refresher, each practice branch is a copy of the sample app prepared for one specific exercise later in the course, usually with an intentional bug for you to find and fix. Your `main` branch stays clean and passing, so these branches give you a safe, realistic way to inspect or fix without breaking the working app.
+Back in [Chapter 00](../00-quick-start/README.md), the setup script added several *practice branches* to your forked repository. As a quick refresher, each practice branch is a copy of the sample app prepared for one specific exercise later in the course, usually with an intentional bug or issue for you to resolve. By using practice branches you get a safe, realistic way to inspect or fix without breaking the working app.
 
-Each exercise names the branch it needs. For reference, here is the full set:
+Each exercise names the branch it needs. For reference, here is the full set that you'll see in this course:
 
 - `practice-search-case-bug`: book search is case-sensitive when it should match regardless of case
 - `practice-unread-count-bug`: the unread stats count is wrong while a filter is active
@@ -134,9 +152,11 @@ Each exercise names the branch it needs. For reference, here is the full set:
 - `practice-card-polish`: a starting point for improving book card spacing and responsive layout
 - `practice-failing-stats-check`: a stats test fails on purpose so you can practice fixing a failing CI check
 
-When an exercise calls for one of these branches, base your GitHub Copilot App session on it before you start by selecting the projects' `Create from` icon in the sidebar and then selecting the desired branch from the dialog.
+When an exercise calls for you to use one of these branches, you'll use it to create your GitHub Copilot App session. You can do this by selecting the project's `Create from` icon in the sidebar (1) and then selecting the desired branch from the dialog (2).
 
-![Create from branch](assets/app-create-from-icon.webp)
+![Create from branch](assets/app-create-from-icon-step1.svg)
+
+![Create from branch](assets/app-branches-dialog-step2.svg)
 
 Try it out!
 1. Locate the **copilot-app-for-beginners** project in the sidebar.
@@ -166,11 +186,11 @@ Perform these steps:
 
 1. Read Issue 3 in your forked GitHub repository, to understand the task:
 
-```text
-https://github.com/YOUR-USER/copilot-app-for-beginners/issues/3
-```
+   ```text
+   https://github.com/YOUR-USER/copilot-app-for-beginners/issues/3
+   ```
 
-> Note: You can also find the issue in [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-3-improve-the-empty-state-copy) if you'd like to manually add it to your repository.
+   > Note: You can also find the issue in [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-3-improve-the-empty-state-copy) if you'd like to manually add it to your repository.
 
 2. Make sure the `practice-empty-state-copy` branch is ready. The setup script from [Chapter 00](../00-quick-start/README.md#2-fork-clone-and-prepare-the-course-repository) created it for you. If you skipped that script, go back and run it now.
 3. In the sidebar, locate the `copilot-app-for-beginners` project and select the **`Create from`** icon next to it.
@@ -233,7 +253,7 @@ Perform these steps:
 2. In the dialog, select the **Issues** tab.
 3. Select Issue #3 from the list. The app starts a new session, reads the issue, and begins planning how to address it automatically.
 
-![Open Issue in Copilot App](assets/app-create-from-icon.webp)
+![App Issues Dialog](assets/app-issues-dialog.webp)
 
 #### Expected Output
 
@@ -340,8 +360,9 @@ Context is the content Copilot App is using for the current session. Checking it
 
 1. Sessions are focused agent workspaces.
 2. Worktrees keep session changes separate from your main checkout.
-3. `@`, `#`, and `/` help you control context and commands.
-4. Slash commands can be used to quickly access features and information within the app.
+3. The **Workspace** selector lets a session run in your local clone, a new worktree, or a cloud sandbox; a new worktree is the safe default.
+4. `@`, `#`, and `/` help you control context and commands.
+5. Slash commands can be used to quickly access features and information within the app.
 
 ---
 

@@ -93,7 +93,7 @@ In these exercises, you'll:
 
 #### Expected Output
 
-You'll see the main app window with navigation areas such as Home, My work, Automations, Search, and Sessions, and Quick chats.
+You'll see the main app window with navigation areas such as Home, My work, Automations, Search, Sessions, and Quick chats.
 
 ![GitHub Copilot App First Look](assets/app-github-copilot-app-first-look.webp)
 
@@ -290,7 +290,7 @@ In Chapter 01, you'll tour the app interface, compare Quick chat with sessions, 
 - [About the GitHub Copilot App][about-app]
 - [Working with agent sessions][agent-sessions]
 
-[course-repository]: https://github.com/github/copilot-app-for-beginners
+[course-repository]: https://github.com/DanWahlin/copilot-app-for-beginners
 [getting-started]: https://docs.github.com/copilot/how-tos/github-copilot-app/getting-started
 [about-app]: https://docs.github.com/copilot/concepts/agents/github-copilot-app
 [agent-sessions]: https://docs.github.com/copilot/how-tos/github-copilot-app/agent-sessions

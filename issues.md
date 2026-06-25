@@ -284,6 +284,59 @@ The issues below come from a deep review of the root README and Chapters 00-08 f
 
 **Resolution:** Added "Hands-On Workflow 4: Refactor Safely with Tests" (an extract-function refactor of `filterBooks` in `App.tsx` that runs tests before and after to prove behavior is unchanged), renumbered Rubber Duck Review to Workflow 5, added a matching learning objective ("Refactor code safely using tests as a guardrail") and a key takeaway.
 
+## ✅ Issue 26: Chapter 02 learning objective "decide local repo vs worktrees" is never taught (and its image is orphaned)
+
+**Severity:** Medium
+
+**Files:** `02-sessions-worktrees-context/README.md`, `02-sessions-worktrees-context/assets/session-run-location-comparison.webp`
+
+**Problem:** Chapter 02 lists the learning objective "Decide between working directly with a local repository or using worktrees" (line 26), but no section, table, or exercise in the chapter actually covers that decision. The only chapter mentions of "local" / "directly" (lines 119, 228) are unrelated. Separately, the asset `assets/session-run-location-comparison.webp` exists but is never referenced in the README, the only unused image across Chapters 00-02. The image's name ("session run location comparison") strongly suggests it was generated to support exactly this missing objective. A learner who reads the objective will expect guidance on when to run directly in their clone versus in a worktree-backed session and never receives it.
+
+**Resolution:** Added a new "Where a Session Runs" Core Concepts subsection grounded in the composer's **Workspace** selector (confirmed as `AXPopUpButton Workspace: Local` in the app-ui-map reference). It includes a three-row table (Local repo / New worktree / Cloud sandbox) matching the previously orphaned `session-run-location-comparison.webp`, which is now embedded, plus a "when in doubt, use a worktree" tip. Expanded the learning objective to name all three run locations and added a matching Key Takeaway.
+
+## ✅ Issue 27: Chapter 00 fork link points to a repository that returns 404
+
+**Severity:** Medium
+
+**File:** `00-quick-start/README.md`
+
+**Problem:** The `[course-repository]` reference link resolves to `https://github.com/github/copilot-app-for-beginners` (line 293). That URL currently returns **404**, while the working repository is `https://github.com/DanWahlin/copilot-app-for-beginners` (HTTP 200, confirmed via `git remote -v`). The link is used in the very first hands-on setup steps: the Prerequisites bullet "A fork of the [course repository]" (line 37) and the "Fork this [course's repository on GitHub]" instruction (line 110). A beginner who clicks it on day one lands on a 404 and cannot fork.
+
+**Resolution:** Author confirmed the live repository is canonical. Updated `[course-repository]` to `https://github.com/DanWahlin/copilot-app-for-beginners` (verified HTTP 200). This was the only `github/copilot-app-for-beginners` reference in the course, so all fork/clone cross-references now resolve.
+
+## ✅ Issue 28: Chapter 01 voice dictation cites a Copilot CLI doc, not an app doc
+
+**Severity:** Low
+
+**File:** `01-first-steps/README.md`
+
+**Problem:** Exercise 5 teaches the app's **Voice dictation** feature, but the Source References `[voice-input]` link points to `https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/voice-input` (line 358), which is the Copilot **CLI** documentation path. The link resolves (HTTP 200) but documents a different surface than the one the chapter teaches, which can confuse a learner who follows it expecting app guidance.
+
+**Resolution:** Verified via web research that no GitHub Copilot App-specific voice/dictation doc exists yet; the desktop app is built on the Copilot CLI, and the CLI voice-input page is the only official reference. Kept the valid link but relabeled the citation to "Voice input documentation (Copilot CLI, which the app is built on)" so learners know what they are opening.
+
+## ✅ Issue 29: Chapter 02 "Start from an Issue" reuses the branch screenshot
+
+**Severity:** Low
+
+**File:** `02-sessions-worktrees-context/README.md`
+
+**Problem:** Exercise 3 ("Start from an Issue") embeds `assets/app-create-from-icon.webp` with alt text "Open Issue in Copilot App" (line 236). That is the same screenshot used earlier for the branch-based step (line 139, alt "Create from branch"). The steps tell the learner to open the **Issues** tab and "Select Issue #3 from the list," but the reused image shows the Create-from icon, not the Issues tab or the issue list, so the visual does not match the instructions a beginner is trying to follow.
+
+**Resolution:** Replaced the misleading reused image with an `<!-- app-screenshot: ... -->` placeholder describing the Create-from dialog's Issues tab with Issue #3 selectable, matching the repo's pending-screenshot convention (Issue 24). The accurate capture is now tracked alongside the other planned app screenshots.
+
+## ✅ Issue 30: Minor copy and grammar nits in Chapters 00 and 02
+
+**Severity:** Low
+
+**Files:** `00-quick-start/README.md`, `02-sessions-worktrees-context/README.md`
+
+**Problem:** A few small wording issues a careful learner notices:
+
+- `00-quick-start/README.md` line 96: "navigation areas such as Home, My work, Automations, Search, and Sessions, and Quick chats" has a doubled "and" and reads awkwardly; it also lists the surfaces in a slightly different grouping than Chapter 01's sidebar order.
+- `02-sessions-worktrees-context/README.md` line 137: "selecting the projects' `Create from` icon" uses the plural possessive "projects'" where the singular "project's" is intended.
+
+**Resolution:** Reworded line 96 to a single clean list ("Home, My work, Automations, Search, Sessions, and Quick chats") and changed "projects'" to "project's" on line 137.
+
 ## Positive highlights
 
 - Hands-on examples cover a strong, realistic range of developer scenarios: setup, Quick chat, sessions/modes, focused context, issue-driven sessions, worktree inspection, `/chronicle` and `/context`, code review, debug-and-fix, test generation, rubber duck, Pick and Polish, My Work, PR creation/review, responding to review comments, fixing failing checks, Agent Merge, repo-local skills, canvases, automations, and an end-to-end capstone.
@@ -293,7 +346,12 @@ The issues below come from a deep review of the root README and Chapters 00-08 f
 
 ## Open questions
 
-None. Both prior open questions are resolved:
+Prior questions remain resolved:
 
 - **Chapter header image format (Issue 23):** SVG is intentional for the App course (author confirmed).
 - **Slash-command claims (Issue 22):** All Chapter 02 slash-command claims were verified against the `github/app` changelog, the `github/app` README, and GitHub Docs. They are accurate.
+
+New questions from the Chapters 00-02 review:
+
+- **Canonical fork URL (Issue 27):** Resolved. Author confirmed the live `DanWahlin/copilot-app-for-beginners` repo is canonical; the link now points there and resolves.
+- **App voice documentation (Issue 28):** Resolved. No app-specific voice doc exists yet; the CLI voice-input page is the official reference and the citation is now labeled accordingly.
