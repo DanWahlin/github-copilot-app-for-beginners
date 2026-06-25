@@ -407,6 +407,8 @@ If you capture images for your notes, capture visible app windows only. Hidden o
 
 ## 📝 Assignment
 
+![Assignment](../assets/assignment.webp)
+
 Practice the full loop on a safe issue:
 
 ```text

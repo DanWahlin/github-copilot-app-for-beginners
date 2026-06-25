@@ -380,6 +380,8 @@ Context is the content Copilot App is using for the current session. Checking it
 
 ## 📝 Assignment
 
+![Assignment](../assets/assignment.webp)
+
 Start a new Plan mode session for the following task:
 
 ```text

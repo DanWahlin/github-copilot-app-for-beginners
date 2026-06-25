@@ -257,6 +257,8 @@ If a canvas fails to open after edits, check extension dependencies, reload requ
 
 ## 📝 Assignment
 
+![Assignment](../assets/assignment.webp)
+
 Use the prepared canvas concept to run a validation checklist:
 
 1. Add checklist items for `npm install`, `npm test -- --run`, `npm run build`, and browser preview.

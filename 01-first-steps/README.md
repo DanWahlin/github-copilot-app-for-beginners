@@ -287,6 +287,8 @@ Check your plan, organization policy, project settings, and app version.
 
 ## 📝 Assignment
 
+![Assignment](../assets/assignment.webp)
+
 Create a small mode map for the Book App. The goal is to use the app surfaces from this chapter without changing files yet.
 
 1. Open Quick chats and submit this prompt:

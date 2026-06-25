@@ -302,6 +302,8 @@ Public or shared training repositories may require forks. Ask your instructor or
 
 ## 📝 Assignment
 
+![Assignment](../assets/assignment.webp)
+
 Use a training issue or instructor-provided scenario:
 
 ```text

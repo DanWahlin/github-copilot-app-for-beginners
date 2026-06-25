@@ -296,6 +296,8 @@ Use `/agent` only after you're able to explain why a role is better than a skill
 
 ## 📝 Assignment
 
+![Assignment](../assets/assignment.webp)
+
 Improve the `book-app-reviewer` skill:
 
 1. Add one rule about empty-state copy.

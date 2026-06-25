@@ -286,6 +286,8 @@ If an issue-triggered automation fires too often, narrow the issue search query,
 
 ## 📝 Assignment
 
+![Assignment](../assets/assignment.webp)
+
 Create one manual automation for your own workflow:
 
 1. Name it clearly.

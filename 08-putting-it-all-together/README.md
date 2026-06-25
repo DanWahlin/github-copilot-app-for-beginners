@@ -399,6 +399,8 @@ These summaries help you spot long-running sessions, repeated rework, and places
 
 ## 📝 Assignment
 
+![Assignment](../assets/assignment.webp)
+
 Complete the capstone with a small issue in `samples/book-app-web`:
 
 1. Pick one issue or small improvement.
