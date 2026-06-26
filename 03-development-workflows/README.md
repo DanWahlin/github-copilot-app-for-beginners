@@ -83,17 +83,23 @@ If your own repository does not have instructions yet, keep them short and proje
 
 ### Try the Comparison
 
-Start a Plan-mode session and ask:
+See how repository instructions change Copilot's answers by running a broad prompt and a scoped one in the same session.
 
-```text
-Review the sample web app structure and suggest one beginner-friendly improvement.
-```
+Perform these steps:
 
-Then ask a more scoped version:
+1. In the sidebar, start a new session for the `copilot-app-for-beginners` project.
+2. In the session composer, set the **Mode** selector to **Plan** so Copilot answers without editing files.
+3. Submit this broad prompt and read the response:
 
-```text
-Using the repository instructions, review @samples/book-app-web and suggest one small accessibility improvement. Do not change files yet.
-```
+   ```text
+   Review the sample web app structure and suggest one beginner-friendly improvement.
+   ```
+
+4. Submit this more scoped prompt in the same session, then compare the two responses:
+
+   ```text
+   Using the repository instructions, review @samples/book-app-web and suggest one small accessibility improvement. Do not change files yet.
+   ```
 
 Demo output varies. Look for signs that Copilot used the validation commands and project boundaries from the instructions.
 
@@ -188,7 +194,8 @@ Perform these steps:
    Fix the unread count when filters are active in samples/book-app-web. Keep the change small, explain the root cause, and run the relevant tests.
    ```
 
-4. When Copilot proposes changes, review them in the **Changes** tab of the Review panel before you approve them.
+4. Open the **Review panel** with the toggle in the upper-right corner of the app, then select the **Changes** tab to see each proposed edit as a diff.
+5. Read the diff, then apply the edits you want to keep using the diff's approve control (look for a **Keep** or **Approve** action on the change or in the composer). Applying the edits writes them to the files in this session's worktree.
 
    <!-- MANUAL STEP TO VERIFY: Confirm the exact affordance to approve/apply Copilot's proposed edits in Interactive mode (for example a "Keep" or "Approve" button on the diff or in the composer), then add a screenshot. -->
 
@@ -196,7 +203,7 @@ Perform these steps:
 
 Copilot should make a focused change, explain the cause, and run or suggest a test command.
 
-#### Check the Result
+#### Success Check
 
 1. In the session terminal, install this worktree's dependencies (a new worktree starts without them), then run the tests from the repository root:
 
@@ -206,6 +213,8 @@ Copilot should make a focused change, explain the cause, and run or suggest a te
    npm test -- --run
    ```
 
+   The tests should pass, which is your evidence that the fix works.
+
 2. To see the change in the running app, start the dev server in the same terminal:
 
    ```bash
@@ -214,11 +223,13 @@ Copilot should make a focused change, explain the cause, and run or suggest a te
 
    This command keeps running so the browser can preview the app. Leave that terminal open while you test, then press `Ctrl+C` when you're finished.
 
-3. Open the app's integrated browser and navigate to:
+3. Open the app's integrated browser preview: in the **Review panel**, select the browser/preview surface (next to the **Terminal** and **Changes** tabs), then enter the app address:
 
    ```text
    http://127.0.0.1:5173
    ```
+
+   Apply a filter and confirm the unread count stays correct while the filter is active.
 
    <!-- MANUAL STEP TO VERIFY: Confirm how to open the integrated browser/preview in the current app build (for example Review panel → Browser tab, or a Preview / Open in browser button), then add a screenshot. -->
 
@@ -279,7 +290,7 @@ Perform these steps:
    Refactor filterBooks in @samples/book-app-web/src/App.tsx to extract the search, genre, and status checks into small, clearly named helper functions. Do not change behavior, and keep the filterBooks signature the same. Then run the tests to prove the behavior is unchanged.
    ```
 
-4. Review the refactor in the **Changes** tab, then approve it.
+4. Review the refactor in the **Changes** tab, then apply it using the same approve control (**Keep** / **Approve**) you used in Exercise 2.
 
 #### Expected Output
 
@@ -342,7 +353,7 @@ Perform these steps:
    npm run dev -- --host 127.0.0.1 --port 5173
    ```
 
-3. Open the app's integrated browser to `http://127.0.0.1:5173` to preview the running app.
+3. Open the app's integrated browser preview: in the **Review panel**, select the browser/preview surface (next to the **Terminal** and **Changes** tabs), then enter `http://127.0.0.1:5173` to preview the running app.
 
    <!-- MANUAL STEP TO VERIFY: Confirm how to open the integrated browser/preview and, if available, the Pick and Polish live-select mode in the current app build, then add a screenshot. -->
 
@@ -352,7 +363,7 @@ Perform these steps:
    Polish the book card UI in samples/book-app-web for spacing, visual hierarchy, accessible copy, and responsive behavior. Keep the design consistent with the existing app and show me the diff before I accept it.
    ```
 
-5. Preview the result in the browser, then review the diff in the **Changes** tab and run the tests before you accept it.
+5. Preview the result in the browser, then review the diff in the **Changes** tab, apply the changes with the approve control, and run the tests before you treat the work as done.
 
 <!-- app-screenshot: Pick and Polish live mode or relevant app UI showing selected browser element and polish options, with any user data hidden. -->
 
