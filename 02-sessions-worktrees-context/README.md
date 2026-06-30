@@ -371,7 +371,7 @@ Context is the content Copilot App is using for the current session. Checking it
 
 1. Sessions are focused agent workspaces.
 2. Worktrees keep session changes separate from your main checkout.
-3. The workspace /selector lets a session run in your local clone, a new worktree, or a cloud sandbox; a new worktree is the safe default.
+3. The workspace selector lets a session run in your local clone, a new worktree, or a cloud sandbox; a new worktree is the safe default.
 4. Worktrees isolate files and branches, but not ports, databases, or background processes, so run parallel sessions on different ports.
 5. `@`, `#`, and `/` help you control context and commands.
 6. Slash commands can be used to quickly access features and information within the app.

@@ -185,7 +185,7 @@ Perform these steps:
 
 1. Stay in the same session you started in Exercise 1 (the one on the `practice-unread-count-bug` branch).
 
-   > Note: Starting here without Exercise 1? Base a new session on the `practice-unread-count-bug` branch first, using the [Chapter 02 practice-branch steps](../02-sessions-worktrees-context/README.md#practice-branches-in-this-course).
+   > Note: Starting here without Exercise 1? Base a new session on the `practice-unread-count-bug` branch first, using the [Chapter 02 practice-branch steps](../02-sessions-worktrees-context/README.md#branches-used-in-this-course).
 
 2. In the session composer, change the **Mode** selector from **Plan** to **Interactive** so Copilot can propose and apply edits while you steer.
 3. Submit the following prompt:

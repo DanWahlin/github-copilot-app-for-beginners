@@ -122,3 +122,11 @@ consistent on-screen size, see below), `--color "#d1242f"` (GitHub danger red),
   the UI generically and don't surface private data when reporting placement.
 - Only edit a chapter README to swap in the `.svg` when the user asks; generating
   the asset and changing the Markdown are separate steps.
+
+## Related Skills
+
+- **comic-strip-site** — builds a full webcomic-style site by wrapping
+  AI-generated character panels in inline SVG (comic frame, tailed speech
+  bubbles, terminal command bar). Shares this skill's SVG-over-raster technique
+  and the `--grid` coordinate-finding workflow, but for storytelling panels and
+  recurring cartoon characters rather than single numbered step badges.

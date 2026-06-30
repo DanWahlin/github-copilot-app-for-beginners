@@ -99,7 +99,7 @@ You're able to explain whether a missing issue or PR is more likely caused by fi
 
 ### 2. Start from an Issue
 
-Open a seeded issue for the sample app. Choose Issue 1 from [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-1-make-search-case-insensitive) and use the `practice-search-case-bug` branch created by the setup script. If you skipped the script, manually apply Issue 1's training-branch diff before asking Copilot to fix it. If you're unsure how to base the session on that branch, use the [Chapter 02 practice branch note](../02-sessions-worktrees-context/README.md#practice-branches-in-this-course):
+Open a seeded issue for the sample app. Choose Issue 1 from [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-1-make-search-case-insensitive) and use the `practice-search-case-bug` branch created by the setup script. If you skipped the script, manually apply Issue 1's training-branch diff before asking Copilot to fix it. If you're unsure how to base the session on that branch, use the [Chapter 02 practice branch note](../02-sessions-worktrees-context/README.md#branches-used-in-this-course):
 
 ```text
 Search should be case-insensitive in samples/book-app-web
