@@ -81,6 +81,8 @@ Repository instructions give Copilot stable project guidance before it starts ed
 
 If your own repository does not have instructions yet, keep them short and project-specific. Put personal preferences in global instructions, but put shared build, test, style, and safety rules in repository instructions so teammates can review them in git.
 
+> Where these live in the app: open **Settings**, then set **global** instructions under **Sessions**, and **repository-specific** instructions under the repository name in the **Projects** section. The committed `.github/copilot-instructions.md` file above is the git-reviewable form of repository instructions that Copilot reads automatically.
+
 ### Try the Comparison
 
 See how repository instructions change Copilot's answers by running a broad prompt and a scoped one in the same session.
@@ -325,7 +327,7 @@ Perform these steps:
    /rubber-duck Critique the plan, diff, tests, and browser validation for this session. What should I double-check before creating a pull request?
    ```
 
-   > If `/rubber-duck` is not available in your app build, submit the same prompt without the slash command.
+   > The rubber duck agent runs on a different model from your session and is currently available only when the main agent uses a Claude or GPT model. If `/rubber-duck` isn't available, switch the session's model to a Claude or GPT option, or submit the same prompt without the slash command.
 
 <!-- app-screenshot: Diff view showing code changes alongside the conversation or validation output. -->
 
