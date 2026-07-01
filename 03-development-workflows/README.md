@@ -372,6 +372,31 @@ If your app exposes `/agent-merge`, treat it as an advanced entry point to that 
 
 </details>
 
+<details>
+<summary>Advanced: Parallel sessions and /orchestrate</summary>
+
+Once you're comfortable with a single session, you can run several at once — each isolated in its own worktree (see [Chapter 02](../02-sessions-worktrees-context/README.md#running-multiple-sessions-in-parallel)). Parallel sessions save time, but they collide if two of them edit the same files.
+
+![Parallel sessions without collisions](assets/parallel-sessions-without-collisions.webp)
+
+Delegate to parallel sessions only when the tasks are genuinely independent — for example, one session fixes a bug while another drafts documentation. Keep them safe with clear boundaries:
+
+1. Separate files or clearly separate responsibilities.
+2. Separate branches or worktrees.
+3. Clear session names.
+4. Distinct validation steps.
+5. Human review before combining the work.
+
+The `/orchestrate` command, when available, lets the agent coordinate this by delegating to child sessions instead of doing everything inline. Use it with explicit pause points: start the feature session in **Plan** mode and approve its file scope, start a second session only for tests or docs, pause before either session edits overlapping files, validate each worktree separately, then compare the diffs before combining.
+
+```text
+/orchestrate Split this work into two independent child sessions: one may inspect and fix the bug, and one may draft documentation notes. Do not let either child session edit files until I approve the scopes.
+```
+
+Use `/orchestrate` only after you can describe the child-session boundaries yourself. If it isn't available, create separate sessions manually and keep the same pause points. If two sessions touch the same files, expect conflicts — pause one, review diffs, and decide which branch is the source of truth.
+
+</details>
+
 ---
 
 ## Troubleshooting
@@ -398,6 +423,10 @@ Compare Node versions, dependency install state, environment variables, and gene
 ### A PR Is Still Blocked After the Fix
 
 Confirm required checks re-ran, review comments are resolved, and branch protection or merge rules aren't waiting on an approval you can't give yourself.
+
+### Parallel Sessions Collide or Duplicate Work
+
+If two sessions edited the same files, pause one, compare the diffs, and pick one branch as the source of truth before combining. Delegate to parallel sessions only when the tasks are genuinely independent.
 
 </details>
 

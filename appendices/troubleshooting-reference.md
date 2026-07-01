@@ -55,6 +55,7 @@ Related chapter: [03 Development and GitHub Workflows](../03-development-workflo
 | CI fails but local tests pass | Different environment, secrets, or branch protection | Read the failing check log and compare Node version, commands, and secrets |
 | PR remains blocked | Required reviews, checks, branch protection, or conflicts | Triage in this order: failing checks, merge conflicts, required reviews, stale reviews, branch rules |
 | Agent Merge is unavailable | Policy, permissions, or repository settings | Treat Agent Merge as advanced and use manual review or merge flow instead |
+| Parallel sessions duplicate work or collide | Tasks were not independent, or branches touched the same files | Pause, compare diffs, assign one session as the source of truth, and resolve conflicts manually |
 
 ## Chapter 04: Skills, Model Context Protocol (MCP) Servers, and Plugins
 
@@ -95,17 +96,6 @@ Related chapter: [06 Automations](../06-automations/)
 | Cloud automation is unavailable | Policy, billing, repository, or permission issue | Treat it as advanced and use instructor screenshots or a simulated flow |
 | Issue trigger fires too often | Trigger is too broad | Narrow the repository, labels, issue query, or tool permissions |
 | Automation result is unsafe to publish | Run history includes private data | Redact or recreate with sample repository data |
-
-## Chapter 07: Putting It All Together
-
-Related chapter: [07 Putting It All Together](../07-putting-it-all-together/)
-
-| Symptom | Likely cause | Try this |
-|---|---|---|
-| Parallel sessions duplicate work | Tasks were not independent | Pause, compare diffs, and assign one session as the source of truth |
-| Merge conflicts appear | Branches touched the same files | Resolve manually after reviewing both diffs |
-| Final PR is blocked | Checks, reviews, conflicts, branch rules, or Agent Merge settings | Triage checks first, then conflicts, reviews, branch protection, and Agent Merge |
-| Learner loses track of evidence | Too many surfaces open | Use a checklist: plan, diff, terminal output, browser behavior, PR checks, and review comments |
 
 ## General rule
 

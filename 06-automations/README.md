@@ -301,11 +301,13 @@ Success criteria: You're able to explain why the automation is safe to run again
 
 ---
 
-## ➡️ What's Next
+## 🎓 Course Complete
 
-In the next chapter, you'll combine the app workflow into a capstone: Issue triage, planning, implementation, validation, PR review, and merge readiness.
+That's the full course. You've gone from setup and orientation through sessions, worktrees, and context; the development-and-GitHub workflow loop; skills, MCP servers, and plugins; canvases; and automations — always keeping a human in control of quality and delivery.
 
-**[← Back to Chapter 05](../05-canvases/README.md)** | **[Next: Putting It All Together →](../07-putting-it-all-together/README.md)**
+For a recap of everything you practiced, see [Wrapping Up](../README.md#wrapping-up) on the course home page.
+
+**[← Back to Chapter 05](../05-canvases/README.md)** | **[Return to Course Home →](../README.md)**
 
 ---
 

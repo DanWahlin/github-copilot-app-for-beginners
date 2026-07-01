@@ -10,9 +10,9 @@ Use a fork or disposable training repository. Do not use a production repository
 |---|---|---|
 | Seeded issues | `samples/app-course-issues.md` | Chapters 02, 03 |
 | Practice branches | Training branch setup steps in each issue draft | Chapters 02, 03 |
-| Pull request scenarios | `samples/app-course-pr-scenarios.md` | Chapter 03, Chapter 07 |
+| Pull request scenarios | `samples/app-course-pr-scenarios.md` | Chapter 03 |
 | Failing check example | PR scenario 2 and the `Book app web` workflow | Chapter 03 |
-| Merge-readiness example | PR scenario 3 | Chapter 03, Chapter 07 |
+| Merge-readiness example | PR scenario 3 | Chapter 03 |
 
 ## Prerequisites
 

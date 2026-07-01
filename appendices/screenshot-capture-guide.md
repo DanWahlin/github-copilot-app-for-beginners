@@ -112,7 +112,6 @@ Suggested entry:
 - Chapter 04: Show skills, Model Context Protocol (MCP) servers, plugins, and agents only with safe names and no credentials.
 - Chapter 05: Treat canvas content as publishable course content. Remove private notes first.
 - Chapter 06: Hide repository secrets, cloud configuration, billing details, and organization settings.
-- Chapter 07: Use a safe training repository for capstone screenshots.
 
 ## Final review checklist
 
