@@ -36,7 +36,7 @@ By the end of this chapter, you'll be able to:
 Before starting:
 
 - Complete Chapter 05
-- Open the course repository in the GitHub Copilot app
+- Open the course repository in the GitHub Copilot App
 - Confirm the repository includes the prepared release checklist concept under `.github/extensions/release-checklist`
 - Use `samples/book-app-web` as the sample app path
 
@@ -281,5 +281,5 @@ In the next chapter, you'll turn repeatable prompts into automations. You'll sta
 ## Source References
 
 - [Working with canvas extensions](https://docs.github.com/en/copilot/how-tos/github-copilot-app/working-with-canvas-extensions)
-- [GitHub Copilot app generally available](https://github.blog/changelog/2026-06-17-github-copilot-app-generally-available/)
-- [GitHub Copilot app product blog](https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience/)
+- [GitHub Copilot App generally available](https://github.blog/changelog/2026-06-17-github-copilot-app-generally-available/)
+- [GitHub Copilot App product blog](https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience/)

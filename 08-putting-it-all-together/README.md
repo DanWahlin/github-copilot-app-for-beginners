@@ -37,7 +37,7 @@ By the end of this chapter, you'll be able to:
 Before starting:
 
 - Complete Chapters 00 through 07
-- Use the course repository in the GitHub Copilot app
+- Use the course repository in the GitHub Copilot App
 - Use `samples/book-app-web` as the sample app path
 - Have the repo-local skill from Chapter 05 available if you completed that exercise
 - Use a GitHub-backed training repository for PR and issue work. Self-paced learners should follow the [Training GitHub Scenarios setup guide](../appendices/training-github-scenarios.md) first.
@@ -50,9 +50,9 @@ Mixing a final album is more than playing tracks. You balance each part, watch t
 
 ![Mixing the final album analogy for the capstone workflow](assets/final-mix-capstone.webp)
 
-The Copilot app is similar when you run agent work:
+The Copilot App is similar when you run agent work:
 
-| Mixing the album | Copilot app workflow |
+| Mixing the album | Copilot App workflow |
 |---|---|
 | The arrangement | Plan-mode session |
 | Separate tracks | Separate branches and worktrees |
@@ -424,7 +424,7 @@ Success criteria: You're able to walk from issue triage to validated PR readines
 
 ## 🎓 Course Complete
 
-You now know how to use the GitHub Copilot app as an agent-driven development control center:
+You now know how to use the GitHub Copilot App as an agent-driven development control center:
 
 | Area | What you practiced |
 |---|---|
@@ -447,10 +447,10 @@ Practice on small real issues first. Then gradually add advanced workflows when 
 
 ## Source References
 
-- [About the GitHub Copilot app](https://docs.github.com/en/copilot/concepts/agents/github-copilot-app)
+- [About the GitHub Copilot App](https://docs.github.com/en/copilot/concepts/agents/github-copilot-app)
 - [Working with agent sessions](https://docs.github.com/en/copilot/how-tos/github-copilot-app/agent-sessions)
 - [Managing issues and pull requests](https://docs.github.com/en/copilot/how-tos/github-copilot-app/managing-issues-and-pull-requests)
 - [Working with canvas extensions](https://docs.github.com/en/copilot/how-tos/github-copilot-app/working-with-canvas-extensions)
 - [Using automations](https://docs.github.com/en/copilot/how-tos/github-copilot-app/using-automations)
-- [Customizing the GitHub Copilot app](https://docs.github.com/en/copilot/how-tos/github-copilot-app/customize-github-copilot-app)
-- [GitHub Copilot app product blog](https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience/)
+- [Customizing the GitHub Copilot App](https://docs.github.com/en/copilot/how-tos/github-copilot-app/customize-github-copilot-app)
+- [GitHub Copilot App product blog](https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience/)

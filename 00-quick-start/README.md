@@ -95,7 +95,7 @@ In these exercises, you'll:
 
 You'll see the main app window with navigation areas such as Home, My work, Automations, Search, Sessions, and Quick chats.
 
-![GitHub Copilot App First Look](assets/app-github-copilot-app-first-look.webp)
+![GitHub Copilot App First Look](../assets/github-copilot-app.webp)
 
 #### How It Works
 

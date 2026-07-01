@@ -337,6 +337,36 @@ The issues below come from a deep review of the root README and Chapters 00-08 f
 
 **Resolution:** Reworded line 96 to a single clean list ("Home, My work, Automations, Search, Sessions, and Quick chats") and changed "projects'" to "project's" on line 137.
 
+## ✅ Issue 31: Chapters 05-08 drifted to lowercase "Copilot app" for the product name
+
+**Severity:** Medium (consistency)
+
+**Files:** `05-skills-mcp-plugins/README.md`, `06-canvases/README.md`, `07-automations/README.md`, `08-putting-it-all-together/README.md`
+
+**Problem:** The deep review of Chapters 03-08 (the line-by-line pass that Chapters 00-02 got via Issues 16-30 but 03-08 had not) found the product name written inconsistently. The root `README.md` (15 uses, 0 lowercase) and Chapters 00-04 always write "GitHub Copilot **App**" with a capital A, but Chapters 05-08 used lowercase "Copilot app" 18 times across prose, an analogy table, and Source Reference link labels (for example `05` line 41, `06` line 39, `07` line 38, `08` lines 53/55/427). A learner reading straight through sees the app's name change casing mid-course.
+
+**Resolution:** Normalized all 18 prose/label occurrences to "GitHub Copilot App" to match the root README and Chapters 00-04. Verified the change touched only visible text: every documentation URL still uses the lowercase `github-copilot-app` path (a 20-insertion/20-deletion casing-only diff), and all external links in these chapters return HTTP 200.
+
+## ✅ Issue 32: Chapter 07 referred to a hands-on step as "Hands-on example 3" instead of "Exercise 3"
+
+**Severity:** Low (consistency)
+
+**File:** `07-automations/README.md`
+
+**Problem:** Chapter 07 (line 99) told learners to "skip to the local validation reminder in Hands-on example 3," but the established in-text convention (Chapter 03 lines 153, 188, 295) refers to numbered hands-on steps as "Exercise N." The mismatched label makes the cross-reference read like it points to a different section.
+
+**Resolution:** Changed "Hands-on example 3" to "Exercise 3" to match the Chapter 03 cross-reference convention.
+
+## Issue 33: Chapter 03 still contains three "MANUAL STEP TO VERIFY" author notes
+
+**Severity:** Low (pending task, not a defect)
+
+**File:** `03-development-workflows/README.md` (lines 202, 236, 360)
+
+**Problem:** Three `<!-- MANUAL STEP TO VERIFY: ... -->` comments remain in the shipping content. They flag app affordances the author must confirm in the live app before publishing: the exact control that approves/applies Copilot's edits in Interactive mode (a "Keep" or "Approve" action), and how to open the integrated browser/preview. These require in-app verification and cannot be confirmed from the CLI.
+
+**Suggested resolution:** Verify each affordance in the current GitHub Copilot App build, update the surrounding step wording if the labels differ, capture the paired screenshot, and remove the `MANUAL STEP TO VERIFY` comment. These pair with the pending app screenshots tracked in Issue 24.
+
 ## Positive highlights
 
 - Hands-on examples cover a strong, realistic range of developer scenarios: setup, Quick chat, sessions/modes, focused context, issue-driven sessions, worktree inspection, `/chronicle` and `/context`, code review, debug-and-fix, test generation, rubber duck, Pick and Polish, My Work, PR creation/review, responding to review comments, fixing failing checks, Agent Merge, repo-local skills, canvases, automations, and an end-to-end capstone.

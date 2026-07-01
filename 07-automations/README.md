@@ -35,7 +35,7 @@ By the end of this chapter, you'll be able to:
 Before starting:
 
 - Complete Chapter 06
-- Open the course repository in the GitHub Copilot app
+- Open the course repository in the GitHub Copilot App
 - Use `samples/book-app-web` for validation examples
 - Have a GitHub-backed repository if you want live PR or issue summaries
 
@@ -96,7 +96,7 @@ In these exercises, you'll:
 
 ### 1. Create a Manual PR Summary Automation
 
-This exercise works best after Chapter 04 has created at least one PR. If your training repository has no open PRs yet, skip to the local validation reminder in Hands-on example 3, then come back later.
+This exercise works best after Chapter 04 has created at least one PR. If your training repository has no open PRs yet, skip to the local validation reminder in Exercise 3, then come back later.
 
 Create an automation named:
 
@@ -311,6 +311,6 @@ In the next chapter, you'll combine the app workflow into a capstone: Issue tria
 
 ## Source References
 
-- [Using automations in the GitHub Copilot app](https://docs.github.com/en/copilot/how-tos/github-copilot-app/using-automations)
-- [GitHub Copilot app generally available](https://github.blog/changelog/2026-06-17-github-copilot-app-generally-available/)
-- [GitHub Copilot app product blog](https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience/)
+- [Using automations in the GitHub Copilot App](https://docs.github.com/en/copilot/how-tos/github-copilot-app/using-automations)
+- [GitHub Copilot App generally available](https://github.blog/changelog/2026-06-17-github-copilot-app-generally-available/)
+- [GitHub Copilot App product blog](https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience/)

@@ -72,8 +72,8 @@ The choices trade off speed against isolation:
 
 | Workspace | What it means | Choose it when... |
 |---|---|---|
-| Local repo | The session works directly in your existing clone, with no separate folder | You want a quick, low-stakes look and don't mind the session touching your working folder |
 | New worktree | The session gets its own folder and branch beside your clone | You want changes, branches, and diffs kept separate from your main checkout (the safe default this course uses) |
+| Local repo | The session works directly in your existing clone, with no separate folder | You want a quick, low-stakes look and don't mind the session touching your working folder |
 | Cloud sandbox | The session runs on GitHub's hosted infrastructure instead of your machine | You want to offload the work or keep your local environment untouched |
 
 ![Where should this session run: local repo, new worktree, or cloud sandbox](assets/session-run-location-comparison.webp)

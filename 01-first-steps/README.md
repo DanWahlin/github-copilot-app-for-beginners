@@ -231,7 +231,7 @@ You're able to explain what the **Search** feature does and how it can be used.
 
 ### 5. Voice Dictation
 
-Go back to the GitHub Copilot App's Settings dialog. Select **Voice dictation** and explore the available options:
+Go back to the GitHub Copilot App's **Settings** dialog. Select **Voice dictation** and explore the available options:
 
 - Input device
 - Microphone privacy
@@ -246,8 +246,9 @@ Perform the following actions:
 
 1. Select **Microphone privacy**, **Open preferences** and ensure the GitHub Copilot App has the necessary permissions to use the microphone.
 2. Select **Test microphone** to verify that it's working correctly.
-3. Note the keyboard shortcut for activating voice dictation. Try it out (you'll probably see a message saying that you need to use it with a text box).
-4. Create a new **Quick chats** session and test voice dictation by using the keyboard shortcut.
+3. Note the keyboard shortcut for activating voice dictation.
+4. Exit the **Settings** dialog and return to the main app window.
+5. Create a new **Quick chats** session and test voice dictation by using the keyboard shortcut.
 
 #### How It Works
 

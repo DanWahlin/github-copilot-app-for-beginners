@@ -23,7 +23,7 @@ By the end of this chapter, you'll be able to:
 
 - Explain when skills are useful
 - Inspect the repo-local `book-app-reviewer` skill included with the course
-- Use a skill-guided review prompt in a Copilot app session
+- Use a skill-guided review prompt in a Copilot App session
 - Use `/skills` or the slash palette to discover available skills when supported
 - Explain the difference between reusable expertise and optional external tool access
 - Choose least-context and least-tool setups
@@ -38,7 +38,7 @@ By the end of this chapter, you'll be able to:
 Before starting:
 
 - Complete Chapter 04
-- Have the course repository open in the GitHub Copilot app
+- Have the course repository open in the GitHub Copilot App
 - Use `samples/book-app-web` for all hands-on prompts
 - Keep the beginner path repo-local
 
@@ -80,7 +80,7 @@ Skills package task-specific instructions in a folder with a `SKILL.md` file.
 
 This may appear under Settings, Skills, Plugins, or Agents depending on your app version.
 
-> 💡 **Tip**: A skill changes how Copilot approaches work. It does not automatically give Copilot access to new external systems.
+> 💡 **Tip**: A skill changes how Copilot Approaches work. It does not automatically give Copilot access to new external systems.
 
 ### Where Repo-Local Skills Live
 
@@ -319,6 +319,6 @@ In the next chapter, you'll inspect a prepared canvas concept to see how agent w
 
 ## Source References
 
-- [Customizing the GitHub Copilot app](https://docs.github.com/en/copilot/how-tos/github-copilot-app/customize-github-copilot-app)
+- [Customizing the GitHub Copilot App](https://docs.github.com/en/copilot/how-tos/github-copilot-app/customize-github-copilot-app)
 - [Optimizing AI usage](https://docs.github.com/en/copilot/tutorials/optimize-ai-usage)
-- [GitHub Copilot app changelog](https://github.com/github/app/blob/main/changelog.md)
+- [GitHub Copilot App changelog](https://github.com/github/app/blob/main/changelog.md)
