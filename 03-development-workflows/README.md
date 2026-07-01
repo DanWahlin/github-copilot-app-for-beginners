@@ -4,7 +4,7 @@ id: CopilotApp-03
 title: !translate Development and GitHub Workflows
 description: !translate Use the GitHub Copilot App for the full workflow: review, debug, test, and preview a change, then move it through issues, pull requests, review comments, and checks.
 audience: Developers / Students / Desktop users
-slug: development-workflows
+slug: development-and-github-workflows
 weight: 4
 ---
 -->
@@ -13,7 +13,7 @@ weight: 4
 
 > **What if one supervised workflow carried a change from first edit all the way to a merge-ready pull request?**
 
-The GitHub Copilot App is strongest when you use it as a loop. In this chapter you'll work that loop in two halves. **Part A** is the inner loop on your machine: review, debug, test, and preview a change in `samples/book-app-web` with the evidence kept visible. **Part B** is the outer loop on GitHub: use My work as an inbox, start sessions from issues, open and review pull requests, and use Fix actions on review comments and failing checks. Both halves live in the same app, so you supervise the whole path without switching tools.
+The GitHub Copilot App is strongest when you use it as a loop. In this chapter you'll work that loop in two halves. **Part A** is the inner loop on your machine: review, debug, test, and preview a change in `samples/book-app-web` with the evidence kept visible. **Part B** is the outer loop on GitHub: use My work as an inbox, start sessions from issues, open and review pull requests, and ask Copilot to fix review comments and failing checks. Both halves live in the same app, so you supervise the whole path without switching tools.
 
 ## 🎯 Learning Objectives
 
@@ -25,10 +25,10 @@ By the end of this chapter, you'll be able to:
 - Use rubber duck to critique work before you ship it
 - Use My work as an issue and pull request inbox
 - Start sessions from issues and open a pull request from the app
-- Use Fix actions to address review comments and failing checks
+- Ask Copilot to address review comments and failing checks
 - Explain why Agent Merge still needs human judgment
 
-> ⏱️ **Estimated Time**: ~90 minutes (30 min reading + 60 min hands-on). The Intermediate (Pick and Polish) and Advanced (Agent Merge) sections are optional and not counted in this estimate.
+> ⏱️ **Estimated Time**: ~90 minutes (30 min reading + 60 min hands-on). 
 
 ---
 
@@ -36,7 +36,7 @@ By the end of this chapter, you'll be able to:
 
 Complete Chapters [00](../00-quick-start/README.md), [01](../01-first-steps/README.md), and [02](../02-sessions-worktrees-context/README.md). You should have a session for the course repository and know where the Review panel's diff and terminal surfaces live.
 
-**Part B** works best with a GitHub-backed fork that has the seeded issues, branches, and PR scenarios. If you skipped the setup script, run it from [Chapter 00](../00-quick-start/README.md#2-fork-clone-and-prepare-the-course-repository) or follow [appendices/training-github-scenarios.md](../appendices/training-github-scenarios.md). If you can't create PRs, read the steps and use the screenshots or instructor examples.
+**Part B** works best with a GitHub-backed fork that has the seeded issues, branches, and PR scenarios. If you skipped the setup script, run it from [Chapter 00](../00-quick-start/README.md#2-fork-clone-and-prepare-the-course-repository). If you can't create PRs, read the steps and follow along with the screenshots.
 
 ---
 
@@ -60,7 +60,7 @@ But a take isn't an album. A producer's review desk tracks briefs, approvals, no
 | Integrated browser | A web preview surface for checking the running app |
 | Rubber duck | A critic agent that reviews a plan, diff, or tests before you accept them |
 | My work | An app view for GitHub issues, pull requests, review requests, and checks |
-| Fix action | A guided action that asks Copilot to address a review comment or failing check |
+| Guided fix | Asking Copilot to address a specific review comment or failing check, with the diff and validation kept visible |
 | CI check | An automated validation run, often from GitHub Actions |
 | Agent Merge | An advanced finishing workflow that helps carry a PR to merge-readiness |
 
@@ -103,7 +103,7 @@ You'll see dependencies install, tests run, and a production build complete. Tes
 In these exercises, you'll:
 
 - **Part A (inner loop):** review, debug, test, refactor, and preview a change with the evidence visible
-- **Part B (outer loop):** find work in My work, start from an issue, open a pull request, and use Fix actions on comments and checks
+- **Part B (outer loop):** find work in My work, start from an issue, open a pull request, and ask Copilot to fix comments and checks
 
 **Part A: Develop and validate in a session.** Work the inner loop: review, fix, test, and preview a change while the evidence stays visible.
 
@@ -256,7 +256,7 @@ Remember: visual polish can change accessibility and behavior. Always finish wit
 
 ---
 
-**Part B: Move work through GitHub.** Part A validated a change end to end. Part B practices the same loop on a fresh, GitHub-tracked issue: find the work in My work, start a session from the issue, open a pull request, and finish it with Fix actions.
+**Part B: Move work through GitHub.** Part A validated a change end to end. Part B practices the same loop on a fresh, GitHub-tracked issue: find the work in My work, start a session from the issue, open a pull request, and finish it by asking Copilot to fix comments and checks.
 
 ![Issue to pull request workflow](assets/issue-to-merged-pr.webp)
 
@@ -319,9 +319,9 @@ The PR shows a focused diff, passing tests and build, and a description that mat
 
 ---
 
-### 6. Use Fix Actions for Comments and Checks
+### 6. Ask Copilot to Fix Comments and Checks
 
-A **Fix action** is a guided way to ask Copilot to address a specific review comment or failing check, with the diff and validation kept visible.
+A **guided fix** is simply asking Copilot to address a specific review comment or failing check, with the diff and validation kept visible.
 
 **Respond to a review comment.** Open the PR conversation comment from [PR scenario 1](../samples/app-course-pr-scenarios.md#pr-scenario-1-review-comment-asks-for-clearer-empty-state-copy), which asks for clearer empty-state copy, then submit:
 
@@ -329,7 +329,7 @@ A **Fix action** is a guided way to ask Copilot to address a specific review com
 Review this PR conversation comment and propose the smallest change that addresses it. Show me the diff and validation plan before I accept the fix.
 ```
 
-<!-- app-screenshot: PR conversation comment or failing CI check, with a Copilot Fix action visible if your app exposes one. -->
+<!-- app-screenshot: PR conversation comment or failing CI check in the app. -->
 
 **Fix a failing check.** Open [PR scenario 2](../samples/app-course-pr-scenarios.md#pr-scenario-2-failing-ci-points-to-the-stats-test), which fails the `Book app web` workflow, then submit:
 
@@ -439,7 +439,7 @@ If two sessions edited the same files, pause one, compare the diffs, and pick on
 3. A passing agent response is not validated software; tests and builds are the required evidence.
 4. Tests are the guardrail that makes refactors safe.
 5. My work is your issue and pull request inbox; start sessions straight from GitHub context.
-6. Fix actions keep review-comment and failing-check work small and visible.
+6. Asking Copilot to fix review comments and failing checks keeps that work small and visible.
 7. Agent Merge is a finishing aid, not a replacement for human judgment.
 
 ---

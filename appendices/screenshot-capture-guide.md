@@ -84,7 +84,7 @@ Each batch should include:
 - sample repository commit,
 - chapter or appendix,
 - screenshot filenames,
-- account type, such as training account or sanitized instructor account,
+- account type, such as training account or sanitized account,
 - notes about redaction or cropping.
 
 Suggested entry:

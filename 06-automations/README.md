@@ -311,7 +311,7 @@ Here's a recap of everything you practiced:
 |---|---|
 | Sessions and worktrees | Work in scoped branches and isolated worktrees, including parallel sessions |
 | Context | Use prompts, files, issues, and instructions intentionally |
-| Development and GitHub | Plan, change, and validate with tests, builds, browser previews, and diffs, then move work through issues, PRs, checks, and Fix actions |
+| Development and GitHub | Plan, change, and validate with tests, builds, browser previews, and diffs, then move work through issues, PRs, checks, and guided fixes |
 | Customization | Repository instructions, skills, MCP servers, and plugins |
 | Visibility | Canvases for shared, inspectable state |
 | Repetition | Manual and scheduled automations, used safely |

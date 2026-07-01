@@ -23,7 +23,7 @@ Use a fork or disposable training repository. Do not use a production repository
 - `python3` for the Bash script, or PowerShell for the Windows script
 - `gh auth login` completed for the account that owns the fork or training repository
 
-If you cannot create issues or pull requests, read the workflows and use instructor-provided screenshots instead.
+If you cannot create issues or pull requests, read the workflows and follow along with the screenshots instead.
 
 ## Recommended path: Fork, clone, run the setup script for your shell
 

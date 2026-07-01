@@ -93,7 +93,7 @@ Related chapter: [06 Automations](../06-automations/)
 |---|---|---|
 | Manual automation does not run | App, project, or tool dependency is unavailable | Confirm the app is open, the project exists, and required tools are installed |
 | Schedule does not run | Local machine asleep or cloud setting unavailable | Use manual run for beginner exercises or verify cloud automation prerequisites |
-| Cloud automation is unavailable | Policy, billing, repository, or permission issue | Treat it as advanced and use instructor screenshots or a simulated flow |
+| Cloud automation is unavailable | Policy, billing, repository, or permission issue | Treat it as advanced and use the provided screenshots or a simulated flow |
 | Issue trigger fires too often | Trigger is too broad | Narrow the repository, labels, issue query, or tool permissions |
 | Automation result is unsafe to publish | Run history includes private data | Redact or recreate with sample repository data |
 

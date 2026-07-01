@@ -101,7 +101,7 @@ Use the prepared canvas concept included with this repository. Do not create a n
 2. Read the checklist items and the expected canvas behavior described in the concept.
 3. Compare the checklist with the validation commands in `samples/book-app-web/README.md`.
 4. Decide which items should be checked manually before a pull request.
-5. This folder is a design concept, not a loadable extension. If your instructor provides a working release checklist canvas, open it from the canvas panel. Otherwise, continue with the markdown simulation.
+5. This folder is a design concept, not a loadable extension. If you have a working release checklist canvas, open it from the canvas panel. Otherwise, continue with the markdown simulation.
 
 <!-- app-screenshot: Right-side canvas panel showing a plan, checklist, browser session, terminal session, or markdown artifact open inside the GitHub Copilot App. -->
 
