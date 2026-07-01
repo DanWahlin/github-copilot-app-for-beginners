@@ -8,11 +8,11 @@ Use a fork or disposable training repository. Do not use a production repository
 
 | Course item | Source draft | Used in |
 |---|---|---|
-| Seeded issues | `samples/app-course-issues.md` | Chapters 02, 04, 08 |
-| Practice branches | Training branch setup steps in each issue draft | Chapters 02, 03, 04, 08 |
-| Pull request scenarios | `samples/app-course-pr-scenarios.md` | Chapter 04, Chapter 08 |
-| Failing check example | PR scenario 2 and the `Book app web` workflow | Chapter 04 |
-| Merge-readiness example | PR scenario 3 | Chapter 04, Chapter 08 |
+| Seeded issues | `samples/app-course-issues.md` | Chapters 02, 03 |
+| Practice branches | Training branch setup steps in each issue draft | Chapters 02, 03 |
+| Pull request scenarios | `samples/app-course-pr-scenarios.md` | Chapter 03, Chapter 07 |
+| Failing check example | PR scenario 2 and the `Book app web` workflow | Chapter 03 |
+| Merge-readiness example | PR scenario 3 | Chapter 03, Chapter 07 |
 
 ## Prerequisites
 
@@ -156,7 +156,7 @@ To create the failing-check scenario:
 3. Push the branch and open a pull request.
 4. Wait for the `Book app web` workflow to fail.
 
-Use this PR in Chapter 04 when practicing failing-check analysis.
+Use this PR in Chapter 03 when practicing failing-check analysis.
 
 ## Keep the training repo safe
 
@@ -168,7 +168,7 @@ Use this PR in Chapter 04 when practicing failing-check analysis.
 
 ## Quick readiness check
 
-Before starting Chapter 04, confirm:
+Before starting Chapter 03, confirm:
 
 - At least one seeded issue exists.
 - At least one practice branch exists.

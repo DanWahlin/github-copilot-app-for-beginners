@@ -13,7 +13,7 @@ These appendices support the hands-on chapters in **GitHub Copilot App for Begin
 ## How to use these appendices
 
 - Read [Git Worktrees](git-worktrees.md) before Chapter 02 if worktrees are new to you.
-- Use [Training GitHub Scenarios](training-github-scenarios.md) before Chapter 04 if you're working through the course without an instructor-provided training repository.
+- Use [Training GitHub Scenarios](training-github-scenarios.md) before Chapter 03 if you're working through the course without an instructor-provided training repository.
 - Keep [Screenshot Capture Guide](screenshot-capture-guide.md) open while creating chapter images.
 - Run the [Privacy-Safe Course Assets](privacy-safe-course-assets.md) checklist before sharing course material.
 - Use [Troubleshooting Reference](troubleshooting-reference.md) when a learner gets stuck during setup, sessions, PRs, canvases, or automations.
@@ -25,6 +25,6 @@ The required beginner path is Chapters 00 through 03. The appendices support tha
 - Chapter 00: Setup, sign in, repository connection, and Quick chat.
 - Chapter 01: App orientation, modes, model choices, settings, shortcuts, and voice.
 - Chapter 02: Sessions, worktrees, context controls, and local or cloud execution.
-- Chapter 03: Review, debug, test, browser validation, and Pick and Polish.
+- Chapter 03: Review, debug, test, browser validation, Pick and Polish, plus GitHub issues, pull requests, review comments, and checks.
 
 Intermediate and advanced topics appear later in the course. When an appendix mentions Model Context Protocol (MCP) servers, plugins, custom agents, cloud automations, or Agent Merge, treat those as optional unless your chapter says otherwise.

@@ -1,15 +1,15 @@
 <!--
 ---
-id: CopilotApp-06
+id: CopilotApp-05
 title: !translate Canvases
 description: !translate Use shared canvas surfaces in the GitHub Copilot App to make agent work visible, inspectable, and steerable.
 audience: Developers / Students / Desktop users
 slug: canvases
-weight: 7
+weight: 6
 ---
 -->
 
-![Chapter 06: Canvases](assets/chapter-header.svg)
+![Chapter 05: Canvases](assets/chapter-header.svg)
 
 > **What if the agent's work was not trapped in a chat transcript?**
 
@@ -35,7 +35,7 @@ By the end of this chapter, you'll be able to:
 
 Before starting:
 
-- Complete Chapter 05
+- Complete Chapter 04
 - Open the course repository in the GitHub Copilot App
 - Confirm the repository includes the prepared release checklist concept under `.github/extensions/release-checklist`
 - Use `samples/book-app-web` as the sample app path
@@ -274,7 +274,7 @@ Success criteria: You're able to explain the difference between a chat answer an
 
 In the next chapter, you'll turn repeatable prompts into automations. You'll start with manual automations before trying schedules or cloud/event-triggered workflows.
 
-**[← Back to Chapter 05](../05-skills-mcp-plugins/README.md)** | **[Next: Automations →](../07-automations/README.md)**
+**[← Back to Chapter 04](../04-skills-mcp-plugins/README.md)** | **[Next: Automations →](../06-automations/README.md)**
 
 ---
 

@@ -78,12 +78,11 @@ This course focuses on the GitHub Copilot App. Along the way, you'll see how it 
 | 00 | 🚀 [Quick Start](./00-quick-start/README.md) | Prepare the course environment and verify a Quick chat |
 | 01 | 👋 [First Steps](./01-first-steps/README.md) | Learn the UI, Quick chats, settings, sessions, modes, and model controls |
 | 02 | 🌳 [Sessions, Worktrees, and Context](./02-sessions-worktrees-context/README.md) | Start isolated sessions and use `@`, `#`, and `/` for context |
-| 03 | ⚡ [Development Workflows](./03-development-workflows/README.md) | Use repository instructions, review, debug, test, preview, and polish `samples/book-app-web` |
-| 04 | 🔀 [GitHub Workflows](./04-github-workflows/README.md) | Use My work, issues, PRs, review comments, checks, Fix actions, and advanced Agent Merge |
-| 05 | 🧰 [Skills, Model Context Protocol (MCP) Servers, and Plugins](./05-skills-mcp-plugins/README.md) | Add reusable expertise and optional tool integrations |
-| 06 | 🖼️ [Canvases](./06-canvases/README.md) | Use shared visual work surfaces |
-| 07 | 🔁 [Automations](./07-automations/README.md) | Create manual, scheduled, and advanced cloud automations |
-| 08 | 🧭 [Putting It All Together](./08-putting-it-all-together/README.md) | Complete an end-to-end multi-session workflow |
+| 03 | ⚡ [Development and GitHub Workflows](./03-development-workflows/README.md) | Review, debug, test, and preview a change, then move it through My work, issues, PRs, review comments, checks, Fix actions, and advanced Agent Merge |
+| 04 | 🧰 [Skills, Model Context Protocol (MCP) Servers, and Plugins](./04-skills-mcp-plugins/README.md) | Add reusable expertise and optional tool integrations |
+| 05 | 🖼️ [Canvases](./05-canvases/README.md) | Use shared visual work surfaces |
+| 06 | 🔁 [Automations](./06-automations/README.md) | Create manual, scheduled, and advanced cloud automations |
+| 07 | 🧭 [Putting It All Together](./07-putting-it-all-together/README.md) | Complete an end-to-end multi-session workflow |
 
 ## 📖 How This Course Works
 

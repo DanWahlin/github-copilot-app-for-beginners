@@ -39,9 +39,9 @@ Related chapter: [02 Sessions, Worktrees, and Context](../02-sessions-worktrees-
 | Session differs from main checkout | Dependencies, branch contents, environment, or generated files differ | Run install and validation commands in the session worktree |
 | Context is noisy | Too many files or broad prompts | Use focused `@` file or folder references and smaller tasks |
 
-## Chapter 03: Development Workflows
+## Chapter 03: Development and GitHub Workflows
 
-Related chapter: [03 Development Workflows](../03-development-workflows/)
+Related chapter: [03 Development and GitHub Workflows](../03-development-workflows/)
 
 | Symptom | Likely cause | Try this |
 |---|---|---|
@@ -50,22 +50,15 @@ Related chapter: [03 Development Workflows](../03-development-workflows/)
 | Diff is hard to trust | Too many unrelated changes | Ask the agent to explain the diff, then split or revert unrelated edits |
 | Pick and Polish changes hurt accessibility | Visual update changed contrast, layout, or labels | Review with accessibility goals and rerun tests or manual checks |
 | Screenshot does not show expected state | Window was hidden, covered, or scrolled elsewhere | Bring the app forward, expose the target panel, and capture the visible window |
-
-## Chapter 04: GitHub Workflows
-
-Related chapter: [04 GitHub Workflows](../04-github-workflows/)
-
-| Symptom | Likely cause | Try this |
-|---|---|---|
 | Issue or PR is missing from My work | Filters or permissions | Clear filters, check repository access, and confirm assignment or review request |
 | Cannot push a branch | No write access to upstream | Use a fork or a repository where the learner has write access |
 | CI fails but local tests pass | Different environment, secrets, or branch protection | Read the failing check log and compare Node version, commands, and secrets |
 | PR remains blocked | Required reviews, checks, branch protection, or conflicts | Triage in this order: failing checks, merge conflicts, required reviews, stale reviews, branch rules |
 | Agent Merge is unavailable | Policy, permissions, or repository settings | Treat Agent Merge as advanced and use manual review or merge flow instead |
 
-## Chapter 05: Skills, Model Context Protocol (MCP) Servers, and Plugins
+## Chapter 04: Skills, Model Context Protocol (MCP) Servers, and Plugins
 
-Related chapter: [05 Skills, Model Context Protocol (MCP) Servers, and Plugins](../05-skills-mcp-plugins/)
+Related chapter: [04 Skills, Model Context Protocol (MCP) Servers, and Plugins](../04-skills-mcp-plugins/)
 
 | Symptom | Likely cause | Try this |
 |---|---|---|
@@ -80,9 +73,9 @@ Related chapter: [05 Skills, Model Context Protocol (MCP) Servers, and Plugins](
 | Custom agent is confusing | Advanced concept introduced too early | Return to repo-local skills first, then explain agents as optional specialization |
 | Agent has too many tools | Toolset adds noise and risk | Disable tools not needed for the task |
 
-## Chapter 06: Canvases
+## Chapter 05: Canvases
 
-Related chapter: [06 Canvases](../06-canvases/)
+Related chapter: [05 Canvases](../05-canvases/)
 
 | Symptom | Likely cause | Try this |
 |---|---|---|
@@ -91,9 +84,9 @@ Related chapter: [06 Canvases](../06-canvases/)
 | Agent action fails | Capability name or input schema mismatch | Check the action name, required fields, and stored state |
 | Canvas contains private content | Shared surface was used like private notes | Remove secrets, private repo details, and customer data before publishing |
 
-## Chapter 07: Automations
+## Chapter 06: Automations
 
-Related chapter: [07 Automations](../07-automations/)
+Related chapter: [06 Automations](../06-automations/)
 
 | Symptom | Likely cause | Try this |
 |---|---|---|
@@ -103,9 +96,9 @@ Related chapter: [07 Automations](../07-automations/)
 | Issue trigger fires too often | Trigger is too broad | Narrow the repository, labels, issue query, or tool permissions |
 | Automation result is unsafe to publish | Run history includes private data | Redact or recreate with sample repository data |
 
-## Chapter 08: Putting It All Together
+## Chapter 07: Putting It All Together
 
-Related chapter: [08 Putting It All Together](../08-putting-it-all-together/)
+Related chapter: [07 Putting It All Together](../07-putting-it-all-together/)
 
 | Symptom | Likely cause | Try this |
 |---|---|---|

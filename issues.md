@@ -6,7 +6,7 @@ This file tracks issues found during course reviews of the root README and Chapt
 
 **Severity:** Blocking
 
-**Files:** `README.md`, `00-quick-start/README.md` through `08-putting-it-all-together/README.md`
+**Files:** `README.md`, `00-quick-start/README.md` through `07-putting-it-all-together/README.md`
 
 **Problem:** The plan called for course imagery and app capture placeholders throughout the course, but the chapters only included the SVG header images. That made a desktop app course feel too text-heavy for beginners.
 
@@ -16,7 +16,7 @@ This file tracks issues found during course reviews of the root README and Chapt
 
 **Severity:** High
 
-**Files:** `00-quick-start/README.md` through `08-putting-it-all-together/README.md`
+**Files:** `00-quick-start/README.md` through `07-putting-it-all-together/README.md`
 
 **Problem:** The first half and second half of the course used noticeably different conventions for hook style, estimated time formatting, prerequisites headings, separators, and notes.
 
@@ -26,7 +26,7 @@ This file tracks issues found during course reviews of the root README and Chapt
 
 **Severity:** High
 
-**Files:** later course chapter READMEs through `08-putting-it-all-together/README.md`
+**Files:** later course chapter READMEs through `07-putting-it-all-together/README.md`
 
 **Problem:** Repeated sections such as `Expected output`, `Expected result`, `How it works`, `Pause point`, `Try the comparison`, and `Why this matters` were marked as `##` headings, which made them appear as peers of the hands-on examples.
 
@@ -76,7 +76,7 @@ This file tracks issues found during course reviews of the root README and Chapt
 
 **Severity:** Low
 
-**Files:** `00-quick-start/README.md` through `08-putting-it-all-together/README.md`
+**Files:** `00-quick-start/README.md` through `07-putting-it-all-together/README.md`
 
 **Problem:** The chapters had troubleshooting sections, but they did not consistently include beginner mistake callouts that reinforce safe habits before problems occur.
 
@@ -86,7 +86,7 @@ This file tracks issues found during course reviews of the root README and Chapt
 
 **Severity:** High
 
-**Files:** `06-canvases/README.md`, `.github/extensions/release-checklist/README.md`
+**Files:** `05-canvases/README.md`, `.github/extensions/release-checklist/README.md`
 
 **Problem:** Chapter 07 correctly starts by calling the release checklist a prepared canvas concept, but the next workflow asks learners to "use the canvas" and update checklist state. The repository currently contains a concept README, not a working canvas extension, so beginners may think something is broken or missing.
 
@@ -98,7 +98,7 @@ This file tracks issues found during course reviews of the root README and Chapt
 
 **Severity:** High
 
-**Files:** `04-github-workflows/README.md`, `08-putting-it-all-together/README.md`, `samples/app-course-issues.md`, `samples/app-course-pr-scenarios.md`
+**Files:** `03-development-workflows/README.md`, `07-putting-it-all-together/README.md`, `samples/app-course-issues.md`, `samples/app-course-pr-scenarios.md`
 
 **Problem:** Chapters 04 and 09 rely on seeded issues, pull requests, review comments, failing checks, and merge-readiness scenarios. The repository provides strong Markdown drafts for those scenarios, but self-paced learners are not given a clear setup path for turning those drafts into real GitHub issues, branches, PRs, comments, and CI states.
 
@@ -110,19 +110,19 @@ This file tracks issues found during course reviews of the root README and Chapt
 
 **Severity:** Medium
 
-**File:** `08-putting-it-all-together/assets/end-to-end-workflow.png`
+**File:** `07-putting-it-all-together/assets/end-to-end-workflow.png`
 
 **Problem:** Chapter 08 consistently teaches merge readiness, human review, and pause points before merge automation. The final step in the capstone workflow image says "Merge," which is a little stronger than the safer lesson language.
 
 **Suggested resolution:** Regenerate or edit the image so the final step says "Merge ready" or "Merge readiness."
 
-**Resolution:** Regenerated `08-putting-it-all-together/assets/end-to-end-workflow.png` so the final workflow step says "Merge Ready."
+**Resolution:** Regenerated `07-putting-it-all-together/assets/end-to-end-workflow.png` so the final workflow step says "Merge Ready."
 
 ## ✅ Issue 12: MCP acronym is not expanded on first beginner-facing use
 
 **Severity:** Low
 
-**Files:** `README.md`, `05-skills-mcp-plugins/README.md`
+**Files:** `README.md`, `04-skills-mcp-plugins/README.md`
 
 **Problem:** The course introduces "MCP servers" before spelling out Model Context Protocol. Chapter 06 explains the concept later, but beginners should see the expanded term the first time the acronym appears.
 
@@ -140,7 +140,7 @@ The issues below come from a deep review of the root README and Chapters 00-08 f
 
 **Severity:** High
 
-**Files:** `README.md`, `00-quick-start/README.md` through `08-putting-it-all-together/README.md`
+**Files:** `README.md`, `00-quick-start/README.md` through `07-putting-it-all-together/README.md`
 
 **Problem:** Every `copilot-cli-for-beginners` chapter and its README begin with an HTML frontmatter comment block (`id`, `title: !translate`, `description: !translate`, `audience`, `slug`, `weight`) used by the Awesome Copilot learning hub. The App course had no frontmatter at all, so the template did not match.
 
@@ -150,7 +150,7 @@ The issues below come from a deep review of the root README and Chapters 00-08 f
 
 **Severity:** High
 
-**Files:** `README.md`, `00-quick-start/README.md` through `08-putting-it-all-together/README.md`
+**Files:** `README.md`, `00-quick-start/README.md` through `07-putting-it-all-together/README.md`
 
 **Problem:** The App course used sentence-case headings ("Learning objectives", "Real-world analogy", "Hands-on example", "Estimated time") while the CLI course uses Title Case ("Learning Objectives", "Real-World Analogy", "Hands-On Example", "Estimated Time").
 
@@ -160,7 +160,7 @@ The issues below come from a deep review of the root README and Chapters 00-08 f
 
 **Severity:** Medium
 
-**Files:** `02-sessions-worktrees-context/README.md`, `03-development-workflows/README.md`, `04-github-workflows/README.md`, `05-skills-mcp-plugins/README.md`, `06-canvases/README.md`, `07-automations/README.md`, `08-putting-it-all-together/README.md`
+**Files:** `02-sessions-worktrees-context/README.md`, `03-development-workflows/README.md`, `04-skills-mcp-plugins/README.md`, `05-canvases/README.md`, `06-automations/README.md`, `07-putting-it-all-together/README.md`
 
 **Problem:** Capture placeholders were left as visible Markdown list items, for example `- [app-screenshot: My Work view ...]`. On GitHub these render as literal bullet text that looks unfinished or broken to a newcomer, hurting reading flow.
 
@@ -210,7 +210,7 @@ The issues below come from a deep review of the root README and Chapters 00-08 f
 
 **Severity:** Low
 
-**Files:** `05-skills-mcp-plugins/README.md`, `06-canvases/README.md`, `07-automations/README.md`, `08-putting-it-all-together/README.md`
+**Files:** `04-skills-mcp-plugins/README.md`, `05-canvases/README.md`, `06-automations/README.md`, `07-putting-it-all-together/README.md`
 
 **Problem:** Chapters 00-04 used descriptive `<summary>Troubleshooting: <topic></summary>` labels (matching the Intermediate:/Advanced: prefix style used for other collapsibles), while Chapters 05-08 used a generic `<summary>🔧 Troubleshooting</summary>`.
 
@@ -258,7 +258,7 @@ The issues below come from a deep review of the root README and Chapters 00-08 f
 
 **Severity:** Low
 
-**Files:** `00-quick-start/assets/chapter-header.svg` through `08-putting-it-all-together/assets/chapter-header.svg`
+**Files:** `00-quick-start/assets/chapter-header.svg` through `07-putting-it-all-together/assets/chapter-header.svg`
 
 **Problem:** The CLI course uses `assets/chapter-header.png` for each chapter header; the App course uses `chapter-header.svg`. The SVGs render correctly on GitHub, but it is one remaining difference from the CLI template.
 
@@ -341,7 +341,7 @@ The issues below come from a deep review of the root README and Chapters 00-08 f
 
 **Severity:** Medium (consistency)
 
-**Files:** `05-skills-mcp-plugins/README.md`, `06-canvases/README.md`, `07-automations/README.md`, `08-putting-it-all-together/README.md`
+**Files:** `04-skills-mcp-plugins/README.md`, `05-canvases/README.md`, `06-automations/README.md`, `07-putting-it-all-together/README.md`
 
 **Problem:** The deep review of Chapters 03-08 (the line-by-line pass that Chapters 00-02 got via Issues 16-30 but 03-08 had not) found the product name written inconsistently. The root `README.md` (15 uses, 0 lowercase) and Chapters 00-04 always write "GitHub Copilot **App**" with a capital A, but Chapters 05-08 used lowercase "Copilot app" 18 times across prose, an analogy table, and Source Reference link labels (for example `05` line 41, `06` line 39, `07` line 38, `08` lines 53/55/427). A learner reading straight through sees the app's name change casing mid-course.
 
@@ -351,7 +351,7 @@ The issues below come from a deep review of the root README and Chapters 00-08 f
 
 **Severity:** Low (consistency)
 
-**File:** `07-automations/README.md`
+**File:** `06-automations/README.md`
 
 **Problem:** Chapter 07 (line 99) told learners to "skip to the local validation reminder in Hands-on example 3," but the established in-text convention (Chapter 03 lines 153, 188, 295) refers to numbered hands-on steps as "Exercise N." The mismatched label makes the cross-reference read like it points to a different section.
 

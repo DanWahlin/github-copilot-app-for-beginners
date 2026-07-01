@@ -69,7 +69,7 @@ Examples:
 ```text
 02-sessions-worktrees-context/assets/app-screenshot-session-worktree-path.png
 03-development-workflows/assets/app-screenshot-browser-preview.png
-04-github-workflows/assets/app-screenshot-pr-failing-check.png
+03-development-workflows/assets/app-screenshot-pr-failing-check.png
 ```
 
 ## Screenshot manifest
@@ -107,13 +107,12 @@ Suggested entry:
 - Chapter 00: Hide sign-in details, account names, and private repository lists.
 - Chapter 01: Hide model provider credentials and account settings.
 - Chapter 02: Show branch and worktree concepts, but crop personal home folder paths if needed.
-- Chapter 03: Show terminal, browser, and diff evidence without secrets or unrelated file paths.
-- Chapter 04: Use safe training issues and PRs only.
+- Chapter 03: Show terminal, browser, and diff evidence without secrets or unrelated file paths, and use safe training issues and PRs only.
 - Chapter 01: Never show tokens, provider keys, private endpoints, or organization-only policies in settings screenshots.
-- Chapter 05: Show skills, Model Context Protocol (MCP) servers, plugins, and agents only with safe names and no credentials.
-- Chapter 06: Treat canvas content as publishable course content. Remove private notes first.
-- Chapter 07: Hide repository secrets, cloud configuration, billing details, and organization settings.
-- Chapter 08: Use a safe training repository for capstone screenshots.
+- Chapter 04: Show skills, Model Context Protocol (MCP) servers, plugins, and agents only with safe names and no credentials.
+- Chapter 05: Treat canvas content as publishable course content. Remove private notes first.
+- Chapter 06: Hide repository secrets, cloud configuration, billing details, and organization settings.
+- Chapter 07: Use a safe training repository for capstone screenshots.
 
 ## Final review checklist
 

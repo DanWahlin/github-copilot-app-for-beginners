@@ -1,15 +1,15 @@
 <!--
 ---
-id: CopilotApp-05
+id: CopilotApp-04
 title: !translate Skills, MCP Servers, and Plugins
 description: !translate Extend the GitHub Copilot App with repo-local skills, and learn where optional MCP servers, plugins, and custom agents fit.
 audience: Developers / Students / Desktop users
 slug: skills-mcp-servers-and-plugins
-weight: 6
+weight: 5
 ---
 -->
 
-![Chapter 05: Skills, Model Context Protocol Servers, and Plugins](assets/chapter-header.svg)
+![Chapter 04: Skills, Model Context Protocol Servers, and Plugins](assets/chapter-header.svg)
 
 > **What if Copilot could reuse your team's review checklist without gaining any new external access?**
 
@@ -37,7 +37,7 @@ By the end of this chapter, you'll be able to:
 
 Before starting:
 
-- Complete Chapter 04
+- Complete Chapter 03
 - Have the course repository open in the GitHub Copilot App
 - Use `samples/book-app-web` for all hands-on prompts
 - Keep the beginner path repo-local
@@ -313,7 +313,7 @@ Success criteria: You're able to explain why the required exercise uses a repo-l
 
 In the next chapter, you'll inspect a prepared canvas concept to see how agent work can become visible and steerable.
 
-**[← Back to Chapter 04](../04-github-workflows/README.md)** | **[Next: Canvases →](../06-canvases/README.md)**
+**[← Back to Chapter 03](../03-development-workflows/README.md)** | **[Next: Canvases →](../05-canvases/README.md)**
 
 ---
 

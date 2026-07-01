@@ -1,15 +1,15 @@
 <!--
 ---
-id: CopilotApp-08
+id: CopilotApp-07
 title: !translate Putting It All Together
 description: !translate Run a complete end-to-end GitHub Copilot App workflow from issue triage to pull request readiness with clear pause points.
 audience: Developers / Students / Desktop users
 slug: putting-it-all-together
-weight: 9
+weight: 8
 ---
 -->
 
-![Chapter 08: Putting It All Together](assets/chapter-header.svg)
+![Chapter 07: Putting It All Together](assets/chapter-header.svg)
 
 > **Now you get to run the whole workflow without losing control.**
 
@@ -36,10 +36,10 @@ By the end of this chapter, you'll be able to:
 
 Before starting:
 
-- Complete Chapters 00 through 07
+- Complete Chapters 00 through 06
 - Use the course repository in the GitHub Copilot App
 - Use `samples/book-app-web` as the sample app path
-- Have the repo-local skill from Chapter 05 available if you completed that exercise
+- Have the repo-local skill from Chapter 04 available if you completed that exercise
 - Use a GitHub-backed training repository for PR and issue work. Self-paced learners should follow the [Training GitHub Scenarios setup guide](../appendices/training-github-scenarios.md) first.
 
 ---
@@ -134,7 +134,7 @@ Start a session from the issue or prompt in Plan mode:
 Plan a small improvement to the empty-state copy in @samples/book-app-web. Include files to inspect, validation commands, and a pause before implementation.
 ```
 
-If you created the Chapter 05 skill, ask:
+If you created the Chapter 04 skill, ask:
 
 ```text
 Use the book-app-reviewer skill while planning this change.
@@ -441,7 +441,7 @@ You now know how to use the GitHub Copilot App as an agent-driven development co
 
 Practice on small real issues first. Then gradually add advanced workflows when the work is independent, validated, and reviewable.
 
-**[← Back to Chapter 07](../07-automations/README.md)** | **[Return to Course Home →](../README.md)**
+**[← Back to Chapter 06](../06-automations/README.md)** | **[Return to Course Home →](../README.md)**
 
 ---
 

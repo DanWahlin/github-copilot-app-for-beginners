@@ -1,15 +1,15 @@
 <!--
 ---
-id: CopilotApp-07
+id: CopilotApp-06
 title: !translate Automations
 description: !translate Turn repeatable Copilot prompts into manual, scheduled, and cloud automations with least-privilege tool selection.
 audience: Developers / Students / Desktop users
 slug: automations
-weight: 8
+weight: 7
 ---
 -->
 
-![Chapter 07: Automations](assets/chapter-header.svg)
+![Chapter 06: Automations](assets/chapter-header.svg)
 
 > **What if your recurring Copilot prompt became a reusable button?**
 
@@ -34,7 +34,7 @@ By the end of this chapter, you'll be able to:
 
 Before starting:
 
-- Complete Chapter 06
+- Complete Chapter 05
 - Open the course repository in the GitHub Copilot App
 - Use `samples/book-app-web` for validation examples
 - Have a GitHub-backed repository if you want live PR or issue summaries
@@ -96,7 +96,7 @@ In these exercises, you'll:
 
 ### 1. Create a Manual PR Summary Automation
 
-This exercise works best after Chapter 04 has created at least one PR. If your training repository has no open PRs yet, skip to the local validation reminder in Exercise 3, then come back later.
+This exercise works best after Chapter 03 has created at least one PR. If your training repository has no open PRs yet, skip to the local validation reminder in Exercise 3, then come back later.
 
 Create an automation named:
 
@@ -305,7 +305,7 @@ Success criteria: You're able to explain why the automation is safe to run again
 
 In the next chapter, you'll combine the app workflow into a capstone: Issue triage, planning, implementation, validation, PR review, and merge readiness.
 
-**[← Back to Chapter 06](../06-canvases/README.md)** | **[Next: Putting It All Together →](../08-putting-it-all-together/README.md)**
+**[← Back to Chapter 05](../05-canvases/README.md)** | **[Next: Putting It All Together →](../07-putting-it-all-together/README.md)**
 
 ---
 
