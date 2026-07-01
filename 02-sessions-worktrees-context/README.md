@@ -146,7 +146,7 @@ When in doubt, type `/` and use the in-app palette to discover what's available.
 
 ### Branches Used in This Course
 
-Back in [Chapter 00](../00-quick-start/README.md), the setup script added several *practice branches* to your forked repository. As a quick refresher, each practice branch is a copy of the sample app prepared for one specific exercise later in the course, usually with an intentional bug or issue for you to resolve. By using practice branches you get a safe, realistic way to inspect or fix without breaking the working app.
+Back in [Chapter 00](../00-quick-start/README.md), the setup script added several *practice branches* to your forked repository. As a quick refresher, each practice branch starts from your `main` branch and adds a small intentional change to the sample app in `samples/book-app-web`, usually a bug for you to fix, set up for one specific exercise later in the course. Because that change lives on its own branch, you can inspect or fix it in a safe, realistic way without touching `main` or the working app.
 
 Each exercise names the branch it needs. For reference, here is the full set that you'll see in this course:
 
