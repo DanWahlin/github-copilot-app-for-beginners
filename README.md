@@ -100,21 +100,6 @@ Each chapter follows the same beginner-friendly pattern:
 
 When a chapter shows a model response, remember that demo output varies. Your app version, model, reasoning setting, repository context, and enabled tools can change the response.
 
-## 🎓 Wrapping Up
-
-By the end of the course, you'll have run the GitHub Copilot App as an agent-driven development control center — combining every piece while keeping a human in control of quality and delivery:
-
-| Area | What you practiced |
-|---|---|
-| Sessions and worktrees | Work in scoped branches and isolated worktrees, including parallel sessions |
-| Context | Use prompts, files, issues, and instructions intentionally |
-| Development and GitHub | Plan, change, and validate with tests, builds, browser previews, and diffs, then move work through issues, PRs, checks, and Fix actions |
-| Customization | Repository instructions, skills, MCP servers, and plugins |
-| Visibility | Canvases for shared, inspectable state |
-| Repetition | Manual and scheduled automations, used safely |
-
-Human judgment stays in the loop at every major control point: before implementation starts, before a pull request is opened, and before any merge automation is enabled.
-
 ## Command, Reference, and Help
 
 - [GitHub Copilot App overview][about-app]

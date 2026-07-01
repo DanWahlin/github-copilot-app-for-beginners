@@ -64,7 +64,7 @@ This allows you to work on multiple tasks or branches simultaneously without sta
 
 ### Running Multiple Sessions in Parallel
 
-Because each session works in its own worktree, you can run several at once without them colliding — one session fixing a bug while another explores a different branch, each with its own folder, branch, and diff. This is the real payoff of worktrees. You'll practice coordinating parallel work safely, including the `/orchestrate` command, in the [Chapter 03 advanced section](../03-development-workflows/README.md).
+Because each session works in its own worktree, you can run several at once without them colliding: one session fixing a bug while another explores a different branch, each with its own folder, branch, and diff. This is the real payoff of worktrees. You'll practice coordinating parallel work safely, including the `/orchestrate` command, in the [Chapter 03 advanced section](../03-development-workflows/README.md).
 
 ### Where a Session Runs
 

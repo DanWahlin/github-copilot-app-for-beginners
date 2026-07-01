@@ -303,9 +303,20 @@ Success criteria: You're able to explain why the automation is safe to run again
 
 ## 🎓 Course Complete
 
-That's the full course. You've gone from setup and orientation through sessions, worktrees, and context; the development-and-GitHub workflow loop; skills, MCP servers, and plugins; canvases; and automations — always keeping a human in control of quality and delivery.
+That's the full course. You've gone from setup and orientation through sessions, worktrees, and context; the development-and-GitHub workflow loop; skills, MCP servers, and plugins; canvases; and automations. Along the way, one habit stayed constant: keeping a human in control of quality and delivery.
 
-For a recap of everything you practiced, see [Wrapping Up](../README.md#wrapping-up) on the course home page.
+Here's a recap of everything you practiced:
+
+| Area | What you practiced |
+|---|---|
+| Sessions and worktrees | Work in scoped branches and isolated worktrees, including parallel sessions |
+| Context | Use prompts, files, issues, and instructions intentionally |
+| Development and GitHub | Plan, change, and validate with tests, builds, browser previews, and diffs, then move work through issues, PRs, checks, and Fix actions |
+| Customization | Repository instructions, skills, MCP servers, and plugins |
+| Visibility | Canvases for shared, inspectable state |
+| Repetition | Manual and scheduled automations, used safely |
+
+That last habit is the whole point: human judgment stays in the loop at every major control point, before implementation starts, before a pull request is opened, and before any merge automation is enabled. Practice on small, real issues first, then add advanced workflows as the work stays independent, validated, and reviewable.
 
 **[← Back to Chapter 05](../05-canvases/README.md)** | **[Return to Course Home →](../README.md)**
 

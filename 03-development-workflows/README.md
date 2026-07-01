@@ -105,7 +105,7 @@ In these exercises, you'll:
 - **Part A (inner loop):** review, debug, test, refactor, and preview a change with the evidence visible
 - **Part B (outer loop):** find work in My work, start from an issue, open a pull request, and use Fix actions on comments and checks
 
-**Part A — Develop and validate in a session.** Work the inner loop: review, fix, test, and preview a change while the evidence stays visible.
+**Part A: Develop and validate in a session.** Work the inner loop: review, fix, test, and preview a change while the evidence stays visible.
 
 ### 1. Review and Fix a Bug
 
@@ -200,7 +200,7 @@ In the same Interactive session, submit:
 Refactor filterBooks in @samples/book-app-web/src/App.tsx to extract the search, genre, and status checks into small, clearly named helper functions. Do not change behavior, keep the signature the same, then run the tests to prove the behavior is unchanged.
 ```
 
-If a test fails after the refactor, the change altered behavior — revert or adjust until tests pass again without editing the test expectations.
+If a test fails after the refactor, the change altered behavior. Revert or adjust until tests pass again without editing the test expectations.
 
 </details>
 
@@ -256,13 +256,13 @@ Remember: visual polish can change accessibility and behavior. Always finish wit
 
 ---
 
-**Part B — Move work through GitHub.** Part A validated a change end to end. Part B practices the same loop on a fresh, GitHub-tracked issue: find the work in My work, start a session from the issue, open a pull request, and finish it with Fix actions.
+**Part B: Move work through GitHub.** Part A validated a change end to end. Part B practices the same loop on a fresh, GitHub-tracked issue: find the work in My work, start a session from the issue, open a pull request, and finish it with Fix actions.
 
 ![Issue to pull request workflow](assets/issue-to-merged-pr.webp)
 
 ### 4. Find Work in My work
 
-Open **My work** — your in-app inbox for GitHub issues, pull requests, review requests, and checks.
+Open **My work**, your in-app inbox for GitHub issues, pull requests, review requests, and checks.
 
 1. Open My work and find issues assigned to you, pull requests you authored, review requests, and PRs with failing checks.
 2. Narrow the view with search qualifiers:
@@ -287,7 +287,7 @@ You're able to explain whether a missing issue or PR is more likely caused by fi
 
 Starting from an issue attaches its context automatically, so Copilot plans against the real task instead of a pasted summary.
 
-1. Choose Issue 1 (make search case-insensitive) — read it in My work, or see [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-1-make-search-case-insensitive). Use the `practice-search-case-bug` branch created by the setup script. If you skipped the script, apply Issue 1's training-branch diff first ([Chapter 02 practice branch note](../02-sessions-worktrees-context/README.md#branches-used-in-this-course)).
+1. Choose Issue 1 (make search case-insensitive). Read it in My work, or see [`samples/app-course-issues.md`](../samples/app-course-issues.md#issue-1-make-search-case-insensitive). Use the `practice-search-case-bug` branch created by the setup script. If you skipped the script, apply Issue 1's training-branch diff first ([Chapter 02 practice branch note](../02-sessions-worktrees-context/README.md#branches-used-in-this-course)).
 2. Start a **Plan**-mode session from the issue and submit:
 
    ```text
@@ -375,11 +375,11 @@ If your app exposes `/agent-merge`, treat it as an advanced entry point to that 
 <details>
 <summary>Advanced: Parallel sessions and /orchestrate</summary>
 
-Once you're comfortable with a single session, you can run several at once — each isolated in its own worktree (see [Chapter 02](../02-sessions-worktrees-context/README.md#running-multiple-sessions-in-parallel)). Parallel sessions save time, but they collide if two of them edit the same files.
+Once you're comfortable with a single session, you can run several at once, each isolated in its own worktree (see [Chapter 02](../02-sessions-worktrees-context/README.md#running-multiple-sessions-in-parallel)). Parallel sessions save time, but they collide if two of them edit the same files.
 
 ![Parallel sessions without collisions](assets/parallel-sessions-without-collisions.webp)
 
-Delegate to parallel sessions only when the tasks are genuinely independent — for example, one session fixes a bug while another drafts documentation. Keep them safe with clear boundaries:
+Delegate to parallel sessions only when the tasks are genuinely independent. For example, one session fixes a bug while another drafts documentation. Keep them safe with clear boundaries:
 
 1. Separate files or clearly separate responsibilities.
 2. Separate branches or worktrees.
@@ -393,7 +393,7 @@ The `/orchestrate` command, when available, lets the agent coordinate this by de
 /orchestrate Split this work into two independent child sessions: one may inspect and fix the bug, and one may draft documentation notes. Do not let either child session edit files until I approve the scopes.
 ```
 
-Use `/orchestrate` only after you can describe the child-session boundaries yourself. If it isn't available, create separate sessions manually and keep the same pause points. If two sessions touch the same files, expect conflicts — pause one, review diffs, and decide which branch is the source of truth.
+Use `/orchestrate` only after you can describe the child-session boundaries yourself. If it isn't available, create separate sessions manually and keep the same pause points. If two sessions touch the same files, expect conflicts. Pause one, review diffs, and decide which branch is the source of truth.
 
 </details>
 
