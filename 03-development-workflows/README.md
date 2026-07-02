@@ -52,7 +52,7 @@ But a take isn't an album. A producer's review desk tracks briefs, approvals, no
 
 ## Core Concepts
 
-| Concept | Beginner explanation |
+| Concept | Explanation |
 |---|---|
 | Diff | The visible set of code changes in a session |
 | Validation evidence | Proof the change works: tests, build output, and browser behavior |
@@ -81,8 +81,13 @@ But a take isn't an album. A producer's review desk tracks briefs, approvals, no
 Next, confirm the sample app builds and tests cleanly. This is also where you'll learn to open the session terminal.
 
 1. In the sidebar, open a session for the `copilot-app-for-beginners` project, or create one with the **New session** (**+**) icon next to the project name.
-2. Open the **Review panel** with the toggle in the upper-right corner of the app (or **View → Toggle Terminal**). This is where the session's terminal, diff, and browser surfaces live.
-3. Select the **Terminal** tab. If no terminal exists yet, press **+** to start one.
+2. In the composer, set the **Mode** selector to **Interactive**, then submit:
+
+   ```text
+   Summarize the @samples/book-app-web project, including its framework, language, test framework, and build tool. Then tell me the commands to install dependencies, run tests, and build the app.
+   ```
+2. Open the **Review panel** with the toggle in the upper-right corner of the app. This is where the session's terminal, diff, and browser surfaces live.
+3. Select the **Terminal** tab. If no terminal exists yet, press **+** to start one. You can also select **View → Toggle Terminal**.
 4. Run these commands from the repository root:
 
    ```bash
@@ -92,9 +97,9 @@ Next, confirm the sample app builds and tests cleanly. This is also where you'll
    npm run build
    ```
 
-> Note: Each practice-branch exercise below opens its **own worktree** (a separate folder), so you'll run `npm install` again the first time you use that worktree's terminal.
+You'll see dependencies install, tests run, and a build complete. Tests and builds are evidence; a confident chat response is not.
 
-You'll see dependencies install, tests run, and a production build complete. Tests and builds are evidence; a confident chat response is not.
+> Note: Each practice-branch exercise below opens its **own worktree** (a separate folder), so you'll run `npm install` again the first time you use that worktree's terminal.
 
 ---
 
@@ -103,13 +108,13 @@ You'll see dependencies install, tests run, and a production build complete. Tes
 In these exercises, you'll:
 
 - **Part A (inner loop):** review, debug, test, refactor, and preview a change with the evidence visible
-- **Part B (outer loop):** find work in My work, start from an issue, open a pull request, and ask Copilot to fix comments and checks
+- **Part B (outer loop):** find work in My work, start from an issue, open a pull request, and ask Copilot App to fix comments and checks
 
 **Part A: Develop and validate in a session.** Work the inner loop: review, fix, test, and preview a change while the evidence stays visible.
 
 ### 1. Review and Fix a Bug
 
-Start on a practice branch that already contains a real bug so the review has something to find and the fix is meaningful. You'll review in **Plan** mode, then switch to **Interactive** to apply the fix while staying in control.
+In this exercise you'll work on a practice branch that already contains a real bug so the review has something to find and the fix is meaningful. You'll review in **Plan** mode, then switch to **Interactive** to apply the fix while staying in control.
 
 Perform these steps:
 
